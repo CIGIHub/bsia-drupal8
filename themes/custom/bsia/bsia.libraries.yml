@@ -1,0 +1,13 @@
+global-js:
+  js:
+    js/bsia_menu.js: {}
+    js/bsia.js: {}
+
+  dependencies:
+    - core/jquery
+
+global-css:
+  css:
+    theme:
+      css/styles.css: { }
+      css/font-awesome.min.css: { }

@@ -1,0 +1,26 @@
+name: BSIA
+type: theme
+description: 'A custom theme for the Balsillieschool.ca adapted from original Drupal 6 theme.</a>.'
+package: Custom
+version: 1.0
+core: 8.x
+
+libraries:
+  - bsia/global-css
+  - bsia/global-js
+
+stylesheets-remove:
+  - core/assets/vendor/normalize-css/normalize.css
+  - core/modules/system/css/system.module.css
+  - core/modules/system/css/system.theme.css
+  - core/modules/views/css/views.module.css
+
+regions:
+  search: 'Search'
+  main_menu: 'Main Menu'
+  feature: 'Feature Area'
+  right_menu: 'Right Menu'
+  right_sidebar: 'Right Sidebar'
+  content: 'Content'
+  footer_menu: 'Footer Menu'
+

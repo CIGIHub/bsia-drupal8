@@ -1,0 +1,93 @@
+@mixin clearfloat{
+  content:'';
+  display:block;
+  clear: both;
+}
+
+@mixin horizontal_menu{
+  ul {
+  	list-style:none;
+    padding: 0px;
+
+    li{
+      list-style-image:none;
+      float:left;
+      &.expanded, &.collapsed, &.leaf {
+      	list-style-image:none;
+      	list-style-type:none;
+      }
+    }
+    &:after{
+      @include clearfloat;
+    }
+  }
+}
+
+@mixin hidden {
+  text-indent: -9999px;
+}
+
+@mixin link{
+  a{
+    color: $link-color;
+    &:hover{
+      color: $link-hover-color;
+    }
+  }
+}
+
+@mixin image-2x($image, $width, $height) {
+  @media (min--moz-device-pixel-ratio: 1.3),
+         (-o-min-device-pixel-ratio: 2.6/2),
+         (-webkit-min-device-pixel-ratio: 1.3),
+         (min-device-pixel-ratio: 1.3),
+         (min-resolution: 1.3dppx) {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url($image);
+    background-size: $width $height;
+  }
+}
+
+@mixin desktop_header{
+  a.logo{
+      padding: 3.5em 0 3em 0;
+      width: 680px;
+      background: url('../images/bsia-logo-2015.png') no-repeat left;
+  }
+  a.logo{
+    @include image-2x('../images/bsia-logo-2015x2.png', 680px, 72px);
+  }
+  .search{
+      display: block;
+      text-align: right;
+  }
+}
+
+@mixin desktop_nav{
+  background: $nav-bg-color;
+  display: block;
+
+  @include horizontal_menu;
+  nav ul {
+    margin: 0;
+    li{
+      font-size: 1.0em;
+      line-height:2.5em;
+      background:url(../images/nav-separator.gif) no-repeat 0 0.846em;
+      a {
+        color:$nav-link-color;
+        padding: 0;
+        &.active{
+          color:$nav-link-active-color;
+        }
+      }
+    }
+
+    li.expanded, li.collapsed, li.leaf {
+      padding:0 1.154em;
+    }
+    li.expanded ul{
+      display:none;
+    }
+  }
+}

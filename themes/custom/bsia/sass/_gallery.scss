@@ -1,0 +1,134 @@
+/******  Gallery  ******/
+#gallery{
+  overflow: hidden;
+
+  .gallery {
+  	position: relative;
+  }
+
+  .box{
+      position: absolute;
+      top: 10%;
+      left: 15%;
+      width: 70%;
+      background: rgb(25,55,79);
+      background: rgba(25,55,79, 0.90);
+      padding: 1.15em;
+      a{
+        font-size: 1.1em;
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        .label{
+          color: #a3a29e;
+        }
+      }
+  }
+
+  .bx-wrapper .bx-pager,
+  .bx-wrapper .bx-controls-auto {
+    margin-top: -1.0em;
+    float: right;
+  }
+
+  .bx-wrapper .bx-pager {
+      font-size: 1.0em;
+      font-family: Arial;
+      font-weight: bold;
+      color: #fbad18;
+  }
+
+  .bx-wrapper .bx-pager .bx-pager-item,
+  .bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+      display: inline-block;
+      *zoom: 1;
+      *display: inline;
+  }
+
+  .bx-wrapper .bx-pager.bx-default-pager a {
+      background: #fbad18;
+      text-indent: -500em;
+      display: block;
+      width: 1.5em;
+      height: 1.5em;
+      margin: 0 0.4em;
+      outline: 0;
+      border-radius: 1em;
+      behavior: url(/sites/all/themes/bsia/_styles/PIE/PIE.php);
+  }
+
+  .bx-wrapper .bx-pager.bx-default-pager a:hover,
+  .bx-wrapper .bx-pager.bx-default-pager a.active {
+      background: #666;
+  }
+
+  #prev a,
+  #next a{
+      position: absolute;
+      top: 30%;
+      font-family: FontAwesome;
+      color: #fbad18;
+      width: 1em;
+      height: 1em;
+      font-size: 2.5em;
+      text-align: center;
+      &:hover{
+        color: #666;
+      }
+  }
+
+  #prev a{
+      left: 0.5em;
+  }
+
+  #next a{
+      right: 0.5em;
+  }
+  #next a:hover, #prev a:hover{
+    text-decoration: none;
+  }
+
+  @media (min-width: $mobile-bp){
+    .box{
+      font-size: 120%;
+    }
+    #prev a,
+    #next a{
+      top: 40%;
+    }
+
+  }
+
+  @media (min-width: $mobile-bp){
+
+    .box{
+      width: 40%;
+      font-size: 140%;
+    }
+
+    .box-top-left{
+      top: 5%;
+      left: 12%;
+    }
+    .box-top-right, .box- {
+    	top: 10%;
+    	left: 55%;
+    }
+
+    .box-bottom-right {
+    	top: 30%;
+    	left: 55%;
+    }
+
+    .box-bottom-left {
+    	top: 30%;
+    	left: 12%;
+    }
+
+    #prev a,
+    #next a{
+      top: 45%;
+    }
+  }
+}
+

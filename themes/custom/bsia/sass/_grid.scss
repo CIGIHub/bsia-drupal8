@@ -1,0 +1,69 @@
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  /* Removes padding behaviour on widths */
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Attribute selector */
+[class*='cols-'] {
+  float: left;
+  padding: 10px;
+  &.no-padding{
+    padding: 0px;
+  }
+}
+
+/* Floats last ".cols-" to the right */
+[class*='cols-']:last-of-type {
+  padding-right: 0.625em;
+  float: right;
+}
+
+.wrapper{
+  margin: 0 auto;
+  max-width: $mobile-bp;
+}
+
+/* Clearfix */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.non-mobile{
+  min-width: $mobile-bp + 1;
+}
+
+.cols-1,
+.cols-2,
+.cols-3,
+.cols-4,
+.cols-5,
+.cols-6{width: 100%;}
+
+.cols-lg-1  {width: 16.67%;}
+.cols-lg-2  {width: 33.33%;}
+.cols-lg-3  {width: 50%;}
+.cols-lg-4  {width: 66.67%;}
+.cols-lg-5  {width: 83.33%;}
+.cols-lg-6  {width: 100%;}
+
+@media (min-width: $mobile-bp){
+
+  .wrapper{
+    min-width: $mobile-bp;
+  }
+
+  .cols-1  {width: 16.67%;}
+  .cols-2  {width: 33.33%;}
+  .cols-3  {width: 50%;}
+  .cols-4  {width: 66.67%;}
+  .cols-5  {width: 83.33%;}
+  .cols-6  {width: 100%;}
+}

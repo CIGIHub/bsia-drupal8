@@ -1,0 +1,267 @@
+body {
+  font-size: 0.8125em;
+  font-family: $sans-serif;
+}
+
+.watermark{
+  background: url(../_images/BSIA-watermark.png) no-repeat center;
+  background-position: top center;
+}
+
+.skiptocontent a{
+	height: 1em;
+  width: 1em;
+  position: absolute;
+  overflow: hidden;
+  top: auto;
+  left: -10000px;
+}
+
+.skiptocontent a:focus{
+	position: static;
+	width: auto;
+	height: auto;
+}
+
+ul {
+	li.expanded, li.collapsed, li.leaf {
+		list-style-type: none;
+		list-style-image: none;
+	}
+}
+
+img{
+  width: 100%;
+  height: auto;
+}
+
+h1, h2, h3{
+  font-weight: normal;
+  line-height: 140%;
+
+}
+h1{
+  font-size: 1.2em;
+  color: #000;
+  padding: 0.4em 0 1.5em 0;
+  border-bottom: solid 1px #d2d2d2;
+  margin: 0 0 1.5em 0;
+}
+
+h2 {
+  font-size: 1.1em; 
+  color:#053b5b;
+}
+
+h3{
+  font-size: 1.0em;
+}
+
+@media(min-width: $mobile-bp){
+  h1, h2, h3{
+    font-size: 130%;
+  }
+}
+
+.strong{
+  font-weight: bold;
+}
+
+.em-light{
+  font-style: italic;
+  color: #7e7f7e;
+}
+
+
+/*******   CONNECT BANNER FOR HOMEPAGE    *******/
+
+.connect-banner{
+  background: url(../_images/connect-banner.png) no-repeat center $brand-secondary-color;
+
+  a{
+    padding: 0.5em;
+    font-size: 2.6em;
+    display: block;
+    color: $link-color;
+  }
+  a:hover{
+    text-decoration: none;
+    color: white;
+  }
+}
+
+@media(min-width: $mobile-bp){
+  background-position: right;
+}
+
+/*******   FOOTER    *******/
+
+footer {
+  @include link;
+  @include horizontal_menu;
+
+  text-transform: uppercase;
+	color: $footer-link-color;
+	font-size: 0.835em;
+  padding: 1.0em 0;
+
+  .contact{    
+    .sharelinks{
+      float: left;
+      font-size: 3em;
+      li{
+        padding: 0.2em 0.5em;
+      }
+    }
+    .footer-menu{
+      margin-top: 1.8em;
+      float: right;
+      ul.links li{
+        padding: 0 0.8em;
+        border-right: solid 1px $footer-link-color;
+        &.last{
+          border: none;
+        }
+        &.first{
+          padding-left: 0px;
+        }
+				a{
+					color: $footer-link-color;
+					&:hover{
+						color: $footer-link-hover-color;
+					}
+				}
+      }
+    }
+  }
+
+  .partners{
+    @include hidden;
+    
+    ul{
+      display: table;
+      margin: auto;
+      li{
+        margin-right: 1em;
+      }
+      li:last{
+        margin-right: 0;
+      }
+    }
+    
+    a.wlu-logo{width:100px; height: 45px; background: url("../images/bsia-partners-2014.png") no-repeat 5%; display: block;}
+    a.cigi-logo{width: 105px; height: 45px; background: url("../images/bsia-partners-2014.png") no-repeat 45%; display: block;}
+    a.uw-logo{width: 145px; height: 45px; background: url("../images/bsia-partners-2014.png") no-repeat 100%; display: block; }
+    a:hover{
+      opacity: 0.6;
+    }
+  }
+  .copyright{
+    display: table;
+    margin: auto;
+  }
+
+  @media(min-width: $mobile-bp){
+    .contact{
+      .sharelinks, .footer-menu{
+        float: none;
+      }
+    }
+    .partners{
+      margin-top: 1em;
+      ul{
+        display: block;
+        margin: 0;
+        float: right;
+      }
+    }
+    .copyright{
+      margin: 0;
+      display: block;
+    }
+  }
+
+}
+
+
+
+
+
+/***********  HOMEPAGE  **************/
+
+.view-homepage{
+  h2{
+    text-transform: uppercase;
+    border-bottom: solid 1px #666;
+		color: #666;
+		margin-top: 0px;
+    a{
+      color: #666;
+      &:hover{
+        color: $link-color;
+        text-decoration: none;
+      }
+    }
+  }
+
+  @include horizontal_menu;
+  .cell{
+    padding: 0em;
+    .views-field-field-event-date-value,
+  	.views-field-field-news-date-value{
+  		font-size: 0.9em;
+  		color: #666;
+  		text-transform: uppercase;
+  	}
+  	.views-field-title{
+  		font-size: 1.1em;
+  		font-weight: bold;
+  		line-height: 130%;
+  		margin-top: 0.4em;
+  	}
+  }
+}
+
+#block-views-homepage-block_2{
+  margin-bottom: 1.5em;
+  .cell{
+    padding: 1em;
+    background: #1a374e;
+    a{
+      color: #fff;
+      &:hover{
+        text-decoration: none;
+        color: #666;
+      }
+    }
+    .views-field-title{
+      font-size: 1.3em;
+      margin-top: 0px;
+			font-weight: normal;
+
+		}
+  }
+}
+
+@media(min-width: $desktop-breakpoint){
+  .view-homepage{
+    h2,
+    .cell .views-field-title,
+    .views-field-field-event-date-value,
+    .views-field-field-news-date-value{
+      font-size: 140%;
+    }
+  }
+  #block-views-homepage-block_2{
+    .cell .views-field-title{
+      font-size: 170%;
+    }
+  }
+
+}
+
+/************ MAIN  ***********/
+
+main {
+    padding-top: 1em;
+}
