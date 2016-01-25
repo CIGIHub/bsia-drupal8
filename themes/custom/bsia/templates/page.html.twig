@@ -45,77 +45,90 @@
  * @ingroup themeable
  */
 #}
-<div class="layout-container">
 
-  <header role="banner">
-    <div class="wrapper">
-      <div class="row">
-        <div class="cols-lg-5 no-padding">
-          <a class="logo" href="{{ front_page }}">Balsillie School of International Affairs</a>
-        </div>
-        <div class="cols-lg-1 no-padding">
-          <div class="main-nav">
-            <i  class="fa fa-list"></i>
-          </div>
-          <div class="search">
-            {{ page.search }}
-
-          </div>
-        </div>
+<header role="banner">
+  <div class="wrapper">
+    <div class="row">
+      <div class="cols-lg-5 no-padding">
+        <a class="logo" href="{{ front_page }}">Balsillie School of International Affairs</a>
       </div>
-    </div>
-  </header>
-  <div id="main-menu" role="navigation">
-    <div class="wrapper">
-      <div class="row">
-        <div class="cols-6">
-          {{ page.main_menu }}
+      <div class="cols-lg-1 no-padding">
+        <div class="main-nav">
+          <i class="fa fa-list"></i>
+        </div>
+        <div class="search">
+          {{ page.search }}
         </div>
       </div>
     </div>
   </div>
+</header>
 
-  {{ page.highlighted }}
-  {{ page.help }}
-
-  <main role="main" class="wrapper">
-    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-
-    <div class="layout-content">
-      {{ page.content }}
-    </div>
-
-    {% if page.right_sidebar %}
-      <aside class="right-sidebar" role="complementary">
-        {{ page.right_sidebar}}
-      </aside>
-    {% endif %}
-
-  </main>
-
-  <footer>
+<div id="main-menu" role="navigation">
+  <div class="wrapper">
     <div class="row">
-      <div class="wrapper">
-        <div class="contact cols-3">
-          <ul class="sharelinks">
-            <li><a href="https://twitter.com/BalsillieSIA"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="https://www.facebook.com/balsillieschool"><i class="fa fa-facebook-square"></i></a></li>
-            <li><a href="https://www.youtube.com/user/BalsillieSchool"><i class="fa fa-youtube"></i></a></li>
-          </ul>
-          <div class="footer-menu">
-            {{ page.footer_menu}}
-          </div>
-        </div>
-        <div class="partners cols-3">
-          <ul>
-            <li><a href="http://www.wlu.ca/" class="wlu-logo">Wilfred Laurier University</a></li>
-            <li><a href="http://www.cigionline.org/" class="cigi-logo">CIGI</a></li>
-            <li class="last"><a href="http://uwaterloo.ca/" class="uw-logo">University of Waterloo</a></li>
-          </ul>
-        </div>
-        <div class="cols-6"><div class="copyright">&copy; <?php print date('Y'); ?> The Balsillie School of International Affairs</div></div>
+      <div class="cols-6">
+        {{ page.main_menu }}
       </div>
     </div>
-  </footer>
-
+  </div>
 </div>
+
+{% if page.highlighted %}
+  {{ page.highlighted }}
+{% endif %}
+
+{% if page.help %}
+  {{ page.help }}
+{% endif %}
+
+<div class="watermark">
+  <main role="main" class="wrapper">
+    <div class="row">
+      {% if page.right_sidebar %}
+        <div class="cols-4">
+      {% else %}
+        <div class="cols-6">
+      {% endif %}
+          <a id="main-content" tabindex="-1"></a>
+          <div id="content">
+            {{ page.content }}
+          </div>
+        </div>
+      {% if page.right_sidebar %}
+        <div class="cols-2">
+          <aside class="right-sidebar" role="complementary">
+            {{ page.right_sidebar }}
+          </aside>
+        </div>
+      {% endif %}
+    </div>
+  </main>
+</div>
+
+<footer>
+  <div class="wrapper">
+    <div class="row">
+      <div class="contact cols-3">
+        <ul class="sharelinks">
+          <li><a href="https://twitter.com/BalsillieSIA"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="https://www.facebook.com/balsillieschool"><i class="fa fa-facebook-square"></i></a></li>
+          <li><a href="https://www.youtube.com/user/BalsillieSchool"><i class="fa fa-youtube"></i></a></li>
+        </ul>
+        <div class="footer-menu">
+          {{ page.footer_menu }}
+        </div>
+      </div>
+      <div class="partners cols-3">
+        <ul>
+          <li><a href="http://www.wlu.ca/" class="wlu-logo">Wilfred Laurier University</a></li>
+          <li><a href="http://www.cigionline.org/" class="cigi-logo">CIGI</a></li>
+          <li class="last"><a href="http://uwaterloo.ca/" class="uw-logo">University of Waterloo</a></li>
+        </ul>
+      </div>
+      <div class="cols-6">
+        <div class="copyright">&copy; <?php print date('Y'); ?> The Balsillie School of International Affairs</div>
+      </div>
+    </div>
+  </div>
+</footer>

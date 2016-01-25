@@ -9,7 +9,7 @@
           box-sizing: border-box;
 }
 
-/* Attribute selector */
+/* Float all columns next to each other */
 [class*='cols-'] {
   float: left;
   padding: 10px;
@@ -26,7 +26,9 @@
 
 .wrapper{
   margin: 0 auto;
-  max-width: $mobile-bp;
+  //max-width: $mobile-bp;
+  max-width: none !important;
+  width: 940px;
 }
 
 /* Clearfix */
@@ -35,17 +37,15 @@
   display: table;
   clear: both;
 }
-
-.non-mobile{
-  min-width: $mobile-bp + 1;
-}
-
+/*
 .cols-1,
 .cols-2,
 .cols-3,
 .cols-4,
 .cols-5,
-.cols-6{width: 100%;}
+.cols-6{
+  width: 100%;
+}
 
 .cols-lg-1  {width: 16.67%;}
 .cols-lg-2  {width: 33.33%;}
@@ -55,10 +55,10 @@
 .cols-lg-6  {width: 100%;}
 
 @media (min-width: $mobile-bp){
-
-  .wrapper{
-    min-width: $mobile-bp;
-  }
+*/
+  //.wrapper{
+  //  min-width: $mobile-bp;
+  //}
 
   .cols-1  {width: 16.67%;}
   .cols-2  {width: 33.33%;}
@@ -66,4 +66,4 @@
   .cols-4  {width: 66.67%;}
   .cols-5  {width: 83.33%;}
   .cols-6  {width: 100%;}
-}
+//}

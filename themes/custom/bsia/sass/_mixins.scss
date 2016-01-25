@@ -50,7 +50,7 @@
 
 @mixin desktop_header{
   a.logo{
-      padding: 3.5em 0 3em 0;
+      padding: 50px 0 50px 0;
       width: 680px;
       background: url('../images/bsia-logo-2015.png') no-repeat left;
   }
@@ -70,24 +70,25 @@
   @include horizontal_menu;
   nav ul {
     margin: 0;
+    padding-top: 6.5px;
     li{
-      font-size: 1.0em;
-      line-height:2.5em;
-      background:url(../images/nav-separator.gif) no-repeat 0 0.846em;
+      font-size: 13px;
+      line-height: 33px;
+      padding: 0 13px;
+
+      background:url(../images/nav-separator.gif) no-repeat 0 13px;
       a {
         color:$nav-link-color;
         padding: 0;
-        &.active{
-          color:$nav-link-active-color;
+        &:hover, &:focus{
+          background: none;
+          border-radius: none;
+          text-decoration: underline;
         }
       }
     }
-
-    li.expanded, li.collapsed, li.leaf {
-      padding:0 1.154em;
-    }
-    li.expanded ul{
-      display:none;
+    li a.is-active  + ul{
+      display: none;
     }
   }
 }

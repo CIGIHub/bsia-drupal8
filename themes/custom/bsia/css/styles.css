@@ -1,5 +1,18 @@
 /* blue */
 /* yellow */
+#block-bsia-local-tasks {
+  margin-bottom: 0.5em; }
+  #block-bsia-local-tasks nav ul li {
+    display: inline-block; }
+    #block-bsia-local-tasks nav ul li a {
+      text-decoration: none;
+      padding: 0.5em 1.5em;
+      color: black;
+      border: solid 1px #999999;
+      display: block; }
+      #block-bsia-local-tasks nav ul li a:hover {
+        background: #999999; }
+
 *,
 *:after,
 *:before {
@@ -10,7 +23,7 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-/* Attribute selector */
+/* Float all columns next to each other */
 [class*='cols-'] {
   float: left;
   padding: 10px; }
@@ -24,7 +37,8 @@
 
 .wrapper {
   margin: 0 auto;
-  max-width: 940px; }
+  max-width: none !important;
+  width: 940px; }
 
 /* Clearfix */
 .row:after {
@@ -32,62 +46,49 @@
   display: table;
   clear: both; }
 
-.non-mobile {
-  min-width: 941px; }
-
+/*
 .cols-1,
 .cols-2,
 .cols-3,
 .cols-4,
 .cols-5,
+.cols-6{
+  width: 100%;
+}
+
+.cols-lg-1  {width: 16.67%;}
+.cols-lg-2  {width: 33.33%;}
+.cols-lg-3  {width: 50%;}
+.cols-lg-4  {width: 66.67%;}
+.cols-lg-5  {width: 83.33%;}
+.cols-lg-6  {width: 100%;}
+
+@media (min-width: $mobile-bp){
+*/
+.cols-1 {
+  width: 16.67%; }
+
+.cols-2 {
+  width: 33.33%; }
+
+.cols-3 {
+  width: 50%; }
+
+.cols-4 {
+  width: 66.67%; }
+
+.cols-5 {
+  width: 83.33%; }
+
 .cols-6 {
   width: 100%; }
 
-.cols-lg-1 {
-  width: 16.67%; }
-
-.cols-lg-2 {
-  width: 33.33%; }
-
-.cols-lg-3 {
-  width: 50%; }
-
-.cols-lg-4 {
-  width: 66.67%; }
-
-.cols-lg-5 {
-  width: 83.33%; }
-
-.cols-lg-6 {
-  width: 100%; }
-
-@media (min-width: 940px) {
-  .wrapper {
-    min-width: 940px; }
-
-  .cols-1 {
-    width: 16.67%; }
-
-  .cols-2 {
-    width: 33.33%; }
-
-  .cols-3 {
-    width: 50%; }
-
-  .cols-4 {
-    width: 66.67%; }
-
-  .cols-5 {
-    width: 83.33%; }
-
-  .cols-6 {
-    width: 100%; } }
 body {
-  font-size: 0.8125em;
+  font-size: 14px;
   font-family: Arial, Helvetica, sans-serif; }
 
 .watermark {
-  background: url(../_images/BSIA-watermark.png) no-repeat center;
+  background: url(../images/BSIA-watermark.png) no-repeat center;
   background-position: top center; }
 
 .skiptocontent a {
@@ -103,10 +104,6 @@ body {
   width: auto;
   height: auto; }
 
-ul li.expanded, ul li.collapsed, ul li.leaf {
-  list-style-type: none;
-  list-style-image: none; }
-
 img {
   width: 100%;
   height: auto; }
@@ -116,28 +113,37 @@ h1, h2, h3 {
   line-height: 140%; }
 
 h1 {
-  font-size: 1.2em;
+  font-size: 2.0em;
   color: #000;
-  padding: 0.4em 0 1.5em 0;
+  padding: 0.4em 0 0.6em 0;
   border-bottom: solid 1px #d2d2d2;
-  margin: 0 0 1.5em 0; }
+  margin: 0 0 0.6em 0; }
 
 h2 {
-  font-size: 1.1em;
+  font-size: 1.6em;
   color: #053b5b; }
 
 h3 {
-  font-size: 1.0em; }
+  font-size: 1.3em; }
 
-@media (min-width: 940px) {
-  h1, h2, h3 {
-    font-size: 130%; } }
+a {
+  text-decoration: none;
+  color: #1A374E; }
+
 .strong {
   font-weight: bold; }
 
 .em-light {
   font-style: italic;
   color: #7e7f7e; }
+
+article {
+  line-height: 130%; }
+  article ul {
+    margin: 15px;
+    padding-left: 15px; }
+  article p {
+    margin-bottom: 15px; }
 
 /*******   CONNECT BANNER FOR HOMEPAGE    *******/
 .connect-banner {
@@ -153,90 +159,6 @@ h3 {
 
 @media (min-width: 940px) {
   background-position: right; }
-/*******   FOOTER    *******/
-footer {
-  text-transform: uppercase;
-  color: #666;
-  font-size: 0.835em;
-  padding: 1.0em 0; }
-  footer a {
-    color: #1A374E; }
-    footer a:hover {
-      color: #58595B; }
-  footer ul {
-    list-style: none;
-    padding: 0px; }
-    footer ul li {
-      list-style-image: none;
-      float: left; }
-      footer ul li.expanded, footer ul li.collapsed, footer ul li.leaf {
-        list-style-image: none;
-        list-style-type: none; }
-    footer ul:after {
-      content: '';
-      display: block;
-      clear: both; }
-  footer .contact .sharelinks {
-    float: left;
-    font-size: 3em; }
-    footer .contact .sharelinks li {
-      padding: 0.2em 0.5em; }
-  footer .contact .footer-menu {
-    margin-top: 1.8em;
-    float: right; }
-    footer .contact .footer-menu ul.links li {
-      padding: 0 0.8em;
-      border-right: solid 1px #666; }
-      footer .contact .footer-menu ul.links li.last {
-        border: none; }
-      footer .contact .footer-menu ul.links li.first {
-        padding-left: 0px; }
-      footer .contact .footer-menu ul.links li a {
-        color: #666; }
-        footer .contact .footer-menu ul.links li a:hover {
-          color: #1A374E; }
-  footer .partners {
-    text-indent: -9999px; }
-    footer .partners ul {
-      display: table;
-      margin: auto; }
-      footer .partners ul li {
-        margin-right: 1em; }
-      footer .partners ul li:last {
-        margin-right: 0; }
-    footer .partners a.wlu-logo {
-      width: 100px;
-      height: 45px;
-      background: url("../images/bsia-partners-2014.png") no-repeat 5%;
-      display: block; }
-    footer .partners a.cigi-logo {
-      width: 105px;
-      height: 45px;
-      background: url("../images/bsia-partners-2014.png") no-repeat 45%;
-      display: block; }
-    footer .partners a.uw-logo {
-      width: 145px;
-      height: 45px;
-      background: url("../images/bsia-partners-2014.png") no-repeat 100%;
-      display: block; }
-    footer .partners a:hover {
-      opacity: 0.6; }
-  footer .copyright {
-    display: table;
-    margin: auto; }
-  @media (min-width: 940px) {
-    footer .contact .sharelinks, footer .contact .footer-menu {
-      float: none; }
-    footer .partners {
-      margin-top: 1em; }
-      footer .partners ul {
-        display: block;
-        margin: 0;
-        float: right; }
-    footer .copyright {
-      margin: 0;
-      display: block; } }
-
 /***********  HOMEPAGE  **************/
 .view-homepage h2 {
   text-transform: uppercase;
@@ -308,22 +230,20 @@ header {
   header a.logo {
     display: block;
     text-indent: -9999px;
-    padding: 2.5em 0;
     background: url("../images/bsia-logo-2015.png") no-repeat 10px;
     width: 300px;
     background-size: 175% auto; }
   header .search {
     display: none; }
   header .main-nav {
-    font-size: 2em;
-    margin: 1.0em 0;
+    font-size: 130%;
     color: #1A374E;
     text-align: center; }
     header .main-nav:hover {
       cursor: pointer; }
   @media (min-width: 940px) {
     header a.logo {
-      padding: 3.5em 0 3em 0;
+      padding: 50px 0 50px 0;
       width: 680px;
       background: url("../images/bsia-logo-2015.png") no-repeat left; } }
 @media (min-width: 940px) and (min--moz-device-pixel-ratio: 1.3), (min-width: 940px) and (-o-min-device-pixel-ratio: 2.6 / 2), (min-width: 940px) and (-webkit-min-device-pixel-ratio: 1.3), (min-width: 940px) and (min-device-pixel-ratio: 1.3), (min-width: 940px) and (min-resolution: 1.3dppx) {
@@ -336,7 +256,7 @@ header {
       display: block;
       text-align: right; } }
   .non-mobile header a.logo {
-    padding: 3.5em 0 3em 0;
+    padding: 50px 0 50px 0;
     width: 680px;
     background: url("../images/bsia-logo-2015.png") no-repeat left; }
   @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
@@ -386,19 +306,21 @@ header {
           display: block;
           clear: both; }
       #main-menu nav ul {
-        margin: 0; }
+        margin: 0;
+        padding-top: 6.5px; }
         #main-menu nav ul li {
-          font-size: 1.0em;
-          line-height: 2.5em;
-          background: url(../images/nav-separator.gif) no-repeat 0 0.846em; }
+          font-size: 13px;
+          line-height: 33px;
+          padding: 0 13px;
+          background: url(../images/nav-separator.gif) no-repeat 0 13px; }
           #main-menu nav ul li a {
             color: #ffffff;
             padding: 0; }
-            #main-menu nav ul li a.active {
-              color: #cccccc; }
-        #main-menu nav ul li.expanded, #main-menu nav ul li.collapsed, #main-menu nav ul li.leaf {
-          padding: 0 1.154em; }
-        #main-menu nav ul li.expanded ul {
+            #main-menu nav ul li a:hover, #main-menu nav ul li a:focus {
+              background: none;
+              border-radius: none;
+              text-decoration: underline; }
+        #main-menu nav ul li a.is-active + ul {
           display: none; } }
   .non-mobile #main-menu {
     background: #19374f;
@@ -417,19 +339,21 @@ header {
         display: block;
         clear: both; }
     .non-mobile #main-menu nav ul {
-      margin: 0; }
+      margin: 0;
+      padding-top: 6.5px; }
       .non-mobile #main-menu nav ul li {
-        font-size: 1.0em;
-        line-height: 2.5em;
-        background: url(../images/nav-separator.gif) no-repeat 0 0.846em; }
+        font-size: 13px;
+        line-height: 33px;
+        padding: 0 13px;
+        background: url(../images/nav-separator.gif) no-repeat 0 13px; }
         .non-mobile #main-menu nav ul li a {
           color: #ffffff;
           padding: 0; }
-          .non-mobile #main-menu nav ul li a.active {
-            color: #cccccc; }
-      .non-mobile #main-menu nav ul li.expanded, .non-mobile #main-menu nav ul li.collapsed, .non-mobile #main-menu nav ul li.leaf {
-        padding: 0 1.154em; }
-      .non-mobile #main-menu nav ul li.expanded ul {
+          .non-mobile #main-menu nav ul li a:hover, .non-mobile #main-menu nav ul li a:focus {
+            background: none;
+            border-radius: none;
+            text-decoration: underline; }
+      .non-mobile #main-menu nav ul li a.is-active + ul {
         display: none; }
 
 /*******  SEARCH Block   *******/
@@ -439,11 +363,12 @@ header {
   .search .form-item,
   .search .form-submit {
     float: left; }
-  .search #search-block-form input[type=search] {
+  .search #search-block-form input[type="search"] {
+    -webkit-appearance: textfield;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.0em;
     color: #999;
     text-transform: uppercase;
+    font-size: 13px;
     border: solid 1px #999;
     border-radius: 5px;
     float: left;
@@ -453,10 +378,83 @@ header {
     border: none;
     background-color: none;
     background-image: url("../images/search-icon.png");
-    margin-left: -25px;
+    margin-left: -20px;
     margin-top: 7px;
     height: 15px;
     width: 15px; }
+
+/*******   FOOTER    *******/
+footer {
+  text-transform: uppercase;
+  color: #666;
+  padding: 15px 0;
+  font-size: 12px; }
+  footer a {
+    color: #1A374E; }
+    footer a:hover {
+      color: #58595B; }
+  footer ul {
+    list-style: none;
+    padding: 0px; }
+    footer ul li {
+      list-style-image: none;
+      float: left; }
+      footer ul li.expanded, footer ul li.collapsed, footer ul li.leaf {
+        list-style-image: none;
+        list-style-type: none; }
+    footer ul:after {
+      content: '';
+      display: block;
+      clear: both; }
+  footer .contact .sharelinks {
+    font-size: 32px; }
+    footer .contact .sharelinks li {
+      padding-right: 25px; }
+  footer .contact nav {
+    margin-top: 22px; }
+    footer .contact nav a {
+      color: #666;
+      text-decoration: none; }
+      footer .contact nav a:hover, footer .contact nav a:focus {
+        color: #1A374E;
+        text-decoration: underline; }
+    footer .contact nav ul li {
+      padding: 0 5px;
+      border-right: solid 1px #666; }
+      footer .contact nav ul li.last {
+        border: none; }
+      footer .contact nav ul li.first {
+        padding-left: 0px; }
+  footer .partners {
+    text-indent: -9999px; }
+    footer .partners ul {
+      display: block;
+      margin: 0; }
+      footer .partners ul li {
+        margin-right: 15px;
+        float: right; }
+      footer .partners ul li:last {
+        margin-right: 0; }
+    footer .partners a.wlu-logo {
+      width: 100px;
+      height: 45px;
+      background: url("../images/bsia-partners-2014.png") no-repeat 5%;
+      display: block; }
+    footer .partners a.cigi-logo {
+      width: 105px;
+      height: 45px;
+      background: url("../images/bsia-partners-2014.png") no-repeat 45%;
+      display: block; }
+    footer .partners a.uw-logo {
+      width: 145px;
+      height: 45px;
+      background: url("../images/bsia-partners-2014.png") no-repeat 100%;
+      display: block; }
+    footer .partners a:hover {
+      opacity: 0.6; }
+  footer .copyright {
+    display: block;
+    margin: 0; }
 
 /******  Gallery  ******/
 #gallery {

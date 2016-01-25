@@ -1,0 +1,19 @@
+#block-bsia-local-tasks{
+  margin-bottom: 0.5em;
+  
+	nav ul li{
+		display: inline-block;
+  
+		a{
+			text-decoration: none;
+      padding: 0.5em 1.5em;
+      color: black;
+      border: solid 1px $system-button-bg-color;
+      display: block;
+      
+      &:hover{
+        background: $system-button-bg-color;
+      }
+		}
+	}
+}

@@ -1,0 +1,104 @@
+/*******   FOOTER    *******/
+
+footer {
+  @include link;
+  @include horizontal_menu;
+
+  text-transform: uppercase;
+  color: $footer-link-color;
+  padding: 15px 0;
+  font-size: 12px;
+
+  .contact{
+    .sharelinks{
+      font-size: 32px;
+      li{
+        padding-right: 25px;
+      }
+    }
+    nav{
+      margin-top: 22px;
+      a{
+        color: $footer-link-color; 
+        text-decoration: none;
+        &:hover,
+        &:focus{
+          color: $footer-link-hover-color;
+          text-decoration: underline;
+        }
+      }
+      ul li{
+        padding: 0 5px;
+        border-right: solid 1px $footer-link-color;
+        &.last{
+          border: none;
+        }
+        &.first{
+          padding-left: 0px;
+        }
+      }
+    }
+  }
+
+  .partners{
+    @include hidden;
+
+    ul{
+      display: block;
+      margin: 0;
+    
+      li{
+        margin-right: 15px;
+        float: right;
+      }
+      li:last{
+        margin-right: 0;
+      }
+    }
+
+    a.wlu-logo{width:100px; height: 45px; background: url("../images/bsia-partners-2014.png") no-repeat 5%; display: block;}
+    a.cigi-logo{width: 105px; height: 45px; background: url("../images/bsia-partners-2014.png") no-repeat 45%; display: block;}
+    a.uw-logo{width: 145px; height: 45px; background: url("../images/bsia-partners-2014.png") no-repeat 100%; display: block; }
+    a:hover{
+      opacity: 0.6;
+    }
+  }
+  .copyright{
+    display: block;
+    margin: 0;
+  }
+
+  //@media(max-width: $mobile-bp ){
+  //  background: green;
+  //  .contact{
+  //    .sharelinks, nav{
+  //      float: none;
+  //    }
+  //    nav{
+  //      a{
+  //        color: $footer-link-color;
+  //        text-decoration: none;
+  //        margin-right: 1em;
+  //        &:hover,
+  //        &:focus{
+  //          color: $footer-link-hover-color;
+  //          text-decoration: underline;
+  //        }
+  //      }
+  //    }
+  //  }
+  //  .partners{
+  //    margin-top: 1em;
+  //    ul{
+  //      display: block;
+  //      margin: 0;
+  //      float: right;
+  //    }
+  //  }
+  //  .copyright{
+  //    margin: 0;
+  //    display: block;
+  //  }
+  //}
+
+}

@@ -1,15 +1,15 @@
 body {
-  font-size: 0.8125em;
+  font-size: 14px;
   font-family: $sans-serif;
 }
 
 .watermark{
-  background: url(../_images/BSIA-watermark.png) no-repeat center;
+  background: url(../images/BSIA-watermark.png) no-repeat center;
   background-position: top center;
 }
 
 .skiptocontent a{
-	height: 1em;
+  height: 1em;
   width: 1em;
   position: absolute;
   overflow: hidden;
@@ -23,13 +23,6 @@ body {
 	height: auto;
 }
 
-ul {
-	li.expanded, li.collapsed, li.leaf {
-		list-style-type: none;
-		list-style-image: none;
-	}
-}
-
 img{
   width: 100%;
   height: auto;
@@ -38,30 +31,30 @@ img{
 h1, h2, h3{
   font-weight: normal;
   line-height: 140%;
-
 }
+
 h1{
-  font-size: 1.2em;
+  font-size: 2.0em;
   color: #000;
-  padding: 0.4em 0 1.5em 0;
+  padding: 0.4em 0 0.6em 0;
   border-bottom: solid 1px #d2d2d2;
-  margin: 0 0 1.5em 0;
+  margin: 0 0 0.6em 0;
 }
 
 h2 {
-  font-size: 1.1em; 
+  font-size: 1.6em; 
   color:#053b5b;
 }
 
 h3{
-  font-size: 1.0em;
+  font-size: 1.3em;
 }
 
-@media(min-width: $mobile-bp){
-  h1, h2, h3{
-    font-size: 130%;
-  }
+a{
+  text-decoration: none;
+  color: $link-color;
 }
+
 
 .strong{
   font-weight: bold;
@@ -71,6 +64,20 @@ h3{
   font-style: italic;
   color: #7e7f7e;
 }
+
+
+article{
+  line-height: 130%;
+  ul{
+    margin: 15px;
+    padding-left: 15px;
+  }
+  p{
+    margin-bottom: 15px;
+    
+  }
+}
+
 
 
 /*******   CONNECT BANNER FOR HOMEPAGE    *******/
@@ -93,99 +100,6 @@ h3{
 @media(min-width: $mobile-bp){
   background-position: right;
 }
-
-/*******   FOOTER    *******/
-
-footer {
-  @include link;
-  @include horizontal_menu;
-
-  text-transform: uppercase;
-	color: $footer-link-color;
-	font-size: 0.835em;
-  padding: 1.0em 0;
-
-  .contact{    
-    .sharelinks{
-      float: left;
-      font-size: 3em;
-      li{
-        padding: 0.2em 0.5em;
-      }
-    }
-    .footer-menu{
-      margin-top: 1.8em;
-      float: right;
-      ul.links li{
-        padding: 0 0.8em;
-        border-right: solid 1px $footer-link-color;
-        &.last{
-          border: none;
-        }
-        &.first{
-          padding-left: 0px;
-        }
-				a{
-					color: $footer-link-color;
-					&:hover{
-						color: $footer-link-hover-color;
-					}
-				}
-      }
-    }
-  }
-
-  .partners{
-    @include hidden;
-    
-    ul{
-      display: table;
-      margin: auto;
-      li{
-        margin-right: 1em;
-      }
-      li:last{
-        margin-right: 0;
-      }
-    }
-    
-    a.wlu-logo{width:100px; height: 45px; background: url("../images/bsia-partners-2014.png") no-repeat 5%; display: block;}
-    a.cigi-logo{width: 105px; height: 45px; background: url("../images/bsia-partners-2014.png") no-repeat 45%; display: block;}
-    a.uw-logo{width: 145px; height: 45px; background: url("../images/bsia-partners-2014.png") no-repeat 100%; display: block; }
-    a:hover{
-      opacity: 0.6;
-    }
-  }
-  .copyright{
-    display: table;
-    margin: auto;
-  }
-
-  @media(min-width: $mobile-bp){
-    .contact{
-      .sharelinks, .footer-menu{
-        float: none;
-      }
-    }
-    .partners{
-      margin-top: 1em;
-      ul{
-        display: block;
-        margin: 0;
-        float: right;
-      }
-    }
-    .copyright{
-      margin: 0;
-      display: block;
-    }
-  }
-
-}
-
-
-
-
 
 /***********  HOMEPAGE  **************/
 

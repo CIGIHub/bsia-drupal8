@@ -23,4 +23,6 @@ regions:
   right_sidebar: 'Right Sidebar'
   content: 'Content'
   footer_menu: 'Footer Menu'
+  help: 'system help'
+  highlight: 'system messages'
 
