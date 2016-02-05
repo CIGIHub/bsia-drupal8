@@ -1,0 +1,168 @@
+{#
+/**
+  Person Node Content Type
+  Based on node.html.twig
+  A custom page template for students, graduates, faculty and staff support nodes and basic lists of people.
+ */
+#}
+
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+
+
+{% set student = false %}
+{% set graduate = false %}
+{% set faculty = false %}
+
+{% for item in content.person_type['#items'].getValue() %}
+  {% if item.target_id == '5' %}
+    {% set student = true %}
+  {% endif %}
+  {% if item.target_id == '42' %}
+    {% set graduate = true %}
+  {% endif %}
+  {% if item.target_id == '2' %}
+    {% set faculty = true %}
+  {% endif %}
+{% endfor %}
+
+{% set program_page = '' %}
+{% for item in content.program_type['#items'].getValue() %}
+  {% if item.target_id == '6' %}
+    {% set program_page = '/degree-programs/joint-university-phd-in-global-governance' %}
+  {% endif %}
+  {% if item.target_id == '7' %}
+    {% set program_page = '/degree-programs/masters-of-arts-in-international-public-policy' %}
+  {% endif %}
+  {% if item.target_id == '8' %}
+    {% set program_page = '/degree-programs/master-arts-global-governance' %}
+  {% endif %}
+{% endfor %} 
+
+<article{{ attributes.addClass(classes) }}>
+  {% if not page %}
+    <h2><a href="{{ url }}" rel="bookmark">{{ label }}</a></h2>
+  {% else %}
+  
+  {% if graduate %}
+    <div class="notice-box">To see more graduate profiles <a href="/graduates">click here</a>.</div>
+  {% endif %}
+
+  <div class="row">
+    <div class="profile">
+      {% if content.field_square_image %}
+        <div class="image">{{ content.field_square_image }}</div>
+      {% endif %}
+
+      <div class="contact">
+        {% if student or graduate %}
+          <div class="field-group">
+            {% if content.program_type|render %}
+              {{ content.program_type }}
+            {% endif %}
+            {% if graduate %}
+              {% if content.field_year_graduated %}
+                {{ content.field_year_graduated }}
+              {% endif %}
+            {% endif %}
+          </div>
+          <div class="field-group">
+            {% if content.field_graduate_title %}
+              {{ content.field_graduate_title }}
+            {% endif %}
+          </div>
+           
+        {% else %}
+          <div class="field-group">
+            {% if content.field_person_position %}
+              {{ content.field_person_position }}
+            {% endif %}
+            {% if content.field_department %}
+              {{ content.field_department }}
+            {% endif %}
+          </div>
+        {% endif %}
+        
+        {% if not graduate %}
+          <div class="field-group">
+            {% if content.field_office_location %}
+              {{ content.field_office_location }}
+            {% endif %}
+            {% if content.field_phone %}
+              {{ content.field_phone }}
+            {% endif %}
+            {% if content.field_email %}
+              {{ content.field_email }}
+            {% endif %}  
+          </div>
+        {% endif %}
+
+        <div class="digital-contact field-group">
+          {% if content.field_website %}
+            {{ content.field_website }}
+          {% endif %}
+          {% if content.field_twitter_url or content.field_linkedin_url %}
+            <div class="social">
+              {% if content.field_twitter_url %}
+                {{ content.field_twitter_url }}
+              {% endif %}
+              {% if content.field_linkedin_url %}
+                {{ content.field_linkedin_url }}
+              {% endif %}
+            </div>
+          {% endif %}
+        </div>
+
+        {% if content.field_languages %}
+          {{ content.field_languages }}
+        {% endif %}
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="cols-6">
+      <div class="body">
+        {{ content.body }}
+      </div>
+
+      {% if graduate and content.field_youtube_id %}
+        {{ content.field_youtube_id }}
+
+        <iframe class="video-border" width="620" height="348" src="https://www.youtube.com/embed/{{ content.field_youtube_id }}" frameborder="0" allowfullscreen></iframe>
+
+      {% endif %}
+
+      {% if content.field_publications %}
+        {{ content.field_publications }}
+      {% endif %}
+
+      {% if content.field_testimonial %}
+        {{ content.field_testimonial }}
+      {% endif %}
+
+      {% if content.field_awards %}
+        {{ content.field_awards }}
+      {% endif %}
+
+      {% if content.topics %}
+        <div class="topics">
+          {{ content.topics }}
+        </div>
+      {% endif %}
+
+
+    </div>
+  </div>
+{% endif %}
+
+</article>

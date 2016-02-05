@@ -1,5 +1,6 @@
 name: BSIA
 type: theme
+base theme: classy
 description: 'A custom theme for the Balsillieschool.ca adapted from original Drupal 6 theme.</a>.'
 package: Custom
 version: 1.0
@@ -19,10 +20,11 @@ regions:
   search: 'Search'
   main_menu: 'Main Menu'
   feature: 'Feature Area'
+  content_header: 'Content Header'
   right_menu: 'Right Menu'
   right_sidebar: 'Right Sidebar'
   content: 'Content'
   footer_menu: 'Footer Menu'
-  help: 'system help'
-  highlight: 'system messages'
+  help: 'Help'
+  highlight: 'Highlight'
 

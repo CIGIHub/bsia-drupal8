@@ -1,0 +1,62 @@
+{#
+/**
+  Event Node Content Type
+  Based on node.html.twig
+  A custom page template for events.
+ */
+#}
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+
+<article{{ attributes.addClass(classes) }}>
+
+  {% if not page %}
+    <h2><a href="{{ url }}" rel="bookmark">{{ label }}</a></h2>
+  {% endif %}
+  <div{{ content_attributes }}>
+
+    {{ content.nid }}
+    {{ content.field_event_date }}
+    {{ content.field_event_end_date }}
+    {{ content.field_address_1 }}
+    {{ content.field_city }}
+    {{ content.field_state_province }}
+    {{ content.field_country }}
+    {{ content.field_email_subject }}
+    {{ content.field_invitation }}
+    {{ content.field_rsvp }}
+    {{ content.field_event_management }}
+    {{ content.field_image }}
+    {{ content.field_event_summary }}
+    {{ content.field_website }}
+    {{ content.field_event_vidoes }}
+    {{ content.field_event_flickr_id }}
+    {{ content.field_event_type }}
+    {{ content.field_event_series }}
+
+    {{ content.body }}
+
+
+
+  </div>
+
+</article>

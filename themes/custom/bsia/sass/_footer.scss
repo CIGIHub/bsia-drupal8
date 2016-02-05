@@ -40,6 +40,10 @@ footer {
     }
   }
 
+  .region-footer-menu ul.menu{
+    margin: 0px;
+  }
+
   .partners{
     @include hidden;
 

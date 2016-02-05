@@ -8,10 +8,10 @@
       text-decoration: none;
       padding: 0.5em 1.5em;
       color: black;
-      border: solid 1px #999999;
+      border: solid 1px #999;
       display: block; }
       #block-bsia-local-tasks nav ul li a:hover {
-        background: #999999; }
+        background: #999; }
 
 *,
 *:after,
@@ -104,10 +104,6 @@ body {
   width: auto;
   height: auto; }
 
-img {
-  width: 100%;
-  height: auto; }
-
 h1, h2, h3 {
   font-weight: normal;
   line-height: 140%; }
@@ -121,7 +117,8 @@ h1 {
 
 h2 {
   font-size: 1.6em;
-  color: #053b5b; }
+  color: #053b5b;
+  margin: 0 0 0.4em 0; }
 
 h3 {
   font-size: 1.3em; }
@@ -130,6 +127,10 @@ a {
   text-decoration: none;
   color: #1A374E; }
 
+a[href$=".pdf"]:after {
+  font-family: FontAwesome;
+  content: ' \f1c1'; }
+
 .strong {
   font-weight: bold; }
 
@@ -137,92 +138,82 @@ a {
   font-style: italic;
   color: #7e7f7e; }
 
+/************ MAIN  ***********/
 article {
   line-height: 130%; }
-  article ul {
+  article ul, article ol {
     margin: 15px;
     padding-left: 15px; }
   article p {
     margin-bottom: 15px; }
 
-/*******   CONNECT BANNER FOR HOMEPAGE    *******/
-.connect-banner {
-  background: url(../_images/connect-banner.png) no-repeat center #fed130; }
-  .connect-banner a {
-    padding: 0.5em;
-    font-size: 2.6em;
-    display: block;
-    color: #1A374E; }
-  .connect-banner a:hover {
-    text-decoration: none;
-    color: white; }
-
-@media (min-width: 940px) {
-  background-position: right; }
-/***********  HOMEPAGE  **************/
-.view-homepage h2 {
-  text-transform: uppercase;
-  border-bottom: solid 1px #666;
-  color: #666;
-  margin-top: 0px; }
-  .view-homepage h2 a {
-    color: #666; }
-    .view-homepage h2 a:hover {
-      color: #1A374E;
-      text-decoration: none; }
-.view-homepage ul {
-  list-style: none;
-  padding: 0px; }
-  .view-homepage ul li {
-    list-style-image: none;
-    float: left; }
-    .view-homepage ul li.expanded, .view-homepage ul li.collapsed, .view-homepage ul li.leaf {
-      list-style-image: none;
-      list-style-type: none; }
-  .view-homepage ul:after {
-    content: '';
-    display: block;
-    clear: both; }
-.view-homepage .cell {
-  padding: 0em; }
-  .view-homepage .cell .views-field-field-event-date-value,
-  .view-homepage .cell .views-field-field-news-date-value {
-    font-size: 0.9em;
-    color: #666;
-    text-transform: uppercase; }
-  .view-homepage .cell .views-field-title {
-    font-size: 1.1em;
-    font-weight: bold;
-    line-height: 130%;
-    margin-top: 0.4em; }
-
-#block-views-homepage-block_2 {
-  margin-bottom: 1.5em; }
-  #block-views-homepage-block_2 .cell {
-    padding: 1em;
-    background: #1a374e; }
-    #block-views-homepage-block_2 .cell a {
-      color: #fff; }
-      #block-views-homepage-block_2 .cell a:hover {
-        text-decoration: none;
-        color: #666; }
-    #block-views-homepage-block_2 .cell .views-field-title {
-      font-size: 1.3em;
-      margin-top: 0px;
-      font-weight: normal; }
-
-@media (min-width: 992px) {
-  .view-homepage h2,
-  .view-homepage .cell .views-field-title,
-  .view-homepage .views-field-field-event-date-value,
-  .view-homepage .views-field-field-news-date-value {
-    font-size: 140%; }
-
-  #block-views-homepage-block_2 .cell .views-field-title {
-    font-size: 170%; } }
-/************ MAIN  ***********/
 main {
   padding-top: 1em; }
+
+.image {
+  margin-bottom: 10px; }
+
+.caption {
+  background: #d2d2d2;
+  opacity: 0.6;
+  color: black;
+  margin-top: -22px;
+  float: right;
+  font-size: 11px;
+  padding: 0 5px; }
+
+ul.inline, ol.inline {
+  margin: 0px; }
+  ul.inline li, ol.inline li {
+    padding: 0 0.2em; }
+
+.field__label {
+  font-weight: normal; }
+
+ol.field--ordered-list-style-lower {
+  list-style-type: lower-roman;
+  color: #053b5b; }
+  ol.field--ordered-list-style-lower .list-item {
+    color: #808080; }
+
+.field-group {
+  margin-bottom: 10px; }
+
+.field--name-topics {
+  text-transform: uppercase;
+  font-size: 11px; }
+  .field--name-topics a:hover {
+    text-decoration: underline; }
+
+.field--name-upload h3 {
+  margin-bottom: 10px; }
+.field--name-upload span:before {
+  font-family: FontAwesome;
+  content: '\f019 - '; }
+
+/*****  Person  *****/
+.node--type-person .profile {
+  display: table;
+  width: 100%; }
+  .node--type-person .profile .image, .node--type-person .profile .contact {
+    display: table-cell; }
+  .node--type-person .profile .image {
+    width: 30%; }
+    .node--type-person .profile .image img {
+      border: solid 10px #ddd; }
+  .node--type-person .profile .contact {
+    vertical-align: middle;
+    width: 70%;
+    text-transform: uppercase; }
+.node--type-person .field--name-field-graduate-title {
+  font-weight: bold; }
+.node--type-person .field--name-program-type, .node--type-person .field--name-field-year-graduated {
+  display: inline-block;
+  vertical-align: bottom; }
+.node--type-person .field--name-program-type .field__items {
+  padding-right: 0; }
+.node--type-person .field--name-program-type .field__item:after {
+  content: ","; }
 
 /*****  HEADER   ******/
 header {
@@ -296,6 +287,7 @@ header {
         list-style: none;
         padding: 0px; }
         #main-menu ul li {
+          list-style: none;
           list-style-image: none;
           float: left; }
           #main-menu ul li.expanded, #main-menu ul li.collapsed, #main-menu ul li.leaf {
@@ -329,6 +321,7 @@ header {
       list-style: none;
       padding: 0px; }
       .non-mobile #main-menu ul li {
+        list-style: none;
         list-style-image: none;
         float: left; }
         .non-mobile #main-menu ul li.expanded, .non-mobile #main-menu ul li.collapsed, .non-mobile #main-menu ul li.leaf {
@@ -397,6 +390,7 @@ footer {
     list-style: none;
     padding: 0px; }
     footer ul li {
+      list-style: none;
       list-style-image: none;
       float: left; }
       footer ul li.expanded, footer ul li.collapsed, footer ul li.leaf {
@@ -425,6 +419,8 @@ footer {
         border: none; }
       footer .contact nav ul li.first {
         padding-left: 0px; }
+  footer .region-footer-menu ul.menu {
+    margin: 0px; }
   footer .partners {
     text-indent: -9999px; }
     footer .partners ul {
@@ -456,6 +452,82 @@ footer {
     display: block;
     margin: 0; }
 
+/*******   CONNECT BANNER FOR HOMEPAGE    *******/
+.connect-banner {
+  background: url(../_images/connect-banner.png) no-repeat center #fed130; }
+  .connect-banner a {
+    padding: 0.5em;
+    font-size: 2.6em;
+    display: block;
+    color: #1A374E; }
+  .connect-banner a:hover {
+    text-decoration: none;
+    color: white; }
+
+@media (min-width: 940px) {
+  background-position: right; }
+/***********  HOMEPAGE  **************/
+.view-homepage h2 {
+  text-transform: uppercase;
+  border-bottom: solid 1px #666;
+  color: #666;
+  margin-top: 0px; }
+  .view-homepage h2 a {
+    color: #666; }
+    .view-homepage h2 a:hover {
+      color: #1A374E;
+      text-decoration: none; }
+.view-homepage ul {
+  list-style: none;
+  padding: 0px; }
+  .view-homepage ul li {
+    list-style: none;
+    list-style-image: none;
+    float: left; }
+    .view-homepage ul li.expanded, .view-homepage ul li.collapsed, .view-homepage ul li.leaf {
+      list-style-image: none;
+      list-style-type: none; }
+  .view-homepage ul:after {
+    content: '';
+    display: block;
+    clear: both; }
+.view-homepage .cell {
+  padding: 0em; }
+  .view-homepage .cell .views-field-field-event-date-value,
+  .view-homepage .cell .views-field-field-news-date-value {
+    font-size: 0.9em;
+    color: #666;
+    text-transform: uppercase; }
+  .view-homepage .cell .views-field-title {
+    font-size: 1.1em;
+    font-weight: bold;
+    line-height: 130%;
+    margin-top: 0.4em; }
+
+#block-views-homepage-block_2 {
+  margin-bottom: 1.5em; }
+  #block-views-homepage-block_2 .cell {
+    padding: 1em;
+    background: #1a374e; }
+    #block-views-homepage-block_2 .cell a {
+      color: #fff; }
+      #block-views-homepage-block_2 .cell a:hover {
+        text-decoration: none;
+        color: #666; }
+    #block-views-homepage-block_2 .cell .views-field-title {
+      font-size: 1.3em;
+      margin-top: 0px;
+      font-weight: normal; }
+
+@media (min-width: 992px) {
+  .view-homepage h2,
+  .view-homepage .cell .views-field-title,
+  .view-homepage .views-field-field-event-date-value,
+  .view-homepage .views-field-field-news-date-value {
+    font-size: 140%; }
+
+  #block-views-homepage-block_2 .cell .views-field-title {
+    font-size: 170%; } }
 /******  Gallery  ******/
 #gallery {
   overflow: hidden; }

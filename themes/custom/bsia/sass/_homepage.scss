@@ -1,0 +1,93 @@
+/*******   CONNECT BANNER FOR HOMEPAGE    *******/
+
+.connect-banner{
+  background: url(../_images/connect-banner.png) no-repeat center $brand-secondary-color;
+
+  a{
+    padding: 0.5em;
+    font-size: 2.6em;
+    display: block;
+    color: $link-color;
+  }
+  a:hover{
+    text-decoration: none;
+    color: white;
+  }
+}
+
+@media(min-width: $mobile-bp){
+  background-position: right;
+}
+
+/***********  HOMEPAGE  **************/
+
+.view-homepage{
+  h2{
+    text-transform: uppercase;
+    border-bottom: solid 1px #666;
+		color: #666;
+		margin-top: 0px;
+    a{
+      color: #666;
+      &:hover{
+        color: $link-color;
+        text-decoration: none;
+      }
+    }
+  }
+
+  @include horizontal_menu;
+  .cell{
+    padding: 0em;
+    .views-field-field-event-date-value,
+  	.views-field-field-news-date-value{
+  		font-size: 0.9em;
+  		color: #666;
+  		text-transform: uppercase;
+  	}
+  	.views-field-title{
+  		font-size: 1.1em;
+  		font-weight: bold;
+  		line-height: 130%;
+  		margin-top: 0.4em;
+  	}
+  }
+}
+
+#block-views-homepage-block_2{
+  margin-bottom: 1.5em;
+  .cell{
+    padding: 1em;
+    background: #1a374e;
+    a{
+      color: #fff;
+      &:hover{
+        text-decoration: none;
+        color: #666;
+      }
+    }
+    .views-field-title{
+      font-size: 1.3em;
+      margin-top: 0px;
+			font-weight: normal;
+
+		}
+  }
+}
+
+@media(min-width: $desktop-breakpoint){
+  .view-homepage{
+    h2,
+    .cell .views-field-title,
+    .views-field-field-event-date-value,
+    .views-field-field-news-date-value{
+      font-size: 140%;
+    }
+  }
+  #block-views-homepage-block_2{
+    .cell .views-field-title{
+      font-size: 170%;
+    }
+  }
+
+}

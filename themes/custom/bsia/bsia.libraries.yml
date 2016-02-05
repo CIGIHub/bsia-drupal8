@@ -11,3 +11,4 @@ global-css:
     theme:
       css/styles.css: { }
       css/font-awesome.min.css: { }
+     

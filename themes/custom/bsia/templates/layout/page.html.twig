@@ -73,7 +73,7 @@
     </div>
   </div>
 </div>
-
+ 
 {% if page.highlighted %}
   {{ page.highlighted }}
 {% endif %}
@@ -85,18 +85,23 @@
 <div class="watermark">
   <main role="main" class="wrapper">
     <div class="row">
-      {% if page.right_sidebar %}
-        <div class="cols-4">
-      {% else %}
-        <div class="cols-6">
-      {% endif %}
+        <div class='{% if page.right_sidebar or page.right_menu %}cols-4{% else %}cols-6{% endif %}'>
           <a id="main-content" tabindex="-1"></a>
+          {% if page.content_header %}
+            <div id="content-header">
+              {{  page.content_header }}
+            </div>
+          {% endif %}
           <div id="content">
+            
             {{ page.content }}
           </div>
         </div>
-      {% if page.right_sidebar %}
+      {% if page.right_sidebar or page.right_menu %}
         <div class="cols-2">
+          <aside class="right-menu">
+            {{ page.right_menu}}
+          </aside>
           <aside class="right-sidebar" role="complementary">
             {{ page.right_sidebar }}
           </aside>

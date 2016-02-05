@@ -1,4 +1,20 @@
 <?php
 
+// function bsia_preprocess_page(&$vars) {
+//  if($vars['is_front']){
+//  	$vars['#attached']['library'][] = 'gallery/slider';
+//  }
+// }
 
+// function bsia_preprocess_node(&$vars){
+// 	if($vars['node']->getType() === 'page'){
+// 		$unformatted_date = $vars['node']->getCreatedTime();
+// 		$vars['date'] = format_date($unformatted_date, 'custom', 'Y');
+// 	}
+	
+	
+// 		$nid = $vars['node']->id();
+// 		$vars['test'] = $nid;
+	
+// }
 ?>
