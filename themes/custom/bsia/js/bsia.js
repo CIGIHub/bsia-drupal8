@@ -66,16 +66,16 @@
          //toggle_clear_button();
          //mark_current_page_link_in_directory();
          //
-         ////Calendar drop down
-         //$(".calendar dd").hide();
-         //$("dl.calendar").hover(
-         //    function () {
-         //        $(".calendar dd").show();
-         //    },
-         //    function () {
-         //        $(".calendar dd").hide();
-         //    }
-         //);
+         //Calendar drop down
+         $(".calendar dd").hide();
+         $("dl.calendar").hover(
+            function () {
+                $(".calendar dd").show();
+            },
+            function () {
+                $(".calendar dd").hide();
+            }
+         );
 
          if ($("a.vimeo").length > 0) {
              $("a.vimeo").colorbox({iframe: true, innerWidth: 625, innerHeight: 444});

@@ -28,32 +28,85 @@
 %}
 
 <article{{ attributes.addClass(classes) }}>
-
+    
   {% if not page %}
     <h2><a href="{{ url }}" rel="bookmark">{{ label }}</a></h2>
   {% endif %}
   <div{{ content_attributes }}>
+    {% include 'themes/custom/bsia/templates/node/_partials/addthis.html.twig' %}
+    
+    {% if content.event_series %}
+      {{ content.event_series }}
+    {% endif %}
 
-    {{ content.nid }}
-    {{ content.field_event_date }}
-    {{ content.field_event_end_date }}
-    {{ content.field_address_1 }}
-    {{ content.field_city }}
-    {{ content.field_state_province }}
-    {{ content.field_country }}
-    {{ content.field_email_subject }}
-    {{ content.field_invitation }}
-    {{ content.field_rsvp }}
-    {{ content.field_event_management }}
-    {{ content.field_image }}
-    {{ content.field_event_summary }}
-    {{ content.field_website }}
-    {{ content.field_event_vidoes }}
-    {{ content.field_event_flickr_id }}
-    {{ content.field_event_type }}
-    {{ content.field_event_series }}
+    {% if content.field_event_date %}
+      {{ content.field_event_date }}
+    {% endif %}
 
-    {{ content.body }}
+    {# speakers should go here  #}
+
+    <div class="location">
+      {% if content.field_location %}
+        {{ content.field_location }}
+      {% endif %}
+      {% if address %}
+        {{ address }}
+      {% endif %}
+    </div>
+
+    <div class="event-signup-wrapper">
+      <div class="event-signup">
+        <dl class="event-registration button calendar">
+          <dt>Add to Calendar</dt>
+            <dd><a href="{{ google_ical }}" target="_blank" class="cal_google">Google</a></dd>
+            <dd><a href="/calendar/ical/{{ nid }}">Outlook</a></dd>
+            <dd><a href="/calendar/ical/{{ nid }}">iCal</a></dd>
+        </dl>
+     
+        {% if content.field_event_management|render %}
+          <div class="event-registration button">
+            {% if content.field_email_subject|render %}
+              <a href="{{ event_registration_email }}">Register</a>
+            {% else %}
+              <a href="{{ content.field_event_management }}">Register</a>
+            {% endif %}
+          </div>
+        {% endif %}
+
+        {% if invitation_only == 1 %}
+          <div class="event-registration ">By Invitation Only</div>
+        {% elseif rsvp == 1 %}
+            <div class="event-registration ">Registration Required</div>
+        {% endif %}
+      </div>
+    </div>
+    
+    {% if content.field_image %}
+      {{ content.field_image }}
+    {% endif %}
+
+    {% if current_datetime > endstamp and content.field_event_summary %}
+      {{ content.field_event_summary }}
+    {% else %}
+      {{ content.body }}
+      {% if content.field_website %}
+        <div class="field-group">
+          {{ content.field_website }}
+        </div>
+      {% endif %}
+    {% endif %}    
+   
+    
+      {{ content.field_event_videos }}
+    
+
+      {{ content.field_flickr_id }}
+    
+
+
+    {{ content.event_type }}
+    
+    {{ content.upload }}
 
 
 
