@@ -147,6 +147,11 @@ article {
   article p {
     margin-bottom: 15px; }
 
+hr {
+  margin: 20px 0;
+  border: none;
+  border-top: solid 1px #d2d2d2; }
+
 main {
   padding-top: 1em; }
 
@@ -180,7 +185,7 @@ ol.field--ordered-list-style-lower {
   margin-bottom: 10px; }
 
 .field--name-body {
-  margin-top: 20px; }
+  margin: 20px 0; }
 
 .field--name-topics {
   text-transform: uppercase;
@@ -265,6 +270,48 @@ dl.calendar {
   dl.calendar dd {
     z-index: 10;
     margin-left: 0px; }
+
+/*****  Publication  *****/
+.apply-now {
+  background: #FBAD18;
+  width: 120px;
+  font-size: 1.0em;
+  line-height: 1.8em;
+  font-weight: normal;
+  text-transform: capitalize;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #d2d2d2;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px; }
+
+.publication-download {
+  width: 180px;
+  height: 30px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  font-size: 1.1em;
+  line-height: 2.0em; }
+  .publication-download .field--name-upload span:before {
+    content: ''; }
+  .publication-download a {
+    background: #FBAD18;
+    width: 120px;
+    font-size: 1.0em;
+    line-height: 1.8em;
+    font-weight: normal;
+    text-transform: capitalize;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #d2d2d2;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color: white;
+    padding: 5px 10px; }
+    .publication-download a:hover {
+      text-decoration: underline; }
 
 /*****  HEADER   ******/
 header {

@@ -10,7 +10,7 @@ function bsia_preprocess_field(&$variables, $hook) {
 
 function bsia_preprocess_node(&$variables){
 
-	
+/* Preprocess logic for event nodes */
 	if($variables['node']->getType() === 'event'){
 
 		global $base_url;
@@ -36,9 +36,7 @@ function bsia_preprocess_node(&$variables){
 			$variables['endstamp'] = format_date($start_datetime, timestamp);
 		}
 		
-		
 		$variables['current_datetime'] = time();
-	
 
 		/* build address from fields and return to event node template */ 
 		$street = $variables['node']->field_address_1->getValue()[0]['value'];
@@ -69,6 +67,34 @@ function bsia_preprocess_node(&$variables){
 		$variables['invitation_only'] = $variables['node']->field_invitation->getValue()[0]['value'];
 		$variables['rsvp'] = $variables['node']->field_rsvp->getValue()[0]['value'];
 
+	}
+
+/* Preprocess logic for publication ane external publication nodes */
+	if($variables['node']->getType() === 'publication' || $variables['node']->getType() === 'external_publication'){
+
+		$publication_type_id = $variables['node']->publication_type->getValue()[0]['target_id'];
+		$publication_type_object = taxonomy_term_load($publication_type_id);
+		$publication_type_uri = taxonomy_term_uri($publication_type_object);
+
+		$publication_type_name = $publication_type_object->get('name')->value;
+		
+		$variables['publication_source'] = $variables['node']->field_publication_source->getValue()[0]['value'];
+		$variables['publication_type_name'] = $publication_type_name;
+		$variables['publication_type_uri'] = $publication_type_uri;
+
+		$variables['publication_source_link'] = $variables['node']->field_publication_source_link->getValue()[0]['value'];
+
+		
+	}
+
+/* Preprocess logic for publication nodes */
+	if($variables['node']->getType() === 'publication'){
+		if(!empty($variables['node']->field_link_label->getValue()[0]['value'])){
+			$variables['link_label'] = $variables['node']->field_link_label->getValue()[0]['value'];
+		}
+		else{
+			$variables['link_label'] = 'Visit Website';
+		}
 	}
 }	
 

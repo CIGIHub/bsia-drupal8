@@ -88,7 +88,7 @@
     {% if current_datetime > endstamp and content.field_event_summary %}
       {{ content.field_event_summary }}
     {% else %}
-      {{ content.body }}
+      <div class="body">{{ content.body }}</div>
       {% if content.field_website %}
         <div class="field-group">
           {{ content.field_website }}
@@ -96,19 +96,21 @@
       {% endif %}
     {% endif %}    
    
-    
+    {% if content.field_event_videos %}
       {{ content.field_event_videos }}
-    
+    {% endif %}
 
+    {% if content.field_flickr_id %}
       {{ content.field_flickr_id }}
+    {% endif %}
+
+    {% if content.event_type %}
+      {{ content.event_type }}
+    {% endif %}
     
-
-
-    {{ content.event_type }}
-    
-    {{ content.upload }}
-
-
+    {% if content.upload %}
+      {{ content.upload }}
+    {% endif %}
 
   </div>
 
