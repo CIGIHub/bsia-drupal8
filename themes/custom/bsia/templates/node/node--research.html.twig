@@ -1,0 +1,43 @@
+{#
+/**
+  News Node Content Type
+  Based on node.html.twig
+  A custom page template for news items.
+ */
+#}
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+
+<article{{ attributes.addClass(classes) }}>
+
+  {% if not page %}
+    <h2><a href="{{ url }}" rel="bookmark">{{ label }}</a></h2>
+  {% endif %}
+  <div{{ content_attributes }}>
+    <div class="image">{{ content.field_image }}
+      <div class="caption">{{ content.field_caption }}</div>
+    </div>
+    <div class="body">{{ content.body }}</div>
+  </div>
+  {{ content.upload }}
+
+</article>
