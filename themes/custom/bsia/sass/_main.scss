@@ -54,9 +54,13 @@ ul, ol{
 .field-group{
   margin-bottom: 10px;
 }
+
+.field--name-body{
+  margin-top: 20px;
+}
+
 .field--name-topics{
-  text-transform: uppercase;
-  font-size: 11px;
+  @include type;
   a:hover{
     text-decoration: underline;
   }
@@ -71,6 +75,19 @@ ul, ol{
     content: '\f019 - ';
   }
 }
+
+.date, .location{
+  @include type;
+  color: $type-grey;
+}
+
+.addthis{
+  float: right;
+  width: 80px;
+  height: 16px;
+}
+
+.addthis_default_style{font-size: 12px;}
 
 /*****  Person  *****/
 
@@ -109,3 +126,34 @@ ul, ol{
     } 
   }
 }
+
+/*****  Event  *****/
+
+.event-signup-wrapper{
+  margin-bottom: 45px;
+}
+.event-signup{
+  position: absolute;
+}
+
+.event-registration{
+  float: left;
+  margin-top: 5px;
+  margin-right: 10px;
+  line-height: 1.6em;
+  &.button{
+    @include submit_button;
+  }
+}
+
+dl.calendar{
+  height: 100%;
+  z-index: 10;
+  cursor: pointer;
+  color: #053b5b;
+  dd{
+    z-index: 10;
+    margin-left: 0px;
+  }
+}
+

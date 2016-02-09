@@ -93,3 +93,26 @@
     }
   }
 }
+
+@mixin type{
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+@mixin submit_button{
+  background: #FBAD18;
+  width: 120px;
+  
+  font-size: 1.0em;
+  line-height: 1.8em;
+  font-weight: normal;
+  text-transform: capitalize;
+  text-align: center;
+  
+  cursor: pointer;
+  border: 1px solid #d2d2d2;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+ 
+}

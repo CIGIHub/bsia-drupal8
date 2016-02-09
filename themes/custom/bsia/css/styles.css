@@ -179,6 +179,9 @@ ol.field--ordered-list-style-lower {
 .field-group {
   margin-bottom: 10px; }
 
+.field--name-body {
+  margin-top: 20px; }
+
 .field--name-topics {
   text-transform: uppercase;
   font-size: 11px; }
@@ -190,6 +193,19 @@ ol.field--ordered-list-style-lower {
 .field--name-upload span:before {
   font-family: FontAwesome;
   content: '\f019 - '; }
+
+.date, .location {
+  text-transform: uppercase;
+  font-size: 11px;
+  color: #666; }
+
+.addthis {
+  float: right;
+  width: 80px;
+  height: 16px; }
+
+.addthis_default_style {
+  font-size: 12px; }
 
 /*****  Person  *****/
 .node--type-person .profile {
@@ -214,6 +230,41 @@ ol.field--ordered-list-style-lower {
   padding-right: 0; }
 .node--type-person .field--name-program-type .field__item:after {
   content: ","; }
+
+/*****  Event  *****/
+.event-signup-wrapper {
+  margin-bottom: 45px; }
+
+.event-signup {
+  position: absolute; }
+
+.event-registration {
+  float: left;
+  margin-top: 5px;
+  margin-right: 10px;
+  line-height: 1.6em; }
+  .event-registration.button {
+    background: #FBAD18;
+    width: 120px;
+    font-size: 1.0em;
+    line-height: 1.8em;
+    font-weight: normal;
+    text-transform: capitalize;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #d2d2d2;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px; }
+
+dl.calendar {
+  height: 100%;
+  z-index: 10;
+  cursor: pointer;
+  color: #053b5b; }
+  dl.calendar dd {
+    z-index: 10;
+    margin-left: 0px; }
 
 /*****  HEADER   ******/
 header {
@@ -306,7 +357,7 @@ header {
           padding: 0 13px;
           background: url(../images/nav-separator.gif) no-repeat 0 13px; }
           #main-menu nav ul li a {
-            color: #ffffff;
+            color: #fff;
             padding: 0; }
             #main-menu nav ul li a:hover, #main-menu nav ul li a:focus {
               background: none;
@@ -340,7 +391,7 @@ header {
         padding: 0 13px;
         background: url(../images/nav-separator.gif) no-repeat 0 13px; }
         .non-mobile #main-menu nav ul li a {
-          color: #ffffff;
+          color: #fff;
           padding: 0; }
           .non-mobile #main-menu nav ul li a:hover, .non-mobile #main-menu nav ul li a:focus {
             background: none;
