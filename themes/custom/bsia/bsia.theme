@@ -10,7 +10,9 @@ function bsia_preprocess_field(&$variables, $hook) {
 
 function bsia_preprocess_node(&$variables){
 
+
 /* Preprocess logic for event nodes */
+
 	if($variables['node']->getType() === 'event'){
 
 		global $base_url;
@@ -96,6 +98,7 @@ function bsia_preprocess_node(&$variables){
 			$variables['link_label'] = 'Visit Website';
 		}
 	}
+
 }	
 
 function bsia_page_attachments_alter(array &$page){

@@ -185,7 +185,11 @@ ol.field--ordered-list-style-lower {
   margin-bottom: 10px; }
 
 .field--name-body {
+<<<<<<< HEAD
   margin: 20px 0; }
+=======
+  margin-top: 20px; }
+>>>>>>> c91667e1ba30c0c8b22971215ae580e89b16623f
 
 .field--name-topics {
   text-transform: uppercase;
@@ -271,6 +275,7 @@ dl.calendar {
     z-index: 10;
     margin-left: 0px; }
 
+<<<<<<< HEAD
 /*****  Publication  *****/
 .apply-now {
   background: #FBAD18;
@@ -313,6 +318,8 @@ dl.calendar {
     .publication-download a:hover {
       text-decoration: underline; }
 
+=======
+>>>>>>> c91667e1ba30c0c8b22971215ae580e89b16623f
 /*****  HEADER   ******/
 header {
   background-color: #d9dfe3; }
