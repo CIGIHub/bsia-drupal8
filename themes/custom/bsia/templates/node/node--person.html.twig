@@ -49,7 +49,12 @@
 
 <article{{ attributes.addClass(classes) }}>
   {% if not page %}
-    <h2><a href="{{ url }}" rel="bookmark">{{ label }}</a></h2>
+    {% if view_mode == 'teaser' %}
+      
+    {% elseif view_mode == 'token' %}
+      <span class="speaker"><a href="{{ url }}" rel="bookmark">{{ label }}</a></span>
+      
+    {% endif %}
   {% else %}
   
   {% if graduate %}
@@ -90,7 +95,7 @@
             {% endif %}
           </div>
         {% endif %}
-        
+        {{ content.field_department }}
         {% if not graduate %}
           <div class="field-group">
             {% if content.field_office_location %}

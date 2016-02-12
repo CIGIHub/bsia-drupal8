@@ -13,9 +13,9 @@
       list-style: none;
       list-style-image: none;
       float:left;
-      &.expanded, &.collapsed, &.leaf {
-      	list-style-image:none;
-      	list-style-type:none;
+  
+      &.menu-item--expanded{
+        display: none;
       }
     }
     &:after{

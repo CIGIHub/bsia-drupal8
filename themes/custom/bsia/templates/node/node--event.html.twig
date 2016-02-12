@@ -28,7 +28,7 @@
 %}
 
 <article{{ attributes.addClass(classes) }}>
-    
+
   {% if not page %}
     <h2><a href="{{ url }}" rel="bookmark">{{ label }}</a></h2>
   {% endif %}
@@ -44,6 +44,11 @@
     {% endif %}
 
     {# speakers should go here  #}
+    {{ speaker_string|raw }}
+
+
+  {#   {{ content.field_speakers }}
+    {{ content.field_speakers_unlinked }} #}
 
     <div class="location">
       {% if content.field_location %}
@@ -84,8 +89,7 @@
     {% if content.field_image %}
       {{ content.field_image }}
     {% endif %}
-
-    {% if current_datetime > endstamp and content.field_event_summary %}
+    {% if current_datetime > endstamp and content.field_event_summary|render %}
       {{ content.field_event_summary }}
     {% else %}
       <div class="body">{{ content.body }}</div>

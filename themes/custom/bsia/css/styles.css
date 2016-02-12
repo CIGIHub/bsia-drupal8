@@ -388,9 +388,8 @@ header {
           list-style: none;
           list-style-image: none;
           float: left; }
-          #main-menu ul li.expanded, #main-menu ul li.collapsed, #main-menu ul li.leaf {
-            list-style-image: none;
-            list-style-type: none; }
+          #main-menu ul li.menu-item--expanded {
+            display: none; }
         #main-menu ul:after {
           content: '';
           display: block;
@@ -422,9 +421,8 @@ header {
         list-style: none;
         list-style-image: none;
         float: left; }
-        .non-mobile #main-menu ul li.expanded, .non-mobile #main-menu ul li.collapsed, .non-mobile #main-menu ul li.leaf {
-          list-style-image: none;
-          list-style-type: none; }
+        .non-mobile #main-menu ul li.menu-item--expanded {
+          display: none; }
       .non-mobile #main-menu ul:after {
         content: '';
         display: block;
@@ -450,7 +448,7 @@ header {
 /*******  SEARCH Block   *******/
 .search {
   float: right;
-  margin-top: 23%; }
+  margin-top: 16%; }
   .search .form-item,
   .search .form-submit {
     float: left; }
@@ -470,7 +468,7 @@ header {
     background-color: none;
     background-image: url("../images/search-icon.png");
     margin-left: -20px;
-    margin-top: 7px;
+    margin-top: 20px;
     height: 15px;
     width: 15px; }
 
@@ -491,9 +489,8 @@ footer {
       list-style: none;
       list-style-image: none;
       float: left; }
-      footer ul li.expanded, footer ul li.collapsed, footer ul li.leaf {
-        list-style-image: none;
-        list-style-type: none; }
+      footer ul li.menu-item--expanded {
+        display: none; }
     footer ul:after {
       content: '';
       display: block;
@@ -582,9 +579,8 @@ footer {
     list-style: none;
     list-style-image: none;
     float: left; }
-    .view-homepage ul li.expanded, .view-homepage ul li.collapsed, .view-homepage ul li.leaf {
-      list-style-image: none;
-      list-style-type: none; }
+    .view-homepage ul li.menu-item--expanded {
+      display: none; }
   .view-homepage ul:after {
     content: '';
     display: block;

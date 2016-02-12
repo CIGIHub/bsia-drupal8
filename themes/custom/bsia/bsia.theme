@@ -1,5 +1,6 @@
 <?php
 
+
 function bsia_preprocess_field(&$variables, $hook) {
  	
  	if($variables['field_name'] === 'field_event_date'){
@@ -9,6 +10,23 @@ function bsia_preprocess_field(&$variables, $hook) {
 }
 
 function bsia_preprocess_node(&$variables){
+
+
+  /* assemble speakers string */
+		$speaker_list = array();
+
+		//create a string from linked speakers
+		foreach($variables['node']->field_speakers->getValue() as $key=>$value){
+			$speaker_object = entity_load('node', $variables['node']->field_speakers->getValue()[$key]['target_id']);
+			$speaker_path = \Drupal::service('path.alias_manager')->getAliasByPath('/node/'.$speaker_object->id(), 'en');
+			$speaker = '<a href="' . $speaker_path . '">' . $speaker_object->label() . '</a>';
+			array_push($speaker_list, $speaker);
+		}
+		foreach($variables['node']->field_speakers_unlinked->getValue() as $key=>$value){
+			array_push($speaker_list, $variables['node']->field_speakers_unlinked->getValue()[$key]['value']);
+		}
+
+		$variables['speaker_string'] = implode(', ', $speaker_list);
 
 
 /* Preprocess logic for event nodes */
@@ -27,15 +45,16 @@ function bsia_preprocess_node(&$variables){
 		
 		$start_datetime = strtotime($variables['event_date']);
 		$end_datetime = strtotime($variables['event_date_2']);
-		
-		$variables['ical_start_date'] = format_date($start_datetime, ical);
-		$variables['ical_end_date'] = format_date($end_datetime, ical);
+
+		$ical_start_date = format_date($start_datetime, ical);
 
 		if(!empty($end_datetime)){
 			$variables['endstamp'] = format_date($end_datetime, timestamp);
+			$ical_end_date = format_date($end_datetime, ical);
 		}
 		else{
 			$variables['endstamp'] = format_date($start_datetime, timestamp);
+			$ical_end_date = format_date($start_datetime, ical);
 		}
 		
 		$variables['current_datetime'] = time();
@@ -62,7 +81,7 @@ function bsia_preprocess_node(&$variables){
 
 		$ical_location = $variables['node']->field_location->getValue()[0]['value'] . $address;
 
-		$variables['google_ical'] = 'https://www.google.com/calendar/render?action=TEMPLATE&amp;text=' . $title . '&amp;dates=' . $ical_start_date . '/' . $ical_end_date . '&amp;details=' . $description . '&amp;location=' . $ical_location . '&amp;trp=false&amp;sprop=www.balsillieschool.ca&amp;sprop=name:www.balsillieschool.ca&amp;pli=1&amp;sf=true&amp;output=xml';
+		$variables['google_ical'] = 'https://www.google.com/calendar/render?action=TEMPLATE&text=' . $title . '&dates=' . $ical_start_date . '/' . $ical_end_date . '&details=' . $description . '&location=' . $ical_location . '&trp=false&sprop=www.balsillieschool.ca&sprop=name:www.balsillieschool.ca&pli=1&sf=true&output=xml';
 
 		$variables['event_registration_email'] = $variables['node']->field_event_management->getValue()[0]['value'] . '?subject=' . $variables['node']->field_email_subject->getValue()[0]['value'];
 
