@@ -1,6 +1,7 @@
 <?php
 
 
+
 function bsia_preprocess_field(&$variables, $hook) {
  	
  	if($variables['field_name'] === 'field_event_date'){
@@ -9,25 +10,39 @@ function bsia_preprocess_field(&$variables, $hook) {
  	}	 
 }
 
+function bsia_views_pre_render(&$view) {
+
+	// if($view->result[0]->view_name == 'news:block_1'){
+	// 	dsm($view->result[0]->view_name);
+	// 	$row_count = count($view->result);
+	// 	dsm($row_count);
+	// 	dsm($view->result);
+
+	// }
+
+	
+	//dsm($view->result[0]);
+	
+  	//dsm($view->result[0]->field_news_date_value_year_month);
+    // do something for this block
+ 
+}
+
+
 function bsia_preprocess_node(&$variables){
 
+	if( $variables['node']->getType() === 'news' || ($variables['node']->getType() === 'news' && $variables['view_mode'] === 'teaser')){
+		
+		$news_date = strtotime($variables['node']->field_news_date->getValue()[0]['value']);
+		$variables['news_date_month'] = format_date($news_date, 'custom', 'M');
+		$variables['news_date_day'] = format_date($news_date, 'custom', 'd');
+		$variables['news_date_year'] = format_date($news_date, 'custom', 'Y');
 
-  /* assemble speakers string */
-		$speaker_list = array();
+	}
 
-		//create a string from linked speakers
-		foreach($variables['node']->field_speakers->getValue() as $key=>$value){
-			$speaker_object = entity_load('node', $variables['node']->field_speakers->getValue()[$key]['target_id']);
-			$speaker_path = \Drupal::service('path.alias_manager')->getAliasByPath('/node/'.$speaker_object->id(), 'en');
-			$speaker = '<a href="' . $speaker_path . '">' . $speaker_object->label() . '</a>';
-			array_push($speaker_list, $speaker);
-		}
-		foreach($variables['node']->field_speakers_unlinked->getValue() as $key=>$value){
-			array_push($speaker_list, $variables['node']->field_speakers_unlinked->getValue()[$key]['value']);
-		}
-
-		$variables['speaker_string'] = implode(', ', $speaker_list);
-
+	if($variables['node']->getType() === 'research'){
+		speakers_or_authors($variables['node']->field_speakers, $variables['node']->field_speakers_unlinked);
+	}
 
 /* Preprocess logic for event nodes */
 
@@ -88,9 +103,12 @@ function bsia_preprocess_node(&$variables){
 		$variables['invitation_only'] = $variables['node']->field_invitation->getValue()[0]['value'];
 		$variables['rsvp'] = $variables['node']->field_rsvp->getValue()[0]['value'];
 
+		speakers_or_authors($variables['node']->field_speakers, $variables['node']->field_speakers_unlinked);
+
 	}
 
 /* Preprocess logic for publication ane external publication nodes */
+
 	if($variables['node']->getType() === 'publication' || $variables['node']->getType() === 'external_publication'){
 
 		$publication_type_id = $variables['node']->publication_type->getValue()[0]['target_id'];
@@ -105,11 +123,14 @@ function bsia_preprocess_node(&$variables){
 
 		$variables['publication_source_link'] = $variables['node']->field_publication_source_link->getValue()[0]['value'];
 
-		
+		speakers_or_authors($variables['node']->field_speakers, $variables['node']->field_speakers_unlinked);
+
 	}
 
 /* Preprocess logic for publication nodes */
+
 	if($variables['node']->getType() === 'publication'){
+
 		if(!empty($variables['node']->field_link_label->getValue()[0]['value'])){
 			$variables['link_label'] = $variables['node']->field_link_label->getValue()[0]['value'];
 		}
@@ -118,7 +139,30 @@ function bsia_preprocess_node(&$variables){
 		}
 	}
 
-}	
+ }	
+
+function speakers_or_authors($node_speakers_linked, $node_speakers_unlinked){
+
+	/* assemble speakers string */
+	$speaker_list = array();
+
+	//create a string from linked speakers
+	foreach($node_speakers_linked->getValue() as $key=>$value){
+		$speaker_object = entity_load('node', $node_speakers_linked->getValue()[$key]['target_id']);
+		$speaker_path = \Drupal::service('path.alias_manager')->getAliasByPath('/node/'.$speaker_object->id(), 'en');
+		$speaker = '<a href="' . $speaker_path . '">' . $speaker_object->label() . '</a>';
+		array_push($speaker_list, $speaker);
+	}
+	foreach($node_speakers_unlinked->getValue() as $key=>$value){
+		array_push($speaker_list, $node_speakers_unlinked->getValue()[$key]['value']);
+	}
+
+	$variables['speaker_string'] = implode(', ', $speaker_list);
+
+	return $speaker_list;
+	
+}
+
 
 function bsia_page_attachments_alter(array &$page){
 	//'Content-type: text/calendar; charset=utf-8'

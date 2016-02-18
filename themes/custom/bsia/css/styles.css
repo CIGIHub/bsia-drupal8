@@ -147,10 +147,10 @@ article {
   article p {
     margin-bottom: 15px; }
 
-hr {
+hr, .row-divider {
   margin: 20px 0;
   border: none;
-  border-top: solid 1px #d2d2d2; }
+  border-bottom: solid 1px #d2d2d2; }
 
 main {
   padding-top: 1em; }
@@ -211,6 +211,19 @@ ol.field--ordered-list-style-lower {
 
 .addthis_default_style {
   font-size: 12px; }
+
+.pager .pager__item {
+  padding: 0.4em; }
+  .pager .pager__item a {
+    padding: 4px 8px;
+    border: solid 1px #d2d2d2;
+    border-radius: 15px;
+    background: #f2f7f2; }
+    .pager .pager__item a:hover {
+      text-decoration: none;
+      background: #ccdae3; }
+  .pager .pager__item.is-active a {
+    background: #ccdae3; }
 
 /*****  Person  *****/
 .node--type-person .profile {
@@ -312,6 +325,31 @@ dl.calendar {
     padding: 5px 10px; }
     .publication-download a:hover {
       text-decoration: underline; }
+
+/*****  News and Events  *****/
+.views-row article {
+  margin: 20px 0;
+  border: none;
+  border-bottom: solid 1px #d2d2d2; }
+
+.teaser-text h2 {
+  font-size: 20px; }
+
+.datemark {
+  float: right;
+  width: 90px;
+  height: 90px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #f1f1f1;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: bold; }
+  .datemark .month, .datemark .year {
+    font-size: 14px; }
+  .datemark .day {
+    font-size: 35px;
+    line-height: 35px; }
 
 /*****  HEADER   ******/
 header {

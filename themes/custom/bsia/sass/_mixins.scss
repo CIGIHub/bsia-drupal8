@@ -24,7 +24,7 @@
   }
 }
 
-@mixin hidden {
+@mixin hidden{
   text-indent: -9999px;
 }
 
@@ -35,6 +35,12 @@
       color: $link-hover-color;
     }
   }
+}
+
+@mixin divider{
+  margin: 20px 0;
+  border: none;
+  border-bottom: solid 1px $hr-border-color;
 }
 
 @mixin image-2x($image, $width, $height) {

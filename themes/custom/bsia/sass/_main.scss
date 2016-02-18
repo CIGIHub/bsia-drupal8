@@ -11,10 +11,8 @@ article{
   }
 }
 
-hr{
-  margin: 20px 0;
-  border: none;
-  border-top: solid 1px $hr-border-color;
+hr, .row-divider{
+  @include divider
 }
 
 main {
@@ -93,6 +91,51 @@ ul, ol{
 }
 
 .addthis_default_style{font-size: 12px;}
+
+.pager{
+  .pager__item{
+    padding: 0.4em;
+
+    a{
+      padding: 4px 8px;
+      border: solid 1px #d2d2d2;
+      border-radius: 15px;
+      background: #f2f7f2;
+      &:hover{
+        text-decoration: none;
+        background: #ccdae3;
+      }
+    }
+    &.is-active a{
+       background: #ccdae3;
+    }
+  }
+}
+// }
+// .pager a{
+//   padding: 4px 8px;
+//   border: solid 1px #d2d2d2;
+//   border-radius: 15px;
+//   background: #f2f7f2;
+// }
+// .item-list .pager a:hover{
+//   text-decoration: none;
+//   background: #ccdae3;
+// }
+
+// .item-list .pager li{
+//   padding: 0px;
+// }
+// .item-list .pager li.pager-current{
+//   border: solid 1px #d2d2d2;
+//   background: #ccdae3;
+//   border-radius: 15px;
+//   padding: 4px 8px;
+//   width: 15px;
+//   height: 15px;
+// }
+
+
 
 /*****  Person  *****/
 
@@ -185,4 +228,36 @@ dl.calendar{
         text-decoration: underline;
       }
     }
+}
+
+/*****  News and Events  *****/
+
+.views-row article{
+  @include divider
+}
+
+.teaser-text{
+  h2{
+    font-size: 20px;
+  }
+}
+
+.datemark {
+  float: right;
+  width: 90px;
+  height: 90px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #f1f1f1;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: bold;
+
+  .month, .year{
+    font-size: 14px;
+  }
+  .day{
+    font-size: 35px;
+    line-height: 35px;
+  }
 }

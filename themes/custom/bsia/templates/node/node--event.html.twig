@@ -32,10 +32,11 @@
   {% if not page %}
     <h2><a href="{{ url }}" rel="bookmark">{{ label }}</a></h2>
   {% endif %}
-  <div{{ content_attributes }}>
-    {% include 'themes/custom/bsia/templates/node/_partials/addthis.html.twig' %}
-    
-    {% if content.event_series %}
+ 
+
+  {% include 'themes/custom/bsia/templates/node/_partials/addthis.html.twig' %}
+
+{% if content.event_series %}
       {{ content.event_series }}
     {% endif %}
 
@@ -43,12 +44,7 @@
       {{ content.field_event_date }}
     {% endif %}
 
-    {# speakers should go here  #}
     {{ speaker_string|raw }}
-
-
-  {#   {{ content.field_speakers }}
-    {{ content.field_speakers_unlinked }} #}
 
     <div class="location">
       {% if content.field_location %}
@@ -57,7 +53,7 @@
       {% if address %}
         {{ address }}
       {% endif %}
-    </div>
+    </div> 
 
     <div class="event-signup-wrapper">
       <div class="event-signup">
@@ -84,8 +80,8 @@
             <div class="event-registration ">Registration Required</div>
         {% endif %}
       </div>
-    </div>
-    
+    </div> 
+
     {% if content.field_image %}
       {{ content.field_image }}
     {% endif %}
@@ -99,8 +95,8 @@
         </div>
       {% endif %}
     {% endif %}    
-   
-    {% if content.field_event_videos %}
+
+     {% if content.field_event_videos %}
       {{ content.field_event_videos }}
     {% endif %}
 
@@ -116,6 +112,5 @@
       {{ content.upload }}
     {% endif %}
 
-  </div>
 
 </article>
