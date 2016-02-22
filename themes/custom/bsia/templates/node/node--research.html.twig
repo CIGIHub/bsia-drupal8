@@ -30,14 +30,34 @@
 <article{{ attributes.addClass(classes) }}>
 
   {% if not page %}
-    <h2><a href="{{ url }}" rel="bookmark">{{ label }}</a></h2>
-  {% endif %}
+    {% if teaser %}
+      <h2><a href="{{ url }}" rel="bookmark">{{ label }}</a></h2>
+      {{ content.field_square_image }}
+      {{ content.field_short_description }}
+    {% endif %}
+
+  {% else %}
+  
   <div{{ content_attributes }}>
-    <div class="image">{{ content.field_image }}
-    <div class="caption">{{ content.field_caption }}</div>
-    </div>
+    <div class="image">{{ content.field_image }}</div>
     <div class="body">{{ content.body }}</div>
 
-  </div>
+    {% if content.field_related_publications %}
+      <div class="related-publications">
+        <h2>Related Publications</h2>
+        {{ content.field_related_publications }}
+      </div>
+    {% endif %}
+  
+    {% if members_string %}
+      <div class="related-members">
+        <h2>Members</h2>
+        <div class="member-list">
+          {{ members_string|raw }}
+        </div>
+      </div>
+    {% endif %}
 
+    </div>
+{% endif %}
 </article>

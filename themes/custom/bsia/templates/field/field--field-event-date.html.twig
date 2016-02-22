@@ -25,10 +25,13 @@
 
 
 {% if end_date is null %}
-	<div class="date">{{ start_date|format_date('medium') }}</div>
+	<div class="date">{{ start_date|format_date('medium') }} - {{ start_time }}</div>
 {% else %}
 	{% set end_time = end_date|date("g:iA") %}
 	{% set end_mdy = end_date|date("m/d/Y") %}
+	{% if end_mdy < start_mdy %}
+		{% set end_mdy = start_mdy %}
+	{% endif %}
 	{% if end_mdy == start_mdy %}
 		<div class="date">{{ start_date|format_date('medium') }}, {{ start_time }} - {{ end_time }}</div>
 	{% else %}

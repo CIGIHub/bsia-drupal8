@@ -30,33 +30,66 @@
 <article{{ attributes.addClass(classes) }}>
 
   {% if not page %}
-    <h2><a href="{{ url }}" rel="bookmark">{{ label }}</a></h2>
-  {% endif %}
-  <div{{ content_attributes }}>
-  {% include 'themes/custom/bsia/templates/node/_partials/addthis.html.twig' %}
-    
-    <div class="authors">{{ speaker_string|raw }}</div>
-  
-    {% if content.publication_type %}
-      <a href="{{ publication_type_uri }}">{{ publication_type_name }}</a>
-      {% if content.field_publication_source %}
-          / {{ publication_source }}
+
+    {% if view_mode == 'entity' %}
+
+      {% if label %}
+        {% if authors_string %}
+          {{ authors_string|raw }}
+        {% endif %}
+        {% if publication_date %}
+          ({{ publication_date|date('Y') }}).
+        {% endif %}
+        <a href="{{ url }}" rel="bookmark">{{ publication_title }}</a>.
+        {% if publication_source %}
+          {% if publication_source_link %}
+            <a href="{{ publication_source_link }}">{{ publication_source }}</a>.
+          {% else %}
+            {{ publication_source }}.
+          {% endif %}
+        {% endif %}
+      
       {% endif %}
-    {% else %}
-      {{ content.publication_source }}
+
+    {% elseif view_mode == 'teaser' %}
+      <h2><a href="{{ url }}" rel="bookmark">{{ label }}</a></h2>
+      {% if authors_string %}
+        <div class="authors">{{ authors_string|raw }}</div>
+      {% endif %}
+      <div class="type">{{ publication_type_name }}</div>
+      <div class="date">{{ content.field_published_date }}</div>
+      {{ content.field_short_description }}
     {% endif %}
 
-    {{ content.field_published_date }}
-    <div class="body">{{ content.body }}</div>
+  {% else %}  
+    <div{{ content_attributes }}>
+    {% include 'themes/custom/bsia/templates/node/_partials/addthis.html.twig' %}
+      
+      <div class="authors">{{ speakers_string|raw }}</div>
+    
+      {% if content.publication_type %}
+        <div class="type">
+        <a href="{{ publication_type_uri }}">{{ publication_type_name }}</a>
+        {% if content.field_publication_source %}
+            / {{ publication_source }}
+        {% endif %}
+      </div>
+      {% else %}
+        <div class="type">{{ content.publication_source }}</div>
+      {% endif %}
 
-    {% if content.field_publication_source and content.field_publication_source_link %}
-      <div class="apply-now"><a href="{{ publication_source_link }}">{{ link_label }}</a></div>
+      {{ content.field_published_date }}
+      <div class="body">{{ content.body }}</div>
+
+      {% if content.field_publication_source and content.field_publication_source_link %}
+        <div class="apply-now"><a href="{{ publication_source_link }}">{{ link_label }}</a></div>
+      {% endif %}
+
+    </div>
+    {% if content.upload|render %}
+      <hr>
+      <div class="publication-download">{{ content.upload }}</div>
     {% endif %}
-
-  </div>
-  {% if content.upload|render %}
-    <hr>
-    <div class="publication-download">{{ content.upload }}</div>
   {% endif %}
 
 </article>

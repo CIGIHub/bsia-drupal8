@@ -30,8 +30,15 @@
 <article{{ attributes.addClass(classes) }}>
 
   {% if not page %}
-    <h2><a href="{{ url }}" rel="bookmark">{{ label }}</a></h2>
-  {% endif %}
+
+    {% if view_mode == 'entity' %}
+        <div><a href="{{ url }}" rel="bookmark">{{ label }}</a></div>
+        
+    {% elseif view_mode == 'teaser' %}      
+      <h2><a href="{{ url }}" rel="bookmark">{{ label }}</a></h2>
+    {% endif %}
+      
+  {% else %}
   <div{{ content_attributes }}>
   {% include 'themes/custom/bsia/templates/node/_partials/addthis.html.twig' %}
     
@@ -59,4 +66,5 @@
     <div class="publication-download">{{ content.upload }}</div>
   {% endif %}
 
+{% endif %}
 </article>

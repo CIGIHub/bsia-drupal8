@@ -62,6 +62,7 @@
   {% endif %}
 
   <div class="row">
+
     <div class="profile">
       {% if content.field_square_image %}
         <div class="image">{{ content.field_square_image }}</div>
@@ -95,7 +96,6 @@
             {% endif %}
           </div>
         {% endif %}
-        {{ content.field_department }}
         {% if not graduate %}
           <div class="field-group">
             {% if content.field_office_location %}
@@ -111,8 +111,8 @@
         {% endif %}
 
         <div class="digital-contact field-group">
-          {% if content.field_website %}
-            {{ content.field_website }}
+          {% if website %}
+            <div><a href="{{ website }}">Personal website</a> <i class="fa fa-external-link"></i></div>
           {% endif %}
           {% if content.field_twitter_url or content.field_linkedin_url %}
             <div class="social">

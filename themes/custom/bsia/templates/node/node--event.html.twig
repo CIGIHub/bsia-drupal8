@@ -28,23 +28,43 @@
 %}
 
 <article{{ attributes.addClass(classes) }}>
-
-  {% if not page %}
-    <h2><a href="{{ url }}" rel="bookmark">{{ label }}</a></h2>
-  {% endif %}
+ {% if not page %}
+    {% if teaser %}
+      <div class="datemark">
+        <div class="month">{{ event_month }}</div>
+        <div class="day">{{ event_day }}</div>
+        <div class="year">{{ event_year }}</div>
+      </div>
+      <div class="teaser-text">
+        <h2><a href="{{ url }}" rel="bookmark">{{ label }}</a></h2>
+         {% if content.field_event_date %}
+          {{ content.field_event_date }}
+        {% endif %}
+        <div class="location">
+          {% if content.field_location %}
+            {{ content.field_location }}
+          {% endif %}
+          {% if address %}
+            {{ address }}
+          {% endif %}
+        </div>
+        {{ content.field_short_description }}
+      </div>
+        
+    {% endif %}    
+  
+  {% else %}
  
 
-  {% include 'themes/custom/bsia/templates/node/_partials/addthis.html.twig' %}
+    {% include 'themes/custom/bsia/templates/node/_partials/addthis.html.twig' %}
 
-{% if content.event_series %}
+    {% if content.event_series %}
       {{ content.event_series }}
     {% endif %}
 
     {% if content.field_event_date %}
       {{ content.field_event_date }}
     {% endif %}
-
-    {{ speaker_string|raw }}
 
     <div class="location">
       {% if content.field_location %}
@@ -69,7 +89,7 @@
             {% if content.field_email_subject|render %}
               <a href="{{ event_registration_email }}">Register</a>
             {% else %}
-              <a href="{{ content.field_event_management }}">Register</a>
+              <a href="{{ event_registration_link }}">Register</a>
             {% endif %}
           </div>
         {% endif %}
@@ -81,6 +101,10 @@
         {% endif %}
       </div>
     </div> 
+
+    {% if speakers_string %}
+      <div class="speakers">Speakers: {{ speakers_string|raw }}</div>
+    {% endif %}
 
     {% if content.field_image %}
       {{ content.field_image }}
@@ -112,5 +136,5 @@
       {{ content.upload }}
     {% endif %}
 
-
+{% endif %}
 </article>

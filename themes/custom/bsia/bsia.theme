@@ -10,27 +10,10 @@ function bsia_preprocess_field(&$variables, $hook) {
  	}	 
 }
 
-function bsia_views_pre_render(&$view) {
-
-	// if($view->result[0]->view_name == 'news:block_1'){
-	// 	dsm($view->result[0]->view_name);
-	// 	$row_count = count($view->result);
-	// 	dsm($row_count);
-	// 	dsm($view->result);
-
-	// }
-
-	
-	//dsm($view->result[0]);
-	
-  	//dsm($view->result[0]->field_news_date_value_year_month);
-    // do something for this block
- 
-}
-
 
 function bsia_preprocess_node(&$variables){
 
+/* Preprocess logic for news nodes */
 	if( $variables['node']->getType() === 'news' || ($variables['node']->getType() === 'news' && $variables['view_mode'] === 'teaser')){
 		
 		$news_date = strtotime($variables['node']->field_news_date->getValue()[0]['value']);
@@ -40,11 +23,31 @@ function bsia_preprocess_node(&$variables){
 
 	}
 
+/* Preprocess logic for research nodes */
 	if($variables['node']->getType() === 'research'){
-		speakers_or_authors($variables['node']->field_speakers, $variables['node']->field_speakers_unlinked);
+
+		$variables['members_string'] = speakers_or_authors($variables['node']->field_speakers, $variables['node']->field_speakers_unlinked, ' / ');
+	}
+
+/* Preprocess logic for person nodes */
+
+	if($variables['node']->getType() === 'person'){
+		$variables['website'] = $variables['node']->field_website->getValue()[0]['value'];
 	}
 
 /* Preprocess logic for event nodes */
+
+	if($variables['node']->getType() === 'event' && $variables['view_mode'] === 'teaser' ){
+		$variables['event_date'] = $variables['node']->field_event_date->getValue()[0]['value'];
+		$variables['event_date_2'] = $variables['node']->field_event_date->getValue()[1]['value'];
+		
+		$start_datetime = strtotime($variables['event_date']);
+		$end_datetime = strtotime($variables['event_date_2']);
+
+		if(!empty($end_datetime)){
+
+		}
+	}
 
 	if($variables['node']->getType() === 'event'){
 
@@ -58,21 +61,29 @@ function bsia_preprocess_node(&$variables){
 		$variables['event_date'] = $variables['node']->field_event_date->getValue()[0]['value'];
 		$variables['event_date_2'] = $variables['node']->field_event_date->getValue()[1]['value'];
 		
+		//convert dates to integers for further comparisons
 		$start_datetime = strtotime($variables['event_date']);
 		$end_datetime = strtotime($variables['event_date_2']);
 
+		/*	check if there is an end date entered and that is it different than the start date other
+			otherwise assume the enddate to be the same as the start 
+		*/
+		if(($end_datetime < $start_datetime) || (empty($end_datetime))){
+			$end_datetime = $start_datetime;
+		}
+	
+		//set ical time formats
 		$ical_start_date = format_date($start_datetime, ical);
+		$ical_end_date = format_date($start_datetime, ical);
 
-		if(!empty($end_datetime)){
-			$variables['endstamp'] = format_date($end_datetime, timestamp);
-			$ical_end_date = format_date($end_datetime, ical);
-		}
-		else{
-			$variables['endstamp'] = format_date($start_datetime, timestamp);
-			$ical_end_date = format_date($start_datetime, ical);
-		}
-		
+		//set a endstamp to compare in templates as a flag for showing past material
+		$variables['endstamp'] = format_date($end_datetime, timestamp);
 		$variables['current_datetime'] = time();
+
+		// set dates for datemark on views/teasers
+		$variables['event_month'] = format_date($start_datetime, 'custom', 'M', 'Etc/GMT+10');
+		$variables['event_day'] = format_date($end_datetime, 'custom', 'd', 'Etc/GMT+10');
+		$variables['event_year'] = format_date($start_datetime, 'custom', 'Y', 'Etc/GMT+10');
 
 		/* build address from fields and return to event node template */ 
 		$street = $variables['node']->field_address_1->getValue()[0]['value'];
@@ -100,36 +111,42 @@ function bsia_preprocess_node(&$variables){
 
 		$variables['event_registration_email'] = $variables['node']->field_event_management->getValue()[0]['value'] . '?subject=' . $variables['node']->field_email_subject->getValue()[0]['value'];
 
+		$variables['event_registration_link'] = $variables['node']->field_event_management->getValue()[0]['value'];
 		$variables['invitation_only'] = $variables['node']->field_invitation->getValue()[0]['value'];
 		$variables['rsvp'] = $variables['node']->field_rsvp->getValue()[0]['value'];
 
-		speakers_or_authors($variables['node']->field_speakers, $variables['node']->field_speakers_unlinked);
+		$variables['speakers_string'] = speakers_or_authors($variables['node']->field_speakers, $variables['node']->field_speakers_unlinked, ', ');
 
 	}
 
 /* Preprocess logic for publication ane external publication nodes */
 
 	if($variables['node']->getType() === 'publication' || $variables['node']->getType() === 'external_publication'){
-
+		
 		$publication_type_id = $variables['node']->publication_type->getValue()[0]['target_id'];
 		$publication_type_object = taxonomy_term_load($publication_type_id);
 		$publication_type_uri = taxonomy_term_uri($publication_type_object);
-
 		$publication_type_name = $publication_type_object->get('name')->value;
-		
+
+		$variables['publication_title'] = $variables['node']->label();
+
 		$variables['publication_source'] = $variables['node']->field_publication_source->getValue()[0]['value'];
+		$variables['publication_source_link'] = $variables['node']->field_publication_source_link->getValue()[0]['value'];
+		
 		$variables['publication_type_name'] = $publication_type_name;
 		$variables['publication_type_uri'] = $publication_type_uri;
 
-		$variables['publication_source_link'] = $variables['node']->field_publication_source_link->getValue()[0]['value'];
-
-		speakers_or_authors($variables['node']->field_speakers, $variables['node']->field_speakers_unlinked);
-
+		//dsm($variables['node']->field_published_date->getValue());
+		$variables['publication_date'] = $variables['node']->field_published_date->getValue()[0]['value'];
+		$variables['authors_string'] = speakers_or_authors($variables['node']->field_speakers, $variables['node']->field_speakers_unlinked, ', ');
+	
 	}
 
 /* Preprocess logic for publication nodes */
 
 	if($variables['node']->getType() === 'publication'){
+		if($variables['view_mode'] != 'entity'){
+
 
 		if(!empty($variables['node']->field_link_label->getValue()[0]['value'])){
 			$variables['link_label'] = $variables['node']->field_link_label->getValue()[0]['value'];
@@ -138,10 +155,11 @@ function bsia_preprocess_node(&$variables){
 			$variables['link_label'] = 'Visit Website';
 		}
 	}
+	}
 
  }	
 
-function speakers_or_authors($node_speakers_linked, $node_speakers_unlinked){
+function speakers_or_authors($node_speakers_linked, $node_speakers_unlinked, $divider){
 
 	/* assemble speakers string */
 	$speaker_list = array();
@@ -154,12 +172,13 @@ function speakers_or_authors($node_speakers_linked, $node_speakers_unlinked){
 		array_push($speaker_list, $speaker);
 	}
 	foreach($node_speakers_unlinked->getValue() as $key=>$value){
-		array_push($speaker_list, $node_speakers_unlinked->getValue()[$key]['value']);
+		$unlinked_speaker = ucfirst(strtolower($node_speakers_unlinked->getValue()[$key]['value']));
+		array_push($speaker_list, $unlinked_speaker);
 	}
 
-	$variables['speaker_string'] = implode(', ', $speaker_list);
+	$speaker_string = implode($divider, $speaker_list);
 
-	return $speaker_list;
+	return $speaker_string;
 	
 }
 

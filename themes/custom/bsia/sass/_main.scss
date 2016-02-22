@@ -62,6 +62,10 @@ ul, ol{
   margin: 20px 0;
 }
 
+.field--name-field-short-description{
+  margin-top: 10px;
+}
+
 .field--name-topics{
   @include type;
   a:hover{
@@ -79,7 +83,13 @@ ul, ol{
   }
 }
 
-.date, .location{
+.date,
+.location,
+.authors,
+.speakers,
+.type,
+.field--name-field-published-date, 
+.views-field-publication-type{
   @include type;
   color: $type-grey;
 }
@@ -111,30 +121,10 @@ ul, ol{
     }
   }
 }
-// }
-// .pager a{
-//   padding: 4px 8px;
-//   border: solid 1px #d2d2d2;
-//   border-radius: 15px;
-//   background: #f2f7f2;
-// }
-// .item-list .pager a:hover{
-//   text-decoration: none;
-//   background: #ccdae3;
-// }
 
-// .item-list .pager li{
-//   padding: 0px;
-// }
-// .item-list .pager li.pager-current{
-//   border: solid 1px #d2d2d2;
-//   background: #ccdae3;
-//   border-radius: 15px;
-//   padding: 4px 8px;
-//   width: 15px;
-//   height: 15px;
-// }
-
+.view-content{
+  margin-bottom: 20px;
+}
 
 
 /*****  Person  *****/
@@ -232,7 +222,47 @@ dl.calendar{
 
 /*****  News and Events  *****/
 
-.views-row article{
+
+.region-right-sidebar{
+  .views-element-container{
+    .views-row{
+      margin-bottom: 10px;
+    }
+
+    .views-field-title,
+    .views-field-field-event-date{
+      padding-bottom: 5px;
+    }
+  
+    .views-field-publication-type{
+      a{
+        color: $list-text-grey;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .views-field-field-event-date{
+      @include type;
+    }
+    @include sidebar_link;
+
+    background: #D1DEE2;
+    border: solid 5px #f2f2f2;
+    padding: 10px;
+    margin-bottom: 10px;
+
+    h2{
+      color: $header2-color;
+      font-size: 20px;
+    }
+ 
+  }
+}
+
+.views-row article,
+.views-row .research-listing{
   @include divider
 }
 
@@ -261,3 +291,65 @@ dl.calendar{
     line-height: 35px;
   }
 }
+
+/*****  Research  *****/
+
+.research-listing{
+  display: table;
+  width: 100%;
+
+  h2{
+    font-size: 18px;
+  }
+  h3{
+    @include type(12px);
+    color: $type-grey;
+    border-bottom: solid 1px $hr-border-color;
+    margin: 20px 0 10px 0;
+  }
+  
+  .circle-image, .description{
+    display: table-cell;
+  }
+  .circle-image{
+    float:left;
+    position: relative;
+    width: 20%;
+    img{
+      border: solid 1px #19374f;
+      border-radius: 50px;
+    }
+    a{
+      display: block;
+      overflow: auto;
+    }
+  }
+  .description{
+    width: 80%;
+    overflow: auto;
+  }
+  .short-description{
+    margin-bottom: 20px;
+  }
+}
+
+.related-publications{
+  .field__item{
+    margin-bottom: 10px;
+  }
+  margin-bottom: 20px;
+}
+
+.related-publications, .related-members{
+  h2{
+    @include type;
+    color: $type-grey;
+    border-bottom: solid 1px $hr-border-color;
+    margin: 20px 0 10px 0;
+  }
+  .member-list{
+    @include type;
+   
+  }
+}
+

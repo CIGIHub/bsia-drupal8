@@ -125,7 +125,7 @@ h3 {
 
 a {
   text-decoration: none;
-  color: #1A374E; }
+  color: #053b5b; }
 
 a[href$=".pdf"]:after {
   font-family: FontAwesome;
@@ -187,9 +187,12 @@ ol.field--ordered-list-style-lower {
 .field--name-body {
   margin: 20px 0; }
 
+.field--name-field-short-description {
+  margin-top: 10px; }
+
 .field--name-topics {
   text-transform: uppercase;
-  font-size: 11px; }
+  font-size: 12px; }
   .field--name-topics a:hover {
     text-decoration: underline; }
 
@@ -199,9 +202,15 @@ ol.field--ordered-list-style-lower {
   font-family: FontAwesome;
   content: '\f019 - '; }
 
-.date, .location {
+.date,
+.location,
+.authors,
+.speakers,
+.type,
+.field--name-field-published-date,
+.views-field-publication-type {
   text-transform: uppercase;
-  font-size: 11px;
+  font-size: 12px;
   color: #666; }
 
 .addthis {
@@ -224,6 +233,9 @@ ol.field--ordered-list-style-lower {
       background: #ccdae3; }
   .pager .pager__item.is-active a {
     background: #ccdae3; }
+
+.view-content {
+  margin-bottom: 20px; }
 
 /*****  Person  *****/
 .node--type-person .profile {
@@ -327,7 +339,33 @@ dl.calendar {
       text-decoration: underline; }
 
 /*****  News and Events  *****/
-.views-row article {
+.region-right-sidebar .views-element-container {
+  background: #D1DEE2;
+  border: solid 5px #f2f2f2;
+  padding: 10px;
+  margin-bottom: 10px; }
+  .region-right-sidebar .views-element-container .views-row {
+    margin-bottom: 10px; }
+  .region-right-sidebar .views-element-container .views-field-title,
+  .region-right-sidebar .views-element-container .views-field-field-event-date {
+    padding-bottom: 5px; }
+  .region-right-sidebar .views-element-container .views-field-publication-type a {
+    color: #808080; }
+    .region-right-sidebar .views-element-container .views-field-publication-type a:hover {
+      text-decoration: underline; }
+  .region-right-sidebar .views-element-container .views-field-field-event-date {
+    text-transform: uppercase;
+    font-size: 12px; }
+  .region-right-sidebar .views-element-container a {
+    color: #053b5b; }
+    .region-right-sidebar .views-element-container a:hover {
+      text-decoration: underline; }
+  .region-right-sidebar .views-element-container h2 {
+    color: #053b5b;
+    font-size: 20px; }
+
+.views-row article,
+.views-row .research-listing {
   margin: 20px 0;
   border: none;
   border-bottom: solid 1px #d2d2d2; }
@@ -351,6 +389,51 @@ dl.calendar {
     font-size: 35px;
     line-height: 35px; }
 
+/*****  Research  *****/
+.research-listing {
+  display: table;
+  width: 100%; }
+  .research-listing h2 {
+    font-size: 18px; }
+  .research-listing h3 {
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #666;
+    border-bottom: solid 1px #d2d2d2;
+    margin: 20px 0 10px 0; }
+  .research-listing .circle-image, .research-listing .description {
+    display: table-cell; }
+  .research-listing .circle-image {
+    float: left;
+    position: relative;
+    width: 20%; }
+    .research-listing .circle-image img {
+      border: solid 1px #19374f;
+      border-radius: 50px; }
+    .research-listing .circle-image a {
+      display: block;
+      overflow: auto; }
+  .research-listing .description {
+    width: 80%;
+    overflow: auto; }
+  .research-listing .short-description {
+    margin-bottom: 20px; }
+
+.related-publications {
+  margin-bottom: 20px; }
+  .related-publications .field__item {
+    margin-bottom: 10px; }
+
+.related-publications h2, .related-members h2 {
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #666;
+  border-bottom: solid 1px #d2d2d2;
+  margin: 20px 0 10px 0; }
+.related-publications .member-list, .related-members .member-list {
+  text-transform: uppercase;
+  font-size: 12px; }
+
 /*****  HEADER   ******/
 header {
   background-color: #d9dfe3; }
@@ -364,7 +447,7 @@ header {
     display: none; }
   header .main-nav {
     font-size: 130%;
-    color: #1A374E;
+    color: #053b5b;
     text-align: center; }
     header .main-nav:hover {
       cursor: pointer; }
@@ -517,7 +600,7 @@ footer {
   padding: 15px 0;
   font-size: 12px; }
   footer a {
-    color: #1A374E; }
+    color: #053b5b; }
     footer a:hover {
       color: #58595B; }
   footer ul {
@@ -592,7 +675,7 @@ footer {
     padding: 0.5em;
     font-size: 2.6em;
     display: block;
-    color: #1A374E; }
+    color: #053b5b; }
   .connect-banner a:hover {
     text-decoration: none;
     color: white; }
@@ -608,7 +691,7 @@ footer {
   .view-homepage h2 a {
     color: #666; }
     .view-homepage h2 a:hover {
-      color: #1A374E;
+      color: #053b5b;
       text-decoration: none; }
 .view-homepage ul {
   list-style: none;
