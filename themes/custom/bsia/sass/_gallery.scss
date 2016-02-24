@@ -3,7 +3,7 @@
   overflow: hidden;
 
   .gallery {
-  	position: relative;
+    position: relative;
   }
 
   .box{
@@ -13,16 +13,18 @@
       width: 70%;
       background: rgb(25,55,79);
       background: rgba(25,55,79, 0.90);
-      padding: 1.15em;
+      padding: 1.0em;
       a{
-        font-size: 1.1em;
+        font-size: 1.0em;
         color: #fff;
         text-decoration: none;
         display: block;
         .label{
-          color: #a3a29e;
+          color: $label-grey;
+          font-weight: normal;
         }
       }
+
   }
 
   .bx-wrapper .bx-pager,
@@ -111,18 +113,18 @@
       left: 12%;
     }
     .box-top-right, .box- {
-    	top: 10%;
-    	left: 55%;
+      top: 10%;
+      left: 55%;
     }
 
     .box-bottom-right {
-    	top: 30%;
-    	left: 55%;
+      top: 30%;
+      left: 55%;
     }
 
     .box-bottom-left {
-    	top: 30%;
-    	left: 12%;
+      top: 30%;
+      left: 12%;
     }
 
     #prev a,

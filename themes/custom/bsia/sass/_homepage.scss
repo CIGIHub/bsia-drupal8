@@ -21,12 +21,13 @@
 
 /***********  HOMEPAGE  **************/
 
-.view-homepage{
+.region-homepage{
   h2{
     text-transform: uppercase;
     border-bottom: solid 1px #666;
 		color: #666;
 		margin-top: 0px;
+    font-size: 1.3em;
     a{
       color: #666;
       &:hover{
@@ -37,16 +38,18 @@
   }
 
   @include horizontal_menu;
-  .cell{
-    padding: 0em;
-    .views-field-field-event-date-value,
-  	.views-field-field-news-date-value{
+  li{
+    width: 32%;
+    padding: 1em;
+    margin: 0 0 0.25em 0.5em;
+    .views-field-field-event-date, 
+    .views-field-field-news-date{
   		font-size: 0.9em;
   		color: #666;
   		text-transform: uppercase;
   	}
   	.views-field-title{
-  		font-size: 1.1em;
+  		font-size: 1.3em;
   		font-weight: bold;
   		line-height: 130%;
   		margin-top: 0.4em;
@@ -54,10 +57,10 @@
   }
 }
 
-#block-views-homepage-block_2{
+#block-views-block-homepage-block-1-2{
   margin-bottom: 1.5em;
-  .cell{
-    padding: 1em;
+  li{
+    
     background: #1a374e;
     a{
       color: #fff;
@@ -67,7 +70,7 @@
       }
     }
     .views-field-title{
-      font-size: 1.3em;
+      font-size: 1.6em;
       margin-top: 0px;
 			font-weight: normal;
 

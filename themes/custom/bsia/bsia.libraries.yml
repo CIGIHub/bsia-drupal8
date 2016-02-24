@@ -9,6 +9,10 @@ global-js:
 global-css:
   css:
     theme:
-      css/styles.css: { }
-      css/font-awesome.min.css: { }
-     
+      css/styles.css: {}
+      css/font-awesome.min.css: {}
+
+homepage-slider:
+  js:
+    js/jquery.bxslider.min.js: {}
+    js/bsia-bxslider.js: {}

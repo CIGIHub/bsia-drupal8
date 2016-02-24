@@ -9,6 +9,7 @@ core: 8.x
 libraries:
   - bsia/global-css
   - bsia/global-js
+  - bsia/homepage-slider
 
 stylesheets-remove:
   - core/assets/vendor/normalize-css/normalize.css
@@ -19,12 +20,12 @@ stylesheets-remove:
 regions:
   search: 'Search'
   main_menu: 'Main Menu'
-  feature: 'Feature Area'
   content_header: 'Content Header'
   content: 'Main Content'
-  below_content: 'Below Main Content'
+  homepage: 'Homepage'
   right_menu: 'Right Menu'
   right_sidebar: 'Right Sidebar'
+  connect_banner: 'Connect Footer'
   footer_menu: 'Footer Menu'
   help: 'Help'
   highlight: 'Highlight'

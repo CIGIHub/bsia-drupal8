@@ -683,54 +683,56 @@ footer {
 @media (min-width: 940px) {
   background-position: right; }
 /***********  HOMEPAGE  **************/
-.view-homepage h2 {
+.region-homepage h2 {
   text-transform: uppercase;
   border-bottom: solid 1px #666;
   color: #666;
-  margin-top: 0px; }
-  .view-homepage h2 a {
+  margin-top: 0px;
+  font-size: 1.3em; }
+  .region-homepage h2 a {
     color: #666; }
-    .view-homepage h2 a:hover {
+    .region-homepage h2 a:hover {
       color: #053b5b;
       text-decoration: none; }
-.view-homepage ul {
+.region-homepage ul {
   list-style: none;
   padding: 0px; }
-  .view-homepage ul li {
+  .region-homepage ul li {
     list-style: none;
     list-style-image: none;
     float: left; }
-    .view-homepage ul li.menu-item--expanded {
+    .region-homepage ul li.menu-item--expanded {
       display: none; }
-  .view-homepage ul:after {
+  .region-homepage ul:after {
     content: '';
     display: block;
     clear: both; }
-.view-homepage .cell {
-  padding: 0em; }
-  .view-homepage .cell .views-field-field-event-date-value,
-  .view-homepage .cell .views-field-field-news-date-value {
+.region-homepage li {
+  width: 32%;
+  padding: 1em;
+  margin: 0 0 0.25em 0.5em; }
+  .region-homepage li .views-field-field-event-date,
+  .region-homepage li .views-field-field-news-date {
     font-size: 0.9em;
     color: #666;
     text-transform: uppercase; }
-  .view-homepage .cell .views-field-title {
-    font-size: 1.1em;
+  .region-homepage li .views-field-title {
+    font-size: 1.3em;
     font-weight: bold;
     line-height: 130%;
     margin-top: 0.4em; }
 
-#block-views-homepage-block_2 {
+#block-views-block-homepage-block-1-2 {
   margin-bottom: 1.5em; }
-  #block-views-homepage-block_2 .cell {
-    padding: 1em;
+  #block-views-block-homepage-block-1-2 li {
     background: #1a374e; }
-    #block-views-homepage-block_2 .cell a {
+    #block-views-block-homepage-block-1-2 li a {
       color: #fff; }
-      #block-views-homepage-block_2 .cell a:hover {
+      #block-views-block-homepage-block-1-2 li a:hover {
         text-decoration: none;
         color: #666; }
-    #block-views-homepage-block_2 .cell .views-field-title {
-      font-size: 1.3em;
+    #block-views-block-homepage-block-1-2 li .views-field-title {
+      font-size: 1.6em;
       margin-top: 0px;
       font-weight: normal; }
 
@@ -755,14 +757,15 @@ footer {
     width: 70%;
     background: #19374f;
     background: rgba(25, 55, 79, 0.9);
-    padding: 1.15em; }
+    padding: 1.0em; }
     #gallery .box a {
-      font-size: 1.1em;
+      font-size: 1.0em;
       color: #fff;
       text-decoration: none;
       display: block; }
       #gallery .box a .label {
-        color: #a3a29e; }
+        color: #a3a29e;
+        font-weight: normal; }
   #gallery .bx-wrapper .bx-pager,
   #gallery .bx-wrapper .bx-controls-auto {
     margin-top: -1.0em;

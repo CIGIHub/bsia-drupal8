@@ -94,7 +94,9 @@
           {% endif %}
           <div id="content">
             {{ page.content }}
-            {{ page.below_content }}
+            {% if is_front %}
+              {{ page.homepage }}
+            {% endif %}
           </div>
         </div>
       {% if page.right_sidebar or page.right_menu %}
@@ -113,6 +115,7 @@
 
 <footer>
   <div class="wrapper">
+    {{ page.connect_banner }}
     <div class="row">
       <div class="contact cols-3">
         <ul class="sharelinks">

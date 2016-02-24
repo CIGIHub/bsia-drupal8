@@ -2,7 +2,7 @@
 
  (function ($) {
      $(document).ready(function () {
-         Menu.initialize();
+         //Menu.initialize();
 
         if($('#search-block-form').length){
             var searchFormInput = $('#search-block-form input');
@@ -17,6 +17,18 @@
             });
 
         }
+
+        //add markup to first part of strings on gallery feature lines
+        if($('#gallery li p').length){
+
+            $('#gallery li p').each(function(){
+                var originalText = $(this).html();
+                var pieces = originalText.split(":");
+                var newText = '<span class="label">'+pieces[0]+':</span>'+pieces[1];
+                $(this).html(newText);
+            });
+        }
+
          //function search_clear_button(event) {
          //    event.cancelBubble = true;
          //    event.stopPropagation();

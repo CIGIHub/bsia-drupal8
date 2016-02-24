@@ -42,7 +42,7 @@
     <div class="image">{{ content.field_image }}</div>
     <div class="body">{{ content.body }}</div>
 
-    {% if content.field_related_publications %}
+    {% if content.field_related_publications|render %}
       <div class="related-publications">
         <h2>Related Publications</h2>
         {{ content.field_related_publications }}
