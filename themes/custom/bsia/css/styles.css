@@ -242,11 +242,13 @@ ol.field--ordered-list-style-lower {
   display: table;
   width: 100%; }
   .node--type-person .profile .image, .node--type-person .profile .contact {
-    display: table-cell; }
+    display: table-cell;
+    float: left; }
   .node--type-person .profile .image {
-    width: 30%; }
+    margin-right: 20px;
+    border: solid 10px #ddd; }
     .node--type-person .profile .image img {
-      border: solid 10px #ddd; }
+      display: block; }
   .node--type-person .profile .contact {
     vertical-align: middle;
     width: 70%;
@@ -260,6 +262,29 @@ ol.field--ordered-list-style-lower {
   padding-right: 0; }
 .node--type-person .field--name-program-type .field__item:after {
   content: ","; }
+.node--type-person.node--view-mode-teaser .profile {
+  margin-bottom: 10px; }
+  .node--type-person.node--view-mode-teaser .profile h2 {
+    font-size: 18px;
+    margin-bottom: 0px; }
+  .node--type-person.node--view-mode-teaser .profile .position {
+    font-style: italic;
+    color: #666;
+    font-size: 0.95em;
+    line-height: 130%;
+    margin-bottom: 10px; }
+  .node--type-person.node--view-mode-teaser .profile .image {
+    border: solid 5px #ddd; }
+
+.view-people .view-header {
+  border: 1px solid #d2d2d2;
+  background-color: #f2f7f2;
+  padding: 20px;
+  width: 580px;
+  margin-bottom: 20px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px; }
 
 /*****  Event  *****/
 .event-signup-wrapper {
@@ -393,6 +418,8 @@ dl.calendar {
 .research-listing {
   display: table;
   width: 100%; }
+  .research-listing .views-row {
+    margin-bottom: 20px; }
   .research-listing h2 {
     font-size: 18px; }
   .research-listing h3 {
@@ -509,7 +536,7 @@ header {
           list-style: none;
           list-style-image: none;
           float: left; }
-          #main-menu ul li.menu-item--expanded {
+          #main-menu ul li.menu-item--expanded ul {
             display: none; }
         #main-menu ul:after {
           content: '';
@@ -529,9 +556,7 @@ header {
             #main-menu nav ul li a:hover, #main-menu nav ul li a:focus {
               background: none;
               border-radius: none;
-              text-decoration: underline; }
-        #main-menu nav ul li a.is-active + ul {
-          display: none; } }
+              text-decoration: underline; } }
   .non-mobile #main-menu {
     background: #19374f;
     display: block; }
@@ -542,7 +567,7 @@ header {
         list-style: none;
         list-style-image: none;
         float: left; }
-        .non-mobile #main-menu ul li.menu-item--expanded {
+        .non-mobile #main-menu ul li.menu-item--expanded ul {
           display: none; }
       .non-mobile #main-menu ul:after {
         content: '';
@@ -563,8 +588,6 @@ header {
             background: none;
             border-radius: none;
             text-decoration: underline; }
-      .non-mobile #main-menu nav ul li a.is-active + ul {
-        display: none; }
 
 /*******  SEARCH Block   *******/
 .search {
@@ -610,7 +633,7 @@ footer {
       list-style: none;
       list-style-image: none;
       float: left; }
-      footer ul li.menu-item--expanded {
+      footer ul li.menu-item--expanded ul {
         display: none; }
     footer ul:after {
       content: '';
@@ -668,12 +691,31 @@ footer {
     display: block;
     margin: 0; }
 
+#block-connectwithus {
+  background-image: url(../images/connect-button.png);
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: right; }
+  #block-connectwithus a {
+    padding: 30px 20px;
+    display: block;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase; }
+  #block-connectwithus a:hover {
+    text-decoration: none;
+    color: white; }
+
 /*******   CONNECT BANNER FOR HOMEPAGE    *******/
 .connect-banner {
-  background: url(../_images/connect-banner.png) no-repeat center #fed130; }
+  background-image: url(../images/connect-banner.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: #fed130;
+  font-size: 34px; }
   .connect-banner a {
-    padding: 0.5em;
-    font-size: 2.6em;
+    padding: 26px 0;
     display: block;
     color: #053b5b; }
   .connect-banner a:hover {
@@ -701,7 +743,7 @@ footer {
     list-style: none;
     list-style-image: none;
     float: left; }
-    .region-homepage ul li.menu-item--expanded {
+    .region-homepage ul li.menu-item--expanded ul {
       display: none; }
   .region-homepage ul:after {
     content: '';

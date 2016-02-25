@@ -1,0 +1,18 @@
+#block-connectwithus{
+	background-image:url(../images/connect-button.png);
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: right;
+  a{
+    padding: 30px 20px;
+    display: block;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  a:hover{
+    text-decoration: none;
+    color: white;
+  }
+}

@@ -113,9 +113,16 @@
   </main>
 </div>
 
+{% if is_front %}
+  <div class="connect-banner">
+    <div class="wrapper">
+      {{ page.connect_banner }}
+    </div>
+  </div>
+{% endif %}
+
 <footer>
   <div class="wrapper">
-    {{ page.connect_banner }}
     <div class="row">
       <div class="contact cols-3">
         <ul class="sharelinks">

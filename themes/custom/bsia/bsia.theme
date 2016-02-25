@@ -6,17 +6,28 @@ function theme_name_preprocess_page(&$variables) {
 	}
 }
 
+function bsia_theme_suggestions_block_alter(&$suggestions, $variables) {
+  $content = $variables['elements']['content'];
+  if (isset($content['#block_content']) && $content['#block_content'] instanceof \Drupal\block_content\BlockContentInterface) {
+    $suggestions[] = 'block__' . $content['#block_content']->bundle();
+  }
+}
 
 function bsia_preprocess_field(&$variables, $hook) {
  	
  	if($variables['field_name'] === 'field_event_date'){
- 		$variables['start_date'] = $variables['items'][0]['content']['#text'];
- 		$variables['end_date'] = $variables['items'][1]['content']['#text'];
- 	}	 
-}
+ 		$variables['start_date'] = null;
+ 		$variables['end_date'] = null;
 
-function bsia_preprocess_views_view(&$variables) {
-  //dsm($variables));
+ 		foreach($variables['items'] as $key=>$value){
+			if($key == 0){
+				$variables['start_date'] = $variables['items'][$key]['content']['#text'];
+			}
+			if($key == 1){
+				$variables['end_date'] = $variables['items'][$key]['content']['#text'];
+			}
+		}
+ 	}	 
 }
 
 function bsia_preprocess_node(&$variables){
@@ -40,34 +51,123 @@ function bsia_preprocess_node(&$variables){
 /* Preprocess logic for person nodes */
 
 	if($variables['node']->getType() === 'person'){
-		$variables['website'] = $variables['node']->field_website->getValue()[0]['value'];
+		if($variables['node']->field_website->getValue()){
+			$variables['website'] = $variables['node']->field_website->getValue()[0]['value'];
+		}
+	
+		//set flag for person types
+		$variables['staff'] = false;
+		$variables['faculty'] = false;
+		$variables['cigi_chair'] = false;
+		$variables['program_director'] = false;
+		$variables['student'] = false;
+		$variables['postdoc_fellow'] = false;
+		$variables['graduate'] = false;
+		$variables['visiting_fellow'] = false;
+		$variables['bsia_fellow'] = false;
+		$variables['board_member'] = false;
+
+
+
+		foreach($variables['node']->person_type->getValue() as $key=>$value){
+
+			if($variables['node']->person_type->getValue()[$key]['target_id'] == 1){
+				$variables['staff'] = true;
+			}
+			if($variables['node']->person_type->getValue()[$key]['target_id'] == 2){
+				$variables['faculty'] = true;
+			}
+			if($variables['node']->person_type->getValue()[$key]['target_id'] == 3){
+				$variables['cigi_chair'] = true;
+			}
+			if($variables['node']->person_type->getValue()[$key]['target_id'] == 4){
+				$variables['program_director'] = true;
+			}
+			if($variables['node']->person_type->getValue()[$key]['target_id'] == 5){
+				$variables['student'] = true;
+			}
+			if($variables['node']->person_type->getValue()[$key]['target_id'] == 23){
+				$variables['postdoc_fellow'] = true;
+			}
+			if($variables['node']->person_type->getValue()[$key]['target_id'] == 42){
+				$variables['graduate'] = true;
+			}
+			if($variables['node']->person_type->getValue()[$key]['target_id'] == 137){
+				$variables['visiting_fellow'] = true;
+			}
+			if($variables['node']->person_type->getValue()[$key]['target_id'] == 138){
+				$variables['bsia_fellow'] = true;
+			}
+			if($variables['node']->person_type->getValue()[$key]['target_id'] == 158){
+				$variables['board_member'] = true;
+			}
+		}
+
+		$variables['program_path'] = '';
+
+		foreach($variables['node']->program_type->getValue() as $key=>$value){
+			if($variables['node']->program_type->getValue()[$key]['target_id'] == 6){
+				$variables['program_url'] = '/degree-programs/joint-university-phd-in-global-governance';
+			}
+			elseif($variables['node']->program_type->getValue()[$key]['target_id'] == 7){
+				$variables['program_url'] = '/degree-programs/masters-of-arts-in-international-public-policy';
+			}
+			elseif($variables['node']->program_type->getValue()[$key]['target_id'] == 8){
+				$variables['program_url'] = '/degree-programs/master-arts-global-governance';
+			}
+		}
+
 	}
 
 /* Preprocess logic for event nodes */
 
 	if($variables['node']->getType() === 'event' && $variables['view_mode'] === 'teaser' ){
-		$variables['event_date'] = $variables['node']->field_event_date->getValue()[0]['value'];
-		$variables['event_date_2'] = $variables['node']->field_event_date->getValue()[1]['value'];
+
+		$variables['event_date'] = null;
+		$variables['event_date_2'] = null;
+
+		foreach($variables['node']->field_event_date->getValue() as $key=>$value){
+			if($key == 0){
+				$variables['event_date'] = $variables['node']->field_event_date->getValue()[$key]['value'];
+			}
+			if($key == 1){
+				$variables['event_date_2'] = $variables['node']->field_event_date->getValue()[$key]['value'];
+			}
+		}
+		
 		
 		$start_datetime = strtotime($variables['event_date']);
-		$end_datetime = strtotime($variables['event_date_2']);
-
-		if(!empty($end_datetime)){
-
+		if($variables['event_date_2'] != null){
+			$end_datetime = strtotime($variables['event_date_2']);
 		}
+		else{
+			$end_datetime = '';
+		}
+		
 	}
 
 	if($variables['node']->getType() === 'event'){
 
 		global $base_url;
 		$absolute_url = $base_url . \Drupal::request()->getRequestUri();
-		$title = $variables['node']->title->getValue()[0]['value'];
+		if($title = $variables['node']->title->getValue()){
+			$title = $variables['node']->title->getValue()[0]['value'];
+		}
+		
 		$description = 'More Event Information: ' . $absolute_url;
 
 		/* get date fields and reformat for ical */ 
-		
-		$variables['event_date'] = $variables['node']->field_event_date->getValue()[0]['value'];
-		$variables['event_date_2'] = $variables['node']->field_event_date->getValue()[1]['value'];
+		$variables['event_date'] = null;
+		$variables['event_date_2'] = null;
+
+		foreach($variables['node']->field_event_date->getValue() as $key=>$value){
+			if($key == 0){
+				$variables['event_date'] = $variables['node']->field_event_date->getValue()[$key]['value'];
+			}
+			if($key == 1){
+				$variables['event_date_2'] = $variables['node']->field_event_date->getValue()[$key]['value'];
+			}
+		}
 		
 		//convert dates to integers for further comparisons
 		$start_datetime = strtotime($variables['event_date']);
@@ -81,11 +181,11 @@ function bsia_preprocess_node(&$variables){
 		}
 	
 		//set ical time formats
-		$ical_start_date = format_date($start_datetime, ical);
-		$ical_end_date = format_date($start_datetime, ical);
+		$ical_start_date = format_date($start_datetime, 'custom', 'Ymd\THis', 'Etc/GMT+10');
+		$ical_end_date = format_date($start_datetime, 'custom', 'Ymd\THis', 'Etc/GMT+10');
 
 		//set a endstamp to compare in templates as a flag for showing past material
-		$variables['endstamp'] = format_date($end_datetime, timestamp);
+		$variables['endstamp'] = format_date($end_datetime, 'custom', 'U', 'Etc/GMT+10');
 		$variables['current_datetime'] = time();
 
 		// set dates for datemark on views/teasers
@@ -93,11 +193,24 @@ function bsia_preprocess_node(&$variables){
 		$variables['event_day'] = format_date($end_datetime, 'custom', 'd', 'Etc/GMT+10');
 		$variables['event_year'] = format_date($start_datetime, 'custom', 'Y', 'Etc/GMT+10');
 
-		/* build address from fields and return to event node template */ 
-		$street = $variables['node']->field_address_1->getValue()[0]['value'];
-		$city = $variables['node']->field_city->getValue()[0]['value'];
-		$province_state = $variables['node']->field_state_province->getValue()[0]['value'];
-		$country = $variables['node']->field_country->getValue()[0]['value'];
+		/* build address from fields and return to event node template */
+		$street = null;
+		$city = null;
+		$province_state = null;
+		$country = null;
+
+		if($variables['node']->field_address_1->getValue()){
+			$street = $variables['node']->field_address_1->getValue()[0]['value'];
+		}
+		if($variables['node']->field_city->getValue()){
+			$city = $variables['node']->field_city->getValue()[0]['value'];
+		}
+		if($variables['node']->field_state_province->getValue()){
+			$province_state = $variables['node']->field_state_province->getValue()[0]['value'];
+		}
+		if($variables['node']->field_country->getValue()){
+			$country = $variables['node']->field_country->getValue()[0]['value'];
+		}
 
 		$address = '';
 		$addressFields = array($street, $city, $province_state, $country);
@@ -113,16 +226,27 @@ function bsia_preprocess_node(&$variables){
 		}
 		$variables['address'] = $address;
 
-		$ical_location = $variables['node']->field_location->getValue()[0]['value'] . $address;
+		if($variables['node']->field_location->getValue()){
+			$ical_location = $variables['node']->field_location->getValue()[0]['value'] . $address;
+		}
+		
 
 		$variables['google_ical'] = 'https://www.google.com/calendar/render?action=TEMPLATE&text=' . $title . '&dates=' . $ical_start_date . '/' . $ical_end_date . '&details=' . $description . '&location=' . $ical_location . '&trp=false&sprop=www.balsillieschool.ca&sprop=name:www.balsillieschool.ca&pli=1&sf=true&output=xml';
-
-		$variables['event_registration_email'] = $variables['node']->field_event_management->getValue()[0]['value'] . '?subject=' . $variables['node']->field_email_subject->getValue()[0]['value'];
-
-		$variables['event_registration_link'] = $variables['node']->field_event_management->getValue()[0]['value'];
-		$variables['invitation_only'] = $variables['node']->field_invitation->getValue()[0]['value'];
-		$variables['rsvp'] = $variables['node']->field_rsvp->getValue()[0]['value'];
-
+		
+		if($variables['node']->field_event_management->getValue() && $variables['node']->field_email_subject->getValue()){
+			$variables['event_registration_email'] = $variables['node']->field_event_management->getValue()[0]['value'] . '?subject=' . $variables['node']->field_email_subject->getValue()[0]['value'];
+		}
+		
+		if($variables['node']->field_event_management->getValue()){
+			$variables['event_registration_link'] = $variables['node']->field_event_management->getValue()[0]['value'];
+		}
+		if($variables['node']->field_invitation->getValue()){
+			$variables['invitation_only'] = $variables['node']->field_invitation->getValue()[0]['value'];
+		}
+		if($variables['node']->field_rsvp->getValue()){
+			$variables['rsvp'] = $variables['node']->field_rsvp->getValue()[0]['value'];
+		}
+		
 		$variables['speakers_string'] = speakers_or_authors($variables['node']->field_speakers, $variables['node']->field_speakers_unlinked, ', ');
 
 	}
@@ -131,21 +255,30 @@ function bsia_preprocess_node(&$variables){
 
 	if($variables['node']->getType() === 'publication' || $variables['node']->getType() === 'external_publication'){
 		
-		$publication_type_id = $variables['node']->publication_type->getValue()[0]['target_id'];
+		if($variables['node']->publication_type->getValue()){
+			$publication_type_id = $variables['node']->publication_type->getValue()[0]['target_id'];
+		}
+		
 		$publication_type_object = taxonomy_term_load($publication_type_id);
 		$publication_type_uri = taxonomy_term_uri($publication_type_object);
 		$publication_type_name = $publication_type_object->get('name')->value;
 
 		$variables['publication_title'] = $variables['node']->label();
 
-		$variables['publication_source'] = $variables['node']->field_publication_source->getValue()[0]['value'];
-		$variables['publication_source_link'] = $variables['node']->field_publication_source_link->getValue()[0]['value'];
+		if($variables['node']->field_publication_source->getValue()){
+			$variables['publication_source'] = $variables['node']->field_publication_source->getValue()[0]['value'];
+		}
+		if($variables['node']->field_publication_source_link->getValue()){
+			$variables['publication_source_link'] = $variables['node']->field_publication_source_link->getValue()[0]['value'];
+		}
 		
 		$variables['publication_type_name'] = $publication_type_name;
 		$variables['publication_type_uri'] = $publication_type_uri;
 
 		//dsm($variables['node']->field_published_date->getValue());
-		$variables['publication_date'] = $variables['node']->field_published_date->getValue()[0]['value'];
+		if($variables['node']->field_published_date->getValue()){
+			$variables['publication_date'] = $variables['node']->field_published_date->getValue()[0]['value'];
+		}
 		$variables['authors_string'] = speakers_or_authors($variables['node']->field_speakers, $variables['node']->field_speakers_unlinked, ', ');
 	
 	}
@@ -155,7 +288,7 @@ function bsia_preprocess_node(&$variables){
 	if($variables['node']->getType() === 'publication'){
 		if($variables['view_mode'] != 'entity'){
 
-
+		
 		if(!empty($variables['node']->field_link_label->getValue()[0]['value'])){
 			$variables['link_label'] = $variables['node']->field_link_label->getValue()[0]['value'];
 		}

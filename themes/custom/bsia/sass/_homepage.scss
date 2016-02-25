@@ -1,11 +1,13 @@
 /*******   CONNECT BANNER FOR HOMEPAGE    *******/
 
 .connect-banner{
-  background: url(../_images/connect-banner.png) no-repeat center $brand-secondary-color;
-
+  background-image:url(../images/connect-banner.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: $brand-secondary-color;
+  font-size: 34px;
   a{
-    padding: 0.5em;
-    font-size: 2.6em;
+    padding: 26px 0;
     display: block;
     color: $link-color;
   }

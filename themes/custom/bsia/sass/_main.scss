@@ -135,12 +135,14 @@ ul, ol{
     width: 100%;
     .image, .contact{
       display: table-cell;
+      float: left;
     }
     .image{
-      width: 30%;
       img{
-        border: solid 10px $image-border-color;
+        display: block;
       }
+      margin-right: 20px;
+      border: solid 10px $image-border-color;
     }
     .contact{
       vertical-align: middle;
@@ -162,6 +164,29 @@ ul, ol{
     .field__item:after{
      content: ",";
     } 
+  }
+  &.node--view-mode-teaser .profile{
+    margin-bottom: 10px;
+    h2{
+      font-size: 18px;
+      margin-bottom: 0px;
+    }
+    .position{
+      font-style: italic;
+      color: $type-grey;
+      font-size: 0.95em;
+      line-height: 130%;
+      margin-bottom: 10px;
+    }
+    .image{
+      border: solid 5px $image-border-color;
+    }
+  }
+}
+
+.view-people{
+  .view-header{
+    @include header_box;
   }
 }
 
@@ -297,6 +322,10 @@ dl.calendar{
 .research-listing{
   display: table;
   width: 100%;
+
+  .views-row{
+    margin-bottom: 20px;
+  }
 
   h2{
     font-size: 18px;

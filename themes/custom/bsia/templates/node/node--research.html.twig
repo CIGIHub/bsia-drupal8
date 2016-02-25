@@ -31,9 +31,11 @@
 
   {% if not page %}
     {% if teaser %}
-      <h2><a href="{{ url }}" rel="bookmark">{{ label }}</a></h2>
-      {{ content.field_square_image }}
-      {{ content.field_short_description }}
+    
+        <h2><a href="{{ url }}" rel="bookmark">{{ label }}</a></h2>
+        {{ content.field_square_image }}
+        {{ content.field_short_description }}
+      
     {% endif %}
 
   {% else %}
