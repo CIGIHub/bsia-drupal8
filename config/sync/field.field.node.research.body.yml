@@ -1,0 +1,22 @@
+uuid: c75a6983-8c3a-4606-8a09-9bd952004598
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.research
+  module:
+    - text
+id: node.research.body
+field_name: body
+entity_type: node
+bundle: research
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

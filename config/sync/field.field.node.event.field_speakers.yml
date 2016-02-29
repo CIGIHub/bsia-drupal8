@@ -1,0 +1,24 @@
+uuid: 36860f1f-1c0e-4755-8940-64d00804ef7a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_speakers
+    - node.type.event
+    - node.type.person
+id: node.event.field_speakers
+field_name: field_speakers
+entity_type: node
+bundle: event
+label: Speakers
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      person: person
+field_type: entity_reference

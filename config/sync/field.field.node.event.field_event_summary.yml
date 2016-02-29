@@ -1,0 +1,21 @@
+uuid: 845f0db7-cd60-4d99-9109-0946a7e2ff74
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_summary
+    - node.type.event
+  module:
+    - text
+id: node.event.field_event_summary
+field_name: field_event_summary
+entity_type: node
+bundle: event
+label: 'Event Summary'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

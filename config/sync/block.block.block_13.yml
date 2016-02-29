@@ -1,0 +1,30 @@
+uuid: 9975c6a7-6317-43d5-840b-11c897f04f6e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:238ce17c-ce5e-4e72-8b26-385eeaeee5c6'
+  module:
+    - block_content
+    - system
+  theme:
+    - bsia
+id: block_13
+theme: bsia
+region: content_header
+weight: -52
+provider: null
+plugin: 'block_content:238ce17c-ce5e-4e72-8b26-385eeaeee5c6'
+settings:
+  id: 'block_content:238ce17c-ce5e-4e72-8b26-385eeaeee5c6'
+  label: ''
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /faculty/program-directors

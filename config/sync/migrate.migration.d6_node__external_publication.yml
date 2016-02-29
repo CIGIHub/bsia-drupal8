@@ -1,0 +1,147 @@
+uuid: dd9f26f1-1f74-4b44-bb03-3da0c189831c
+langcode: en
+status: true
+dependencies:
+  config:
+    - migrate.migration.d6_filter_format
+    - migrate.migration.d6_node_settings
+    - migrate.migration.d6_node_type
+    - migrate.migration.d6_user
+  module:
+    - node
+id: d6_node__external_publication
+migration_tags:
+  - 'Drupal 6'
+label: 'Nodes (external_publication)'
+source:
+  plugin: d6_node
+  database_state_key: migrate_upgrade_6
+  node_type: external_publication
+process:
+  nid: nid
+  vid: vid
+  type: type
+  langcode:
+    plugin: default_value
+    source: language
+    default_value: und
+  title: title
+  uid: node_uid
+  status: status
+  created: created
+  changed: changed
+  promote: promote
+  sticky: sticky
+  body/format:
+    plugin: migration
+    migration: d6_filter_format
+    source: format
+  body/value: body
+  body/summary: teaser
+  revision_uid: revision_uid
+  revision_log: log
+  revision_timestamp: timestamp
+  field_short_description:
+    plugin: iterator
+    source: field_short_description
+    process:
+      value: value
+      format:
+        -
+          plugin: static_map
+          bypass: true
+          source: format
+          map:
+            - null
+        -
+          plugin: skip_on_empty
+          method: process
+        -
+          plugin: migration
+          migration:
+            - d6_filter_format
+            - d7_filter_format
+          source: format
+  field_speakers:
+    plugin: iterator
+    source: field_speakers
+    process:
+      target_id: nid
+  field_speakers_unlinked:
+    plugin: iterator
+    source: field_speakers_unlinked
+    process:
+      value: value
+      format:
+        -
+          plugin: static_map
+          bypass: true
+          source: format
+          map:
+            - null
+        -
+          plugin: skip_on_empty
+          method: process
+        -
+          plugin: migration
+          migration:
+            - d6_filter_format
+            - d7_filter_format
+          source: format
+  field_published_date: field_published_date
+  field_publication_source:
+    plugin: iterator
+    source: field_publication_source
+    process:
+      value: value
+      format:
+        -
+          plugin: static_map
+          bypass: true
+          source: format
+          map:
+            - null
+        -
+          plugin: skip_on_empty
+          method: process
+        -
+          plugin: migration
+          migration:
+            - d6_filter_format
+            - d7_filter_format
+          source: format
+  field_publication_source_link:
+    plugin: iterator
+    source: field_publication_source_link
+    process:
+      value: value
+      format:
+        -
+          plugin: static_map
+          bypass: true
+          source: format
+          map:
+            - null
+        -
+          plugin: skip_on_empty
+          method: process
+        -
+          plugin: migration
+          migration:
+            - d6_filter_format
+            - d7_filter_format
+          source: format
+destination:
+  plugin: 'entity:node'
+template: d6_node
+migration_dependencies:
+  required:
+    - d6_user
+    - d6_node_type
+    - d6_node_settings
+    - d6_filter_format
+  optional:
+    - d6_field_instance_widget_settings
+    - d6_field_formatter_settings
+    - d6_upload_field_instance
+migration_group: null

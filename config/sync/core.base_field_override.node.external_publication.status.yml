@@ -1,0 +1,22 @@
+uuid: f24bac55-0942-4682-b500-c8eff1b7a124
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.external_publication
+id: node.external_publication.status
+field_name: status
+entity_type: node
+bundle: external_publication
+label: null
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

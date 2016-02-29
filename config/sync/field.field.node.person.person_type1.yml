@@ -1,0 +1,25 @@
+uuid: 8dc02141-68c1-4220-8862-98464823060b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.person_type1
+    - node.type.person
+    - taxonomy.vocabulary.person_type1
+id: node.person.person_type1
+field_name: person_type1
+entity_type: node
+bundle: person
+label: 'Person Type'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      - person_type1
+    auto_create: true
+field_type: entity_reference

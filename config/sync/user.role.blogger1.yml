@@ -1,0 +1,17 @@
+uuid: 08ecba48-2441-47f0-b501-1d95c37afba9
+langcode: en
+status: true
+dependencies: {  }
+id: blogger1
+label: blogger
+weight: 10
+is_admin: null
+permissions:
+  - 'access administration menu'
+  - 'edit field_image'
+  - 'edit field_published_date'
+  - 'administer menu'
+  - 'access content'
+  - 'create blog content'
+  - 'delete own blog content'
+  - 'edit own blog content'

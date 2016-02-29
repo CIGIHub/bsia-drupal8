@@ -1,0 +1,19 @@
+uuid: db4be580-69c4-4aab-a006-6c0bcb4726b8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_languages
+field_name: field_languages
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

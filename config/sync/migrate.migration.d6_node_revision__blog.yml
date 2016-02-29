@@ -1,0 +1,51 @@
+uuid: 56382121-d1ba-4413-b004-4c973cf404a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - migrate.migration.d6_node__blog
+  module:
+    - node
+id: d6_node_revision__blog
+migration_tags:
+  - 'Drupal 6'
+label: 'Node revisions (blog)'
+source:
+  plugin: d6_node_revision
+  database_state_key: migrate_upgrade_6
+  node_type: blog
+process:
+  nid: nid
+  vid: vid
+  type: type
+  langcode:
+    plugin: default_value
+    source: language
+    default_value: und
+  title: title
+  uid: node_uid
+  status: status
+  created: created
+  changed: changed
+  promote: promote
+  sticky: sticky
+  body/format:
+    plugin: migration
+    migration: d6_filter_format
+    source: format
+  body/value: body
+  body/summary: teaser
+  revision_uid: revision_uid
+  revision_log: log
+  revision_timestamp: timestamp
+  field_image:
+    plugin: d6_cck_file
+    source: field_image
+  field_published_date: field_published_date
+destination:
+  plugin: 'entity_revision:node'
+template: d6_node_revision
+migration_dependencies:
+  required:
+    - d6_node__blog
+migration_group: null

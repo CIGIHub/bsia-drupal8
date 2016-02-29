@@ -1,0 +1,19 @@
+uuid: f6b724d4-69c4-4648-b410-16f1bfc292a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_speakers_unlinked
+    - node.type.external_publication
+id: node.external_publication.field_speakers_unlinked
+field_name: field_speakers_unlinked
+entity_type: node
+bundle: external_publication
+label: 'Authors (Not Linked)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

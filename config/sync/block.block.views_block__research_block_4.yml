@@ -1,0 +1,30 @@
+uuid: 1e63a55e-8738-4212-b400-0b31e9f16e4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.research
+  module:
+    - system
+    - views
+  theme:
+    - bsia
+id: views_block__research_block_4
+theme: bsia
+region: right_sidebar
+weight: -10
+provider: null
+plugin: 'views_block:research-block_4'
+settings:
+  id: 'views_block:research-block_4'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '/people/*'
+    negate: false
+    context_mapping: {  }

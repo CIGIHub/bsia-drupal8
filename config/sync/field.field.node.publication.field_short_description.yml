@@ -1,0 +1,21 @@
+uuid: 4a985956-9aaf-4f70-931b-27e3f7fc3475
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_short_description
+    - node.type.publication
+  module:
+    - text
+id: node.publication.field_short_description
+field_name: field_short_description
+entity_type: node
+bundle: publication
+label: 'Short Description'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,30 @@
+uuid: 52928cc3-de72-45c3-9534-5227633cdb73
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.research
+  module:
+    - system
+    - views
+  theme:
+    - bsia
+id: views_block__research_block_3
+theme: bsia
+region: right_sidebar
+weight: -10
+provider: null
+plugin: 'views_block:research-block_3'
+settings:
+  id: 'views_block:research-block_3'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '/research/*'
+    negate: false
+    context_mapping: {  }

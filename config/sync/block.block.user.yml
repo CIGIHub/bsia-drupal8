@@ -1,0 +1,24 @@
+uuid: 9c72b856-d7c0-4a9f-bb00-bf9ba755a03f
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.tools
+  module:
+    - system
+  theme:
+    - seven
+id: user
+theme: seven
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:tools'
+settings:
+  id: 'system_menu_block:tools'
+  label: ''
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

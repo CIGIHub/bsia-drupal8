@@ -1,0 +1,24 @@
+uuid: d377749e-08a4-48cd-a600-b70a9ad9574c
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.tools
+  module:
+    - system
+  theme:
+    - bsia
+id: user_4
+theme: bsia
+region: '-1'
+weight: -58
+provider: null
+plugin: 'system_menu_block:tools'
+settings:
+  id: 'system_menu_block:tools'
+  label: ''
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

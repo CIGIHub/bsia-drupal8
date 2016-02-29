@@ -1,0 +1,315 @@
+uuid: ddd00d76-bdf5-42fa-b700-fb607e982e4c
+langcode: en
+status: true
+dependencies:
+  config:
+    - migrate.migration.d6_node__publication
+  module:
+    - node
+id: d6_node_revision__publication
+migration_tags:
+  - 'Drupal 6'
+label: 'Node revisions (publication)'
+source:
+  plugin: d6_node_revision
+  database_state_key: migrate_upgrade_6
+  node_type: publication
+process:
+  nid: nid
+  vid: vid
+  type: type
+  langcode:
+    plugin: default_value
+    source: language
+    default_value: und
+  title: title
+  uid: node_uid
+  status: status
+  created: created
+  changed: changed
+  promote: promote
+  sticky: sticky
+  body/format:
+    plugin: migration
+    migration: d6_filter_format
+    source: format
+  body/value: body
+  body/summary: teaser
+  revision_uid: revision_uid
+  revision_log: log
+  revision_timestamp: timestamp
+  field_image_page:
+    plugin: d6_cck_file
+    source: field_image_page
+  field_position:
+    plugin: iterator
+    source: field_position
+    process:
+      value: value
+      format:
+        -
+          plugin: static_map
+          bypass: true
+          source: format
+          map:
+            - null
+        -
+          plugin: skip_on_empty
+          method: process
+        -
+          plugin: migration
+          migration:
+            - d6_filter_format
+            - d7_filter_format
+          source: format
+  field_credit:
+    plugin: iterator
+    source: field_credit
+    process:
+      value: value
+      format:
+        -
+          plugin: static_map
+          bypass: true
+          source: format
+          map:
+            - null
+        -
+          plugin: skip_on_empty
+          method: process
+        -
+          plugin: migration
+          migration:
+            - d6_filter_format
+            - d7_filter_format
+          source: format
+  field_link_text:
+    plugin: iterator
+    source: field_link_text
+    process:
+      value: value
+      format:
+        -
+          plugin: static_map
+          bypass: true
+          source: format
+          map:
+            - null
+        -
+          plugin: skip_on_empty
+          method: process
+        -
+          plugin: migration
+          migration:
+            - d6_filter_format
+            - d7_filter_format
+          source: format
+  field_feature_area:
+    plugin: iterator
+    source: field_feature_area
+    process:
+      value: value
+      format:
+        -
+          plugin: static_map
+          bypass: true
+          source: format
+          map:
+            - null
+        -
+          plugin: skip_on_empty
+          method: process
+        -
+          plugin: migration
+          migration:
+            - d6_filter_format
+            - d7_filter_format
+          source: format
+  field_feature_weight: field_feature_weight
+  field_feature_line:
+    plugin: iterator
+    source: field_feature_line
+    process:
+      value: value
+      format:
+        -
+          plugin: static_map
+          bypass: true
+          source: format
+          map:
+            - null
+        -
+          plugin: skip_on_empty
+          method: process
+        -
+          plugin: migration
+          migration:
+            - d6_filter_format
+            - d7_filter_format
+          source: format
+  field_alternative_url:
+    plugin: iterator
+    source: field_alternative_url
+    process:
+      value: value
+      format:
+        -
+          plugin: static_map
+          bypass: true
+          source: format
+          map:
+            - null
+        -
+          plugin: skip_on_empty
+          method: process
+        -
+          plugin: migration
+          migration:
+            - d6_filter_format
+            - d7_filter_format
+          source: format
+  field_short_description:
+    plugin: iterator
+    source: field_short_description
+    process:
+      value: value
+      format:
+        -
+          plugin: static_map
+          bypass: true
+          source: format
+          map:
+            - null
+        -
+          plugin: skip_on_empty
+          method: process
+        -
+          plugin: migration
+          migration:
+            - d6_filter_format
+            - d7_filter_format
+          source: format
+  field_image:
+    plugin: d6_cck_file
+    source: field_image
+  field_speakers:
+    plugin: iterator
+    source: field_speakers
+    process:
+      target_id: nid
+  field_speakers_unlinked:
+    plugin: iterator
+    source: field_speakers_unlinked
+    process:
+      value: value
+      format:
+        -
+          plugin: static_map
+          bypass: true
+          source: format
+          map:
+            - null
+        -
+          plugin: skip_on_empty
+          method: process
+        -
+          plugin: migration
+          migration:
+            - d6_filter_format
+            - d7_filter_format
+          source: format
+  field_published_date: field_published_date
+  field_embed_code:
+    plugin: iterator
+    source: field_embed_code
+    process:
+      value: value
+      format:
+        -
+          plugin: static_map
+          bypass: true
+          source: format
+          map:
+            - null
+        -
+          plugin: skip_on_empty
+          method: process
+        -
+          plugin: migration
+          migration:
+            - d6_filter_format
+            - d7_filter_format
+          source: format
+  field_publication_source:
+    plugin: iterator
+    source: field_publication_source
+    process:
+      value: value
+      format:
+        -
+          plugin: static_map
+          bypass: true
+          source: format
+          map:
+            - null
+        -
+          plugin: skip_on_empty
+          method: process
+        -
+          plugin: migration
+          migration:
+            - d6_filter_format
+            - d7_filter_format
+          source: format
+  field_publication_source_link:
+    plugin: iterator
+    source: field_publication_source_link
+    process:
+      value: value
+      format:
+        -
+          plugin: static_map
+          bypass: true
+          source: format
+          map:
+            - null
+        -
+          plugin: skip_on_empty
+          method: process
+        -
+          plugin: migration
+          migration:
+            - d6_filter_format
+            - d7_filter_format
+          source: format
+  field_link_label:
+    plugin: iterator
+    source: field_link_label
+    process:
+      value: value
+      format:
+        -
+          plugin: static_map
+          bypass: true
+          source: format
+          map:
+            - null
+        -
+          plugin: skip_on_empty
+          method: process
+        -
+          plugin: migration
+          migration:
+            - d6_filter_format
+            - d7_filter_format
+          source: format
+  field_book_cover:
+    plugin: d6_cck_file
+    source: field_book_cover
+destination:
+  plugin: 'entity_revision:node'
+template: d6_node_revision
+migration_dependencies:
+  required:
+    - d6_node__publication
+migration_group: null

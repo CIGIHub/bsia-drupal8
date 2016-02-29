@@ -1,0 +1,14 @@
+uuid: 3442e522-8b20-4213-8417-2381b9379994
+langcode: en
+status: true
+dependencies: {  }
+name: square_90x90
+label: square_90x90
+effects:
+  5b4435c2-94ac-4d1f-823e-621f4f4db7b4:
+    uuid: 5b4435c2-94ac-4d1f-823e-621f4f4db7b4
+    id: image_scale_and_crop
+    weight: 0
+    data:
+      width: 90
+      height: 90

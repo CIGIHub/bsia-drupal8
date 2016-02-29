@@ -1,0 +1,30 @@
+uuid: 78a5457e-18f9-4f5e-aa00-ac632786c5ca
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:55d3100a-f8e5-4d11-984d-775f35ede635'
+  module:
+    - block_content
+    - system
+  theme:
+    - bsia
+id: block_20
+theme: bsia
+region: content
+weight: -56
+provider: null
+plugin: 'block_content:55d3100a-f8e5-4d11-984d-775f35ede635'
+settings:
+  id: 'block_content:55d3100a-f8e5-4d11-984d-775f35ede635'
+  label: ''
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "<front>\n/admin*\n/user*"

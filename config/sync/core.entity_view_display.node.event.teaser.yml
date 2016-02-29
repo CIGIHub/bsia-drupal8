@@ -1,0 +1,182 @@
+uuid: e2127c85-1a1b-45be-b100-ff79d7264ec6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.event.body
+    - field.field.node.event.comment
+    - field.field.node.event.event_series
+    - field.field.node.event.event_type
+    - field.field.node.event.field_address_1
+    - field.field.node.event.field_alternative_url
+    - field.field.node.event.field_city
+    - field.field.node.event.field_country
+    - field.field.node.event.field_credit
+    - field.field.node.event.field_email_subject
+    - field.field.node.event.field_event_date
+    - field.field.node.event.field_event_management
+    - field.field.node.event.field_event_summary
+    - field.field.node.event.field_event_videos
+    - field.field.node.event.field_feature_area
+    - field.field.node.event.field_feature_line
+    - field.field.node.event.field_feature_weight
+    - field.field.node.event.field_flickr_id
+    - field.field.node.event.field_image
+    - field.field.node.event.field_image_page
+    - field.field.node.event.field_invitation
+    - field.field.node.event.field_link_text
+    - field.field.node.event.field_location
+    - field.field.node.event.field_position
+    - field.field.node.event.field_rsvp
+    - field.field.node.event.field_short_description
+    - field.field.node.event.field_speakers
+    - field.field.node.event.field_speakers_unlinked
+    - field.field.node.event.field_state_province
+    - field.field.node.event.field_test3
+    - field.field.node.event.field_website
+    - field.field.node.event.upload
+    - node.type.event
+  module:
+    - datetime
+    - text
+    - user
+id: node.event.teaser
+targetEntityType: node
+bundle: event
+mode: teaser
+content:
+  event_series:
+    type: entity_reference_entity_view
+    weight: 8
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+  event_type:
+    type: entity_reference_entity_view
+    weight: 7
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+  field_address_1:
+    label: above
+    weight: 9
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+  field_city:
+    label: above
+    weight: 10
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+  field_country:
+    label: above
+    weight: 12
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+  field_email_subject:
+    label: above
+    weight: 8
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+  field_event_date:
+    label: above
+    weight: 0
+    type: datetime_default
+    settings:
+      format_type: fallback
+      timezone_override: ''
+    third_party_settings: {  }
+  field_event_management:
+    label: above
+    weight: 7
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+  field_event_summary:
+    label: above
+    weight: 27
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+  field_event_videos:
+    label: above
+    weight: 29
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+  field_feature_line:
+    label: above
+    weight: 19
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+  field_flickr_id:
+    label: above
+    weight: 28
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+  field_invitation:
+    label: above
+    weight: 5
+    type: number_integer
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_location:
+    label: above
+    weight: 8
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+  field_rsvp:
+    label: above
+    weight: 6
+    type: number_integer
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_short_description:
+    label: above
+    weight: -3
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+  field_speakers_unlinked:
+    label: above
+    weight: 6
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+  field_state_province:
+    label: above
+    weight: 11
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  comment: true
+  field_alternative_url: true
+  field_credit: true
+  field_feature_area: true
+  field_feature_weight: true
+  field_image: true
+  field_image_page: true
+  field_link_text: true
+  field_position: true
+  field_speakers: true
+  field_test3: true
+  field_website: true
+  links: true
+  upload: true

@@ -1,0 +1,21 @@
+uuid: 55e62f01-a556-4635-9c09-9c0e878e6978
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_test
+    - node.type.page
+  module:
+    - text
+id: node.page.field_test
+field_name: field_test
+entity_type: node
+bundle: page
+label: test
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

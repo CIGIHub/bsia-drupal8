@@ -1,0 +1,25 @@
+uuid: d2ec9983-8210-47ad-8a2c-44a0d3c04381
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.topics1
+    - node.type.person
+    - taxonomy.vocabulary.topics1
+id: node.person.topics1
+field_name: topics1
+entity_type: node
+bundle: person
+label: Topics
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      - topics1
+    auto_create: true
+field_type: entity_reference

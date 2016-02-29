@@ -1,0 +1,14 @@
+uuid: 1a8ae9c5-4c9b-4cdf-aa36-54d0ed60ab40
+langcode: en
+status: true
+dependencies: {  }
+name: feature_wide1
+label: feature_wide
+effects:
+  fb66001b-072a-4d1a-b400-ca933868b091:
+    uuid: fb66001b-072a-4d1a-b400-ca933868b091
+    id: image_scale_and_crop
+    weight: 0
+    data:
+      width: 190
+      height: 95

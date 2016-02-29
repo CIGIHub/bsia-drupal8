@@ -1,0 +1,21 @@
+uuid: 3baddec1-9184-40a5-af12-1840f7ff8640
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_research_focus
+    - node.type.person
+  module:
+    - text
+id: node.person.field_research_focus
+field_name: field_research_focus
+entity_type: node
+bundle: person
+label: 'Research Focus'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

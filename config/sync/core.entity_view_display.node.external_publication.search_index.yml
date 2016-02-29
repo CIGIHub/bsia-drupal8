@@ -1,0 +1,66 @@
+uuid: ca70c242-b3c2-416e-8500-e4c8bd72b26a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.external_publication.body
+    - field.field.node.external_publication.comment_no_subject
+    - field.field.node.external_publication.field_publication_source
+    - field.field.node.external_publication.field_publication_source_link
+    - field.field.node.external_publication.field_published_date
+    - field.field.node.external_publication.field_short_description
+    - field.field.node.external_publication.field_speakers
+    - field.field.node.external_publication.field_speakers_unlinked
+    - field.field.node.external_publication.publication_type
+    - field.field.node.external_publication.upload
+    - node.type.external_publication
+  module:
+    - datetime
+    - text
+    - user
+id: node.external_publication.search_index
+targetEntityType: node
+bundle: external_publication
+mode: search_index
+content:
+  field_publication_source:
+    label: above
+    weight: -1
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+  field_publication_source_link:
+    label: above
+    weight: 0
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+  field_published_date:
+    label: hidden
+    weight: -4
+    type: datetime_default
+    settings:
+      format_type: fallback
+      timezone_override: ''
+    third_party_settings: {  }
+  field_short_description:
+    label: above
+    weight: 2
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+  field_speakers_unlinked:
+    label: hidden
+    weight: -2
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 100
+hidden:
+  body: true
+  comment_no_subject: true
+  field_speakers: true
+  publication_type: true
+  upload: true

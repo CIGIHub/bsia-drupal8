@@ -1,0 +1,21 @@
+uuid: 0d4307d7-000b-436e-ae06-6c60f8388394
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_position
+    - node.type.publication
+  module:
+    - options
+id: node.publication.field_position
+field_name: field_position
+entity_type: node
+bundle: publication
+label: 'Caption Position'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,21 @@
+uuid: 711b3895-2341-4969-8638-561b9cd8e902
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_feature_area
+    - node.type.news
+  module:
+    - options
+id: node.news.field_feature_area
+field_name: field_feature_area
+entity_type: node
+bundle: news
+label: Areas
+description: 'Select the feature section(s) this content should appear in.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,21 @@
+uuid: 8afab0e8-3ca7-4aa3-b700-dfb7070e50ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_feature_line
+    - node.type.publication
+  module:
+    - text
+id: node.publication.field_feature_line
+field_name: field_feature_line
+entity_type: node
+bundle: publication
+label: 'Feature Line'
+description: 'Sentence to be displayed on the homepage.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

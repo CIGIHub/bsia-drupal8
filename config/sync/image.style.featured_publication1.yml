@@ -1,0 +1,14 @@
+uuid: 637093af-0690-42f5-8a01-1de50442d81a
+langcode: en
+status: true
+dependencies: {  }
+name: featured_publication1
+label: featured_publication
+effects:
+  03a4a29a-db0a-4494-9a5f-95fb8bbcee64:
+    uuid: 03a4a29a-db0a-4494-9a5f-95fb8bbcee64
+    id: image_scale_and_crop
+    weight: 0
+    data:
+      width: 135
+      height: 200

@@ -1,0 +1,21 @@
+uuid: d81915d4-b2d4-4ac4-9500-aed63bcf1ef9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_position
+    - node.type.person
+  module:
+    - options
+id: node.person.field_position
+field_name: field_position
+entity_type: node
+bundle: person
+label: 'Caption Position'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

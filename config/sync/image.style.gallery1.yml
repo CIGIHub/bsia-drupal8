@@ -1,0 +1,14 @@
+uuid: a24130c1-e8ae-434b-8307-7fbe0f43de1c
+langcode: en
+status: true
+dependencies: {  }
+name: gallery1
+label: gallery
+effects:
+  722ed06c-a656-4b93-8303-3b5351bf7493:
+    uuid: 722ed06c-a656-4b93-8303-3b5351bf7493
+    id: image_scale_and_crop
+    weight: 0
+    data:
+      width: 939
+      height: 466

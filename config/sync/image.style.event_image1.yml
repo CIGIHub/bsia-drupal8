@@ -1,0 +1,14 @@
+uuid: 9719510c-96fb-4ca8-8200-f009a75b1781
+langcode: en
+status: true
+dependencies: {  }
+name: event_image1
+label: event_image
+effects:
+  fb8317c0-f547-480e-bc00-dc1c74b0fad3:
+    uuid: fb8317c0-f547-480e-bc00-dc1c74b0fad3
+    id: image_scale_and_crop
+    weight: 0
+    data:
+      width: 150
+      height: 200

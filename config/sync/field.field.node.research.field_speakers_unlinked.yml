@@ -1,0 +1,19 @@
+uuid: b5a485d4-2707-4aaf-9034-5280dc831b23
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_speakers_unlinked
+    - node.type.research
+id: node.research.field_speakers_unlinked
+field_name: field_speakers_unlinked
+entity_type: node
+bundle: research
+label: 'Members (Not Linked)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,24 @@
+uuid: 25fe02bc-4320-4d24-a122-34d37d52760d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_events
+    - node.type.event
+    - node.type.research
+id: node.research.field_related_events
+field_name: field_related_events
+entity_type: node
+bundle: research
+label: 'Related Events'
+description: 'Select events related to this research'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      event: event
+field_type: entity_reference

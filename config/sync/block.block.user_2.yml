@@ -1,0 +1,22 @@
+uuid: ec79b158-a6d2-4907-9e00-db9da7c30f30
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.tools
+  module:
+    - system
+id: user_2
+theme: null
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:tools'
+settings:
+  id: 'system_menu_block:tools'
+  label: ''
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

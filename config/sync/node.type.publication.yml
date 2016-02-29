@@ -1,0 +1,11 @@
+uuid: c50b7e81-3aed-4a6b-9500-a9b301e1c9f9
+langcode: en
+status: true
+dependencies: {  }
+name: Publication
+type: publication
+description: 'A <em>Publication</em>, is a form of literature such as a book or series of papers.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,30 @@
+uuid: 947a9e8a-3919-46ce-8400-c30c24b15001
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.news
+  module:
+    - system
+    - views
+  theme:
+    - bsia
+id: views_block__news_block_1
+theme: bsia
+region: right_sidebar
+weight: -7
+provider: null
+plugin: 'views_block:news-block_1'
+settings:
+  id: 'views_block:news-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: "/news*\r\n/news-archive*"
+    negate: false
+    context_mapping: {  }

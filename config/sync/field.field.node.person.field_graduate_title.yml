@@ -1,0 +1,19 @@
+uuid: 3c08834f-e4df-40cc-9f00-b16e0a7a6d93
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_graduate_title
+    - node.type.person
+id: node.person.field_graduate_title
+field_name: field_graduate_title
+entity_type: node
+bundle: person
+label: 'Graduate Title'
+description: 'Enter the title/position of the graduate'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

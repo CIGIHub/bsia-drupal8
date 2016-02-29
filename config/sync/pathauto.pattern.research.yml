@@ -1,0 +1,23 @@
+uuid: 2105a009-6d9d-49b5-8f10-169b3e05f915
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - node
+id: research
+label: Research
+type: 'canonical_entities:node'
+pattern: 'research/[node:title]'
+selection_criteria:
+  81e007c9-0ac4-40a3-ad00-c0f05cb9d82c:
+    id: 'entity_bundle:node'
+    bundles:
+      research: research
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 81e007c9-0ac4-40a3-ad00-c0f05cb9d82c
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,20 @@
+uuid: 9b4b0ab8-ba6f-43e2-b61e-307fa5cce878
+langcode: en
+status: true
+dependencies:
+  theme:
+    - bsia
+_core:
+  default_config_hash: ZSpc3IoSaLd0PkB02nxjVPBMztIdsTdHek9SiGaqZ_c
+id: bsia_page_title
+theme: bsia
+region: content_header
+weight: -12
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

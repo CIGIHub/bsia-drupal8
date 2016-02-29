@@ -1,0 +1,24 @@
+uuid: 1713e4fd-8335-451b-a300-f7ce066cfe0b
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.menu-main
+  module:
+    - system
+  theme:
+    - isr
+id: menu_3
+theme: isr
+region: content
+weight: -8
+provider: null
+plugin: 'system_menu_block:menu-main'
+settings:
+  id: 'system_menu_block:menu-main'
+  label: ''
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

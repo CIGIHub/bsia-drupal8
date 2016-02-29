@@ -1,0 +1,30 @@
+uuid: a81b71c3-60c7-4bc2-8700-bc5638211224
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:9ecbfb60-476e-4fc4-a730-482029165fa2'
+  module:
+    - block_content
+    - system
+  theme:
+    - bsia
+id: block_11
+theme: bsia
+region: content_header
+weight: -53
+provider: null
+plugin: 'block_content:9ecbfb60-476e-4fc4-a730-482029165fa2'
+settings:
+  id: 'block_content:9ecbfb60-476e-4fc4-a730-482029165fa2'
+  label: ''
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /faculty/cigi-chairs

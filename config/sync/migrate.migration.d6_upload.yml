@@ -1,0 +1,40 @@
+uuid: 8b6cf8c9-600a-41b3-9900-fa67a50d85e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - migrate.migration.d6_file
+    - migrate.migration.d6_upload_field_instance
+  module:
+    - file
+    - node
+id: d6_upload
+migration_tags:
+  - 'Drupal 6'
+label: 'File uploads'
+source:
+  plugin: d6_upload
+  database_state_key: migrate_upgrade_6
+process:
+  nid: nid
+  vid: vid
+  type: type
+  upload:
+    plugin: iterator
+    source: upload
+    process:
+      target_id:
+        plugin: migration
+        migration: d6_file
+        source: fid
+      display: list
+      description: description
+destination:
+  plugin: 'entity:node'
+template: d6_upload
+migration_dependencies:
+  required:
+    - d6_file
+    - 'd6_node:*'
+    - d6_upload_field_instance
+migration_group: null

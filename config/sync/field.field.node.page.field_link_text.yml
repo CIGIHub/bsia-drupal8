@@ -1,0 +1,21 @@
+uuid: 69fd5661-e283-4898-9456-86ef0a5f895e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link_text
+    - node.type.page
+id: node.page.field_link_text
+field_name: field_link_text
+entity_type: node
+bundle: page
+label: 'Link Text'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 'Read More'
+default_value_callback: ''
+settings: {  }
+field_type: string_long

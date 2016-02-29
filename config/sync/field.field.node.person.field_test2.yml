@@ -1,0 +1,21 @@
+uuid: 975f38cf-6e56-4767-a11e-305a9dd690c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_test2
+    - node.type.person
+  module:
+    - text
+id: node.person.field_test2
+field_name: field_test2
+entity_type: node
+bundle: person
+label: test
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

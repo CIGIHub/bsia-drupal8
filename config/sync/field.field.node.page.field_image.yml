@@ -1,0 +1,38 @@
+uuid: 89de58c1-0e4d-455c-8700-c96b068c38cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image
+    - node.type.page
+  module:
+    - image
+id: node.page.field_image
+field_name: field_image
+entity_type: node
+bundle: page
+label: Image
+description: 'The image must be pre-optimized for file size and cropped to 620px by 335px.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_extensions: 'png gif jpg jpeg'
+  file_directory: 'public://'
+  max_filesize: 1MB
+  alt_field: false
+  alt_field_required: false
+  title_field: false
+  title_field_required: false
+  max_resolution: '0'
+  min_resolution: '0'
+  default_image:
+    uuid: null
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

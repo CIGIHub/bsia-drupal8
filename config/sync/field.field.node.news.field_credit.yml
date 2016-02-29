@@ -1,0 +1,19 @@
+uuid: 2f227ecb-c78b-4ce2-ba05-5ddee81d21f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_credit
+    - node.type.news
+id: node.news.field_credit
+field_name: field_credit
+entity_type: node
+bundle: news
+label: 'Image Credit'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

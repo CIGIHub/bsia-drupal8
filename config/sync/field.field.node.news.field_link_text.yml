@@ -1,0 +1,21 @@
+uuid: e7f80084-2feb-4dbe-881b-2798aee2c302
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link_text
+    - node.type.news
+id: node.news.field_link_text
+field_name: field_link_text
+entity_type: node
+bundle: news
+label: 'Link Text'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 'Read More'
+default_value_callback: ''
+settings: {  }
+field_type: string_long

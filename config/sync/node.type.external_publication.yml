@@ -1,0 +1,11 @@
+uuid: 0caa1637-7b72-489b-9405-5d6e9c5f4a39
+langcode: en
+status: true
+dependencies: {  }
+name: 'External Publication'
+type: external_publication
+description: 'A non-BSIA publication'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false
