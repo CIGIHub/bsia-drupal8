@@ -1,0 +1,7 @@
+bsia_connect.connect_with_us:    
+  path: '/connect-with-us'
+  defaults:
+    _form: '\Drupal\bsia_connect\Form\BSIAConnectSubmissionForm'
+    _title: 'Connect With Us'
+  requirements:
+    _permission: 'access content'    
