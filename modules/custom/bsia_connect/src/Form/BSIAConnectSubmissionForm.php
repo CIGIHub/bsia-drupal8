@@ -36,7 +36,57 @@ class BSIAConnectSubmissionForm extends FormBase {
 
 		$form['bsia_connect_title'] = array(
 			'#type' => 'item',
-			'#markup' => "<h1>How would you like to connect with us? (Select all that apply)</h1>",
+			'#markup' => "<h2>How would you like to connect with us? (Select all that apply)</h2>",
+		);
+
+		$form['programs'] = array(
+			'#type' => 'checkboxes',
+			'#options' => array(
+				"phd" => t('PhD in Global Governance'),
+				"magg" => t('Master of Arts in Global Governance (MAGG)'),
+				"mipp" => t('Master of International Public Policy (MIPP)'),
+			),
+			'#title' => $this->t('Find out more about our programs?'),
+		);
+
+		$form['weekly_bulletin'] = array(
+			'#type' => 'checkbox',
+			'#title' => $this->t('Sign up for our weekly bulletin to learn about upcoming events and opportunities.'),
+		);
+
+		$form['campus_tour'] = array(
+			'#type' => 'checkbox',
+			'#title' => $this->t('Book a tour of our campus.'),
+		);
+
+		$form['contact_title'] = array(
+			'#type' => 'item',
+			'#markup' => "Please provide us with your email address and name so we can connect with you.",
+		);
+
+		$form['first_name'] = array(
+			'#type' => 'textfield',
+			'#title' => t('First Name'),
+			'#placeholder' => t("First Name"),
+			'#size' => 60,
+			'#maxlength' => 128,
+		);
+
+		$form['last_name'] = array(
+			'#type' => 'textfield',
+			'#title' => t('Last Name'),
+			'#placeholder' => t("Last Name"),
+			'#size' => 60,
+			'#maxlength' => 128,
+		);
+
+		$form['email'] = array(
+			'#type' => 'email',
+			'#title' => t('Email'),
+			'#placeholder' => t("Email Address (Required)"),
+			'#size' => 60,
+			'#maxlength' => 128,
+			'#required' => true,
 		);
 
 		$form['actions']['#type'] = 'actions';
@@ -48,9 +98,6 @@ class BSIAConnectSubmissionForm extends FormBase {
 			'#suffix' => '</div>',
 		);
 
-		// By default, render the form using theme_system_config_form().
-		$form['#theme'] = 'system_config_form';
-
 		return $form;
 	}
 
@@ -58,8 +105,6 @@ class BSIAConnectSubmissionForm extends FormBase {
 	 * {@inheritdoc}
 	 */
 	public function submitForm(array &$form, FormStateInterface $form_state) {
-		$logger = \Drupal::logger('bsia_connect');
-		//$logger->notice("rate calculated");
 
 		drupal_set_message(t("Submitted form"), 'status', FALSE);
 	}
@@ -68,18 +113,24 @@ class BSIAConnectSubmissionForm extends FormBase {
 	 * {@inheritdoc}
 	 */
 	public function validateForm(array &$form, FormStateInterface $form_state) {
+		$programs = $form_state->getValue('programs');
+		$weekly_bulletin = $form_state->getValue('weekly_bulletin');
+		$campus_tour = $form_state->getValue('campus_tour');
 
+		//$logger = \Drupal::logger('bsia_connect');
+		//$logger->notice(print_r($programs, true));
+
+		$optionSelected = false;
+		//programs are checkboxes, either a 0 or the key.
+		foreach ($programs as $key => $value) {
+			if (!empty($value)) {
+				$optionSelected = true;
+				break;
+			}
+		}
+
+		if (!$optionSelected && empty($weekly_bulletin) && empty($campus_tour)) {
+			$form_state->setErrorByName('bsia_connect_title', $this->t("You must select at least one option!"));
+		}
 	}
-
-	public function book_reservation_submit(array &$form, FormStateInterface $form_state) {
-		$logger = \Drupal::logger('bsia_connect');
-		$logger->notice("Redirecting user to reservation site.");
-
-		$form_state->setRebuild(true);
-
-		//Need to use TrustedRedirectResponse, otherwise Drupal screams at us.
-		//$form_state->setResponse(new TrustedRedirectResponse('http://reservation.park2go.ca/reservation.php?depart=' . $depart . '&return=' . $arrival));
-
-	}
-
 }
