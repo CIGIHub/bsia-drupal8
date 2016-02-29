@@ -107,6 +107,21 @@ class BSIAConnectSubmissionForm extends FormBase {
 	public function submitForm(array &$form, FormStateInterface $form_state) {
 
 		drupal_set_message(t("Submitted form"), 'status', FALSE);
+		$programs = $form_state->getValue('programs');
+		$newsletter = $form_state->getValue('weekly_bulletin');
+		$campus_tour = $form_state->getValue('campus_tour');
+
+		if (!empty($newsletter)) {
+			self::sendNewsletter($form_state);
+		}
+
+		foreach ($programs as $key => $value) {
+			if (!empty($value)) {
+				$optionSelected = true;
+				break;
+			}
+		}
+
 	}
 
 	/**
@@ -132,5 +147,43 @@ class BSIAConnectSubmissionForm extends FormBase {
 		if (!$optionSelected && empty($weekly_bulletin) && empty($campus_tour)) {
 			$form_state->setErrorByName('bsia_connect_title', $this->t("You must select at least one option!"));
 		}
+	}
+	private function sendNewsletter(FormStateInterface $form_state) {
+		drupal_set_message(t("Sending Newsletter"), 'status', FALSE);
+
+		$logger = \Drupal::logger('bsia_connect');
+		$logger->notice(t("Sending Newsletter..."));
+
+		$url = 'https://app.icontact.com/icp/signup.php';
+		$data = array('fields_email' => $form_state->getValue('email'),
+			'fields_fname' => $form_state->getValue('first_name'),
+			'fields_lname' => $form_state->getValue('last_name'),
+			'listid' => "5679",
+			'specialid:39829' => "S462",
+			'clientid' => "1183285",
+			'formid' => "1064",
+			'reallistid' => "1",
+			'doubleopt' => "0",
+			'redirect' => urlencode('http://www.icontact.com/www/signup/thanks.html'),
+			'errorredirect' => urlencode('http://www.icontact.com/www/signup/error.html'));
+
+		foreach ($data as $key => $value) {
+			$post_items[] = $key . '=' . $value;
+		}
+
+		$fields_string = implode('&', $post_items);
+
+		/*$ch = curl_init();
+
+			curl_setopt($ch, CURLOPT_URL, $url);
+			curl_setopt($ch, CURLOPT_POST, count($data));
+			curl_setopt($ch, CURLOPT_POSTFIELDS, $fields_string);
+
+			$response = curl_exec($ch);
+			curl_close($ch);
+		*/
+
+		$logger->notice(t("...Newletter Sent!"));
+
 	}
 }
