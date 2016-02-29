@@ -1,0 +1,6 @@
+name: BSIA Connect 
+description: Connect with Us Form
+package: Custom
+
+type: module
+core: 8.x

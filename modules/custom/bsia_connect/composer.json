@@ -1,0 +1,6 @@
+{
+    "name": "drupal/bsia_connect",
+    "description": "BSIA Connect with Us Form.",
+    "type": "drupal-module",
+    "license": "GPL-2.0+"
+}
