@@ -173,15 +173,14 @@ class BSIAConnectSubmissionForm extends FormBase {
 
 		$fields_string = implode('&', $post_items);
 
-		/*$ch = curl_init();
+		$ch = curl_init();
 
-			curl_setopt($ch, CURLOPT_URL, $url);
-			curl_setopt($ch, CURLOPT_POST, count($data));
-			curl_setopt($ch, CURLOPT_POSTFIELDS, $fields_string);
+		curl_setopt($ch, CURLOPT_URL, $url);
+		curl_setopt($ch, CURLOPT_POST, count($data));
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $fields_string);
 
-			$response = curl_exec($ch);
-			curl_close($ch);
-		*/
+		$response = curl_exec($ch);
+		curl_close($ch);
 
 		$logger->notice(t("...Newletter Sent!"));
 
