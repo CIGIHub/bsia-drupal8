@@ -1,9 +1,0 @@
-uuid: eb6b4de6-014f-447b-9008-08f98393117a
-langcode: en
-status: true
-dependencies: {  }
-name: 'Event Series'
-vid: event_series1
-description: ''
-hierarchy: 1
-weight: -10

@@ -1,9 +1,0 @@
-uuid: 9e4db12a-c40e-44ca-be09-9dd7f7802452
-langcode: en
-status: true
-dependencies: {  }
-name: 'Person Type'
-vid: person_type1
-description: ''
-hierarchy: 1
-weight: -7

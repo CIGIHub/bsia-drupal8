@@ -1,9 +1,0 @@
-uuid: eda4c442-f523-4f4d-ac5b-9165376cc8a0
-langcode: en
-status: true
-dependencies: {  }
-name: 'Publication Type'
-vid: publication_type1
-description: ''
-hierarchy: 0
-weight: -6
