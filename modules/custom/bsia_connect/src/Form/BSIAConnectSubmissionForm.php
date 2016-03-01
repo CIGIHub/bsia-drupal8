@@ -106,7 +106,7 @@ class BSIAConnectSubmissionForm extends FormBase {
 	 */
 	public function submitForm(array &$form, FormStateInterface $form_state) {
 
-		drupal_set_message(t("Thank you for connecting with us."), 'status', FALSE);
+		drupal_set_message(t("Thank you for connecting with us. A Program Director will respond to your request shortly."), 'status', FALSE);
 		$programs = $form_state->getValue('programs');
 		$newsletter = $form_state->getValue('weekly_bulletin');
 		$campus_tour = $form_state->getValue('campus_tour');
@@ -180,10 +180,12 @@ class BSIAConnectSubmissionForm extends FormBase {
 		$reply = null;
 		$langcode = 'en';
 		$send = true;
-		$recipient = 'info@balsillieschool.ca';
+		$to = 'info@balsillieschool.ca';
+		$bcc = 'websiteupdates@balsillieschool.ca';
 		$email_address = $form_state->getValue('email');
 
-		\Drupal::service('plugin.manager.mail')->mail('bsia_connect', 'new_signup', $recipient, $langcode, $form_state->getValues(), $reply, $send);
+		\Drupal::service('plugin.manager.mail')->mail('bsia_connect', 'new_signup', $to, $langcode, $form_state->getValues(), $reply, $send);
+		\Drupal::service('plugin.manager.mail')->mail('bsia_connect', 'new_signup', $bcc, $langcode, $form_state->getValues(), $reply, $send);
 		\Drupal::service('plugin.manager.mail')->mail('bsia_connect', 'confirmation', $email_address, $langcode, $form_state->getValues(), $reply, $send);
 	}
 }

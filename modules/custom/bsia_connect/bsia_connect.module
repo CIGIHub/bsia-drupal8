@@ -28,20 +28,20 @@ function bsia_connect_mail($key, &$message, $params) {
         $programs = $params['programs'];
 		$campus_tour = $params['campus_tour'];
 
-		$signup_message = "Please contact me regarding the following Program(s):\n\n";
+		$signup_message = "<p>Please contact me regarding the following Program(s):<br><br>";
         //programs are checkboxes, either a 0 or the key.
 		foreach ($programs as $key => $value) {
 			if (!empty($value)) {
-				$signup_message .= $value ."\n";
+				$signup_message .= $value ."<br>";
 				break;
 			}
 		}
 
 		if(!empty($campus_tour)) {
-          $signup_message .= "\nPlease contact me to book a tour of the school.\n";
+          $signup_message .= "<br>Please contact me to book a tour of the school.<br>";
         }
 
-        $signup_message .=  "\nFrom: " . $name . $params['email'] . "\n" ;
+        $signup_message .=  "<br>From: " . $name . $params['email'] . "<br></p>" ;
 
         $body = SafeMarkup::checkPlain($signup_message); 
         $message['body'][] = $body;
@@ -57,20 +57,20 @@ function bsia_connect_mail($key, &$message, $params) {
         $programs = $params['programs'];
 		$campus_tour = $params['campus_tour'];
 
-		$confirmation_email = $name . "\n";
+		$confirmation_email = "<p>" . $name . "<br><br>";
         //programs are checkboxes, either a 0 or the key.
 		foreach ($programs as $key => $value) {
 			if (!empty($value)) {
-				$confirmation_email .= "Thank you for requesting more information about our programs.\n";
+				$confirmation_email .= "Thank you for requesting more information about our programs.<br>";
 				break;
 			}
 		}
 
 		if(!empty($campus_tour)) {
-          $confirmation_email .= "Thank you for your interest in touring our campus.\n";
+          $confirmation_email .= "Thank you for your interest in touring our campus.<br>";
         }
 
-        $confirmation_email .=  "\nA Program Director will respond to your request shortly.";
+        $confirmation_email .=  "<br>A Program Director will respond to your request shortly.<br></p>";
 
         $body = SafeMarkup::checkPlain($confirmation_email); 
         $message['body'][] = $body;
