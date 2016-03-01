@@ -106,7 +106,7 @@ class BSIAConnectSubmissionForm extends FormBase {
 	 */
 	public function submitForm(array &$form, FormStateInterface $form_state) {
 
-		drupal_set_message(t("Submitted form"), 'status', FALSE);
+		drupal_set_message(t("Thank you for connecting with us."), 'status', FALSE);
 		$programs = $form_state->getValue('programs');
 		$newsletter = $form_state->getValue('weekly_bulletin');
 		$campus_tour = $form_state->getValue('campus_tour');
@@ -149,7 +149,6 @@ class BSIAConnectSubmissionForm extends FormBase {
 		}
 	}
 	private function sendNewsletter(FormStateInterface $form_state) {
-		drupal_set_message(t("Sending Newsletter"), 'status', FALSE);
 
 		$logger = \Drupal::logger('bsia_connect');
 		$logger->notice(t("Sending Newsletter..."));
@@ -159,7 +158,7 @@ class BSIAConnectSubmissionForm extends FormBase {
 			'fields_fname' => $form_state->getValue('first_name'),
 			'fields_lname' => $form_state->getValue('last_name'),
 			'listid' => "5679",
-			'specialid:39829' => "S462",
+			'specialid:5679' => "S462",
 			'clientid' => "1183285",
 			'formid' => "1064",
 			'reallistid' => "1",
@@ -182,7 +181,7 @@ class BSIAConnectSubmissionForm extends FormBase {
 		$response = curl_exec($ch);
 		curl_close($ch);
 
-		$logger->notice(t("...Newletter Sent!"));
+		$logger->notice(t("...Newletter Sent! Response:" . $response));
 
 	}
 }
