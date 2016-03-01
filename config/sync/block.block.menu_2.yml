@@ -6,10 +6,7 @@ dependencies:
     - system.menu.menu-footer
   module:
     - system
-  theme:
-    - isr
 id: menu_2
-theme: isr
 region: footer
 weight: -9
 provider: null

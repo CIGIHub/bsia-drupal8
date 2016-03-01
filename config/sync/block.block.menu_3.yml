@@ -6,10 +6,7 @@ dependencies:
     - system.menu.menu-main
   module:
     - system
-  theme:
-    - isr
 id: menu_3
-theme: isr
 region: content
 weight: -8
 provider: null

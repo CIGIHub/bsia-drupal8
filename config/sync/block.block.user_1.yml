@@ -6,10 +6,7 @@ dependencies:
     - system.menu.tools
   module:
     - system
-  theme:
-    - isr
 id: user_1
-theme: isr
 region: sidebar_first
 weight: 0
 provider: null

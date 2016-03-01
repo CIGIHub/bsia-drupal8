@@ -7,10 +7,7 @@ dependencies:
   module:
     - block_content
     - system
-  theme:
-    - isr
 id: block_3
-theme: isr
 region: content
 weight: -9
 provider: null
