@@ -12,7 +12,6 @@ dependencies:
     - field.field.node.external_publication.field_speakers
     - field.field.node.external_publication.field_speakers_unlinked
     - field.field.node.external_publication.publication_type
-    - field.field.node.external_publication.publication_type1
     - field.field.node.external_publication.upload
     - node.type.external_publication
   module:

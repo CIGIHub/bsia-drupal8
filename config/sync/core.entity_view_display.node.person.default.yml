@@ -46,11 +46,8 @@ dependencies:
     - field.field.node.person.field_year_graduated
     - field.field.node.person.field_youtube_id
     - field.field.node.person.person_type
-    - field.field.node.person.person_type1
     - field.field.node.person.program_type
-    - field.field.node.person.program_type1
     - field.field.node.person.topics
-    - field.field.node.person.topics1
     - field.field.node.person.upload
     - node.type.person
   module:

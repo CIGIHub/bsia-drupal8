@@ -24,7 +24,6 @@ dependencies:
     - field.field.node.publication.field_speakers
     - field.field.node.publication.field_speakers_unlinked
     - field.field.node.publication.publication_type
-    - field.field.node.publication.publication_type1
     - field.field.node.publication.upload
     - node.type.publication
   module:
