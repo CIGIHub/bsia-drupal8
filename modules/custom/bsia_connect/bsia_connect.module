@@ -1,2 +1,83 @@
 <?php
 
+use Drupal\Component\Utility\SafeMarkup;
+
+/*
+ * Function which the mail() function calls to build the email message and body.
+ */
+function bsia_connect_mail($key, &$message, $params) {
+    $logger = \Drupal::logger('bsia_connect');
+	
+	$message['headers']['Content-Type'] = "text/html; charset=UTF-8; format=flowed; delsp=yes";
+	$message['headers']['Content-Transfer-Encoding'] = "8bit";
+  	
+  	$name = $params['first_name'];
+	if (!empty($params['last_name'])) {
+		$name .= " " . $params['last_name'];
+	}
+
+	if (!empty($params['first_name']) || !empty($params['last_name']) ) {
+		$name .=", ";
+	}
+
+  	switch($key) {
+  	  case 'new_signup':
+  	    $message['from'] = $params['email'];
+      	$message['subject'] = "Connect with Us"; 
+        
+        $programs = $params['programs'];
+		$campus_tour = $params['campus_tour'];
+
+		$signup_message = "Please contact me regarding the following Program(s):\n\n";
+        //programs are checkboxes, either a 0 or the key.
+		foreach ($programs as $key => $value) {
+			if (!empty($value)) {
+				$signup_message .= $value ."\n";
+				break;
+			}
+		}
+
+		if(!empty($campus_tour)) {
+          $signup_message .= "\nPlease contact me to book a tour of the school.\n";
+        }
+
+        $signup_message .=  "\nFrom: " . $name . $params['email'] . "\n" ;
+
+        $body = SafeMarkup::checkPlain($signup_message); 
+        $message['body'][] = $body;
+
+        $logger->notice(t("Email body:" . $body));
+
+  	    break;	
+
+      case 'confirmation':
+      	$message['from'] = 'info@balsillieschool.ca';
+      	$message['subject'] = "Connect with Us"; 
+        
+        $programs = $params['programs'];
+		$campus_tour = $params['campus_tour'];
+
+		$confirmation_email = $name . "\n";
+        //programs are checkboxes, either a 0 or the key.
+		foreach ($programs as $key => $value) {
+			if (!empty($value)) {
+				$confirmation_email .= "Thank you for requesting more information about our programs.\n";
+				break;
+			}
+		}
+
+		if(!empty($campus_tour)) {
+          $confirmation_email .= "Thank you for your interest in touring our campus.\n";
+        }
+
+        $confirmation_email .=  "\nA Program Director will respond to your request shortly.";
+
+        $body = SafeMarkup::checkPlain($confirmation_email); 
+        $message['body'][] = $body;
+
+        $logger->notice(t("Email body:" . $body));
+
+        break;
+  	}
+
+}

@@ -115,13 +115,7 @@ class BSIAConnectSubmissionForm extends FormBase {
 			self::sendNewsletter($form_state);
 		}
 
-		foreach ($programs as $key => $value) {
-			if (!empty($value)) {
-				$optionSelected = true;
-				break;
-			}
-		}
-
+		self::sendMail($form_state);
 	}
 
 	/**
@@ -131,9 +125,6 @@ class BSIAConnectSubmissionForm extends FormBase {
 		$programs = $form_state->getValue('programs');
 		$weekly_bulletin = $form_state->getValue('weekly_bulletin');
 		$campus_tour = $form_state->getValue('campus_tour');
-
-		//$logger = \Drupal::logger('bsia_connect');
-		//$logger->notice(print_r($programs, true));
 
 		$optionSelected = false;
 		//programs are checkboxes, either a 0 or the key.
@@ -182,6 +173,17 @@ class BSIAConnectSubmissionForm extends FormBase {
 		curl_close($ch);
 
 		$logger->notice(t("...Newletter Sent! Response:" . $response));
+	}
 
+	private function sendMail(FormStateInterface $form_state) {
+
+		$reply = null;
+		$langcode = 'en';
+		$send = true;
+		$recipient = 'info@balsillieschool.ca';
+		$email_address = $form_state->getValue('email');
+
+		\Drupal::service('plugin.manager.mail')->mail('bsia_connect', 'new_signup', $recipient, $langcode, $form_state->getValues(), $reply, $send);
+		\Drupal::service('plugin.manager.mail')->mail('bsia_connect', 'confirmation', $email_address, $langcode, $form_state->getValues(), $reply, $send);
 	}
 }
