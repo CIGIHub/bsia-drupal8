@@ -48,12 +48,10 @@ dependencies:
     - field.field.node.person.person_type
     - field.field.node.person.program_type
     - field.field.node.person.topics
-    - field.field.node.person.upload
     - image.style.thumbnail
     - node.type.person
   module:
     - comment
-    - file
     - image
     - path
     - text
@@ -407,11 +405,5 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
-    third_party_settings: {  }
-  upload:
-    settings:
-      progress_indicator: throbber
-    type: file_generic
-    weight: 34
     third_party_settings: {  }
 hidden: {  }

@@ -48,11 +48,9 @@ dependencies:
     - field.field.node.person.person_type
     - field.field.node.person.program_type
     - field.field.node.person.topics
-    - field.field.node.person.upload
     - node.type.person
   module:
     - comment
-    - file
     - image
     - text
     - user
@@ -279,12 +277,6 @@ content:
     weight: 20
     settings:
       link: true
-    third_party_settings: {  }
-  upload:
-    label: hidden
-    settings: {  }
-    type: file_default
-    weight: 33
     third_party_settings: {  }
 hidden:
   field_alternative_url: true

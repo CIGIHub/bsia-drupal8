@@ -1,0 +1,24 @@
+uuid: 1d45c955-d493-4acf-a900-a9ac29dbf97f
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.topics
+  module:
+    - views
+  theme:
+    - bsia
+id: views_block__topics_block_1
+theme: bsia
+region: right_sidebar
+weight: null
+provider: null
+plugin: 'views_block:topics-block_1'
+settings:
+  id: 'views_block:topics-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility: {  }
