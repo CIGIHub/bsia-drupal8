@@ -1,0 +1,16 @@
+name: Code-Driven Development Module
+description: Separates all configuration from the database.
+package: Custom
+dependencies:
+  - migrate_tools
+  - migrate_upgrade
+  - field_group
+  - entityqueue
+  - imce
+  - sitemap
+  - token
+  - ctools
+  - google_analytics
+  - pathauto
+type: module
+core: 8.x

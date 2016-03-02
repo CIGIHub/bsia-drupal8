@@ -1,0 +1,8 @@
+{
+  "name": "drupal/code_driven_devel",
+  "description": "Separates all configuration from the database.",
+  "type": "drupal-module",
+  "license": "GPL-2.0+",
+  "minimum-stability": "dev",
+  "require": { }
+}
