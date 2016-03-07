@@ -8,7 +8,7 @@
 /**
  * Implements hook_install().
  */
-function code_drvien_devel_install() {
+function code_driven_devel_install() {
   // This module is designed to be enabled on a brand new instance of
   // Drupal. Settings its uuid here will tell this instance that it is
   // in fact the same site as any other instance. Therefore, all local
@@ -16,8 +16,8 @@ function code_drvien_devel_install() {
   // instances of a codebase will have the same uuid, enabling us to
   // sync these instances via the config management system.
   // See also https://www.drupal.org/node/2133325
-  // code_driven_devel_set_uuid('84c4f52c-665a-4d6e-8100-d9baf644dc35');
-  // code_driven_devel_override_uuids();
+  code_driven_devel_set_uuid('84c4f52c-665a-4d6e-8100-d9baf644dc35');
+  code_driven_devel_override_uuids();
   for ($i = 8001; $i < 9000; $i++) {
     $candidate = 'code_driven_devel_' . $i;
     if (function_exists($candidate)) {
@@ -29,7 +29,7 @@ function code_drvien_devel_install() {
 /**
  * Update dependencies and revert features
  */
-function code_drvien_devel_update_8001() {
+function code_driven_devel_update_8001() {
   // If you add a new dependency during your development:
   // (1) add your dependency to your .info file
   // (2) increment the number in this function name (example: change
