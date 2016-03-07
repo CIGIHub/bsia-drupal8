@@ -1,0 +1,20 @@
+# Migration configuration for image field descriptions.
+id: caption_node
+label: Image description
+migration_group: caption
+source:
+  plugin: caption_node
+destination:
+  plugin: entity:node
+process:
+  # Hardcode the destination node type (bundle) as 'migrate_example_beer'.
+  type:
+    plugin: default_value
+    default_value: page
+  nid: nid  
+  field_caption: 
+    plugin: migration
+    migration: caption_node
+    source: field_image_data
+  
+
