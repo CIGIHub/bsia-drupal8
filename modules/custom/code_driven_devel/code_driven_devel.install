@@ -16,8 +16,10 @@ function code_driven_devel_install() {
   // instances of a codebase will have the same uuid, enabling us to
   // sync these instances via the config management system.
   // See also https://www.drupal.org/node/2133325
-  code_driven_devel_set_uuid('84c4f52c-665a-4d6e-8100-d9baf644dc35');
-  code_driven_devel_override_uuids();
+  $config_name = 'sync';
+  $uuid = code_driven_devel_get_site_uuid_from_config($config_name);
+  code_driven_devel_set_site_uuid($uuid);
+  code_driven_devel_override_uuids($config_name);
   for ($i = 8001; $i < 9000; $i++) {
     $candidate = 'code_driven_devel_' . $i;
     if (function_exists($candidate)) {

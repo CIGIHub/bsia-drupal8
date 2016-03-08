@@ -4,6 +4,7 @@
  * @file
  * Code-driven development's functions
  */
+use Drupal\Component\Serialization\Yaml;
 use Drupal\Core\Extension\InfoParser;
 
 /**
@@ -23,6 +24,21 @@ function code_driven_devel_update_dependencies() {
 }
 
 /**
+ * Get the configured UUID of this website from the configuration YML files.
+ *
+ * @param $config_name
+ *   The name of the configuration directory to use, for example 'sync'.
+ */
+function code_driven_devel_get_site_uuid_from_config($config_name) {
+  $dir = \Drupal::root() . '/' . config_get_config_directory($config_name) . '/';
+  $file = 'system.site.yml';
+  $info = Yaml::decode(file_get_contents($dir . $file));
+  $uuid = $info['uuid'];
+
+  return $uuid;
+}
+
+/**
  * Set the UUID of this website.
  *
  * By default, reinstalling a site will assign it a new random UUID, making
@@ -32,21 +48,27 @@ function code_driven_devel_update_dependencies() {
  * @param $uuid
  *   A uuid string, for example 'e732b460-add4-47a7-8c00-e4dedbb42900'.
  */
-function code_driven_devel_set_uuid($uuid) {
-  \Drupal::configFactory() ->getEditable('system.site') // After Jan. 16th, 2015, see [Nathanael's comment](http://dcycleproject.org/comment/2603#comment-2603)
+function code_driven_devel_set_site_uuid($uuid) {
+  \Drupal::configFactory()->getEditable('system.site') // After Jan. 16th, 2015, see [Nathanael's comment](http://dcycleproject.org/comment/2603#comment-2603)
   // \Drupal::config('system.site') // Before Jan. 16th, 2015
     ->set('uuid', $uuid)
     ->save();
 }
 
-function code_driven_devel_override_uuids() {
+/**
+ * Override all local UUIDs with the configured UUIDs for this website.
+ *
+ * @param $config_name
+ *   The name of the configuration directory to use, for example 'sync'.
+ */
+function code_driven_devel_override_uuids($config_name) {
 
-  // we need to parse all uuids from deploy dir and override local uuids
-  $dir = \Drupal::root() . '/' . config_get_config_directory('deploy') . '/';
+  // We need to parse all uuids from configuration directory and override local uuids
+  $dir = \Drupal::root() . '/' . config_get_config_directory($config_name) . '/';
   $files = scandir($dir);
 
   foreach($files as $file) {
-    $info = Yaml::parse($dir . $file);
+    $info = Yaml::decode(file_get_contents($dir . $file));
     $name = substr($file, 0, -4);
     if(is_array($info) && array_key_exists('uuid', $info)) {
       if(in_array($name, \Drupal::configFactory()->listAll())) {
