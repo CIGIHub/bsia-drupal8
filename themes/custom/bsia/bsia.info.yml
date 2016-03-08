@@ -10,6 +10,7 @@ libraries:
   - bsia/global-css
   - bsia/global-js
   - bsia/homepage-slider
+  - bsia/people-views
 
 stylesheets-remove:
   - core/assets/vendor/normalize-css/normalize.css
@@ -20,6 +21,7 @@ stylesheets-remove:
 regions:
   search: 'Search'
   main_menu: 'Main Menu'
+  page_title: 'Page Title'
   content_header: 'Content Header'
   content: 'Main Content'
   homepage: 'Homepage'
@@ -27,6 +29,4 @@ regions:
   right_sidebar: 'Right Sidebar'
   connect_banner: 'Connect Banner'
   footer_menu: 'Footer Menu'
-  help: 'Help'
-  highlight: 'Highlight'
-
+ 

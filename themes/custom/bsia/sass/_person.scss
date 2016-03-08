@@ -1,0 +1,219 @@
+/*****  Person  *****/
+
+.profile{
+  display: table;
+  width: 100%;
+
+  h2{
+    font-size: 18px;
+    margin-bottom: 0px;
+  }
+  .position{
+    font-style: italic;
+    color: $type-grey;
+    font-size: 0.95em;
+    line-height: 130%;
+    margin-bottom: 10px;
+  }
+
+  .image, .contact{
+    display: table-cell;
+    float: left;
+  }
+  .image{
+    img{
+      display: block;
+    }
+    margin-right: 20px;
+    border: solid 10px $image-border-color;
+  }
+  .contact{
+    vertical-align: middle;
+    width: 70%;
+    text-transform: uppercase;
+  }
+  .description{
+    margin-bottom: 10px;
+  }
+}
+
+.node--type-person{
+  .field--name-field-graduate-title{
+    font-weight: bold;
+  }
+  .field--name-program-type, .field--name-field-year-graduated{
+    display: inline-block;
+    vertical-align: bottom;
+  }
+  .field--name-program-type{
+    .field__items{
+      padding-right: 0;
+    }
+    .field__item:after{
+     content: ",";
+    } 
+  }
+}
+.node--view-mode-teaser, .view-content{
+  .profile{
+    margin-bottom: 10px;
+    .image{
+      border: solid 5px $image-border-color;
+    }
+  }
+}
+
+
+.view-people{
+  .view-header{
+    @include header_box;
+  }
+}
+
+#block-exposedformfacultypage-2{
+  #edit-keys--2{
+    width: 200px;
+    padding: 3px;
+  }
+  #edit-actions--2{
+      @include hidden;
+  }
+  .search-description{
+    font-style: italic;
+  }
+  .edit-actions{
+    margin: 0px;
+  }
+  #edit-actions--2{
+    position: absolute;
+  }
+}
+
+#block-views-block-faculty-block-1{
+  border-top: solid 1px $hr-border-color;
+  border-bottom: solid 1px $hr-border-color;
+  margin: 10px 0;
+
+  .search-by-letter{
+    margin-top: 20px;
+    span{
+      padding: 0 3px;
+      a.active{
+        color: $extralight-grey-text;
+      }
+    }
+    .showall{
+      margin-right: 10px; 
+    }
+
+  }
+
+}
+
+#clear-button{
+    background: none;
+    border: none;
+    position: absolute;
+    left: 248px;
+    top: 35px;
+    z-index: 500;
+    color: #9DA5B2;
+}
+
+ul.student-list{
+  li{
+    display: inline-block;
+  }
+  hr{
+    margin: 15px 0 10px 0;
+  }
+}
+
+.student{
+  .student-photo{
+    text-align: center;
+    width:95px;
+  }
+  .student-name{
+    text-transform: uppercase;
+    font-size: 9px;
+    margin: 5px 0;
+  }
+  .image-wrapper{
+    .image{
+      margin: 0 auto;
+      width: 60px;
+      padding: 4px;
+      background: #ddd;
+      height: 58px;
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+  
+  .description{
+    clear: both;
+  }
+  &.unselected-student{
+    opacity: 0.5;
+  }
+  &.unselected-student:hover{
+    opacity: 1.0;
+  }
+}
+
+.row-description{
+  display: none;
+}
+.student-description{
+  display: none;
+  position: relative;
+  background: $student-description-box-color;
+  margin: 15px 0 20px 0;
+  padding: 15px 20px 10px;
+  border: 1px solid $hr-border-color;
+  border-radius: 3px;
+
+  .close{
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .uparrowdiv{
+    display: block;
+    height: 20px;
+    width: 20px;
+    margin-left: 70px;
+    background: $student-description-box-color;
+    transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    border-left: 1px solid $hr-border-color;
+    border-top: 1px solid $hr-border-color;
+    position: absolute;
+    top: -10px;
+  }
+
+  .program{
+    font-style: italic;
+    color: $light-grey-text;
+    font-size: 1.0em;
+    margin-bottom: 5px;
+  }
+  .description{
+    font-size: 1.0em;
+    margin-bottom: 10px;
+  }
+  h2{
+    font-size: 1.2em;
+  }
+  .view-profile{
+    @include type;
+    margin-bottom: 5px;
+  }
+  a:hover{
+    text-decoration: underline;
+  }
+}

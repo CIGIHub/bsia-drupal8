@@ -13,6 +13,13 @@ function bsia_theme_suggestions_block_alter(&$suggestions, $variables) {
   }
 }
 
+// function bsia_theme_suggestions_form_alter(array &$suggestions, array $variables, $hook) {
+//   print_r($hook);
+//   if (in_array($hook, ['input', 'form_element']) && $variables['element']['#attributes']['id'] == 'edit-keys') {
+//     $suggestions[] = $hook . '__custom';
+//   }
+// }
+
 function bsia_preprocess_field(&$variables, $hook) {
  	
  	if($variables['field_name'] === 'field_event_date'){

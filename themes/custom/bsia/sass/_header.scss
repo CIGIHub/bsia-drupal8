@@ -80,29 +80,15 @@ header {
   .form-submit{
     float: left;
   }
-
-  #search-block-form input[type="search"]{
-    -webkit-appearance: textfield;
-    font-family: $sans-serif;
-    color: $form-input-color;
-    text-transform: uppercase;
-    font-size: 13px;
-    border: solid 1px $form-input-color;
-    border-radius: 5px;
-    float: left;
-    padding: 5px;
-  }
-
   .form-submit{
-    @include hidden;
-    border: none;
-    background-color: none;
-    background-image: url("../images/search-icon.png");
-    margin-left: -20px;
-    margin-top: 20px;
-    height: 15px;
-    width: 15px;
+    @include search_form_submit;
   }
+
+  #search-block-form{
+    input[type="search"]{
+      @include search_form_input;
+    }
+  } 
 }
 
 
