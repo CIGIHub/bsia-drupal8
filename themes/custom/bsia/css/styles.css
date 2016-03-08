@@ -24,17 +24,13 @@
   box-sizing: border-box; }
 
 /* Float all columns next to each other */
-[class*='cols-'] {
+[class*='col-'] {
   float: left;
   padding: 10px; }
-  [class*='cols-'].no-padding {
+  [class*='col-'].no-padding {
     padding: 0px; }
 
 /* Floats last ".cols-" to the right */
-[class*='cols-']:last-of-type {
-  padding-right: 0.625em;
-  float: right; }
-
 .wrapper {
   margin: 0 auto;
   max-width: none !important;
@@ -65,22 +61,22 @@
 
 @media (min-width: $mobile-bp){
 */
-.cols-1 {
+.col-1 {
   width: 16.67%; }
 
-.cols-2 {
+.col-2 {
   width: 33.33%; }
 
-.cols-3 {
+.col-3 {
   width: 50%; }
 
-.cols-4 {
+.col-4 {
   width: 66.67%; }
 
-.cols-5 {
+.col-5 {
   width: 83.33%; }
 
-.cols-6 {
+.col-6 {
   width: 100%; }
 
 body {
@@ -172,36 +168,6 @@ ul.inline, ol.inline {
   ul.inline li, ol.inline li {
     padding: 0 0.2em; }
 
-.field__label {
-  font-weight: normal; }
-
-ol.field--ordered-list-style-lower {
-  list-style-type: lower-roman;
-  color: #053b5b; }
-  ol.field--ordered-list-style-lower .list-item {
-    color: #808080; }
-
-.field-group {
-  margin-bottom: 10px; }
-
-.field--name-body {
-  margin: 20px 0; }
-
-.field--name-field-short-description {
-  margin-top: 10px; }
-
-.field--name-topics {
-  text-transform: uppercase;
-  font-size: 12px; }
-  .field--name-topics a:hover {
-    text-decoration: underline; }
-
-.field--name-upload h3 {
-  margin-bottom: 10px; }
-.field--name-upload span:before {
-  font-family: FontAwesome;
-  content: '\f019 - '; }
-
 .date,
 .location,
 .authors,
@@ -234,57 +200,42 @@ ol.field--ordered-list-style-lower {
   .pager .pager__item.is-active a {
     background: #ccdae3; }
 
+article .field__label {
+  font-weight: normal; }
+article ol.field--ordered-list-style-lower {
+  list-style-type: lower-roman;
+  color: #053b5b; }
+  article ol.field--ordered-list-style-lower .list-item {
+    color: #808080; }
+article .field-group {
+  margin-bottom: 10px; }
+article .field--name-body {
+  margin: 20px 0; }
+article .field--name-field-short-description {
+  margin-top: 10px; }
+article .field--name-topics {
+  text-transform: uppercase;
+  font-size: 12px; }
+  article .field--name-topics a:hover {
+    text-decoration: underline; }
+article .field--name-upload h3 {
+  margin-bottom: 10px; }
+article .field--name-upload span:before {
+  font-family: FontAwesome;
+  content: '\f019 - '; }
+
 .view-content {
   margin-bottom: 20px; }
 
-/*****  Person  *****/
-.node--type-person .profile {
-  display: table;
-  width: 100%; }
-  .node--type-person .profile .image, .node--type-person .profile .contact {
-    display: table-cell;
-    float: left; }
-  .node--type-person .profile .image {
-    margin-right: 20px;
-    border: solid 10px #ddd; }
-    .node--type-person .profile .image img {
-      display: block; }
-  .node--type-person .profile .contact {
-    vertical-align: middle;
-    width: 70%;
-    text-transform: uppercase; }
-.node--type-person .field--name-field-graduate-title {
-  font-weight: bold; }
-.node--type-person .field--name-program-type, .node--type-person .field--name-field-year-graduated {
-  display: inline-block;
-  vertical-align: bottom; }
-.node--type-person .field--name-program-type .field__items {
-  padding-right: 0; }
-.node--type-person .field--name-program-type .field__item:after {
-  content: ","; }
-.node--type-person.node--view-mode-teaser .profile {
-  margin-bottom: 10px; }
-  .node--type-person.node--view-mode-teaser .profile h2 {
-    font-size: 18px;
-    margin-bottom: 0px; }
-  .node--type-person.node--view-mode-teaser .profile .position {
-    font-style: italic;
-    color: #666;
-    font-size: 0.95em;
-    line-height: 130%;
-    margin-bottom: 10px; }
-  .node--type-person.node--view-mode-teaser .profile .image {
-    border: solid 5px #ddd; }
-
-.view-people .view-header {
+.region-content-header {
   border: 1px solid #d2d2d2;
   background-color: #f2f7f2;
   padding: 20px;
-  width: 580px;
   margin-bottom: 20px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  border-radius: 3px; }
+  border-radius: 3px;
+  color: #7e7f7e; }
 
 /*****  Event  *****/
 .event-signup-wrapper {
@@ -390,7 +341,8 @@ dl.calendar {
     font-size: 20px; }
 
 .views-row article,
-.views-row .research-listing {
+.views-row .research-listing,
+.view-faculty .views-row {
   margin: 20px 0;
   border: none;
   border-bottom: solid 1px #d2d2d2; }
@@ -596,6 +548,15 @@ header {
   .search .form-item,
   .search .form-submit {
     float: left; }
+  .search .form-submit {
+    text-indent: -9999px;
+    border: none;
+    background-color: none;
+    background-image: url("../images/search-icon.png");
+    margin-left: -20px;
+    margin-top: 20px;
+    height: 15px;
+    width: 15px; }
   .search #search-block-form input[type="search"] {
     -webkit-appearance: textfield;
     font-family: Arial, Helvetica, sans-serif;
@@ -606,15 +567,6 @@ header {
     border-radius: 5px;
     float: left;
     padding: 5px; }
-  .search .form-submit {
-    text-indent: -9999px;
-    border: none;
-    background-color: none;
-    background-image: url("../images/search-icon.png");
-    margin-left: -20px;
-    margin-top: 20px;
-    height: 15px;
-    width: 15px; }
 
 /*******   FOOTER    *******/
 footer {
@@ -879,5 +831,164 @@ footer {
     #gallery #prev a,
     #gallery #next a {
       top: 45%; } }
+
+/*****  Person  *****/
+.profile {
+  display: table;
+  width: 100%; }
+  .profile h2 {
+    font-size: 18px;
+    margin-bottom: 0px; }
+  .profile .position {
+    font-style: italic;
+    color: #666;
+    font-size: 0.95em;
+    line-height: 130%;
+    margin-bottom: 10px; }
+  .profile .image, .profile .contact {
+    display: table-cell;
+    float: left; }
+  .profile .image {
+    margin-right: 20px;
+    border: solid 10px #ddd; }
+    .profile .image img {
+      display: block; }
+  .profile .contact {
+    vertical-align: middle;
+    width: 70%;
+    text-transform: uppercase; }
+  .profile .description {
+    margin-bottom: 10px; }
+
+.node--type-person .field--name-field-graduate-title {
+  font-weight: bold; }
+.node--type-person .field--name-program-type, .node--type-person .field--name-field-year-graduated {
+  display: inline-block;
+  vertical-align: bottom; }
+.node--type-person .field--name-program-type .field__items {
+  padding-right: 0; }
+.node--type-person .field--name-program-type .field__item:after {
+  content: ","; }
+
+.node--view-mode-teaser .profile, .view-content .profile {
+  margin-bottom: 10px; }
+  .node--view-mode-teaser .profile .image, .view-content .profile .image {
+    border: solid 5px #ddd; }
+
+.view-people .view-header {
+  border: 1px solid #d2d2d2;
+  background-color: #f2f7f2;
+  padding: 20px;
+  margin-bottom: 20px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px; }
+
+#block-exposedformfacultypage-2 #edit-keys--2 {
+  width: 200px;
+  padding: 3px; }
+#block-exposedformfacultypage-2 #edit-actions--2 {
+  text-indent: -9999px; }
+#block-exposedformfacultypage-2 .search-description {
+  font-style: italic; }
+#block-exposedformfacultypage-2 .edit-actions {
+  margin: 0px; }
+#block-exposedformfacultypage-2 #edit-actions--2 {
+  position: absolute; }
+
+#block-views-block-faculty-block-1 {
+  border-top: solid 1px #d2d2d2;
+  border-bottom: solid 1px #d2d2d2;
+  margin: 10px 0; }
+  #block-views-block-faculty-block-1 .search-by-letter {
+    margin-top: 20px; }
+    #block-views-block-faculty-block-1 .search-by-letter span {
+      padding: 0 3px; }
+      #block-views-block-faculty-block-1 .search-by-letter span a.active {
+        color: #cbcecb; }
+    #block-views-block-faculty-block-1 .search-by-letter .showall {
+      margin-right: 10px; }
+
+#clear-button {
+  background: none;
+  border: none;
+  position: absolute;
+  left: 248px;
+  top: 35px;
+  z-index: 500;
+  color: #9DA5B2; }
+
+ul.student-list li {
+  display: inline-block; }
+ul.student-list hr {
+  margin: 15px 0 10px 0; }
+
+.student .student-photo {
+  text-align: center;
+  width: 95px; }
+.student .student-name {
+  text-transform: uppercase;
+  font-size: 9px;
+  margin: 5px 0; }
+.student .image-wrapper .image {
+  margin: 0 auto;
+  width: 60px;
+  padding: 4px;
+  background: #ddd;
+  height: 58px;
+  cursor: pointer;
+  opacity: 0.8; }
+.student .description {
+  clear: both; }
+.student.unselected-student {
+  opacity: 0.5; }
+.student.unselected-student:hover {
+  opacity: 1.0; }
+
+.row-description {
+  display: none; }
+
+.student-description {
+  display: none;
+  position: relative;
+  background: #f2f7f2;
+  margin: 15px 0 20px 0;
+  padding: 15px 20px 10px;
+  border: 1px solid #d2d2d2;
+  border-radius: 3px; }
+  .student-description .close {
+    float: right;
+    font-size: 20px;
+    cursor: pointer; }
+  .student-description .uparrowdiv {
+    display: block;
+    height: 20px;
+    width: 20px;
+    margin-left: 70px;
+    background: #f2f7f2;
+    transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    border-left: 1px solid #d2d2d2;
+    border-top: 1px solid #d2d2d2;
+    position: absolute;
+    top: -10px; }
+  .student-description .program {
+    font-style: italic;
+    color: #7e7f7e;
+    font-size: 1.0em;
+    margin-bottom: 5px; }
+  .student-description .description {
+    font-size: 1.0em;
+    margin-bottom: 10px; }
+  .student-description h2 {
+    font-size: 1.2em; }
+  .student-description .view-profile {
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-bottom: 5px; }
+  .student-description a:hover {
+    text-decoration: underline; }
 
 /*# sourceMappingURL=styles.css.map */
