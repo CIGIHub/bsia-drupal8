@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.event.event_type
     - field.field.node.event.field_address_1
     - field.field.node.event.field_alternative_url
+    - field.field.node.event.field_caption
     - field.field.node.event.field_city
     - field.field.node.event.field_country
     - field.field.node.event.field_credit
@@ -33,7 +34,6 @@ dependencies:
     - field.field.node.event.field_speakers
     - field.field.node.event.field_speakers_unlinked
     - field.field.node.event.field_state_province
-    - field.field.node.event.field_test3
     - field.field.node.event.field_website
     - field.field.node.event.upload
     - node.type.event
@@ -216,6 +216,6 @@ hidden:
   comment: true
   event_series: true
   event_type: true
+  field_caption: true
   field_speakers: true
-  field_test3: true
   upload: true

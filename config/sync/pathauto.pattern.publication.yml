@@ -11,7 +11,7 @@ type: 'canonical_entities:node'
 pattern: 'publications/[node:title]'
 selection_criteria:
   fe2e7c03-5acc-46c1-8b00-f60b9b7ac50c:
-    id: 'entity_bundle:node'
+    id: node_type
     bundles:
       external_publication: external_publication
       publication: publication

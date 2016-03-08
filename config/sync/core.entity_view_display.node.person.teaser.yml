@@ -39,7 +39,6 @@ dependencies:
     - field.field.node.person.field_square_image
     - field.field.node.person.field_subtitle
     - field.field.node.person.field_surname
-    - field.field.node.person.field_test2
     - field.field.node.person.field_testimonial
     - field.field.node.person.field_twitter_url
     - field.field.node.person.field_user_link
@@ -49,7 +48,6 @@ dependencies:
     - field.field.node.person.person_type
     - field.field.node.person.program_type
     - field.field.node.person.topics
-    - field.field.node.person.upload
     - image.style.square_100x100
     - node.type.person
   module:
@@ -226,9 +224,7 @@ hidden:
   field_square_image: true
   field_subtitle: true
   field_surname: true
-  field_test2: true
   field_user_link: true
   field_website: true
   links: true
   topics: true
-  upload: true
