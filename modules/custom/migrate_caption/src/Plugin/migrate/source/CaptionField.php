@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Contains \Drupal\migrate_caption\Plugin\migrate\source\CaptionNode.
+ * Contains \Drupal\migrate_caption\Plugin\migrate\source\CaptionField.
  */
 
 namespace Drupal\migrate_caption\Plugin\migrate\source;
@@ -14,10 +14,10 @@ use Drupal\migrate\Row;
  * Source plugin for caption content.
  *
  * @MigrateSource(
- *   id = "caption_node"
+ *   id = "caption_field"
  * )
  */
-class CaptionNode extends SqlBase {
+class CaptionField extends SqlBase {
 
 	/**
 	 * {@inheritdoc}

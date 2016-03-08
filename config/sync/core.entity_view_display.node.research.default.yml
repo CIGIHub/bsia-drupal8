@@ -23,11 +23,9 @@ dependencies:
     - field.field.node.research.field_speakers_unlinked
     - field.field.node.research.field_square_image
     - field.field.node.research.field_website
-    - field.field.node.research.upload
     - node.type.research
   module:
     - comment
-    - file
     - image
     - text
     - user
@@ -125,12 +123,6 @@ content:
     weight: 11
     label: above
     settings: {  }
-    third_party_settings: {  }
-  upload:
-    label: hidden
-    settings: {  }
-    type: file_default
-    weight: 21
     third_party_settings: {  }
 hidden:
   field_alternative_url: true
