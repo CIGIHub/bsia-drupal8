@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.person.field_awards
     - field.field.node.person.field_board_order
     - field.field.node.person.field_board_position
+    - field.field.node.person.field_caption
     - field.field.node.person.field_courses
     - field.field.node.person.field_credit
     - field.field.node.person.field_current_student
@@ -38,7 +39,6 @@ dependencies:
     - field.field.node.person.field_square_image
     - field.field.node.person.field_subtitle
     - field.field.node.person.field_surname
-    - field.field.node.person.field_test2
     - field.field.node.person.field_testimonial
     - field.field.node.person.field_twitter_url
     - field.field.node.person.field_user_link
@@ -98,6 +98,13 @@ content:
     type: text_default
     settings: {  }
     third_party_settings: {  }
+  field_caption:
+    weight: 32
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
   field_courses:
     label: above
     weight: 20
@@ -196,12 +203,6 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-  field_test2:
-    weight: 32
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
   field_testimonial:
     label: above
     weight: 6

@@ -1,18 +1,18 @@
-uuid: 0e99756a-5d94-46e4-a332-509cd98c5165
+uuid: 95493c0c-21f7-40ac-b400-e95a1d214e3e
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_test3
+    - field.storage.node.field_caption
     - node.type.event
-id: node.event.field_test3
-field_name: field_test3
+id: node.event.field_caption
+field_name: field_caption
 entity_type: node
 bundle: event
-label: Test3
+label: 'Image Caption'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

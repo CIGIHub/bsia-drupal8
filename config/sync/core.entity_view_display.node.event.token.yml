@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.event.event_type
     - field.field.node.event.field_address_1
     - field.field.node.event.field_alternative_url
+    - field.field.node.event.field_caption
     - field.field.node.event.field_city
     - field.field.node.event.field_country
     - field.field.node.event.field_credit
@@ -197,6 +198,7 @@ content:
 hidden:
   comment: true
   field_alternative_url: true
+  field_caption: true
   field_credit: true
   field_feature_area: true
   field_feature_weight: true
@@ -204,4 +206,3 @@ hidden:
   field_image_page: true
   field_link_text: true
   field_position: true
-  field_test3: true
