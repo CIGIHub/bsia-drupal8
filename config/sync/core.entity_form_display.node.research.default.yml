@@ -23,12 +23,10 @@ dependencies:
     - field.field.node.research.field_speakers_unlinked
     - field.field.node.research.field_square_image
     - field.field.node.research.field_website
-    - field.field.node.research.upload
     - image.style.thumbnail
     - node.type.research
   module:
     - comment
-    - file
     - image
     - path
     - text
@@ -201,11 +199,5 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
-    third_party_settings: {  }
-  upload:
-    settings:
-      progress_indicator: throbber
-    type: file_generic
-    weight: 26
     third_party_settings: {  }
 hidden: {  }

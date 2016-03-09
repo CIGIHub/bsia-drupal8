@@ -1,0 +1,49 @@
+<?php
+
+function import_caption_install() {
+  
+  	\Drupal\Core\Database\Database::setActiveConnection('migrate');
+	$connection = \Drupal\Core\Database\Database::getConnection();
+
+  	;
+	$results = $connection->query('select node.type, node.nid, node.vid, field_image_fid, field_image_data from content_field_image 
+		inner join node on node.nid = content_field_image.nid and node.vid = content_field_image.vid 
+		where field_image_data is not null 
+		order by type, field_image_fid')->fetchAll();
+
+	$logger = \Drupal::logger('import_caption');
+	//$logger->notice(t("Query Results:" . print_r($results, true)));
+
+	// Go back to the default database,
+	// otherwise Drupal will not be able to access its own data later on.
+	\Drupal\Core\Database\Database::setActiveConnection();
+
+	$connection = \Drupal\Core\Database\Database::getConnection();
+
+
+	if ($results) {    
+		foreach ($results as $record) {
+
+			$caption = explode('"', $record->field_image_data);
+			$caption_value = $caption[3];
+
+			$fields = array( 
+				'bundle' =>  $record->type,
+				'deleted' => 0,
+				'entity_id' => $record->nid,
+				'revision_id' => $record->vid, 
+				'langcode' => 'en',
+				'delta' => 0,
+				'field_caption_value' => $caption_value, 
+			);
+
+			if(!empty($caption_value)) {
+				db_insert('node__field_caption')
+				  ->fields($fields)
+				  ->execute();  
+			}  
+
+		}
+		$logger->notice(t("Updated " . count($results) . " caption descriptions."));
+	}
+}
