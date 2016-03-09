@@ -35,7 +35,6 @@ function transform_textfield($table, $field_name, $max_length) {
 }
 
 // $json = '{ "unlimited": {"a":1,"b":2,"c":3,"d":4,"e":5} }';
-// bad data in: linkedin_url, publication_source_link, subtitle
 $json_field_config = '{
     "address_1": {"length":255, "content_types": ["event"]},
     "alternative_url": {"length":255, "content_types": ["event", "news", "page", "person", "publication", "research"]},
@@ -67,6 +66,7 @@ $json_field_config = '{
     "publication_source_link": {"length":255, "content_types": ["external_publication", "publication"]},
     "speakers_unlinked": {"length":255, "content_types": ["event", "external_publication", "publication", "research"]},
     "state_province": {"length":255, "content_types": ["event"]},
+    "subtitle": {"length":255, "content_types": ["page", "person"]},
     "surname": {"length":255, "content_types": ["person"]},
     "twitter_url": {"length":255, "content_types": ["person"]},
     "website": {"length":255, "content_types": ["event","person","research"]},
