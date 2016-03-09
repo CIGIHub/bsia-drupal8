@@ -11,6 +11,7 @@ libraries:
   - bsia/global-js
   - bsia/homepage-slider
   - bsia/people-views
+  - bsia/chosen-dropdown
 
 stylesheets-remove:
   - core/assets/vendor/normalize-css/normalize.css

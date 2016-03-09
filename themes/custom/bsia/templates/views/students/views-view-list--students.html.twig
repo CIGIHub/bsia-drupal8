@@ -18,13 +18,11 @@
 #}
 
   {% if title %}
-    <h3>{{ title }}</h3>
+    <h3>{{ title }} <i class="fa fa-list-ul"></i></h3>
   {% endif %}
 
   <ul class="student-list">
     {% for row in rows %}
-      
       <li{{ row.attributes }}>{{ row.content }}</li>
-
     {% endfor %}
  </ul>
