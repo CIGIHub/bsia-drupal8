@@ -8,6 +8,7 @@ dependencies:
   - entityqueue
   - field_group
   - google_analytics
+  - image
   - imce
   - pathauto
   - sitemap
