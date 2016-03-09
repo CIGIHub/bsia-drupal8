@@ -12,7 +12,7 @@ bundle: page
 label: 'Image Caption'
 description: 'If an image has been uploaded add a photo caption/credit'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

@@ -5,14 +5,14 @@ dependencies:
   config:
     - field.field.node.blog.body
     - field.field.node.blog.comment
-    - field.field.node.blog.field_caption
     - field.field.node.blog.field_image
     - field.field.node.blog.field_published_date
     - field.field.node.blog.upload
     - node.type.blog
   module:
+    - comment
     - datetime
-    - image
+    - file
     - text
     - user
 id: node.blog.default
@@ -23,23 +23,15 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 4
+    weight: 101
     settings: {  }
     third_party_settings: {  }
-  field_caption:
-    weight: 2
-    label: above
+  comment:
+    label: hidden
+    type: comment_default
+    weight: 20
     settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-  field_image:
-    type: image
-    weight: 1
-    label: above
-    settings:
-      image_style: ''
-      image_link: ''
+      pager_id: 0
     third_party_settings: {  }
   field_published_date:
     label: above
@@ -50,9 +42,12 @@ content:
       timezone_override: ''
     third_party_settings: {  }
   links:
-    weight: 3
+    weight: 100
+  upload:
+    label: hidden
     settings: {  }
+    type: file_default
+    weight: 102
     third_party_settings: {  }
 hidden:
-  comment: true
-  upload: true
+  field_image: true

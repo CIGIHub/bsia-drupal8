@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.news.body
     - field.field.node.news.comment
     - field.field.node.news.field_alternative_url
-    - field.field.node.news.field_caption
     - field.field.node.news.field_credit
     - field.field.node.news.field_feature_area
     - field.field.node.news.field_feature_line
@@ -23,14 +22,44 @@ dependencies:
     - node.type.news
   module:
     - datetime
+    - field_group
     - image
     - text
     - user
+third_party_settings:
+  field_group:
+    group_features:
+      label: Features
+      weight: 2
+      children:
+        - field_alternative_url
+        - field_feature_area
+        - field_feature_line
+        - field_feature_weight
+        - field_image_page
+      format_type: fieldset
+      format_settings: {  }
+    group_pitchspace:
+      label: 'Pitch Space'
+      weight: 3
+      children:
+        - field_credit
+        - field_link_text
+        - field_position
+      format_type: fieldset
+      format_settings: {  }
 id: node.news.teaser
 targetEntityType: node
 bundle: news
 mode: teaser
 content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
   field_feature_line:
     label: above
     weight: 13
@@ -59,11 +88,11 @@ content:
     type: text_default
     settings: {  }
     third_party_settings: {  }
+  links:
+    weight: 100
 hidden:
-  body: true
   comment: true
   field_alternative_url: true
-  field_caption: true
   field_credit: true
   field_feature_area: true
   field_feature_weight: true
@@ -71,5 +100,4 @@ hidden:
   field_link_text: true
   field_person: true
   field_position: true
-  links: true
   upload: true

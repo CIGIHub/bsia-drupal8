@@ -9,7 +9,6 @@ dependencies:
     - field.field.node.event.event_type
     - field.field.node.event.field_address_1
     - field.field.node.event.field_alternative_url
-    - field.field.node.event.field_caption
     - field.field.node.event.field_city
     - field.field.node.event.field_country
     - field.field.node.event.field_credit
@@ -39,9 +38,62 @@ dependencies:
   module:
     - comment
     - datetime
+    - field_group
     - file
     - text
     - user
+third_party_settings:
+  field_group:
+    group_attendance:
+      label: Attendance
+      weight: 5
+      children:
+        - field_email_subject
+        - field_event_management
+        - field_invitation
+        - field_rsvp
+      format_type: fieldset
+      format_settings: {  }
+    group_location:
+      label: Location
+      weight: 8
+      children:
+        - field_address_1
+        - field_city
+        - field_country
+        - field_location
+        - field_state_province
+      format_type: fieldset
+      format_settings: {  }
+    group_feature:
+      label: Features
+      weight: 9
+      children:
+        - field_alternative_url
+        - field_feature_area
+        - field_feature_line
+        - field_feature_weight
+        - field_image_page
+      format_type: fieldset
+      format_settings: {  }
+    group_pitchspace:
+      label: 'Pitch Space'
+      weight: 10
+      children:
+        - field_credit
+        - field_link_text
+        - field_position
+      format_type: fieldset
+      format_settings: {  }
+    group_event_recap:
+      label: 'Event Recap'
+      weight: 11
+      children:
+        - field_event_summary
+        - field_event_videos
+        - field_flickr_id
+      format_type: fieldset
+      format_settings: {  }
 id: node.event.default
 targetEntityType: node
 bundle: event
@@ -50,24 +102,17 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 19
+    weight: 101
     settings: {  }
     third_party_settings: {  }
   comment:
     label: hidden
     type: comment_default
-    weight: 18
+    weight: 20
     settings:
       pager_id: 0
     third_party_settings: {  }
   event_series:
-    label: hidden
-    type: entity_reference_label
-    weight: 13
-    settings:
-      link: true
-    third_party_settings: {  }
-  event_series1:
     label: hidden
     type: entity_reference_label
     weight: 20
@@ -75,13 +120,6 @@ content:
       link: true
     third_party_settings: {  }
   event_type:
-    label: inline
-    type: entity_reference_label
-    weight: 14
-    settings:
-      link: true
-    third_party_settings: {  }
-  event_type1:
     label: hidden
     type: entity_reference_label
     weight: 20
@@ -91,30 +129,30 @@ content:
   field_address_1:
     label: above
     weight: 9
-    type: basic_string
+    type: text_default
     settings: {  }
     third_party_settings: {  }
   field_city:
     label: above
     weight: 10
-    type: basic_string
+    type: text_default
     settings: {  }
     third_party_settings: {  }
   field_country:
     label: above
     weight: 12
-    type: basic_string
+    type: text_default
     settings: {  }
     third_party_settings: {  }
   field_email_subject:
     label: above
     weight: 8
-    type: basic_string
+    type: text_default
     settings: {  }
     third_party_settings: {  }
   field_event_date:
     label: above
-    weight: 1
+    weight: 0
     type: datetime_default
     settings:
       format_type: fallback
@@ -122,103 +160,84 @@ content:
     third_party_settings: {  }
   field_event_management:
     label: above
-    weight: 6
-    type: basic_string
+    weight: 7
+    type: text_default
     settings: {  }
     third_party_settings: {  }
   field_event_summary:
     label: above
-    weight: 21
+    weight: 27
     type: text_default
     settings: {  }
     third_party_settings: {  }
   field_event_videos:
     label: above
-    weight: 23
-    type: basic_string
+    weight: 29
+    type: text_default
     settings: {  }
     third_party_settings: {  }
   field_feature_line:
     label: above
-    weight: 15
+    weight: 19
     type: text_default
     settings: {  }
     third_party_settings: {  }
   field_flickr_id:
     label: above
-    weight: 22
-    type: basic_string
+    weight: 28
+    type: text_default
     settings: {  }
     third_party_settings: {  }
   field_invitation:
     label: above
-    weight: 3
-    type: boolean
+    weight: 5
+    type: number_integer
     settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
+      thousand_separator: ''
+      prefix_suffix: true
     third_party_settings: {  }
   field_location:
     label: above
-    weight: 7
-    type: basic_string
+    weight: 8
+    type: text_default
     settings: {  }
     third_party_settings: {  }
   field_rsvp:
     label: above
-    weight: 4
-    type: boolean
+    weight: 6
+    type: number_integer
     settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
+      thousand_separator: ''
+      prefix_suffix: true
     third_party_settings: {  }
   field_short_description:
     label: above
-    weight: 0
+    weight: -3
     type: text_default
     settings: {  }
     third_party_settings: {  }
-  field_speakers:
-    type: entity_reference_entity_view
-    weight: 2
-    label: hidden
-    settings:
-      view_mode: token
-      link: false
-    third_party_settings: {  }
   field_speakers_unlinked:
     label: above
-    weight: 5
-    type: basic_string
+    weight: 6
+    type: text_default
     settings: {  }
     third_party_settings: {  }
   field_state_province:
     label: above
     weight: 11
-    type: basic_string
-    settings: {  }
-    third_party_settings: {  }
-  field_website:
-    type: basic_string
-    weight: 16
-    label: above
+    type: text_default
     settings: {  }
     third_party_settings: {  }
   links:
-    weight: 17
-    settings: {  }
-    third_party_settings: {  }
+    weight: 100
   upload:
     label: hidden
     settings: {  }
     type: file_default
-    weight: 24
+    weight: 102
     third_party_settings: {  }
 hidden:
   field_alternative_url: true
-  field_caption: true
   field_credit: true
   field_feature_area: true
   field_feature_weight: true
@@ -226,3 +245,5 @@ hidden:
   field_image_page: true
   field_link_text: true
   field_position: true
+  field_speakers: true
+  field_website: true

@@ -6,7 +6,6 @@ dependencies:
     - field.field.node.research.body
     - field.field.node.research.comment
     - field.field.node.research.field_alternative_url
-    - field.field.node.research.field_caption
     - field.field.node.research.field_credit
     - field.field.node.research.field_feature_area
     - field.field.node.research.field_feature_line
@@ -23,13 +22,38 @@ dependencies:
     - field.field.node.research.field_speakers_unlinked
     - field.field.node.research.field_square_image
     - field.field.node.research.field_website
+    - field.field.node.research.upload
     - image.style.thumbnail
     - node.type.research
   module:
     - comment
+    - field_group
+    - file
     - image
     - path
     - text
+third_party_settings:
+  field_group:
+    group_features:
+      label: Features
+      weight: 7
+      children:
+        - field_alternative_url
+        - field_feature_area
+        - field_feature_line
+        - field_feature_weight
+        - field_image_page
+      format_type: fieldset
+      format_settings: {  }
+    group_pitchspace:
+      label: 'Pitch Space'
+      weight: 8
+      children:
+        - field_credit
+        - field_link_text
+        - field_position
+      format_type: fieldset
+      format_settings: {  }
 id: node.research.default
 targetEntityType: node
 bundle: research
@@ -37,7 +61,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 25
+    weight: 31
     settings:
       rows: 9
       summary_rows: 3
@@ -45,102 +69,95 @@ content:
     third_party_settings: {  }
   comment:
     type: comment_default
-    weight: 23
+    weight: 20
     settings: {  }
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 17
+    weight: 10
     settings: {  }
     third_party_settings: {  }
   field_alternative_url:
-    weight: 13
-    type: string_textarea
-    settings:
-      placeholder: ''
-      rows: 5
-    third_party_settings: {  }
-  field_caption:
-    weight: 8
+    weight: 5
+    type: text_textfield
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
   field_credit:
-    weight: 20
-    type: string_textarea
+    weight: 13
+    type: text_textfield
     settings:
+      size: 60
       placeholder: ''
-      rows: 5
     third_party_settings: {  }
   field_feature_area:
-    weight: 5
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     type: options_select
   field_feature_line:
-    weight: 10
+    weight: 3
     settings:
       rows: 2
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
   field_feature_weight:
-    weight: 12
+    weight: 4
     type: options_select
     settings: {  }
     third_party_settings: {  }
   field_image:
-    weight: 6
+    weight: 2
     settings:
       progress_indicator: bar
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
   field_image_page:
-    weight: 7
+    weight: 2
     settings:
       progress_indicator: bar
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
   field_link_text:
-    weight: 19
-    type: string_textarea
+    weight: 12
+    type: text_textfield
     settings:
+      size: 60
       placeholder: ''
-      rows: 5
     third_party_settings: {  }
   field_position:
-    weight: 18
+    weight: 11
     settings: {  }
     third_party_settings: {  }
     type: options_select
   field_related_events:
-    weight: 15
+    weight: 5
     type: options_select
     settings: {  }
     third_party_settings: {  }
   field_related_publications:
-    weight: 16
+    weight: 6
     type: options_select
     settings: {  }
     third_party_settings: {  }
   field_research_type:
-    weight: 1
+    weight: -2
     settings: {  }
     third_party_settings: {  }
     type: options_select
   field_short_description:
-    weight: 3
+    weight: 0
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
   field_speakers:
-    weight: 2
+    weight: -1
     type: entity_reference_autocomplete
     settings:
       match_operator: CONTAINS
@@ -148,56 +165,62 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_speakers_unlinked:
-    weight: 4
-    type: string_textarea
+    weight: 1
+    type: text_textfield
     settings:
+      size: 60
       placeholder: ''
-      rows: 5
     third_party_settings: {  }
   field_square_image:
-    weight: 9
+    weight: 3
     settings:
       progress_indicator: bar
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
   field_website:
-    weight: 11
-    type: string_textarea
+    weight: 4
+    type: text_textfield
     settings:
+      size: 60
       placeholder: ''
-      rows: 5
     third_party_settings: {  }
   path:
     type: path
-    weight: 24
+    weight: 30
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 21
+    weight: 15
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 22
+    weight: 16
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 0
+    weight: -5
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 14
+    weight: 5
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  upload:
+    settings:
+      progress_indicator: throbber
+    type: file_generic
+    weight: 32
     third_party_settings: {  }
 hidden: {  }

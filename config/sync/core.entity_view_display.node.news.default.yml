@@ -6,7 +6,6 @@ dependencies:
     - field.field.node.news.body
     - field.field.node.news.comment
     - field.field.node.news.field_alternative_url
-    - field.field.node.news.field_caption
     - field.field.node.news.field_credit
     - field.field.node.news.field_feature_area
     - field.field.node.news.field_feature_line
@@ -23,10 +22,33 @@ dependencies:
   module:
     - comment
     - datetime
+    - field_group
     - file
     - image
     - text
     - user
+third_party_settings:
+  field_group:
+    group_features:
+      label: Features
+      weight: 2
+      children:
+        - field_alternative_url
+        - field_feature_area
+        - field_feature_line
+        - field_feature_weight
+        - field_image_page
+      format_type: fieldset
+      format_settings: {  }
+    group_pitchspace:
+      label: 'Pitch Space'
+      weight: 3
+      children:
+        - field_credit
+        - field_link_text
+        - field_position
+      format_type: fieldset
+      format_settings: {  }
 id: node.news.default
 targetEntityType: node
 bundle: news
@@ -35,32 +57,25 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 7
+    weight: 101
     settings: {  }
     third_party_settings: {  }
   comment:
     label: hidden
     type: comment_default
-    weight: 5
+    weight: 20
     settings:
       pager_id: 0
     third_party_settings: {  }
-  field_caption:
-    weight: 3
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
   field_feature_line:
     label: above
-    weight: 4
+    weight: 13
     type: text_default
     settings: {  }
     third_party_settings: {  }
   field_news_date:
     label: above
-    weight: 1
+    weight: -1
     type: datetime_default
     settings:
       format_type: fallback
@@ -68,7 +83,7 @@ content:
     third_party_settings: {  }
   field_news_image:
     label: above
-    weight: 2
+    weight: 0
     type: image
     settings:
       image_style: ''
@@ -76,19 +91,17 @@ content:
     third_party_settings: {  }
   field_short_description:
     label: above
-    weight: 0
+    weight: -1
     type: text_default
     settings: {  }
     third_party_settings: {  }
   links:
-    weight: 6
-    settings: {  }
-    third_party_settings: {  }
+    weight: 100
   upload:
     label: hidden
     settings: {  }
     type: file_default
-    weight: 8
+    weight: 102
     third_party_settings: {  }
 hidden:
   field_alternative_url: true
