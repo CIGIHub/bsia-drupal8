@@ -22,7 +22,6 @@ dependencies:
     - field.field.node.research.field_speakers_unlinked
     - field.field.node.research.field_square_image
     - field.field.node.research.field_website
-    - field.field.node.research.upload
     - image.style.thumbnail
     - node.type.research
   module:

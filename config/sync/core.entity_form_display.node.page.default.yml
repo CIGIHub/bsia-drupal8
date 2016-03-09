@@ -15,11 +15,9 @@ dependencies:
     - field.field.node.page.field_highlight_text
     - field.field.node.page.field_image
     - field.field.node.page.field_image_page
-    - field.field.node.page.field_layout
     - field.field.node.page.field_link_text
     - field.field.node.page.field_position
     - field.field.node.page.field_subtitle
-    - field.field.node.page.upload
     - image.style.thumbnail
     - node.type.page
   module:
