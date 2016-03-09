@@ -34,23 +34,39 @@ function transform_textfield($table, $field_name, $max_length) {
     db_query("UPDATE {content_node_field} SET global_settings = '%s' WHERE field_name = 'field_%s'", serialize($data), $field_name);
 }
 
-// $json = '{ "deprecated": {"a":1,"b":2,"c":3,"d":4,"e":5} }';
-// not awards, linkedin_url, publications, subtitle
+// $json = '{ "unlimited": {"a":1,"b":2,"c":3,"d":4,"e":5} }';
+// bad data in: linkedin_url, publication_source_link, subtitle
 $json_field_config = '{
+    "address_1": {"length":255, "content_types": ["event"]},
+    "alternative_url": {"length":255, "content_types": ["event", "news", "page", "person", "publication", "research"]},
     "board_position": {"length":255, "content_types": ["person"]},
-    "courses": {"length":255, "content_types": ["person", "deprecated"]},
+    "caption": {"length":255, "content_types": ["page"]},
+    "city": {"length":255, "content_types": ["event"]},
+    "country": {"length":255, "content_types": ["event"]},
+    "courses": {"length":255, "content_types": ["person", "unlimited"]},
     "credit": {"length":255, "content_types": ["event","news","page","person","publication","research"]},
     "department": {"length":255, "content_types": ["person"]},
-    "education": {"length":255, "content_types": ["person", "deprecated"]},
+    "education": {"length":255, "content_types": ["person", "unlimited"]},
     "email": {"length":255, "content_types": ["person"]},
-    "expertise": {"length":255, "content_types": ["person", "deprecated"]},
+    "email_subject": {"length":255, "content_types": ["event"]},
+    "event_management": {"length":255, "content_types": ["event"]},
+    "event_videos": {"length":255, "content_types": ["event", "unlimited"]},
+    "expertise": {"length":255, "content_types": ["person", "unlimited"]},
+    "flickr_id": {"length":255, "content_types": ["event"]},
     "given_names": {"length":255, "content_types": ["person"]},
     "graduate_title": {"length":255, "content_types": ["person"]},
+    "highlight_text": {"length":255, "content_types": ["page"]},
     "languages": {"length":255, "content_types": ["person"]},
     "link_text": {"length":255, "content_types": ["event","news","page","person","publication","research"]},
+    "linkedin_url": {"length":255, "content_types": ["person"]},
+    "location": {"length":255, "content_types": ["event"]},
     "office_location": {"length":255, "content_types": ["person"]},
     "person_position": {"length":255, "content_types": ["person"]},
     "phone": {"length":255, "content_types": ["person"]},
+    "publication_source": {"length":255, "content_types": ["external_publication", "publication"]},
+    "publication_source_link": {"length":255, "content_types": ["external_publication", "publication"]},
+    "speakers_unlinked": {"length":255, "content_types": ["event", "external_publication", "publication", "research"]},
+    "state_province": {"length":255, "content_types": ["event"]},
     "surname": {"length":255, "content_types": ["person"]},
     "twitter_url": {"length":255, "content_types": ["person"]},
     "website": {"length":255, "content_types": ["event","person","research"]},
