@@ -918,6 +918,10 @@ footer {
   z-index: 500;
   color: #9DA5B2; }
 
+.students-all-programs .fa-list-ul {
+  font-size: 14px;
+  color: #9da5b2; }
+
 ul.student-list li {
   display: inline-block; }
 ul.student-list hr {
@@ -944,9 +948,6 @@ ul.student-list hr {
   opacity: 0.5; }
 .student.unselected-student:hover {
   opacity: 1.0; }
-
-.row-description {
-  display: none; }
 
 .student-description {
   display: none;
