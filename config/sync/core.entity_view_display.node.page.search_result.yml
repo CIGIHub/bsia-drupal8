@@ -5,7 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.search_result
     - field.field.node.page.body
-    - field.field.node.page.comment
     - field.field.node.page.field_alternative_url
     - field.field.node.page.field_caption
     - field.field.node.page.field_credit
@@ -19,8 +18,6 @@ dependencies:
     - field.field.node.page.field_link_text
     - field.field.node.page.field_position
     - field.field.node.page.field_subtitle
-    - field.field.node.page.field_test
-    - field.field.node.page.upload
     - node.type.page
   module:
     - image
@@ -97,6 +94,12 @@ content:
       image_style: ''
       image_link: ''
     third_party_settings: {  }
+  field_layout:
+    label: hidden
+    weight: 1
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
   field_link_text:
     label: hidden
     weight: 7
@@ -120,5 +123,4 @@ content:
 hidden:
   body: true
   comment: true
-  field_test: true
   upload: true

@@ -24,26 +24,46 @@ dependencies:
     - field.field.node.publication.field_short_description
     - field.field.node.publication.field_speakers
     - field.field.node.publication.field_speakers_unlinked
-    - field.field.node.publication.publication_type
     - field.field.node.publication.upload
     - node.type.publication
   module:
     - datetime
-    - image
+    - field_group
     - text
     - user
+third_party_settings:
+  field_group:
+    group_features:
+      label: Features
+      weight: 8
+      children:
+        - field_alternative_url
+        - field_feature_area
+        - field_feature_line
+        - field_feature_weight
+        - field_image_page
+      format_type: fieldset
+      format_settings: {  }
+    group_pitchspace:
+      label: 'Pitch Space'
+      weight: 9
+      children:
+        - field_credit
+        - field_link_text
+        - field_position
+      format_type: fieldset
+      format_settings: {  }
 id: node.publication.teaser
 targetEntityType: node
 bundle: publication
 mode: teaser
 content:
-  field_book_cover:
-    type: image
-    weight: 6
+  body:
     label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
     settings:
-      image_style: ''
-      image_link: ''
+      trim_length: 600
     third_party_settings: {  }
   field_feature_line:
     label: above
@@ -83,32 +103,19 @@ content:
     type: text_default
     settings: {  }
     third_party_settings: {  }
-  field_speakers:
-    type: entity_reference_entity_view
-    weight: 2
-    label: hidden
-    settings:
-      view_mode: default
-      link: false
-    third_party_settings: {  }
   field_speakers_unlinked:
     label: hidden
     weight: -1
     type: text_default
     settings: {  }
     third_party_settings: {  }
-  publication_type:
-    type: entity_reference_entity_view
-    weight: 5
-    label: hidden
-    settings:
-      view_mode: default
-      link: false
-    third_party_settings: {  }
+  links:
+    weight: 100
 hidden:
-  body: true
   comment_no_subject: true
   field_alternative_url: true
+  field_book_cover: true
+  field_caption: true
   field_credit: true
   field_embed_code: true
   field_feature_area: true
@@ -117,5 +124,6 @@ hidden:
   field_image_page: true
   field_link_text: true
   field_position: true
-  links: true
+  field_speakers: true
+  publication_type: true
   upload: true

@@ -5,15 +5,12 @@ dependencies:
   config:
     - core.entity_view_mode.node.search_result
     - field.field.node.external_publication.body
-    - field.field.node.external_publication.comment_no_subject
     - field.field.node.external_publication.field_publication_source
     - field.field.node.external_publication.field_publication_source_link
     - field.field.node.external_publication.field_published_date
     - field.field.node.external_publication.field_short_description
     - field.field.node.external_publication.field_speakers
     - field.field.node.external_publication.field_speakers_unlinked
-    - field.field.node.external_publication.publication_type
-    - field.field.node.external_publication.upload
     - node.type.external_publication
   module:
     - datetime
@@ -60,7 +57,4 @@ content:
     weight: 100
 hidden:
   body: true
-  comment_no_subject: true
   field_speakers: true
-  publication_type: true
-  upload: true

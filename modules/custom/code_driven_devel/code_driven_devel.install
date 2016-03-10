@@ -1,0 +1,43 @@
+<?php
+
+/**
+ * @file
+ * Code-drvien development's install functions
+ */
+
+/**
+ * Implements hook_install().
+ */
+function code_driven_devel_install() {
+  // This module is designed to be enabled on a brand new instance of
+  // Drupal. Settings its uuid here will tell this instance that it is
+  // in fact the same site as any other instance. Therefore, all local
+  // instances, continuous integration, testing, dev, and production
+  // instances of a codebase will have the same uuid, enabling us to
+  // sync these instances via the config management system.
+  // See also https://www.drupal.org/node/2133325
+  $config_name = 'sync';
+  $uuid = code_driven_devel_get_site_uuid_from_config($config_name);
+  code_driven_devel_set_site_uuid($uuid);
+  code_driven_devel_override_uuids($config_name);
+  for ($i = 8001; $i < 9000; $i++) {
+    $candidate = 'code_driven_devel_' . $i;
+    if (function_exists($candidate)) {
+      $candidate();
+    }
+  }
+}
+
+/**
+ * Update dependencies and revert features
+ */
+function code_driven_devel_update_8001() {
+  // If you add a new dependency during your development:
+  // (1) add your dependency to your .info file
+  // (2) increment the number in this function name (example: change
+  //     change 8001 to 8002)
+  // (3) now, on each target environment, running drush updb -y
+  //     will call the code_driven_devel_update_dependencies() function
+  //     which in turn will enable all new dependencies.
+  code_driven_devel_update_dependencies();
+}

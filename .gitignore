@@ -2,3 +2,8 @@
 .DS_Store
 *.map
 *.sass-cache
+
+# Config ignores
+
+config/sync/.htaccess
+config/sync/migrate.migration.*
