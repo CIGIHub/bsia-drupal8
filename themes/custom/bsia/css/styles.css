@@ -342,7 +342,11 @@ dl.calendar {
 
 .views-row article,
 .views-row .research-listing,
-.view-faculty .views-row {
+.view-faculty .views-row,
+.view-students.view-display-id-page_2 .views-row,
+.view-students.view-display-id-page_3 .views-row,
+.view-students.view-display-id-page_5 .views-row,
+.view-students.view-display-id-page_6 .views-row {
   margin: 20px 0;
   border: none;
   border-bottom: solid 1px #d2d2d2; }
@@ -886,7 +890,8 @@ footer {
 
 #block-exposedformfacultypage-2 #edit-keys--2 {
   width: 200px;
-  padding: 3px; }
+  padding: 3px;
+  font-size: 14px; }
 #block-exposedformfacultypage-2 #edit-actions--2 {
   text-indent: -9999px; }
 #block-exposedformfacultypage-2 .search-description {
@@ -895,6 +900,11 @@ footer {
   margin: 0px; }
 #block-exposedformfacultypage-2 #edit-actions--2 {
   position: absolute; }
+
+#block-exposedformstudentspage-2 #edit-keys--2 {
+  width: 200px;
+  padding: 3px;
+  font-size: 14px; }
 
 #block-views-block-faculty-block-1 {
   border-top: solid 1px #d2d2d2;
@@ -918,14 +928,41 @@ footer {
   z-index: 500;
   color: #9DA5B2; }
 
+#views-exposed-form-students-page-2 label {
+  text-indent: -9999px;
+  position: absolute; }
+#views-exposed-form-students-page-2 #edit-keys--2 {
+  width: 200px;
+  padding: 3px;
+  font-size: 14px; }
+#views-exposed-form-students-page-2 .form-submit {
+  padding: 0 5px;
+  border: 1px solid #D2D2D2;
+  background: #F7F6F6;
+  color: #036;
+  font-weight: normal;
+  font-size: 11px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 3px;
+  margin-top: 0px;
+  height: 24px; }
+#views-exposed-form-students-page-2 .form-actions {
+  display: inline-block; }
+
+.students-all-programs h3 {
+  margin-top: 20px; }
 .students-all-programs .fa-list-ul {
   font-size: 14px;
+  margin-left: 10px;
   color: #9da5b2; }
 
-ul.student-list li {
-  display: inline-block; }
-ul.student-list hr {
-  margin: 15px 0 10px 0; }
+ul.student-list {
+  margin-bottom: 40px; }
+  ul.student-list li {
+    display: inline-block; }
+  ul.student-list hr {
+    margin: 10px 0 5px 0; }
 
 .student .student-photo {
   text-align: center;

@@ -21,23 +21,24 @@
             
         }   
 
-        if($('#views-exposed-form-faculty-page-2 input').length > 0){
-            personBlockForm = $('#views-exposed-form-faculty-page-2 .form-text');
+        if($('#views-exposed-form-faculty-page-2 input').length > 0 || $('#views-exposed-form-students-page-2 input').length > 0){
+            console.log('here');
+            if($('#views-exposed-form-faculty-page-2 .form-text').length > 0){
+                personBlockForm = $('#views-exposed-form-faculty-page-2 .form-text');
+                placeholderText = 'Search All Faculty';
+            }
+            else if($('#views-exposed-form-students-page-2 .form-text').length > 0){
+                personBlockForm = $('#views-exposed-form-students-page-2 .form-text');
+                placeholderText = 'Search All Students';
+            }
+
             clearButton = $('<i class="fa fa-times-circle" id="clear-button"></i>');
             clearButton.insertAfter(personBlockForm).hide();
-            personBlockForm.attr('placeholder', 'Search All Faculty');
+            personBlockForm.attr('placeholder', placeholderText);
 
             personBlockForm.focus(function(){
             current_base_page = window.location.href;
             console.log(current_base_page);
-
-            if (current_base_page.match(/faculty/)){
-                console.log('here');
-                placeholderText = 'Search All Faculty';
-            }
-            if (current_base_page.match(/student/)){
-                placeholderText = 'Search All Students';
-            }
 
             if (personBlockForm.attr('placeholder') == placeholderText) {
                 personBlockForm.attr('placeholder','');
