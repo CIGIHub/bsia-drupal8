@@ -10,8 +10,7 @@ libraries:
   - bsia/global-css
   - bsia/global-js
   - bsia/homepage-slider
-  - bsia/people-views
-  - bsia/chosen-dropdown
+  - bsia/students
 
 stylesheets-remove:
   - core/assets/vendor/normalize-css/normalize.css

@@ -101,6 +101,20 @@ $(document).ready(function(){
         });
     }
 
+    function insert_icon(){
+
+        if($('.students-all-programs h3').length > 0){
+           $(' <i class="fa fa-list-ul"></i>').appendTo('.students-all-programs h3 a');
+        }
+        
+    }
+
+    //attach chosen dropdown plugin to student topic filter
+    $("#edit-tid option").eq(0).text("Filter by Topic");
+    $("#edit-tid").removeClass('form-select').addClass('chosen-select');
+    $(".chosen-select").chosen()
+
+    insert_icon();
     insert_description_ids();
     $("[id^='student-']").click(photo_click_handler);
 

@@ -231,7 +231,11 @@ dl.calendar{
 
 .views-row article,
 .views-row .research-listing,
-.view-faculty .views-row{
+.view-faculty .views-row,
+.view-students.view-display-id-page_2 .views-row,
+.view-students.view-display-id-page_3 .views-row,
+.view-students.view-display-id-page_5 .views-row,
+.view-students.view-display-id-page_6 .views-row{
   @include divider
 }
 

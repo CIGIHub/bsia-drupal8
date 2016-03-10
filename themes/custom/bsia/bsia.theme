@@ -1,11 +1,5 @@
 <?php
 
-function theme_name_preprocess_page(&$variables) {
-	if($variables['is_front']){
-		$variables['#attached']['library'][] = 'theme_name/custom-library';
-	}
-}
-
 function bsia_theme_suggestions_block_alter(&$suggestions, $variables) {
   $content = $variables['elements']['content'];
   if (isset($content['#block_content']) && $content['#block_content'] instanceof \Drupal\block_content\BlockContentInterface) {
@@ -13,12 +7,12 @@ function bsia_theme_suggestions_block_alter(&$suggestions, $variables) {
   }
 }
 
-// function bsia_theme_suggestions_form_alter(array &$suggestions, array $variables, $hook) {
-//   print_r($hook);
-//   if (in_array($hook, ['input', 'form_element']) && $variables['element']['#attributes']['id'] == 'edit-keys') {
-//     $suggestions[] = $hook . '__custom';
-//   }
+// function bsia_preprocess_page(&$variables){
+
+// 	kint($variables);
+// 	dsm($variables['contexts']);
 // }
+
 
 function bsia_preprocess_field(&$variables, $hook) {
  	
