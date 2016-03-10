@@ -241,3 +241,4 @@ content:
     third_party_settings: {  }
 hidden:
   comment_no_subject: true
+  field_caption: true

@@ -222,4 +222,5 @@ content:
     type: file_generic
     weight: 32
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_caption: true

@@ -122,3 +122,5 @@ content:
     weight: 100
 hidden:
   body: true
+  comment: true
+  upload: true

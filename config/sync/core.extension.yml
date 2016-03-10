@@ -31,7 +31,6 @@ module:
   history: 0
   image: 0
   imce: 0
-  import_caption: 0
   link: 0
   menu_ui: 0
   migrate: 0

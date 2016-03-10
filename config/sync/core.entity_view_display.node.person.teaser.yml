@@ -210,6 +210,7 @@ hidden:
   comment: true
   field_alternative_url: true
   field_awards: true
+  field_caption: true
   field_credit: true
   field_current_student: true
   field_department: true
@@ -232,4 +233,7 @@ hidden:
   field_surname: true
   field_user_link: true
   field_website: true
+  person_type: true
+  program_type: true
+  topics: true
   upload: true
