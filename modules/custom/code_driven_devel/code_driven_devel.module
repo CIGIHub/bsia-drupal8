@@ -68,14 +68,17 @@ function code_driven_devel_override_uuids($config_name) {
   $files = scandir($dir);
 
   foreach($files as $file) {
-    $info = Yaml::decode(file_get_contents($dir . $file));
-    $name = substr($file, 0, -4);
-    if(is_array($info) && array_key_exists('uuid', $info)) {
-      if(in_array($name, \Drupal::configFactory()->listAll())) {
-        \Drupal::configFactory()
-          ->getEditable($name)
-          ->set('uuid', $info['uuid'])
-          ->save();
+    $ext = substr($file, -4);
+    if ($ext == '.yml') {
+      $info = Yaml::decode(file_get_contents($dir . $file));
+      $name = substr($file, 0, -4);
+      if(is_array($info) && array_key_exists('uuid', $info)) {
+        if(in_array($name, \Drupal::configFactory()->listAll())) {
+          \Drupal::configFactory()
+            ->getEditable($name)
+            ->set('uuid', $info['uuid'])
+            ->save();
+        }
       }
     }
   }
