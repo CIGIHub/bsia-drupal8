@@ -38,7 +38,6 @@ dependencies:
     - field.field.node.person.field_square_image
     - field.field.node.person.field_subtitle
     - field.field.node.person.field_surname
-    - field.field.node.person.field_test2
     - field.field.node.person.field_testimonial
     - field.field.node.person.field_twitter_url
     - field.field.node.person.field_user_link
@@ -48,15 +47,65 @@ dependencies:
     - field.field.node.person.person_type
     - field.field.node.person.program_type
     - field.field.node.person.topics
-    - field.field.node.person.upload
     - image.style.thumbnail
     - node.type.person
   module:
     - comment
+    - field_group
     - file
     - image
     - path
     - text
+third_party_settings:
+  field_group:
+    group_general:
+      label: 'General information'
+      weight: -2
+      children:
+        - field_board_order
+        - field_board_position
+        - field_courses
+        - field_department
+        - field_education
+        - field_email
+        - field_expertise
+        - field_given_names
+        - field_graduate_title
+        - field_languages
+        - field_linkedin_url
+        - field_office_location
+        - field_person_position
+        - field_phone
+        - field_photo
+        - field_square_image
+        - field_surname
+        - field_twitter_url
+        - field_user_link
+        - field_website
+        - field_year_graduated
+      format_type: fieldset
+      format_settings: {  }
+    group_features:
+      label: Features
+      weight: -1
+      children:
+        - field_alternative_url
+        - field_feature_area
+        - field_feature_line
+        - field_feature_weight
+        - field_image_page
+        - field_youtube_id
+      format_type: fieldset
+      format_settings: {  }
+    group_pitchspace:
+      label: 'Pitch Space'
+      weight: 1
+      children:
+        - field_credit
+        - field_link_text
+        - field_position
+      format_type: fieldset
+      format_settings: {  }
 id: node.person.default
 targetEntityType: node
 bundle: person
@@ -287,11 +336,11 @@ content:
     type: image_image
   field_subtitle:
     weight: -4
+    type: text_textfield
     settings:
-      rows: 1
+      size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
   field_surname:
     weight: 5
     type: text_textfield
@@ -299,13 +348,6 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_test2:
-    weight: 33
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textfield
   field_testimonial:
     weight: 6
     settings:
@@ -356,17 +398,7 @@ content:
     weight: 20
     settings: {  }
     third_party_settings: {  }
-  person_type1:
-    type: options_select
-    weight: 20
-    settings: {  }
-    third_party_settings: {  }
   program_type:
-    type: options_select
-    weight: 20
-    settings: {  }
-    third_party_settings: {  }
-  program_type1:
     type: options_select
     weight: 20
     settings: {  }
@@ -395,11 +427,6 @@ content:
     weight: 20
     settings: {  }
     third_party_settings: {  }
-  topics1:
-    type: options_select
-    weight: 20
-    settings: {  }
-    third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
     weight: 5
@@ -412,6 +439,6 @@ content:
     settings:
       progress_indicator: throbber
     type: file_generic
-    weight: 34
+    weight: 32
     third_party_settings: {  }
 hidden: {  }

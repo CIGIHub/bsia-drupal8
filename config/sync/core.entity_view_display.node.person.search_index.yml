@@ -5,7 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.search_index
     - field.field.node.person.body
-    - field.field.node.person.comment
     - field.field.node.person.field_alternative_url
     - field.field.node.person.field_archived
     - field.field.node.person.field_awards
@@ -39,17 +38,12 @@ dependencies:
     - field.field.node.person.field_square_image
     - field.field.node.person.field_subtitle
     - field.field.node.person.field_surname
-    - field.field.node.person.field_test2
     - field.field.node.person.field_testimonial
     - field.field.node.person.field_twitter_url
     - field.field.node.person.field_user_link
     - field.field.node.person.field_website
     - field.field.node.person.field_year_graduated
     - field.field.node.person.field_youtube_id
-    - field.field.node.person.person_type
-    - field.field.node.person.program_type
-    - field.field.node.person.topics
-    - field.field.node.person.upload
     - node.type.person
   module:
     - image
@@ -296,11 +290,5 @@ content:
     weight: 100
 hidden:
   body: true
-  comment: true
   field_current_student: true
-  field_test2: true
   field_user_link: true
-  person_type: true
-  program_type: true
-  topics: true
-  upload: true

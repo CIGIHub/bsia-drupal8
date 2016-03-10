@@ -1,0 +1,7 @@
+type: module
+name: Import Caption Field
+description: 'Imports the Image data description field to the caption field.'
+package: Migration
+core: 8.x
+dependencies:
+  - migrate

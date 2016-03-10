@@ -5,10 +5,8 @@ dependencies:
   config:
     - core.entity_view_mode.node.search_result
     - field.field.node.blog.body
-    - field.field.node.blog.comment
     - field.field.node.blog.field_image
     - field.field.node.blog.field_published_date
-    - field.field.node.blog.upload
     - node.type.blog
   module:
     - datetime
@@ -39,5 +37,3 @@ content:
     weight: 100
 hidden:
   body: true
-  comment: true
-  upload: true

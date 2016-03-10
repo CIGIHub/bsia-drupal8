@@ -22,10 +22,33 @@ dependencies:
   module:
     - comment
     - datetime
+    - field_group
     - file
     - image
     - text
     - user
+third_party_settings:
+  field_group:
+    group_features:
+      label: Features
+      weight: 2
+      children:
+        - field_alternative_url
+        - field_feature_area
+        - field_feature_line
+        - field_feature_weight
+        - field_image_page
+      format_type: fieldset
+      format_settings: {  }
+    group_pitchspace:
+      label: 'Pitch Space'
+      weight: 3
+      children:
+        - field_credit
+        - field_link_text
+        - field_position
+      format_type: fieldset
+      format_settings: {  }
 id: node.news.default
 targetEntityType: node
 bundle: news
@@ -74,13 +97,11 @@ content:
     third_party_settings: {  }
   links:
     weight: 100
-    settings: {  }
-    third_party_settings: {  }
   upload:
     label: hidden
     settings: {  }
     type: file_default
-    weight: 103
+    weight: 102
     third_party_settings: {  }
 hidden:
   field_alternative_url: true

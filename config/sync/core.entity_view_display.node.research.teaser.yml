@@ -23,18 +23,45 @@ dependencies:
     - field.field.node.research.field_speakers_unlinked
     - field.field.node.research.field_square_image
     - field.field.node.research.field_website
-    - field.field.node.research.upload
-    - image.style.square_90x90
     - node.type.research
   module:
-    - image
+    - field_group
     - text
     - user
+third_party_settings:
+  field_group:
+    group_features:
+      label: Features
+      weight: 7
+      children:
+        - field_alternative_url
+        - field_feature_area
+        - field_feature_line
+        - field_feature_weight
+        - field_image_page
+      format_type: fieldset
+      format_settings: {  }
+    group_pitchspace:
+      label: 'Pitch Space'
+      weight: 8
+      children:
+        - field_credit
+        - field_link_text
+        - field_position
+      format_type: fieldset
+      format_settings: {  }
 id: node.research.teaser
 targetEntityType: node
 bundle: research
 mode: teaser
 content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
   field_feature_line:
     label: above
     weight: 3
@@ -59,16 +86,9 @@ content:
     type: text_default
     settings: {  }
     third_party_settings: {  }
-  field_square_image:
-    type: image
-    weight: 1
-    label: hidden
-    settings:
-      image_style: square_90x90
-      image_link: content
-    third_party_settings: {  }
+  links:
+    weight: 100
 hidden:
-  body: true
   comment: true
   field_alternative_url: true
   field_credit: true
@@ -81,6 +101,6 @@ hidden:
   field_related_events: true
   field_related_publications: true
   field_speakers: true
+  field_square_image: true
   field_website: true
-  links: true
   upload: true

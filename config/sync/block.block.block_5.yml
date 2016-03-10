@@ -8,6 +8,7 @@ dependencies:
     - block_content
     - system
 id: block_5
+theme: null
 region: content
 weight: -10
 provider: null

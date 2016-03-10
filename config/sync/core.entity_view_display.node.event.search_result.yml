@@ -5,9 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.search_result
     - field.field.node.event.body
-    - field.field.node.event.comment
-    - field.field.node.event.event_series
-    - field.field.node.event.event_type
     - field.field.node.event.field_address_1
     - field.field.node.event.field_alternative_url
     - field.field.node.event.field_city
@@ -33,9 +30,7 @@ dependencies:
     - field.field.node.event.field_speakers
     - field.field.node.event.field_speakers_unlinked
     - field.field.node.event.field_state_province
-    - field.field.node.event.field_test3
     - field.field.node.event.field_website
-    - field.field.node.event.upload
     - node.type.event
   module:
     - datetime
@@ -213,9 +208,4 @@ content:
     weight: 100
 hidden:
   body: true
-  comment: true
-  event_series: true
-  event_type: true
   field_speakers: true
-  field_test3: true
-  upload: true

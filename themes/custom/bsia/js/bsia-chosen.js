@@ -1,13 +1,10 @@
-if (Drupal.jsEnabled) {
-  $(document).ready(function () {
+$(document).ready(function () {
 
-$("#edit-tid-1 option").eq(0).text("Filter by Topic");
-$("#edit-tid-1").removeClass('form-select').addClass('chzn-select');
+	$("#edit-tid option").eq(0).text("Filter by Topic");
+	$("#edit-tid").removeClass('form-select').addClass('chosen-select');
 
-//calls the chosen function
-$(".chzn-select").chosen(); $(".chzn-select-deselect").chosen({allow_single_deselect:true});
+	//calls the chosen function
+	$(".chosen-select").chosen()
+	//$(".chzn-select-deselect").chosen({allow_single_deselect:true});
 
-	//end of function
-
-	});
-}
+});

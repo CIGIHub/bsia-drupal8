@@ -10,7 +10,7 @@
 }
 
 /* Float all columns next to each other */
-[class*='cols-'] {
+[class*='col-'] {
   float: left;
   padding: 10px;
   &.no-padding{
@@ -19,10 +19,10 @@
 }
 
 /* Floats last ".cols-" to the right */
-[class*='cols-']:last-of-type {
-  padding-right: 0.625em;
-  float: right;
-}
+// [class*='col-']:last-of-type {
+//   padding-right: 0.625em;
+//   float: right;
+// }
 
 .wrapper{
   margin: 0 auto;
@@ -60,10 +60,10 @@
   //  min-width: $mobile-bp;
   //}
 
-  .cols-1  {width: 16.67%;}
-  .cols-2  {width: 33.33%;}
-  .cols-3  {width: 50%;}
-  .cols-4  {width: 66.67%;}
-  .cols-5  {width: 83.33%;}
-  .cols-6  {width: 100%;}
+  .col-1  {width: 16.67%;}
+  .col-2  {width: 33.33%;}
+  .col-3  {width: 50%;}
+  .col-4  {width: 66.67%;}
+  .col-5  {width: 83.33%;}
+  .col-6  {width: 100%;}
 //}

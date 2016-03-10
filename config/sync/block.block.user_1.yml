@@ -7,6 +7,7 @@ dependencies:
   module:
     - system
 id: user_1
+theme: null
 region: sidebar_first
 weight: 0
 provider: null

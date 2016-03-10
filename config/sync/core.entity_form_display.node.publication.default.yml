@@ -29,10 +29,33 @@ dependencies:
     - node.type.publication
   module:
     - datetime
+    - field_group
     - file
     - image
     - path
     - text
+third_party_settings:
+  field_group:
+    group_features:
+      label: Features
+      weight: 8
+      children:
+        - field_alternative_url
+        - field_feature_area
+        - field_feature_line
+        - field_feature_weight
+        - field_image_page
+      format_type: fieldset
+      format_settings: {  }
+    group_pitchspace:
+      label: 'Pitch Space'
+      weight: 9
+      children:
+        - field_credit
+        - field_link_text
+        - field_position
+      format_type: fieldset
+      format_settings: {  }
 id: node.publication.default
 targetEntityType: node
 bundle: publication
@@ -189,11 +212,6 @@ content:
     weight: 20
     settings: {  }
     third_party_settings: {  }
-  publication_type1:
-    type: options_select
-    weight: 20
-    settings: {  }
-    third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
@@ -219,7 +237,7 @@ content:
     settings:
       progress_indicator: throbber
     type: file_generic
-    weight: 33
+    weight: 32
     third_party_settings: {  }
 hidden:
   comment_no_subject: true

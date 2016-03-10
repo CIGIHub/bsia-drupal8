@@ -1,0 +1,19 @@
+uuid: 1c390b65-9d29-4b09-a831-49f2db388a12
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_caption
+    - node.type.person
+id: node.person.field_caption
+field_name: field_caption
+entity_type: node
+bundle: person
+label: 'Image Caption'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

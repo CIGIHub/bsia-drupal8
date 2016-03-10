@@ -49,10 +49,10 @@
 <header role="banner">
   <div class="wrapper">
     <div class="row">
-      <div class="cols-lg-5 no-padding">
+      <div class="col-lg-5 no-padding">
         <a class="logo" href="{{ front_page }}">Balsillie School of International Affairs</a>
       </div>
-      <div class="cols-lg-1 no-padding">
+      <div class="col-lg-1 no-padding">
         <div class="main-nav">
           <i class="fa fa-list"></i>
         </div>
@@ -66,27 +66,23 @@
 
 <div id="main-menu" role="navigation">
   <div class="wrapper">
-    <div class="row">
-      <div class="cols-6">
+    {% if page.main_menu %}
         {{ page.main_menu }}
-      </div>
-    </div>
+    {% endif %}
   </div>
 </div>
- 
-{% if page.highlighted %}
-  {{ page.highlighted }}
-{% endif %}
-
-{% if page.help %}
-  {{ page.help }}
-{% endif %}
 
 <div class="watermark">
-  <main role="main" class="wrapper">
+  <main role="main" class="wrapper"> 
+    {% if page.page_title %}
+        <div id="content-header">
+          {{  page.page_title }}
+        </div>
+      {% endif %}
     <div class="row">
-        <div class='{% if page.right_sidebar or page.right_menu %}cols-4{% else %}cols-6{% endif %}'>
+        <div class='{% if page.right_sidebar or page.right_menu %}col-4{% else %}col-6{% endif %}'>
           <a id="main-content" tabindex="-1"></a>
+          
           {% if page.content_header %}
             <div id="content-header">
               {{  page.content_header }}
@@ -100,7 +96,7 @@
           </div>
         </div>
       {% if page.right_sidebar or page.right_menu %}
-        <div class="cols-2">
+        <div class="col-2">
           <aside class="right-menu">
             {{ page.right_menu}}
           </aside>
@@ -124,7 +120,7 @@
 <footer>
   <div class="wrapper">
     <div class="row">
-      <div class="contact cols-3">
+      <div class="contact col-3">
         <ul class="sharelinks">
           <li><a href="https://twitter.com/BalsillieSIA"><i class="fa fa-twitter"></i></a></li>
           <li><a href="https://www.facebook.com/balsillieschool"><i class="fa fa-facebook-square"></i></a></li>
@@ -134,14 +130,14 @@
           {{ page.footer_menu }}
         </div>
       </div>
-      <div class="partners cols-3">
+      <div class="partners col-3">
         <ul>
           <li><a href="http://www.wlu.ca/" class="wlu-logo">Wilfred Laurier University</a></li>
           <li><a href="http://www.cigionline.org/" class="cigi-logo">CIGI</a></li>
           <li class="last"><a href="http://uwaterloo.ca/" class="uw-logo">University of Waterloo</a></li>
         </ul>
       </div>
-      <div class="cols-6">
+      <div class="col-6">
         <div class="copyright">&copy; <?php print date('Y'); ?> The Balsillie School of International Affairs</div>
       </div>
     </div>

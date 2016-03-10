@@ -2,23 +2,63 @@
 
  (function ($) {
      $(document).ready(function () {
-         //Menu.initialize();
+         Menu.initialize();
 
-        if($('#search-block-form').length){
-            var searchFormInput = $('#search-block-form input');
-            searchFormInput.focus(function(){
-                if (searchFormInput.val() == 'Search') {
-                    searchFormInput.val("");
+    //add placeholder text for search box and faculty/student exposed views
+        if($('#search-block-form').length > 0){
+            searchBlockForm = $('#search-block-form input');
+            searchBlockForm.attr('placeholder', 'Search');
+
+            searchBlockForm.focus(function(){
+                if (searchBlockForm.attr('placeholder') == 'Search') {
+                    searchBlockForm.attr('placeholder','');
                 }
             }).blur(function(){
-                if (searchFormInput.val() == '') {
-                    searchFormInput.val('Search');
+                if (searchBlockForm.attr('placeholder') == '') {
+                    searchBlockForm.attr('placeholder', 'Search');
+                }
+            });
+            
+        }   
+
+        if($('#views-exposed-form-faculty-page-2 input').length > 0){
+            personBlockForm = $('#views-exposed-form-faculty-page-2 .form-text');
+            clearButton = $('<i class="fa fa-times-circle" id="clear-button"></i>');
+            clearButton.insertAfter(personBlockForm).hide();
+            personBlockForm.attr('placeholder', 'Search All Faculty');
+
+            personBlockForm.focus(function(){
+            current_base_page = window.location.href;
+            console.log(current_base_page);
+
+            if (current_base_page.match(/faculty/)){
+                console.log('here');
+                placeholderText = 'Search All Faculty';
+            }
+            if (current_base_page.match(/student/)){
+                placeholderText = 'Search All Students';
+            }
+
+            if (personBlockForm.attr('placeholder') == placeholderText) {
+                personBlockForm.attr('placeholder','');
+                personBlockForm.keydown(function(){
+                    clearButton.show();
+                });
+                }
+            }).blur(function(){
+                if (personBlockForm.attr('placeholder') == '') {
+                    personBlockForm.attr('placeholder', placeholderText);
+                 
                 }
             });
 
+            clearButton.click(function() {
+                personBlockForm.val("");
+                clearButton.hide();
+            })
         }
 
-        //add markup to first part of strings on gallery feature lines
+    //add markup to first part of strings on gallery feature lines on homepage
         if($('#gallery li p').length){
 
             $('#gallery li p').each(function(){
@@ -29,30 +69,16 @@
             });
         }
 
-         //function search_clear_button(event) {
-         //    event.cancelBubble = true;
-         //    event.stopPropagation();
-         //    event.preventDefault();
-         //
-         //    $("#widget-edit-keys input").val("");
-         //    toggle_clear_button(event);
-         //
-         //    current_base_page = window.location.href.split('?')[0];
-         //
-         //    if (current_base_page.match(/search$/)) {
-         //        window.location.href = current_base_page.slice(0, -6);
-         //    }
-         //
-         //}
-         //
-         //function toggle_clear_button(event) {
-         //    if ($("#widget-edit-keys input").val() == "") {
-         //        $("#clear_button").hide();
-         //    } else {
-         //        $("#clear_button").show();
-         //    }
-         //}
-
+        
+        var page_url = window.location.pathname;
+     
+            $(".alphalist a").each(function () {
+                if ($(this).attr("href") == page_url) {
+                    $(this).attr("href", "#");
+                    $(this).addClass("active");
+                }
+                
+            });
          //function mark_current_page_link_in_directory() {
          //    var page_url = window.location.pathname;
          //    $(".result a").each(function () {
@@ -72,13 +98,8 @@
          //    }
          //}
          //
-         //$("#clear_button").click(search_clear_button);
-         //$("#widget-edit-keys").bind("keyup keydown change", toggle_clear_button);
-         //$("#edit-keys").attr("placeholder", window.placeholder_text_for_search);
-         //toggle_clear_button();
-         //mark_current_page_link_in_directory();
-         //
-         //Calendar drop down
+         
+    //Calendar drop down on events nodes
          $(".calendar dd").hide();
          $("dl.calendar").hover(
             function () {
@@ -105,6 +126,7 @@
              }
          }
      });
+
 
      $(window).resize(function () {
          Menu.initialize();

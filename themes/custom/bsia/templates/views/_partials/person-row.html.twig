@@ -1,0 +1,37 @@
+<script>window.twttr = (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0],
+              t = window.twttr || {};
+            if (d.getElementById(id)) return t;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js, fjs);
+           
+            t._e = [];
+            t.ready = function(f) {
+              t._e.push(f);
+            };
+           
+            return t;
+          }(document, "script", "twitter-wjs"));</script>
+<div class="profile">
+  <div class="image">
+     {{ fields.field_photo.content }}
+  </div>
+  <div class="text">
+    <h2>{{ fields.title.content }}</h2>
+    {% if fields.field_person_position.content %}
+      <div class="position">{{ fields.field_person_position.content }}</div>
+    {% endif %}
+    {% if fields.field_feature_line.content %}
+      <div class="description">{{ fields.field_feature_line.content }}</div>
+    {% endif %}
+    {% if fields.field_twitter_url.content %}
+      <div class="twitter">
+        <a href="{{ fields.field_twitter_url.content }}" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow</a>
+        
+        
+      </div>
+    {% endif %}
+  </div>
+</div>

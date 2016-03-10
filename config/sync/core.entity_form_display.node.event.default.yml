@@ -32,7 +32,6 @@ dependencies:
     - field.field.node.event.field_speakers
     - field.field.node.event.field_speakers_unlinked
     - field.field.node.event.field_state_province
-    - field.field.node.event.field_test3
     - field.field.node.event.field_website
     - field.field.node.event.upload
     - image.style.thumbnail
@@ -40,10 +39,63 @@ dependencies:
   module:
     - comment
     - datetime
+    - field_group
     - file
     - image
     - path
     - text
+third_party_settings:
+  field_group:
+    group_attendance:
+      label: Attendance
+      weight: 5
+      children:
+        - field_email_subject
+        - field_event_management
+        - field_invitation
+        - field_rsvp
+      format_type: fieldset
+      format_settings: {  }
+    group_location:
+      label: Location
+      weight: 8
+      children:
+        - field_address_1
+        - field_city
+        - field_country
+        - field_location
+        - field_state_province
+      format_type: fieldset
+      format_settings: {  }
+    group_feature:
+      label: Features
+      weight: 9
+      children:
+        - field_alternative_url
+        - field_feature_area
+        - field_feature_line
+        - field_feature_weight
+        - field_image_page
+      format_type: fieldset
+      format_settings: {  }
+    group_pitchspace:
+      label: 'Pitch Space'
+      weight: 10
+      children:
+        - field_credit
+        - field_link_text
+        - field_position
+      format_type: fieldset
+      format_settings: {  }
+    group_event_recap:
+      label: 'Event Recap'
+      weight: 11
+      children:
+        - field_event_summary
+        - field_event_videos
+        - field_flickr_id
+      format_type: fieldset
+      format_settings: {  }
 id: node.event.default
 targetEntityType: node
 bundle: event
@@ -51,7 +103,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 35
+    weight: 31
     settings:
       rows: 9
       summary_rows: 3
@@ -64,28 +116,15 @@ content:
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 15
+    weight: 10
     settings: {  }
     third_party_settings: {  }
   event_series:
-    type: options_select
-    weight: 24
-    settings: {  }
-    third_party_settings: {  }
-  event_series1:
     type: options_select
     weight: 20
     settings: {  }
     third_party_settings: {  }
   event_type:
-    type: entity_reference_autocomplete_tags
-    weight: 25
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  event_type1:
     type: entity_reference_autocomplete_tags
     weight: 20
     settings:
@@ -238,7 +277,7 @@ content:
     third_party_settings: {  }
     type: text_textarea
   field_speakers:
-    weight: 7
+    weight: 5
     type: options_select
     settings: {  }
     third_party_settings: {  }
@@ -256,13 +295,6 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_test3:
-    weight: 37
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
   field_website:
     weight: 4
     type: text_textfield
@@ -272,31 +304,31 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 34
+    weight: 30
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 18
+    weight: 15
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 19
+    weight: 16
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 0
+    weight: -5
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 8
+    weight: 5
     settings:
       match_operator: CONTAINS
       size: 60
@@ -306,6 +338,6 @@ content:
     settings:
       progress_indicator: throbber
     type: file_generic
-    weight: 38
+    weight: 32
     third_party_settings: {  }
 hidden: {  }

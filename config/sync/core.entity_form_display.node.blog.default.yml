@@ -88,6 +88,6 @@ content:
     settings:
       progress_indicator: throbber
     type: file_generic
-    weight: 33
+    weight: 32
     third_party_settings: {  }
 hidden: {  }

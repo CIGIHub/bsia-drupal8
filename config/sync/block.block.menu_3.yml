@@ -7,6 +7,7 @@ dependencies:
   module:
     - system
 id: menu_3
+theme: null
 region: content
 weight: -8
 provider: null

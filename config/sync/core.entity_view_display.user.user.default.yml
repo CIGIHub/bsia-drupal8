@@ -22,6 +22,6 @@ content:
       image_style: ''
       image_link: content
     type: image
-    weight: 7
+    weight: 6
     third_party_settings: {  }
 hidden: {  }

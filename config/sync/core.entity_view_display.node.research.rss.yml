@@ -5,7 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.rss
     - field.field.node.research.body
-    - field.field.node.research.comment
     - field.field.node.research.field_alternative_url
     - field.field.node.research.field_credit
     - field.field.node.research.field_feature_area
@@ -23,7 +22,6 @@ dependencies:
     - field.field.node.research.field_speakers_unlinked
     - field.field.node.research.field_square_image
     - field.field.node.research.field_website
-    - field.field.node.research.upload
     - node.type.research
   module:
     - image
@@ -130,8 +128,6 @@ content:
     weight: 100
 hidden:
   body: true
-  comment: true
   field_related_events: true
   field_related_publications: true
   field_speakers: true
-  upload: true

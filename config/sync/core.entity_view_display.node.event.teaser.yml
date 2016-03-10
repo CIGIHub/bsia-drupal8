@@ -6,8 +6,6 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.event.body
     - field.field.node.event.comment
-    - field.field.node.event.event_series
-    - field.field.node.event.event_type
     - field.field.node.event.field_address_1
     - field.field.node.event.field_alternative_url
     - field.field.node.event.field_city
@@ -33,34 +31,77 @@ dependencies:
     - field.field.node.event.field_speakers
     - field.field.node.event.field_speakers_unlinked
     - field.field.node.event.field_state_province
-    - field.field.node.event.field_test3
     - field.field.node.event.field_website
     - field.field.node.event.upload
     - node.type.event
   module:
     - datetime
+    - field_group
     - text
     - user
+third_party_settings:
+  field_group:
+    group_attendance:
+      label: Attendance
+      weight: 5
+      children:
+        - field_email_subject
+        - field_event_management
+        - field_invitation
+        - field_rsvp
+      format_type: fieldset
+      format_settings: {  }
+    group_location:
+      label: Location
+      weight: 8
+      children:
+        - field_address_1
+        - field_city
+        - field_country
+        - field_location
+        - field_state_province
+      format_type: fieldset
+      format_settings: {  }
+    group_feature:
+      label: Features
+      weight: 9
+      children:
+        - field_alternative_url
+        - field_feature_area
+        - field_feature_line
+        - field_feature_weight
+        - field_image_page
+      format_type: fieldset
+      format_settings: {  }
+    group_pitchspace:
+      label: 'Pitch Space'
+      weight: 10
+      children:
+        - field_credit
+        - field_link_text
+        - field_position
+      format_type: fieldset
+      format_settings: {  }
+    group_event_recap:
+      label: 'Event Recap'
+      weight: 11
+      children:
+        - field_event_summary
+        - field_event_videos
+        - field_flickr_id
+      format_type: fieldset
+      format_settings: {  }
 id: node.event.teaser
 targetEntityType: node
 bundle: event
 mode: teaser
 content:
-  event_series:
-    type: entity_reference_entity_view
-    weight: 8
+  body:
     label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
     settings:
-      view_mode: default
-      link: false
-    third_party_settings: {  }
-  event_type:
-    type: entity_reference_entity_view
-    weight: 7
-    label: hidden
-    settings:
-      view_mode: default
-      link: false
+      trim_length: 600
     third_party_settings: {  }
   field_address_1:
     label: above
@@ -164,8 +205,9 @@ content:
     type: text_default
     settings: {  }
     third_party_settings: {  }
+  links:
+    weight: 100
 hidden:
-  body: true
   comment: true
   field_alternative_url: true
   field_credit: true
@@ -176,7 +218,5 @@ hidden:
   field_link_text: true
   field_position: true
   field_speakers: true
-  field_test3: true
   field_website: true
-  links: true
   upload: true
