@@ -1,9 +1,0 @@
-<?php
-
-function migrate_caption_uninstall() {
-  db_query("DELETE FROM {config} WHERE name = 'migrate.migration.caption_node'");
-  db_query("DELETE FROM {config} WHERE name = 'migrate.migration.caption_field'");
-  db_query("DELETE FROM {config} WHERE name = 'd6_node__research_with_caption'");
-  
-  drupal_flush_all_caches();
-}
