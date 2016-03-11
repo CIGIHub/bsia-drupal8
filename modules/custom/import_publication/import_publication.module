@@ -14,11 +14,11 @@ function import_publication_install() {
 		foreach ($results as $record) {
 
 			$field_publications_value = $record->field_publications_value;
-			$openEM = strpos($field_publications_value, "<em>");
+			$openEM = strpos($field_publications_value, "<em>") + 4;
 			$closeEM = strpos($field_publications_value, "</em>");
 			$title_length = $closeEM - $openEM;
 
-			$title = substr($openEM, $title_length);
+			$title = substr($field_publications_value, $openEM, $title_length);
 
 			$publication = entity_create('field_collection_item', array(
 				"host_type" => "node",
@@ -43,11 +43,19 @@ function import_publication_install() {
 			
 			//save the field collection entity to the db
 			$publication->save(TRUE);
+			$logger->notice(t("New Entity of Publication <pre>" . print_r($publication->toArray(), true) . "</pre>"));
+			
+			$logger->notice(t("Publication id: " . print_r($publication->id(), true) ));
+	
+						
 
+			$current_node->field_collection_publication =  array( array( 'target_id' => $publication->id() ));
+
+			$logger->notice(t("Node to add publication to:<pre> " . print_r($current_node->toArray(), true)  . "</pre>"));
+			
 			//Now save the node
 			$current_node->save();
 			
-			$logger->notice(t("New Entity of Publication <pre>" . print_r($publication, true) . "</pre>"));
 			break;
 		}  
 
