@@ -1,29 +1,56 @@
 <?php
 
-function graduate_title_install() {
+function import_publication_install() {
   
   	\Drupal\Core\Database\Database::setActiveConnection();
 	$connection = \Drupal\Core\Database\Database::getConnection();
 
-	$results = $connection->query('select bundle, entity_id, revision_id, field_graduate_title_value from node__field_graduate_title;')->fetchAll();
+	$results = $connection->query('select bundle, entity_id, revision_id, langcode, delta, field_publications_value from node__field_publications;')->fetchAll();
 
-	$logger = \Drupal::logger('graduate_title');
+	$logger = \Drupal::logger('import_publication');
 	//$logger->notice(t("Query Results:" . print_r($results, true)));
 
 	if ($results) {    
 		foreach ($results as $record) {
 
-			$graduate_title = strip_tags($record->field_graduate_title_value);
-			$connection->update('node__field_graduate_title')
-				->fields(array(
-					'field_graduate_title_value' => $graduate_title,
-					))
-				->condition('bundle', $record->bundle, '=')
-				->condition('revision_id', $record->revision_id, '=')
-				->condition('entity_id', $record->entity_id, '=')
-				->execute();  
+			$field_publications_value = $record->field_publications_value;
+			$openEM = strpos($field_publications_value, "<em>");
+			$closeEM = strpos($field_publications_value, "</em>");
+			$title_length = $closeEM - $openEM;
+
+			$title = substr($openEM, $title_length);
+
+			$publication = entity_create('field_collection_item', array(
+				"host_type" => "node",
+				"field_name" => "field_collection_publication",
+			));
+
+			$logger->notice(t("publication entity created. Used for Node ID ") . $record->entity_id);
+			
+
+			$current_node = \Drupal\node\Entity\Node::load($record->entity_id);
+			$publication->setHostEntity($current_node);
+
+			$logger->notice(t("Host Entity Set."));
+			
+			$publication->field_publication_authors->value = 'Goosebumps';
+			$publication->field_article_title->value = $title;
+			$publication->field_periodical_title->value = 'Alternate way of setting periodical';
+			$publication->field_publication_date->value = 'publication date';
+			$publication->field_publication_location->value ='publication location data';
+			
+			$logger->notice(t("Publication Fields set."));
+			
+			//save the field collection entity to the db
+			$publication->save(TRUE);
+
+			//Now save the node
+			$current_node->save();
+			
+			$logger->notice(t("New Entity of Publication <pre>" . print_r($publication, true) . "</pre>"));
+			break;
 		}  
 
 	}
-	$logger->notice(t("Updated " . count($results) . " grad titles."));
+	$logger->notice(t("Updated " . count($results) . " Publications."));
 }
