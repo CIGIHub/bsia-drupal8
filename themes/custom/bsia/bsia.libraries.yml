@@ -17,15 +17,11 @@ homepage-slider:
     js/jquery.bxslider.min.js: {}
     js/bsia-bxslider.js: {}
 
-people-views:
-  js:
-    js/bsia_students.js: {}
-
-chosen-dropdown:
+students:
   js:
     js/chosen/chosen.jquery.js: {}
     js/chosen/docsupport/prism.js: {}
-    js/bsia-chosen.js: {}
+    js/bsia_students.js: {}
   css:
     theme: 
       js/chosen/docsupport/prism.css: {}

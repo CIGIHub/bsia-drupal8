@@ -20,12 +20,18 @@ function import_caption_install() {
 
 	$connection = \Drupal\Core\Database\Database::getConnection();
 
-
-	if ($results) {    
+	if ($results) {
 		foreach ($results as $record) {
 
 			$caption = explode('"', $record->field_image_data);
 			$caption_value = $caption[3];
+
+			$key = array(
+				'entity_id' => $record->nid,
+				'deleted' => 0,
+				'delta' => 0,
+				'langcode' => 'en',
+			);
 
 			$fields = array( 
 				'bundle' =>  $record->type,
@@ -38,7 +44,8 @@ function import_caption_install() {
 			);
 
 			if(!empty($caption_value)) {
-				db_insert('node__field_caption')
+				db_merge('node__field_caption')
+				  ->key($key)
 				  ->fields($fields)
 				  ->execute();  
 			}  
