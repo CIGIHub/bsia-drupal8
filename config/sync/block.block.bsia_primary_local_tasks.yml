@@ -8,7 +8,7 @@ _core:
   default_config_hash: ddy1OsBbWxjwEI8VL1viD4I69qcLHOkul4BxbTqLBTs
 id: bsia_primary_local_tasks
 theme: bsia
-region: content_header
+region: page_title
 weight: -13
 provider: null
 plugin: local_tasks_block

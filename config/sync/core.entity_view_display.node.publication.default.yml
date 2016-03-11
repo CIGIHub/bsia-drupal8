@@ -6,7 +6,6 @@ dependencies:
     - field.field.node.publication.body
     - field.field.node.publication.field_alternative_url
     - field.field.node.publication.field_book_cover
-    - field.field.node.publication.field_caption
     - field.field.node.publication.field_credit
     - field.field.node.publication.field_embed_code
     - field.field.node.publication.field_feature_area
@@ -28,33 +27,11 @@ dependencies:
     - node.type.publication
   module:
     - datetime
-    - field_group
     - file
     - image
+    - options
     - text
     - user
-third_party_settings:
-  field_group:
-    group_features:
-      label: Features
-      weight: 8
-      children:
-        - field_alternative_url
-        - field_feature_area
-        - field_feature_line
-        - field_feature_weight
-        - field_image_page
-      format_type: fieldset
-      format_settings: {  }
-    group_pitchspace:
-      label: 'Pitch Space'
-      weight: 9
-      children:
-        - field_credit
-        - field_link_text
-        - field_position
-      format_type: fieldset
-      format_settings: {  }
 id: node.publication.default
 targetEntityType: node
 bundle: publication
@@ -89,19 +66,19 @@ content:
   field_link_label:
     label: above
     weight: 2
-    type: text_default
+    type: list_default
     settings: {  }
     third_party_settings: {  }
   field_publication_source:
     label: above
     weight: 0
-    type: text_default
+    type: basic_string
     settings: {  }
     third_party_settings: {  }
   field_publication_source_link:
     label: above
     weight: 1
-    type: text_default
+    type: basic_string
     settings: {  }
     third_party_settings: {  }
   field_published_date:
@@ -109,8 +86,8 @@ content:
     weight: -3
     type: datetime_default
     settings:
-      format_type: fallback
       timezone_override: ''
+      format_type: short
     third_party_settings: {  }
   field_short_description:
     label: hidden
@@ -121,11 +98,13 @@ content:
   field_speakers_unlinked:
     label: hidden
     weight: -1
-    type: text_default
+    type: basic_string
     settings: {  }
     third_party_settings: {  }
   links:
     weight: 100
+    settings: {  }
+    third_party_settings: {  }
   publication_type:
     label: hidden
     type: entity_reference_label
@@ -141,7 +120,6 @@ content:
     third_party_settings: {  }
 hidden:
   field_alternative_url: true
-  field_caption: true
   field_credit: true
   field_embed_code: true
   field_feature_area: true

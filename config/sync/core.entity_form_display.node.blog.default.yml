@@ -4,13 +4,14 @@ status: true
 dependencies:
   config:
     - field.field.node.blog.body
-    - field.field.node.blog.field_caption
+    - field.field.node.blog.comment
     - field.field.node.blog.field_image
     - field.field.node.blog.field_published_date
     - field.field.node.blog.upload
     - image.style.thumbnail
     - node.type.blog
   module:
+    - comment
     - datetime
     - file
     - image
@@ -28,6 +29,11 @@ content:
       rows: 9
       summary_rows: 3
       placeholder: ''
+    third_party_settings: {  }
+  comment:
+    type: comment_default
+    weight: 20
+    settings: {  }
     third_party_settings: {  }
   created:
     type: datetime_timestamp
@@ -84,5 +90,4 @@ content:
     type: file_generic
     weight: 32
     third_party_settings: {  }
-hidden:
-  field_caption: true
+hidden: {  }

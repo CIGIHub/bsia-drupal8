@@ -4,11 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.node.event.body
+    - field.field.node.event.comment
     - field.field.node.event.event_series
     - field.field.node.event.event_type
     - field.field.node.event.field_address_1
     - field.field.node.event.field_alternative_url
-    - field.field.node.event.field_caption
     - field.field.node.event.field_city
     - field.field.node.event.field_country
     - field.field.node.event.field_credit
@@ -36,6 +36,7 @@ dependencies:
     - field.field.node.event.upload
     - node.type.event
   module:
+    - comment
     - datetime
     - field_group
     - file
@@ -103,6 +104,13 @@ content:
     type: text_default
     weight: 101
     settings: {  }
+    third_party_settings: {  }
+  comment:
+    label: hidden
+    type: comment_default
+    weight: 20
+    settings:
+      pager_id: 0
     third_party_settings: {  }
   event_series:
     label: hidden

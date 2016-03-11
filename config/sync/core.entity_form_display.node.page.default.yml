@@ -28,26 +28,23 @@ dependencies:
     - text
 third_party_settings:
   field_group:
-    group_pitch_space:
-      label: 'Pitch Space'
-      weight: 4
+    group_homepage:
       children:
-        - field_credit
-        - field_link_text
-        - field_position
-      format_type: fieldset
-      format_settings: {  }
-    group_features:
-      label: Features
-      weight: 5
-      children:
-        - field_alternative_url
-        - field_feature_area
-        - field_feature_line
-        - field_feature_weight
         - field_image_page
+        - field_credit
+        - field_feature_line
+        - field_alternative_url
+        - field_position
+        - field_link_text
+      parent_name: ''
+      weight: 7
+      label: 'Homepage Gallery'
       format_type: fieldset
-      format_settings: {  }
+      format_settings:
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
 _core:
   default_config_hash: KSvzyFhdLuxniTsunUnUfpfMmod2l57GibtVjL8ymHM
 id: node.page.default
@@ -57,7 +54,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 31
+    weight: 4
     settings:
       rows: 9
       summary_rows: 3
@@ -65,32 +62,32 @@ content:
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 13
     settings: {  }
     third_party_settings: {  }
   field_alternative_url:
-    weight: 12
-    type: text_textfield
+    weight: 11
+    type: string_textarea
     settings:
-      size: 60
       placeholder: ''
+      rows: 5
     third_party_settings: {  }
   field_caption:
-    weight: 0
-    type: text_textfield
+    weight: 3
+    type: string_textarea
     settings:
-      size: 60
       placeholder: ''
+      rows: 5
     third_party_settings: {  }
   field_credit:
-    weight: 6
-    type: text_textfield
+    weight: 9
+    type: string_textarea
     settings:
-      size: 60
       placeholder: ''
+      rows: 5
     third_party_settings: {  }
   field_embed_code:
-    weight: 2
+    weight: 5
     settings:
       rows: 3
       placeholder: ''
@@ -109,82 +106,71 @@ content:
     third_party_settings: {  }
     type: text_textarea
   field_feature_weight:
-    weight: 11
+    weight: 9
     type: options_select
     settings: {  }
     third_party_settings: {  }
   field_highlight_text:
-    weight: 3
-    type: text_textfield
+    weight: 11
+    type: string_textarea
     settings:
-      size: 120
       placeholder: ''
+      rows: 5
     third_party_settings: {  }
   field_image:
-    weight: -1
+    weight: 2
     settings:
       progress_indicator: bar
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
   field_image_page:
-    weight: 9
+    weight: 8
     settings:
       progress_indicator: bar
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
-  field_layout:
-    weight: 1
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
   field_link_text:
-    weight: 7
-    type: text_textfield
+    weight: 13
+    type: string_textarea
     settings:
-      size: 60
       placeholder: ''
+      rows: 5
     third_party_settings: {  }
   field_position:
-    weight: 5
+    weight: 12
     settings: {  }
     third_party_settings: {  }
     type: options_select
   field_subtitle:
-    weight: -2
-    type: text_textfield
+    weight: 1
     settings:
-      size: 60
+      rows: 1
       placeholder: ''
     third_party_settings: {  }
+    type: text_textarea
   path:
     type: path
-    weight: 30
+    weight: 10
     settings: {  }
-    third_party_settings: {  }
-  promote:
-    type: boolean_checkbox
-    settings:
-      display_label: true
-    weight: 15
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
+    weight: 14
     settings:
-      display_label: true
-    weight: 16
+      display_label: false
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: -5
+    weight: 0
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 12
     settings:
       match_operator: CONTAINS
       size: 60
@@ -194,6 +180,7 @@ content:
     settings:
       progress_indicator: throbber
     type: file_generic
-    weight: 32
+    weight: 6
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  promote: true

@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.node.research.body
     - field.field.node.research.field_alternative_url
-    - field.field.node.research.field_caption
     - field.field.node.research.field_credit
     - field.field.node.research.field_feature_area
     - field.field.node.research.field_feature_line
@@ -22,35 +21,14 @@ dependencies:
     - field.field.node.research.field_speakers_unlinked
     - field.field.node.research.field_square_image
     - field.field.node.research.field_website
+    - field.field.node.research.upload
     - image.style.thumbnail
     - node.type.research
   module:
-    - field_group
+    - file
     - image
     - path
     - text
-third_party_settings:
-  field_group:
-    group_features:
-      label: Features
-      weight: 7
-      children:
-        - field_alternative_url
-        - field_feature_area
-        - field_feature_line
-        - field_feature_weight
-        - field_image_page
-      format_type: fieldset
-      format_settings: {  }
-    group_pitchspace:
-      label: 'Pitch Space'
-      weight: 8
-      children:
-        - field_credit
-        - field_link_text
-        - field_position
-      format_type: fieldset
-      format_settings: {  }
 id: node.research.default
 targetEntityType: node
 bundle: research
@@ -215,5 +193,4 @@ content:
     type: file_generic
     weight: 32
     third_party_settings: {  }
-hidden:
-  field_caption: true
+hidden: {  }

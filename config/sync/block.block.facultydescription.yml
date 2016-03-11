@@ -1,0 +1,31 @@
+uuid: 0500905f-e216-4e5f-ba06-6ca3db0f0e82
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:d35aed07-f13d-4660-9409-9a14d57931fc'
+  module:
+    - block_content
+    - system
+  theme:
+    - bsia
+id: facultydescription
+theme: bsia
+region: content_header
+weight: -14
+provider: null
+plugin: 'block_content:d35aed07-f13d-4660-9409-9a14d57931fc'
+settings:
+  id: 'block_content:d35aed07-f13d-4660-9409-9a14d57931fc'
+  label: 'Faculty Description'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '/faculty*'
+    negate: false
+    context_mapping: {  }

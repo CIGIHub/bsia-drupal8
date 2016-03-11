@@ -21,7 +21,7 @@ dependencies:
     - taxonomy
     - user
 id: people
-label: People
+label: 'BSIA People'
 module: views
 description: ''
 tag: ''

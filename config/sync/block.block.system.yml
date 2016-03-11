@@ -1,0 +1,20 @@
+uuid: 15a6099f-f063-4d80-ae09-9f0cc11c0864
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - seven
+id: system
+theme: seven
+region: '-1'
+weight: 10
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: ''
+  provider: system
+  label_display: visible
+visibility: {  }

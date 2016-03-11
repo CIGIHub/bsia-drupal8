@@ -1,0 +1,39 @@
+uuid: 1a3b76ec-2f0e-4399-ac1c-2888f3c9b583
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.embedded_blocks
+    - field.field.block_content.embedded_blocks.body
+    - field.field.block_content.embedded_blocks.field_test
+  module:
+    - text
+id: block_content.embedded_blocks.default
+targetEntityType: block_content
+bundle: embedded_blocks
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 3
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+  field_test:
+    weight: 4
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+  info:
+    type: string_textfield
+    weight: -5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

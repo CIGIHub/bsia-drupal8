@@ -9,8 +9,6 @@ dependencies:
     - field.field.node.person.field_awards
     - field.field.node.person.field_board_order
     - field.field.node.person.field_board_position
-    - field.field.node.person.field_caption
-    - field.field.node.person.field_collection_publication
     - field.field.node.person.field_courses
     - field.field.node.person.field_credit
     - field.field.node.person.field_current_student
@@ -48,66 +46,14 @@ dependencies:
     - field.field.node.person.person_type
     - field.field.node.person.program_type
     - field.field.node.person.topics
+    - field.field.node.person.upload
     - node.type.person
   module:
-    - field_group
+    - file
     - image
     - options
     - text
     - user
-third_party_settings:
-  field_group:
-    group_general:
-      label: 'General information'
-      weight: -2
-      children:
-        - field_board_position
-        - field_board_order
-        - field_square_image
-        - field_twitter_url
-        - field_linkedin_url
-        - field_education
-        - field_courses
-        - field_languages
-        - field_year_graduated
-        - field_graduate_title
-        - field_photo
-        - field_surname
-        - field_user_link
-        - field_website
-        - field_phone
-        - field_person_position
-        - field_email
-        - field_expertise
-        - field_given_names
-        - field_office_location
-        - field_department
-      format_type: fieldset
-      format_settings: {  }
-      parent_name: ''
-    group_features:
-      label: Features
-      weight: -1
-      children:
-        - field_feature_line
-        - field_youtube_id
-        - field_image_page
-        - field_feature_weight
-        - field_feature_area
-        - field_alternative_url
-      format_type: fieldset
-      format_settings: {  }
-      parent_name: ''
-    group_pitchspace:
-      label: 'Pitch Space'
-      weight: 1
-      children:
-        - field_position
-        - field_link_text
-        - field_credit
-      format_type: fieldset
-      format_settings: {  }
-      parent_name: ''
 id: node.person.default
 targetEntityType: node
 bundle: person
@@ -116,152 +62,183 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 22
     settings: {  }
     third_party_settings: {  }
   field_archived:
-    label: above
-    weight: -3
+    label: hidden
+    weight: 0
     type: list_default
     settings: {  }
     third_party_settings: {  }
   field_awards:
+    label: above
+    weight: 6
+    type: basic_string
+    settings: {  }
+    third_party_settings: {  }
+  field_board_order:
+    label: hidden
+    weight: 8
+    type: list_default
+    settings: {  }
+    third_party_settings: {  }
+  field_board_position:
     label: hidden
     weight: 7
     type: basic_string
     settings: {  }
     third_party_settings: {  }
-  field_board_order:
-    label: above
-    weight: 9
-    type: list_default
+  field_courses:
+    label: hidden
+    weight: 15
+    type: basic_string
     settings: {  }
     third_party_settings: {  }
-  field_board_position:
-    label: above
-    weight: 8
-    type: string
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-  field_collection_publication:
-    weight: 103
-    label: above
-    settings:
-      view_mode: default
-      link: false
-    third_party_settings: {  }
-    type: entity_reference_entity_view
-  field_courses:
-    label: above
-    weight: 20
-    type: string
-    settings:
-      link_to_entity: false
+  field_department:
+    type: basic_string
+    weight: 29
+    label: hidden
+    settings: {  }
     third_party_settings: {  }
   field_education:
     label: hidden
-    weight: 19
-    type: string
-    settings:
-      link_to_entity: false
+    weight: 12
+    type: basic_string
+    settings: {  }
+    third_party_settings: {  }
+  field_email:
+    type: basic_string
+    weight: 30
+    label: hidden
+    settings: {  }
     third_party_settings: {  }
   field_feature_line:
-    label: above
-    weight: -1
+    label: hidden
+    weight: 1
     type: text_default
     settings: {  }
     third_party_settings: {  }
   field_graduate_title:
-    label: above
-    weight: 24
-    type: string
-    settings:
-      link_to_entity: false
+    label: hidden
+    weight: 20
+    type: basic_string
+    settings: {  }
     third_party_settings: {  }
   field_languages:
-    label: above
-    weight: 21
-    type: string
-    settings:
-      link_to_entity: false
+    label: hidden
+    weight: 18
+    type: basic_string
+    settings: {  }
     third_party_settings: {  }
   field_linkedin_url:
+    label: hidden
+    weight: 11
+    type: basic_string
+    settings: {  }
+    third_party_settings: {  }
+  field_office_location:
+    type: basic_string
+    weight: 28
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+  field_person_position:
+    type: basic_string
+    weight: 26
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_phone:
+    type: basic_string
+    weight: 24
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_publications:
+    type: basic_string
+    weight: 31
     label: above
-    weight: 17
-    type: string
-    settings:
-      link_to_entity: false
+    settings: {  }
     third_party_settings: {  }
   field_quote:
-    label: above
-    weight: 0
+    label: hidden
+    weight: 2
     type: text_default
     settings: {  }
     third_party_settings: {  }
   field_research_focus:
     label: above
-    weight: 3
+    weight: 4
     type: text_default
     settings: {  }
     third_party_settings: {  }
   field_square_image:
     label: above
-    weight: 11
+    weight: 9
     type: image
     settings:
       image_style: ''
       image_link: ''
     third_party_settings: {  }
+  field_surname:
+    type: basic_string
+    weight: 27
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
   field_testimonial:
     label: above
-    weight: 6
+    weight: 5
     type: text_default
     settings: {  }
     third_party_settings: {  }
   field_twitter_url:
-    label: above
-    weight: 16
-    type: string
-    settings:
-      link_to_entity: false
+    label: hidden
+    weight: 10
+    type: basic_string
+    settings: {  }
+    third_party_settings: {  }
+  field_website:
+    type: basic_string
+    weight: 25
+    label: hidden
+    settings: {  }
     third_party_settings: {  }
   field_year_graduated:
-    label: above
-    weight: 23
-    type: string
-    settings:
-      link_to_entity: false
+    label: hidden
+    weight: 19
+    type: basic_string
+    settings: {  }
     third_party_settings: {  }
   field_youtube_id:
-    label: above
-    weight: 2
-    type: string
-    settings:
-      link_to_entity: false
+    label: hidden
+    weight: 3
+    type: basic_string
+    settings: {  }
     third_party_settings: {  }
   links:
-    weight: 100
+    weight: 21
     settings: {  }
     third_party_settings: {  }
   person_type:
     label: hidden
     type: entity_reference_label
-    weight: 20
+    weight: 16
     settings:
       link: true
     third_party_settings: {  }
   program_type:
     label: hidden
     type: entity_reference_label
-    weight: 20
+    weight: 13
     settings:
       link: true
     third_party_settings: {  }
   topics:
-    label: hidden
+    label: inline
     type: entity_reference_label
-    weight: 20
+    weight: 17
     settings:
       link: true
     third_party_settings: {  }
@@ -269,29 +246,20 @@ content:
     label: hidden
     settings: {  }
     type: file_default
-    weight: 102
+    weight: 23
     third_party_settings: {  }
 hidden:
   field_alternative_url: true
-  field_caption: true
   field_credit: true
   field_current_student: true
-  field_department: true
-  field_email: true
   field_expertise: true
   field_feature_area: true
   field_feature_weight: true
   field_given_names: true
   field_image_page: true
   field_link_text: true
-  field_office_location: true
-  field_person_position: true
-  field_phone: true
   field_photo: true
   field_position: true
-  field_publications: true
   field_short_bio: true
   field_subtitle: true
-  field_surname: true
   field_user_link: true
-  field_website: true

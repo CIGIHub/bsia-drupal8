@@ -6,7 +6,6 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.research.body
     - field.field.node.research.field_alternative_url
-    - field.field.node.research.field_caption
     - field.field.node.research.field_credit
     - field.field.node.research.field_feature_area
     - field.field.node.research.field_feature_line
@@ -23,76 +22,45 @@ dependencies:
     - field.field.node.research.field_speakers_unlinked
     - field.field.node.research.field_square_image
     - field.field.node.research.field_website
+    - field.field.node.research.upload
+    - image.style.square_90x90
     - node.type.research
   module:
-    - field_group
+    - image
+    - options
     - text
     - user
-third_party_settings:
-  field_group:
-    group_features:
-      label: Features
-      weight: 7
-      children:
-        - field_alternative_url
-        - field_feature_area
-        - field_feature_line
-        - field_feature_weight
-        - field_image_page
-      format_type: fieldset
-      format_settings: {  }
-    group_pitchspace:
-      label: 'Pitch Space'
-      weight: 8
-      children:
-        - field_credit
-        - field_link_text
-        - field_position
-      format_type: fieldset
-      format_settings: {  }
 id: node.research.teaser
 targetEntityType: node
 bundle: research
 mode: teaser
 content:
-  body:
-    label: hidden
-    type: text_summary_or_trimmed
-    weight: 101
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
-  field_feature_line:
-    label: above
-    weight: 3
-    type: text_default
-    settings: {  }
-    third_party_settings: {  }
   field_research_type:
-    label: above
-    weight: -2
-    type: text_default
+    label: hidden
+    weight: 0
+    type: list_default
     settings: {  }
     third_party_settings: {  }
   field_short_description:
-    label: above
-    weight: 0
+    label: hidden
+    weight: 2
     type: text_default
     settings: {  }
     third_party_settings: {  }
-  field_speakers_unlinked:
-    label: above
+  field_square_image:
+    type: image
     weight: 1
-    type: text_default
-    settings: {  }
+    label: hidden
+    settings:
+      image_style: square_90x90
+      image_link: content
     third_party_settings: {  }
-  links:
-    weight: 100
 hidden:
+  body: true
   field_alternative_url: true
-  field_caption: true
   field_credit: true
   field_feature_area: true
+  field_feature_line: true
   field_feature_weight: true
   field_image: true
   field_image_page: true
@@ -101,6 +69,7 @@ hidden:
   field_related_events: true
   field_related_publications: true
   field_speakers: true
-  field_square_image: true
+  field_speakers_unlinked: true
   field_website: true
+  links: true
   upload: true

@@ -1,0 +1,22 @@
+uuid: a74c0d7e-b149-4468-9700-a6d56ce16afc
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.embedded_blocks
+    - field.storage.block_content.field_test
+id: block_content.embedded_blocks.field_test
+field_name: field_test
+entity_type: block_content
+bundle: embedded_blocks
+label: test
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:entity_view_display'
+  handler_settings:
+    target_bundles: null
+field_type: entity_reference
