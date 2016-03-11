@@ -1,18 +1,18 @@
-uuid: 6466fe86-8a1d-4109-bd00-bfeba1e8e9ab
+uuid: 2b0c4f05-3365-4a50-ba06-6afea0fae4ae
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.field_collection_item.field_publication_authors
-    - field_collection.field_collection.field_publication
-id: field_collection_item.field_publication.field_publication_authors
+    - field_collection.field_collection.field_collection_publication
+id: field_collection_item.field_collection_publication.field_publication_authors
 field_name: field_publication_authors
 entity_type: field_collection_item
-bundle: field_publication
-label: 'Publication Author(s)'
+bundle: field_collection_publication
+label: Author(s)
 description: ''
 required: true
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

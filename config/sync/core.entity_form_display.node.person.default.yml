@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.person.field_board_order
     - field.field.node.person.field_board_position
     - field.field.node.person.field_caption
+    - field.field.node.person.field_collection_publication
     - field.field.node.person.field_courses
     - field.field.node.person.field_credit
     - field.field.node.person.field_current_student
@@ -31,7 +32,6 @@ dependencies:
     - field.field.node.person.field_phone
     - field.field.node.person.field_photo
     - field.field.node.person.field_position
-    - field.field.node.person.field_publication
     - field.field.node.person.field_publications
     - field.field.node.person.field_quote
     - field.field.node.person.field_research_focus
@@ -155,6 +155,18 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_collection_publication:
+    weight: 33
+    settings:
+      allow_new: true
+      allow_existing: false
+      match_operator: CONTAINS
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+    third_party_settings: {  }
+    type: field_collection_complex
   field_courses:
     weight: 20
     type: text_textfield
@@ -294,18 +306,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
-  field_publication:
-    weight: 34
-    settings:
-      allow_new: true
-      allow_existing: false
-      match_operator: CONTAINS
-      form_mode: default
-      override_labels: false
-      label_singular: ''
-      label_plural: ''
-    third_party_settings: {  }
-    type: field_collection_complex
   field_publications:
     weight: 5
     type: text_textfield

@@ -32,7 +32,6 @@ dependencies:
     - field.field.node.person.field_phone
     - field.field.node.person.field_photo
     - field.field.node.person.field_position
-    - field.field.node.person.field_publication
     - field.field.node.person.field_publications
     - field.field.node.person.field_quote
     - field.field.node.person.field_research_focus
@@ -229,7 +228,6 @@ hidden:
   field_phone: true
   field_photo: true
   field_position: true
-  field_publication: true
   field_publications: true
   field_short_bio: true
   field_square_image: true

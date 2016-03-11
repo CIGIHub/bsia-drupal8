@@ -1,0 +1,6 @@
+name: Import Publication Data
+description: 'Parses the current publication field, and exports it into the publication field collection entity.'
+package: Post Migration
+
+type: module
+core: 8.x

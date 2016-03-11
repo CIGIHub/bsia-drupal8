@@ -1,0 +1,29 @@
+<?php
+
+function graduate_title_install() {
+  
+  	\Drupal\Core\Database\Database::setActiveConnection();
+	$connection = \Drupal\Core\Database\Database::getConnection();
+
+	$results = $connection->query('select bundle, entity_id, revision_id, field_graduate_title_value from node__field_graduate_title;')->fetchAll();
+
+	$logger = \Drupal::logger('graduate_title');
+	//$logger->notice(t("Query Results:" . print_r($results, true)));
+
+	if ($results) {    
+		foreach ($results as $record) {
+
+			$graduate_title = strip_tags($record->field_graduate_title_value);
+			$connection->update('node__field_graduate_title')
+				->fields(array(
+					'field_graduate_title_value' => $graduate_title,
+					))
+				->condition('bundle', $record->bundle, '=')
+				->condition('revision_id', $record->revision_id, '=')
+				->condition('entity_id', $record->entity_id, '=')
+				->execute();  
+		}  
+
+	}
+	$logger->notice(t("Updated " . count($results) . " grad titles."));
+}

@@ -32,7 +32,6 @@ dependencies:
     - field.field.node.person.field_phone
     - field.field.node.person.field_photo
     - field.field.node.person.field_position
-    - field.field.node.person.field_publication
     - field.field.node.person.field_publications
     - field.field.node.person.field_quote
     - field.field.node.person.field_research_focus
@@ -297,7 +296,6 @@ hidden:
   body: true
   field_caption: true
   field_current_student: true
-  field_publication: true
   field_user_link: true
   person_type: true
   program_type: true

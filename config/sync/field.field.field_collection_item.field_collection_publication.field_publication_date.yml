@@ -1,18 +1,18 @@
-uuid: 0ec11070-9ee9-40a2-b208-8bcdf7c2a697
+uuid: 9d8e0739-b274-40af-a307-7efff3054ef2
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.field_collection_item.field_publication_date
-    - field_collection.field_collection.field_publication
-id: field_collection_item.field_publication.field_publication_date
+    - field_collection.field_collection.field_collection_publication
+id: field_collection_item.field_collection_publication.field_publication_date
 field_name: field_publication_date
 entity_type: field_collection_item
-bundle: field_publication
+bundle: field_collection_publication
 label: 'Publication Date'
 description: ''
 required: true
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

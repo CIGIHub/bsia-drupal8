@@ -1,4 +1,4 @@
-uuid: 4f405444-ce02-4056-bb00-f4fb3ed1a922
+uuid: bdcf4f26-5908-42f4-b15a-90af3fb1696a
 langcode: en
 status: true
 dependencies:
@@ -14,7 +14,7 @@ settings:
   case_sensitive: false
 module: core
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false
