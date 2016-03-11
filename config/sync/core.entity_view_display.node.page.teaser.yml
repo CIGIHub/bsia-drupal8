@@ -5,7 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.page.body
-    - field.field.node.page.comment
     - field.field.node.page.field_alternative_url
     - field.field.node.page.field_caption
     - field.field.node.page.field_credit
@@ -19,6 +18,7 @@ dependencies:
     - field.field.node.page.field_link_text
     - field.field.node.page.field_position
     - field.field.node.page.field_subtitle
+    - field.field.node.page.upload
     - node.type.page
   module:
     - text
@@ -46,7 +46,6 @@ content:
   links:
     weight: 101
 hidden:
-  comment: true
   field_alternative_url: true
   field_credit: true
   field_embed_code: true

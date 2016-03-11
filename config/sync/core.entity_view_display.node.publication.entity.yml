@@ -5,9 +5,9 @@ dependencies:
   config:
     - core.entity_view_mode.node.entity
     - field.field.node.publication.body
-    - field.field.node.publication.comment_no_subject
     - field.field.node.publication.field_alternative_url
     - field.field.node.publication.field_book_cover
+    - field.field.node.publication.field_caption
     - field.field.node.publication.field_credit
     - field.field.node.publication.field_embed_code
     - field.field.node.publication.field_feature_area
@@ -84,9 +84,9 @@ content:
     third_party_settings: {  }
 hidden:
   body: true
-  comment_no_subject: true
   field_alternative_url: true
   field_book_cover: true
+  field_caption: true
   field_credit: true
   field_embed_code: true
   field_feature_area: true

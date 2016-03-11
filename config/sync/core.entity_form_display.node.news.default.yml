@@ -4,8 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.node.news.body
-    - field.field.node.news.comment
     - field.field.node.news.field_alternative_url
+    - field.field.node.news.field_caption
     - field.field.node.news.field_credit
     - field.field.node.news.field_feature_area
     - field.field.node.news.field_feature_line
@@ -21,7 +21,6 @@ dependencies:
     - image.style.thumbnail
     - node.type.news
   module:
-    - comment
     - datetime
     - field_group
     - file
@@ -62,11 +61,6 @@ content:
       rows: 9
       summary_rows: 3
       placeholder: ''
-    third_party_settings: {  }
-  comment:
-    type: comment_default
-    weight: 20
-    settings: {  }
     third_party_settings: {  }
   created:
     type: datetime_timestamp

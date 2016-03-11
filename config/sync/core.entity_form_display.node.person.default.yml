@@ -4,12 +4,12 @@ status: true
 dependencies:
   config:
     - field.field.node.person.body
-    - field.field.node.person.comment
     - field.field.node.person.field_alternative_url
     - field.field.node.person.field_archived
     - field.field.node.person.field_awards
     - field.field.node.person.field_board_order
     - field.field.node.person.field_board_position
+    - field.field.node.person.field_caption
     - field.field.node.person.field_courses
     - field.field.node.person.field_credit
     - field.field.node.person.field_current_student
@@ -31,6 +31,7 @@ dependencies:
     - field.field.node.person.field_phone
     - field.field.node.person.field_photo
     - field.field.node.person.field_position
+    - field.field.node.person.field_publication
     - field.field.node.person.field_publications
     - field.field.node.person.field_quote
     - field.field.node.person.field_research_focus
@@ -50,9 +51,8 @@ dependencies:
     - image.style.thumbnail
     - node.type.person
   module:
-    - comment
+    - field_collection
     - field_group
-    - file
     - image
     - path
     - text
@@ -118,11 +118,6 @@ content:
       rows: 9
       summary_rows: 3
       placeholder: ''
-    third_party_settings: {  }
-  comment:
-    type: comment_default
-    weight: 20
-    settings: {  }
     third_party_settings: {  }
   created:
     type: datetime_timestamp
@@ -299,6 +294,18 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+  field_publication:
+    weight: 34
+    settings:
+      allow_new: true
+      allow_existing: false
+      match_operator: CONTAINS
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+    third_party_settings: {  }
+    type: field_collection_complex
   field_publications:
     weight: 5
     type: text_textfield

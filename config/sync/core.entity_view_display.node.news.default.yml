@@ -4,8 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.node.news.body
-    - field.field.node.news.comment
     - field.field.node.news.field_alternative_url
+    - field.field.node.news.field_caption
     - field.field.node.news.field_credit
     - field.field.node.news.field_feature_area
     - field.field.node.news.field_feature_line
@@ -20,7 +20,6 @@ dependencies:
     - field.field.node.news.upload
     - node.type.news
   module:
-    - comment
     - datetime
     - field_group
     - file
@@ -59,13 +58,6 @@ content:
     type: text_default
     weight: 101
     settings: {  }
-    third_party_settings: {  }
-  comment:
-    label: hidden
-    type: comment_default
-    weight: 20
-    settings:
-      pager_id: 0
     third_party_settings: {  }
   field_feature_line:
     label: above

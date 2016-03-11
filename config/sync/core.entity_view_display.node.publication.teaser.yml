@@ -5,9 +5,9 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.publication.body
-    - field.field.node.publication.comment_no_subject
     - field.field.node.publication.field_alternative_url
     - field.field.node.publication.field_book_cover
+    - field.field.node.publication.field_caption
     - field.field.node.publication.field_credit
     - field.field.node.publication.field_embed_code
     - field.field.node.publication.field_feature_area
@@ -24,6 +24,7 @@ dependencies:
     - field.field.node.publication.field_short_description
     - field.field.node.publication.field_speakers
     - field.field.node.publication.field_speakers_unlinked
+    - field.field.node.publication.publication_type
     - field.field.node.publication.upload
     - node.type.publication
   module:
@@ -112,7 +113,6 @@ content:
   links:
     weight: 100
 hidden:
-  comment_no_subject: true
   field_alternative_url: true
   field_book_cover: true
   field_caption: true

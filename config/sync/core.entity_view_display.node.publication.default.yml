@@ -4,9 +4,9 @@ status: true
 dependencies:
   config:
     - field.field.node.publication.body
-    - field.field.node.publication.comment_no_subject
     - field.field.node.publication.field_alternative_url
     - field.field.node.publication.field_book_cover
+    - field.field.node.publication.field_caption
     - field.field.node.publication.field_credit
     - field.field.node.publication.field_embed_code
     - field.field.node.publication.field_feature_area
@@ -140,7 +140,6 @@ content:
     weight: 102
     third_party_settings: {  }
 hidden:
-  comment_no_subject: true
   field_alternative_url: true
   field_caption: true
   field_credit: true

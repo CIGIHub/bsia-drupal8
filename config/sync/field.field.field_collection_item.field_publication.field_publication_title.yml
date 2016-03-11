@@ -1,0 +1,19 @@
+uuid: 2d42528c-5838-460b-ac03-03ee96d6bbf6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_publication_title
+    - field_collection.field_collection.field_publication
+id: field_collection_item.field_publication.field_publication_title
+field_name: field_publication_title
+entity_type: field_collection_item
+bundle: field_publication
+label: 'Article Title'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

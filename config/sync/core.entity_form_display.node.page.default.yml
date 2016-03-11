@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
-    - field.field.node.page.comment
     - field.field.node.page.field_alternative_url
     - field.field.node.page.field_caption
     - field.field.node.page.field_credit
@@ -18,10 +17,10 @@ dependencies:
     - field.field.node.page.field_link_text
     - field.field.node.page.field_position
     - field.field.node.page.field_subtitle
+    - field.field.node.page.upload
     - image.style.thumbnail
     - node.type.page
   module:
-    - comment
     - field_group
     - file
     - image
@@ -63,11 +62,6 @@ content:
       rows: 9
       summary_rows: 3
       placeholder: ''
-    third_party_settings: {  }
-  comment:
-    type: comment_default
-    weight: 20
-    settings: {  }
     third_party_settings: {  }
   created:
     type: datetime_timestamp

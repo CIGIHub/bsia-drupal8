@@ -1,7 +1,6 @@
-type: module
 name: Update Graduate Title
 description: 'Strips out the HTML from the graduate title field.'
-package: Migration
+package: Post Migration
+
+type: module
 core: 8.x
-dependencies:
-  - migrate
