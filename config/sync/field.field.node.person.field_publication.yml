@@ -1,0 +1,26 @@
+uuid: 1206b40b-30bf-45ff-9600-d0bd5cc502d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_publication
+    - field_collection.field_collection.field_publication
+    - node.type.person
+  module:
+    - field_collection
+id: node.person.field_publication
+field_name: field_publication
+entity_type: node
+bundle: person
+label: Publication
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:field_collection_item'
+  handler_settings:
+    target_bundles:
+      - field_publication
+field_type: field_collection

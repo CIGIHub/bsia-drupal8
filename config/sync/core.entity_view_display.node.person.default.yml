@@ -4,12 +4,12 @@ status: true
 dependencies:
   config:
     - field.field.node.person.body
-    - field.field.node.person.comment
     - field.field.node.person.field_alternative_url
     - field.field.node.person.field_archived
     - field.field.node.person.field_awards
     - field.field.node.person.field_board_order
     - field.field.node.person.field_board_position
+    - field.field.node.person.field_caption
     - field.field.node.person.field_courses
     - field.field.node.person.field_credit
     - field.field.node.person.field_current_student
@@ -31,6 +31,7 @@ dependencies:
     - field.field.node.person.field_phone
     - field.field.node.person.field_photo
     - field.field.node.person.field_position
+    - field.field.node.person.field_publication
     - field.field.node.person.field_publications
     - field.field.node.person.field_quote
     - field.field.node.person.field_research_focus
@@ -49,10 +50,9 @@ dependencies:
     - field.field.node.person.topics
     - node.type.person
   module:
-    - comment
     - field_group
-    - file
     - image
+    - options
     - text
     - user
 third_party_settings:
@@ -61,50 +61,53 @@ third_party_settings:
       label: 'General information'
       weight: -2
       children:
-        - field_board_order
         - field_board_position
-        - field_courses
-        - field_department
+        - field_board_order
+        - field_square_image
+        - field_twitter_url
+        - field_linkedin_url
         - field_education
+        - field_courses
+        - field_languages
+        - field_year_graduated
+        - field_graduate_title
+        - field_photo
+        - field_surname
+        - field_user_link
+        - field_website
+        - field_phone
+        - field_person_position
         - field_email
         - field_expertise
         - field_given_names
-        - field_graduate_title
-        - field_languages
-        - field_linkedin_url
         - field_office_location
-        - field_person_position
-        - field_phone
-        - field_photo
-        - field_square_image
-        - field_surname
-        - field_twitter_url
-        - field_user_link
-        - field_website
-        - field_year_graduated
+        - field_department
       format_type: fieldset
       format_settings: {  }
+      parent_name: ''
     group_features:
       label: Features
       weight: -1
       children:
-        - field_alternative_url
-        - field_feature_area
         - field_feature_line
-        - field_feature_weight
-        - field_image_page
         - field_youtube_id
+        - field_image_page
+        - field_feature_weight
+        - field_feature_area
+        - field_alternative_url
       format_type: fieldset
       format_settings: {  }
+      parent_name: ''
     group_pitchspace:
       label: 'Pitch Space'
       weight: 1
       children:
-        - field_credit
-        - field_link_text
         - field_position
+        - field_link_text
+        - field_credit
       format_type: fieldset
       format_settings: {  }
+      parent_name: ''
 id: node.person.default
 targetEntityType: node
 bundle: person
@@ -116,50 +119,44 @@ content:
     weight: 101
     settings: {  }
     third_party_settings: {  }
-  comment:
-    label: hidden
-    type: comment_default
-    weight: 20
-    settings:
-      pager_id: 0
-    third_party_settings: {  }
   field_archived:
     label: above
     weight: -3
-    type: text_default
+    type: list_default
     settings: {  }
     third_party_settings: {  }
   field_awards:
     label: hidden
     weight: 7
-    type: text_default
+    type: basic_string
     settings: {  }
     third_party_settings: {  }
   field_board_order:
     label: above
     weight: 9
-    type: number_integer
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
+    type: list_default
+    settings: {  }
     third_party_settings: {  }
   field_board_position:
     label: above
     weight: 8
-    type: text_default
-    settings: {  }
+    type: string
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
   field_courses:
     label: above
     weight: 20
-    type: text_default
-    settings: {  }
+    type: string
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
   field_education:
     label: hidden
     weight: 19
-    type: text_default
-    settings: {  }
+    type: string
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
   field_feature_line:
     label: above
@@ -170,21 +167,32 @@ content:
   field_graduate_title:
     label: above
     weight: 24
-    type: text_default
-    settings: {  }
+    type: string
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
   field_languages:
     label: above
     weight: 21
-    type: text_default
-    settings: {  }
+    type: string
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
   field_linkedin_url:
     label: above
     weight: 17
-    type: text_default
-    settings: {  }
+    type: string
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
+  field_publication:
+    weight: 104
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
   field_quote:
     label: above
     weight: 0
@@ -214,23 +222,28 @@ content:
   field_twitter_url:
     label: above
     weight: 16
-    type: text_default
-    settings: {  }
+    type: string
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
   field_year_graduated:
     label: above
     weight: 23
-    type: text_default
-    settings: {  }
+    type: string
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
   field_youtube_id:
     label: above
     weight: 2
-    type: text_default
-    settings: {  }
+    type: string
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
   links:
     weight: 100
+    settings: {  }
+    third_party_settings: {  }
   person_type:
     label: hidden
     type: entity_reference_label
