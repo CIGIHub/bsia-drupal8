@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.event.body
+    - field.field.node.event.comment
     - field.field.node.event.event_series
     - field.field.node.event.event_type
     - field.field.node.event.field_address_1
@@ -36,76 +37,12 @@ dependencies:
     - image.style.thumbnail
     - node.type.event
   module:
+    - comment
     - datetime
-    - field_group
     - file
     - image
     - path
     - text
-third_party_settings:
-  field_group:
-    group_address:
-      children:
-        - field_location
-        - field_address_1
-        - field_city
-        - field_state_province
-        - field_country
-      parent_name: ''
-      weight: 10
-      label: Address
-      format_type: fieldset
-      format_settings:
-        description: ''
-        classes: ''
-        id: ''
-        required_fields: true
-    group_registration:
-      children:
-        - field_invitation
-        - field_rsvp
-        - field_event_management
-        - field_email_subject
-      parent_name: ''
-      weight: 4
-      label: Registration
-      format_type: fieldset
-      format_settings:
-        description: ''
-        classes: ''
-        id: ''
-        required_fields: true
-    group_homepage:
-      children:
-        - field_feature_line
-        - field_image_page
-        - field_credit
-        - field_alternative_url
-        - field_position
-        - field_link_text
-      parent_name: ''
-      weight: 12
-      label: 'Homepage Gallery'
-      format_type: fieldset
-      format_settings:
-        description: ''
-        classes: ''
-        id: ''
-        required_fields: true
-    group_recap:
-      children:
-        - field_event_summary
-        - field_flickr_id
-        - field_event_videos
-      parent_name: ''
-      weight: 15
-      label: 'Event Recap'
-      format_type: fieldset
-      format_settings:
-        description: ''
-        classes: ''
-        id: ''
-        required_fields: true
 id: node.event.default
 targetEntityType: node
 bundle: event
@@ -113,131 +50,136 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 6
+    weight: 31
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
     third_party_settings: {  }
+  comment:
+    type: comment_default
+    weight: 20
+    settings: {  }
+    third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 21
+    weight: 10
     settings: {  }
     third_party_settings: {  }
   event_series:
     type: options_select
-    weight: 1
+    weight: 20
     settings: {  }
     third_party_settings: {  }
   event_type:
     type: entity_reference_autocomplete_tags
-    weight: 2
+    weight: 20
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
     third_party_settings: {  }
   field_address_1:
-    weight: 17
-    type: string_textarea
+    weight: 9
+    type: string_textfield
     settings:
+      size: 60
       placeholder: ''
-      rows: 5
     third_party_settings: {  }
   field_alternative_url:
-    weight: 18
-    type: string_textarea
+    weight: 21
+    type: string_textfield
     settings:
+      size: 60
       placeholder: ''
-      rows: 5
     third_party_settings: {  }
   field_city:
-    weight: 18
-    type: string_textarea
+    weight: 10
+    type: string_textfield
     settings:
+      size: 60
       placeholder: ''
-      rows: 5
     third_party_settings: {  }
   field_country:
-    weight: 20
-    type: string_textarea
+    weight: 12
+    type: string_textfield
     settings:
+      size: 60
       placeholder: ''
-      rows: 5
     third_party_settings: {  }
   field_credit:
-    weight: 17
-    type: string_textarea
+    weight: 26
+    type: string_textfield
     settings:
+      size: 60
       placeholder: ''
-      rows: 5
     third_party_settings: {  }
   field_email_subject:
     weight: 8
-    type: string_textarea
+    type: string_textfield
     settings:
+      size: 60
       placeholder: ''
-      rows: 5
     third_party_settings: {  }
   field_event_date:
-    weight: 3
+    weight: 0
     type: datetime_default
     settings: {  }
     third_party_settings: {  }
   field_event_management:
     weight: 7
-    type: string_textarea
+    type: string_textfield
     settings:
+      size: 60
       placeholder: ''
-      rows: 5
     third_party_settings: {  }
   field_event_summary:
-    weight: 16
+    weight: 27
     settings:
       rows: 10
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
   field_event_videos:
-    weight: 18
-    type: string_textarea
+    weight: 29
+    type: string_textfield
     settings:
+      size: 60
       placeholder: ''
-      rows: 5
     third_party_settings: {  }
   field_feature_area:
-    weight: 13
+    weight: 17
     settings: {  }
     third_party_settings: {  }
     type: options_select
   field_feature_line:
-    weight: 15
+    weight: 19
     settings:
       rows: 2
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
   field_feature_weight:
-    weight: 14
+    weight: 20
     type: options_select
     settings: {  }
     third_party_settings: {  }
   field_flickr_id:
-    weight: 17
-    type: string_textarea
+    weight: 28
+    type: string_textfield
     settings:
+      size: 60
       placeholder: ''
-      rows: 5
     third_party_settings: {  }
   field_image:
-    weight: 11
+    weight: 3
     settings:
       progress_indicator: bar
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
   field_image_page:
-    weight: 16
+    weight: 18
     settings:
       progress_indicator: bar
       preview_image_style: thumbnail
@@ -250,21 +192,21 @@ content:
       display_label: false
     third_party_settings: {  }
   field_link_text:
-    weight: 20
-    type: string_textarea
+    weight: 24
+    type: string_textfield
     settings:
+      size: 60
       placeholder: ''
-      rows: 5
     third_party_settings: {  }
   field_location:
-    weight: 15
-    type: string_textarea
+    weight: 8
+    type: string_textfield
     settings:
+      size: 60
       placeholder: ''
-      rows: 5
     third_party_settings: {  }
   field_position:
-    weight: 19
+    weight: 25
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -275,59 +217,65 @@ content:
       display_label: false
     third_party_settings: {  }
   field_short_description:
-    weight: 5
+    weight: -3
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
   field_speakers:
-    weight: 8
+    weight: 5
     type: options_select
     settings: {  }
     third_party_settings: {  }
   field_speakers_unlinked:
-    weight: 7
-    type: string_textarea
+    weight: 6
+    type: string_textfield
     settings:
+      size: 60
       placeholder: ''
-      rows: 5
     third_party_settings: {  }
   field_state_province:
-    weight: 19
-    type: string_textarea
+    weight: 11
+    type: string_textfield
     settings:
+      size: 60
       placeholder: ''
-      rows: 5
     third_party_settings: {  }
   field_website:
-    weight: 9
-    type: string_textarea
+    weight: 4
+    type: string_textfield
     settings:
+      size: 60
       placeholder: ''
-      rows: 5
     third_party_settings: {  }
   path:
     type: path
-    weight: 20
+    weight: 30
     settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 15
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 23
+    weight: 16
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 0
+    weight: -5
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 22
+    weight: 5
     settings:
       match_operator: CONTAINS
       size: 60
@@ -337,7 +285,6 @@ content:
     settings:
       progress_indicator: throbber
     type: file_generic
-    weight: 19
+    weight: 32
     third_party_settings: {  }
-hidden:
-  promote: true
+hidden: {  }

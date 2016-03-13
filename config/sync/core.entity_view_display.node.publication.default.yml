@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.publication.body
+    - field.field.node.publication.comment_no_subject
     - field.field.node.publication.field_alternative_url
     - field.field.node.publication.field_book_cover
     - field.field.node.publication.field_credit
@@ -29,7 +30,6 @@ dependencies:
     - datetime
     - file
     - image
-    - options
     - text
     - user
 id: node.publication.default
@@ -66,19 +66,19 @@ content:
   field_link_label:
     label: above
     weight: 2
-    type: list_default
+    type: text_default
     settings: {  }
     third_party_settings: {  }
   field_publication_source:
     label: above
     weight: 0
-    type: basic_string
+    type: text_default
     settings: {  }
     third_party_settings: {  }
   field_publication_source_link:
     label: above
     weight: 1
-    type: basic_string
+    type: text_default
     settings: {  }
     third_party_settings: {  }
   field_published_date:
@@ -86,8 +86,8 @@ content:
     weight: -3
     type: datetime_default
     settings:
+      format_type: fallback
       timezone_override: ''
-      format_type: short
     third_party_settings: {  }
   field_short_description:
     label: hidden
@@ -98,13 +98,11 @@ content:
   field_speakers_unlinked:
     label: hidden
     weight: -1
-    type: basic_string
+    type: text_default
     settings: {  }
     third_party_settings: {  }
   links:
     weight: 100
-    settings: {  }
-    third_party_settings: {  }
   publication_type:
     label: hidden
     type: entity_reference_label
@@ -119,6 +117,7 @@ content:
     weight: 102
     third_party_settings: {  }
 hidden:
+  comment_no_subject: true
   field_alternative_url: true
   field_credit: true
   field_embed_code: true

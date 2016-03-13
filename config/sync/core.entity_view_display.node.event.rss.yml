@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.rss
     - field.field.node.event.body
+    - field.field.node.event.comment
     - field.field.node.event.event_series
     - field.field.node.event.event_type
     - field.field.node.event.field_address_1
@@ -211,6 +212,7 @@ content:
     weight: 100
 hidden:
   body: true
+  comment: true
   event_series: true
   event_type: true
   field_speakers: true

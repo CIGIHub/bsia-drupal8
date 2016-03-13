@@ -4,14 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.comment
     - field.field.node.page.field_alternative_url
-    - field.field.node.page.field_caption
     - field.field.node.page.field_credit
     - field.field.node.page.field_embed_code
     - field.field.node.page.field_feature_area
     - field.field.node.page.field_feature_line
     - field.field.node.page.field_feature_weight
-    - field.field.node.page.field_highlight_text
     - field.field.node.page.field_image
     - field.field.node.page.field_image_page
     - field.field.node.page.field_link_text
@@ -20,6 +19,7 @@ dependencies:
     - field.field.node.page.upload
     - node.type.page
   module:
+    - comment
     - file
     - image
     - text
@@ -37,14 +37,21 @@ content:
     weight: 100
     settings: {  }
     third_party_settings: {  }
-  field_caption:
+  comment:
     label: hidden
+    type: comment_default
+    weight: 20
+    settings:
+      pager_id: 0
+    third_party_settings: {  }
+  field_caption:
+    label: above
     weight: 0
-    type: basic_string
+    type: text_default
     settings: {  }
     third_party_settings: {  }
   field_image:
-    label: hidden
+    label: above
     weight: -1
     type: image
     settings:
@@ -53,8 +60,6 @@ content:
     third_party_settings: {  }
   links:
     weight: 101
-    settings: {  }
-    third_party_settings: {  }
   upload:
     label: hidden
     settings: {  }
@@ -68,7 +73,6 @@ hidden:
   field_feature_area: true
   field_feature_line: true
   field_feature_weight: true
-  field_highlight_text: true
   field_image_page: true
   field_link_text: true
   field_position: true

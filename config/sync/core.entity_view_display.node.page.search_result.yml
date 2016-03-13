@@ -6,13 +6,11 @@ dependencies:
     - core.entity_view_mode.node.search_result
     - field.field.node.page.body
     - field.field.node.page.field_alternative_url
-    - field.field.node.page.field_caption
     - field.field.node.page.field_credit
     - field.field.node.page.field_embed_code
     - field.field.node.page.field_feature_area
     - field.field.node.page.field_feature_line
     - field.field.node.page.field_feature_weight
-    - field.field.node.page.field_highlight_text
     - field.field.node.page.field_image
     - field.field.node.page.field_image_page
     - field.field.node.page.field_link_text
@@ -72,12 +70,6 @@ content:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-  field_highlight_text:
-    label: hidden
-    weight: 3
-    type: text_default
-    settings: {  }
-    third_party_settings: {  }
   field_image:
     label: above
     weight: -1
@@ -93,12 +85,6 @@ content:
     settings:
       image_style: ''
       image_link: ''
-    third_party_settings: {  }
-  field_layout:
-    label: hidden
-    weight: 1
-    type: text_default
-    settings: {  }
     third_party_settings: {  }
   field_link_text:
     label: hidden
@@ -122,5 +108,3 @@ content:
     weight: 100
 hidden:
   body: true
-  comment: true
-  upload: true
