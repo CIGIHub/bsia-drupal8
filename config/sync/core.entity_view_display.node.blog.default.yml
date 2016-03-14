@@ -4,13 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.node.blog.body
-    - field.field.node.blog.comment
     - field.field.node.blog.field_image
     - field.field.node.blog.field_published_date
     - field.field.node.blog.upload
     - node.type.blog
   module:
-    - comment
     - datetime
     - file
     - text
@@ -25,13 +23,6 @@ content:
     type: text_default
     weight: 101
     settings: {  }
-    third_party_settings: {  }
-  comment:
-    label: hidden
-    type: comment_default
-    weight: 20
-    settings:
-      pager_id: 0
     third_party_settings: {  }
   field_published_date:
     label: above

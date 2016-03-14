@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.person.body
-    - field.field.node.person.comment
     - field.field.node.person.field_alternative_url
     - field.field.node.person.field_archived
     - field.field.node.person.field_awards
@@ -51,7 +50,6 @@ dependencies:
     - image.style.thumbnail
     - node.type.person
   module:
-    - comment
     - file
     - image
     - path
@@ -68,11 +66,6 @@ content:
       rows: 9
       summary_rows: 3
       placeholder: ''
-    third_party_settings: {  }
-  comment:
-    type: comment_default
-    weight: 20
-    settings: {  }
     third_party_settings: {  }
   created:
     type: datetime_timestamp

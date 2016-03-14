@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.event.body
-    - field.field.node.event.comment
     - field.field.node.event.event_series
     - field.field.node.event.event_type
     - field.field.node.event.field_address_1
@@ -37,7 +36,6 @@ dependencies:
     - image.style.thumbnail
     - node.type.event
   module:
-    - comment
     - datetime
     - file
     - image
@@ -55,11 +53,6 @@ content:
       rows: 9
       summary_rows: 3
       placeholder: ''
-    third_party_settings: {  }
-  comment:
-    type: comment_default
-    weight: 20
-    settings: {  }
     third_party_settings: {  }
   created:
     type: datetime_timestamp

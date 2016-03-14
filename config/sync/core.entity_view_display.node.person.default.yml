@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.person.body
-    - field.field.node.person.comment
     - field.field.node.person.field_alternative_url
     - field.field.node.person.field_archived
     - field.field.node.person.field_awards
@@ -50,7 +49,6 @@ dependencies:
     - field.field.node.person.upload
     - node.type.person
   module:
-    - comment
     - file
     - image
     - text
@@ -65,13 +63,6 @@ content:
     type: text_default
     weight: 101
     settings: {  }
-    third_party_settings: {  }
-  comment:
-    label: hidden
-    type: comment_default
-    weight: 20
-    settings:
-      pager_id: 0
     third_party_settings: {  }
   field_archived:
     label: above

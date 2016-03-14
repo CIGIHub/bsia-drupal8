@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.research.body
-    - field.field.node.research.comment
     - field.field.node.research.field_alternative_url
     - field.field.node.research.field_credit
     - field.field.node.research.field_feature_area
@@ -26,7 +25,6 @@ dependencies:
     - image.style.thumbnail
     - node.type.research
   module:
-    - comment
     - file
     - image
     - path
@@ -43,11 +41,6 @@ content:
       rows: 9
       summary_rows: 3
       placeholder: ''
-    third_party_settings: {  }
-  comment:
-    type: comment_default
-    weight: 20
-    settings: {  }
     third_party_settings: {  }
   created:
     type: datetime_timestamp

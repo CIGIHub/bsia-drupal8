@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.research.body
-    - field.field.node.research.comment
     - field.field.node.research.field_alternative_url
     - field.field.node.research.field_credit
     - field.field.node.research.field_feature_area
@@ -25,7 +24,6 @@ dependencies:
     - field.field.node.research.upload
     - node.type.research
   module:
-    - comment
     - file
     - image
     - text
@@ -40,13 +38,6 @@ content:
     type: text_default
     weight: 101
     settings: {  }
-    third_party_settings: {  }
-  comment:
-    label: hidden
-    type: comment_default
-    weight: 20
-    settings:
-      pager_id: 0
     third_party_settings: {  }
   field_feature_line:
     label: above
