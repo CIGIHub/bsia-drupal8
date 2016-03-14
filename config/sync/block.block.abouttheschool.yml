@@ -2,10 +2,6 @@ uuid: 46da39eb-4489-4568-9c15-211a5ea4b2c5
 langcode: en
 status: false
 dependencies:
-  content:
-    - 'block_content:basic:4576e266-6bfa-4368-914f-791705907717'
-  module:
-    - block_content
   theme:
     - bsia
 id: abouttheschool

@@ -21,4 +21,4 @@ selection_criteria:
     uuid: fe2e7c03-5acc-46c1-8b00-f60b9b7ac50c
 selection_logic: and
 weight: -5
-context_definitions: {  }
+relationships: {  }

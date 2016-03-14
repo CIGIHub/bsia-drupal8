@@ -43,6 +43,7 @@ content:
   links:
     weight: 101
 hidden:
+  comment: true
   field_alternative_url: true
   field_credit: true
   field_embed_code: true
@@ -54,3 +55,4 @@ hidden:
   field_link_text: true
   field_position: true
   field_subtitle: true
+  upload: true
