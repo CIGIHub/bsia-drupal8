@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.news.body
     - field.field.node.news.field_alternative_url
+    - field.field.node.news.field_caption
     - field.field.node.news.field_credit
     - field.field.node.news.field_feature_area
     - field.field.node.news.field_feature_line
@@ -50,6 +51,13 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_caption:
+    weight: 33
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
   field_credit:
     weight: 16
     type: text_textfield

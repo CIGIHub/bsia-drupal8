@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.page.body
     - field.field.node.page.field_alternative_url
+    - field.field.node.page.field_caption
     - field.field.node.page.field_credit
     - field.field.node.page.field_embed_code
     - field.field.node.page.field_feature_area
@@ -36,11 +37,12 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_caption:
+    weight: 103
     label: above
-    weight: 0
-    type: text_default
-    settings: {  }
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
+    type: string
   field_image:
     label: above
     weight: -1

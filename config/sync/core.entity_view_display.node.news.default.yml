@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.news.body
     - field.field.node.news.field_alternative_url
+    - field.field.node.news.field_caption
     - field.field.node.news.field_credit
     - field.field.node.news.field_feature_area
     - field.field.node.news.field_feature_line
@@ -35,6 +36,13 @@ content:
     weight: 101
     settings: {  }
     third_party_settings: {  }
+  field_caption:
+    weight: 103
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
   field_feature_line:
     label: above
     weight: 13

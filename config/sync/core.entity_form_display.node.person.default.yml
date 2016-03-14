@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.person.field_awards
     - field.field.node.person.field_board_order
     - field.field.node.person.field_board_position
+    - field.field.node.person.field_caption
     - field.field.node.person.field_courses
     - field.field.node.person.field_credit
     - field.field.node.person.field_current_student
@@ -103,6 +104,13 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_caption:
+    weight: 33
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
   field_courses:
     weight: 20
     type: text_textfield

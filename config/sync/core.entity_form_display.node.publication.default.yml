@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.publication.body
     - field.field.node.publication.field_alternative_url
     - field.field.node.publication.field_book_cover
+    - field.field.node.publication.field_caption
     - field.field.node.publication.field_credit
     - field.field.node.publication.field_embed_code
     - field.field.node.publication.field_feature_area
@@ -69,6 +70,13 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+  field_caption:
+    weight: 33
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
   field_credit:
     weight: 16
     type: text_textfield

@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.event.event_type
     - field.field.node.event.field_address_1
     - field.field.node.event.field_alternative_url
+    - field.field.node.event.field_caption
     - field.field.node.event.field_city
     - field.field.node.event.field_country
     - field.field.node.event.field_credit
@@ -86,6 +87,13 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_caption:
+    weight: 33
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
   field_city:
     weight: 10
     type: string_textfield
