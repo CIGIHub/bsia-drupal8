@@ -1,20 +1,23 @@
-uuid: cda46855-ba60-43b1-853f-63d469c47758
+uuid: 41680acb-9896-4d37-aa00-dc17542e7a18
 langcode: en
 status: true
 dependencies:
+  content:
+    - 'block_content:basic:afa1241f-e42b-4439-af06-6a4f25be89e5'
   module:
+    - block_content
     - system
   theme:
     - bsia
 id: connectwithusbanner
 theme: bsia
 region: connect_banner
-weight: -13
+weight: -18
 provider: null
-plugin: 'block_content:00d8eb2f-3259-4390-a100-a69b1bdf2f8a'
+plugin: 'block_content:afa1241f-e42b-4439-af06-6a4f25be89e5'
 settings:
-  id: 'block_content:00d8eb2f-3259-4390-a100-a69b1bdf2f8a'
-  label: 'Connect With Us - Banner'
+  id: 'block_content:afa1241f-e42b-4439-af06-6a4f25be89e5'
+  label: 'Connect with Us - Banner'
   provider: block_content
   label_display: '0'
   status: true
