@@ -213,5 +213,6 @@ hidden:
   body: true
   event_series: true
   event_type: true
+  field_caption: true
   field_speakers: true
   upload: true

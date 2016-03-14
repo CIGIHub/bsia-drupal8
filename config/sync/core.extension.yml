@@ -8,6 +8,7 @@ module:
   calendar: 0
   calendar_datetime: 0
   ckeditor: 0
+  code_driven_devel: 0
   color: 0
   comment: 0
   config: 0
@@ -20,6 +21,7 @@ module:
   editor: 0
   entityqueue: 0
   field: 0
+  field_group: 0
   field_ui: 0
   file: 0
   filter: 0

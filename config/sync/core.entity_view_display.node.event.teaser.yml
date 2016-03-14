@@ -159,6 +159,7 @@ hidden:
   event_series: true
   event_type: true
   field_alternative_url: true
+  field_caption: true
   field_credit: true
   field_feature_area: true
   field_feature_weight: true
