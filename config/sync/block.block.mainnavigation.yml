@@ -1,22 +1,22 @@
-uuid: d377749e-08a4-48cd-a600-b70a9ad9574c
+uuid: cb9a0a52-7396-4141-a304-4e65c1cf6d53
 langcode: en
 status: false
 dependencies:
   config:
-    - system.menu.tools
+    - system.menu.main
   module:
     - system
   theme:
     - bsia
-id: user_4
+id: mainnavigation
 theme: bsia
 region: '-1'
-weight: -9
+weight: -7
 provider: null
-plugin: 'system_menu_block:tools'
+plugin: 'system_menu_block:main'
 settings:
-  id: 'system_menu_block:tools'
-  label: ''
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
   provider: system
   label_display: visible
   level: 1
