@@ -888,18 +888,16 @@ footer {
   -moz-border-radius: 3px;
   border-radius: 3px; }
 
-#block-exposedformfacultypage-2 #edit-keys--2 {
+#block-exposedformfacultypage-2 .form-text {
   width: 200px;
   padding: 3px;
   font-size: 14px; }
-#block-exposedformfacultypage-2 #edit-actions--2 {
-  text-indent: -9999px; }
+#block-exposedformfacultypage-2 .form-actions {
+  text-indent: -9999px;
+  position: absolute;
+  margin: 0px; }
 #block-exposedformfacultypage-2 .search-description {
   font-style: italic; }
-#block-exposedformfacultypage-2 .edit-actions {
-  margin: 0px; }
-#block-exposedformfacultypage-2 #edit-actions--2 {
-  position: absolute; }
 
 #block-exposedformstudentspage-2 #edit-keys--2 {
   width: 200px;

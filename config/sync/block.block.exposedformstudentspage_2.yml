@@ -12,7 +12,7 @@ dependencies:
 id: exposedformstudentspage_2
 theme: bsia
 region: content_header
-weight: -16
+weight: -15
 provider: null
 plugin: 'views_exposed_filter_block:students-page_2'
 settings:

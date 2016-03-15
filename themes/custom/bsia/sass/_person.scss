@@ -70,22 +70,19 @@
 }
 
 #block-exposedformfacultypage-2{
-  #edit-keys--2{
+ 
+  .form-text{
     width: 200px;
     padding: 3px;
     font-size: 14px;
   }
-  #edit-actions--2{
-      @include hidden;
+  .form-actions{
+    @include hidden;
+    position: absolute;
+    margin: 0px;
   }
   .search-description{
     font-style: italic;
-  }
-  .edit-actions{
-    margin: 0px;
-  }
-  #edit-actions--2{
-    position: absolute;
   }
 }
 
