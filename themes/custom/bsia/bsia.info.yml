@@ -24,6 +24,7 @@ regions:
   page_title: 'Page Title'
   content_header: 'Content Header'
   content: 'Main Content'
+  homepage: 'Homepage'
   right_menu: 'Right Menu'
   right_sidebar: 'Right Sidebar'
   connect_banner: 'Connect Banner'
