@@ -11,8 +11,8 @@ dependencies:
     - bsia
 id: views_block__homepage_block_2
 theme: bsia
-region: homepage
-weight: -11
+region: content
+weight: -16
 provider: null
 plugin: 'views_block:homepage-block_2'
 settings:
