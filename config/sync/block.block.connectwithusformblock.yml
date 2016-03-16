@@ -9,7 +9,7 @@ dependencies:
 id: connectwithusformblock
 theme: bsia
 region: content
-weight: -17
+weight: -19
 provider: null
 plugin: 'block_content:93e3985e-7afd-4353-8500-0f3078e5cac0'
 settings:

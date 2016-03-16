@@ -12,7 +12,7 @@ dependencies:
 id: guidebook
 theme: bsia
 region: right_sidebar
-weight: -17
+weight: -18
 provider: null
 plugin: 'block_content:eee089eb-3945-49eb-9307-7b0294a7e6e3'
 settings:

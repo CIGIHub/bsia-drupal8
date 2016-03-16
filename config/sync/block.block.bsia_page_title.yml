@@ -9,7 +9,7 @@ _core:
 id: bsia_page_title
 theme: bsia
 region: page_title
-weight: -15
+weight: -20
 provider: null
 plugin: page_title_block
 settings:

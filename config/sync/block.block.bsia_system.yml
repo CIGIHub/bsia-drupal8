@@ -9,7 +9,7 @@ dependencies:
 id: bsia_system
 theme: bsia
 region: '-1'
-weight: -13
+weight: -14
 provider: null
 plugin: system_powered_by_block
 settings:

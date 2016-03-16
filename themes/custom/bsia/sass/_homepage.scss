@@ -23,7 +23,13 @@
 
 /***********  HOMEPAGE  **************/
 
-.region-homepage{
+.homepage{
+
+  h1{
+    @include hidden;
+    position: absolute;
+  }
+  
   h2{
     text-transform: uppercase;
     border-bottom: solid 1px #666;

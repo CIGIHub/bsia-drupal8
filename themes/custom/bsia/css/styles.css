@@ -610,9 +610,9 @@ footer {
     footer .contact nav ul li {
       padding: 0 5px;
       border-right: solid 1px #666; }
-      footer .contact nav ul li.last {
+      footer .contact nav ul li:last-child {
         border: none; }
-      footer .contact nav ul li.first {
+      footer .contact nav ul li:first-child {
         padding-left: 0px; }
   footer .region-footer-menu ul.menu {
     margin: 0px; }
@@ -681,40 +681,43 @@ footer {
 @media (min-width: 940px) {
   background-position: right; }
 /***********  HOMEPAGE  **************/
-.region-homepage h2 {
+.homepage h1 {
+  text-indent: -9999px;
+  position: absolute; }
+.homepage h2 {
   text-transform: uppercase;
   border-bottom: solid 1px #666;
   color: #666;
   margin-top: 0px;
   font-size: 1.3em; }
-  .region-homepage h2 a {
+  .homepage h2 a {
     color: #666; }
-    .region-homepage h2 a:hover {
+    .homepage h2 a:hover {
       color: #053b5b;
       text-decoration: none; }
-.region-homepage ul {
+.homepage ul {
   list-style: none;
   padding: 0px; }
-  .region-homepage ul li {
+  .homepage ul li {
     list-style: none;
     list-style-image: none;
     float: left; }
-    .region-homepage ul li.menu-item--expanded ul {
+    .homepage ul li.menu-item--expanded ul {
       display: none; }
-  .region-homepage ul:after {
+  .homepage ul:after {
     content: '';
     display: block;
     clear: both; }
-.region-homepage li {
+.homepage li {
   width: 32%;
   padding: 1em;
   margin: 0 0 0.25em 0.5em; }
-  .region-homepage li .views-field-field-event-date,
-  .region-homepage li .views-field-field-news-date {
+  .homepage li .views-field-field-event-date,
+  .homepage li .views-field-field-news-date {
     font-size: 0.9em;
     color: #666;
     text-transform: uppercase; }
-  .region-homepage li .views-field-title {
+  .homepage li .views-field-title {
     font-size: 1.3em;
     font-weight: bold;
     line-height: 130%;
@@ -746,6 +749,10 @@ footer {
 /******  Gallery  ******/
 #gallery {
   overflow: hidden; }
+  #gallery li {
+    padding: 0px;
+    margin: 0px;
+    width: 100%; }
   #gallery .gallery {
     position: relative; }
   #gallery .box {
