@@ -647,39 +647,37 @@ footer {
     display: block;
     margin: 0; }
 
-#block-connectwithus {
+/*******   CONNECT BANNER FOR HOMEPAGE    *******/
+.footer-banner {
+  background-image: url(../images/connect-banner.png);
+  background-repeat: no-repeat;
+  background-color: #fed130; }
+  .footer-banner .connect-with-us {
+    font-size: 34px; }
+    .footer-banner .connect-with-us a {
+      padding: 17px 0px;
+      display: block;
+      color: #053b5b; }
+    .footer-banner .connect-with-us a:hover {
+      text-decoration: none;
+      color: white; }
+
+.right-menu .connect-with-us {
   background-image: url(../images/connect-button.png);
   background-color: #fff;
   background-repeat: no-repeat;
   background-position: right; }
-  #block-connectwithus a {
+  .right-menu .connect-with-us a {
     padding: 30px 20px;
     display: block;
     color: #000;
     font-size: 16px;
     font-weight: bold;
     text-transform: uppercase; }
-  #block-connectwithus a:hover {
+  .right-menu .connect-with-us a:hover {
     text-decoration: none;
     color: white; }
 
-/*******   CONNECT BANNER FOR HOMEPAGE    *******/
-.connect-banner {
-  background-image: url(../images/connect-banner.png);
-  background-repeat: no-repeat;
-  background-position: right;
-  background-color: #fed130;
-  font-size: 34px; }
-  .connect-banner a {
-    padding: 26px 0;
-    display: block;
-    color: #053b5b; }
-  .connect-banner a:hover {
-    text-decoration: none;
-    color: white; }
-
-@media (min-width: 940px) {
-  background-position: right; }
 /***********  HOMEPAGE  **************/
 .homepage h1 {
   text-indent: -9999px;

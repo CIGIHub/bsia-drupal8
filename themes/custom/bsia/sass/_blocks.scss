@@ -1,5 +1,26 @@
-#block-connectwithus{
-	background-image:url(../images/connect-button.png);
+/*******   CONNECT BANNER FOR HOMEPAGE    *******/
+.footer-banner{
+    background-image:url(../images/connect-banner.png);
+    background-repeat: no-repeat;
+    background-color: $brand-secondary-color;
+
+  .connect-with-us{
+    font-size: 34px;
+    a{
+      padding: 17px 0px;
+      display: block;
+      color: $link-color;
+    }
+    a:hover{
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
+
+.right-menu{
+  .connect-with-us{
+  background-image:url(../images/connect-button.png);
   background-color: #fff;
   background-repeat: no-repeat;
   background-position: right;
@@ -16,4 +37,6 @@
     color: white;
   }
 }
+}
+
 
