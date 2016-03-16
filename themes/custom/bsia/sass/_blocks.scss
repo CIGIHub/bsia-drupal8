@@ -38,6 +38,43 @@
       color: white;
     }
   }
+
+  ul.menu:first-child{
+    padding: 10px 0;
+    margin: 0 0 10px 0;
+
+  }
+  ul.menu{
+    list-style: none;
+    background: #19374f;
+    
+    text-transform: uppercase;
+    font-size: 13px;
+
+    .menu-item--expanded{
+      list-style-image: none;
+      list-style: none;
+    }
+
+    li{
+      padding: 5px 20px;
+      a{
+        color: white;
+        &:hover{
+          text-decoration: underline;
+        }
+        &.is-active{
+          color: $nav-link-active-color;
+        }
+        &.is-active:hover{
+          color: white;
+        }
+      }
+      li{
+        padding: 3px 20px;
+      }
+    }
+  }
 }
 
 

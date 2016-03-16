@@ -31,6 +31,10 @@
     padding: 0px; }
 
 /* Floats last ".cols-" to the right */
+[class*='col-']:last-of-type {
+  padding-right: 0.625em;
+  float: right; }
+
 .wrapper {
   margin: 0 auto;
   max-width: none !important;
@@ -207,8 +211,6 @@ article ol.field--ordered-list-style-lower {
     color: #808080; }
 article .field-group {
   margin-bottom: 10px; }
-article .field--name-body {
-  margin: 20px 0; }
 article .field--name-field-short-description {
   margin-top: 10px; }
 article .field--name-topics {
@@ -676,6 +678,29 @@ footer {
   .right-menu .connect-with-us a:hover {
     text-decoration: none;
     color: white; }
+.right-menu ul.menu:first-child {
+  padding: 10px 0;
+  margin: 0 0 10px 0; }
+.right-menu ul.menu {
+  list-style: none;
+  background: #19374f;
+  text-transform: uppercase;
+  font-size: 13px; }
+  .right-menu ul.menu .menu-item--expanded {
+    list-style-image: none;
+    list-style: none; }
+  .right-menu ul.menu li {
+    padding: 5px 20px; }
+    .right-menu ul.menu li a {
+      color: white; }
+      .right-menu ul.menu li a:hover {
+        text-decoration: underline; }
+      .right-menu ul.menu li a.is-active {
+        color: #ccc; }
+      .right-menu ul.menu li a.is-active:hover {
+        color: white; }
+    .right-menu ul.menu li li {
+      padding: 3px 20px; }
 
 /***********  HOMEPAGE  **************/
 .homepage h1 {
