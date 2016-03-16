@@ -26,14 +26,11 @@ function import_publication_install() {
 				"field_name" => "field_collection_publication",
 			));
 
-			$logger->notice(t("Publication entity created. Used for Node ID ") . $record->entity_id);
-			
+			$logger->notice(t("Publication entity created. Used for Node ID ") . $record->entity_id);	
 
 			$current_node = \Drupal\node\Entity\Node::load($record->entity_id);
 			$publication->setHostEntity($current_node);
 
-			//$logger->notice(t("Host Entity Set."));
-			
 			$publication->field_publication_authors->value = $authors;
 			$publication->field_article_title->value = $title;
 			$publication->field_periodical_title->value = $periodical;
