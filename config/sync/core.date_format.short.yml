@@ -7,4 +7,4 @@ _core:
 id: short
 label: 'Default short date'
 locked: false
-pattern: 'F j, Y, g:ia'
+pattern: 'F, Y'

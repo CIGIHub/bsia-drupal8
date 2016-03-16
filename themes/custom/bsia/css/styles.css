@@ -967,27 +967,29 @@ ul.student-list {
   ul.student-list hr {
     margin: 10px 0 5px 0; }
 
-.student .student-photo {
-  text-align: center;
-  width: 95px; }
-.student .student-name {
-  text-transform: uppercase;
-  font-size: 9px;
-  margin: 5px 0; }
-.student .image-wrapper .image {
-  margin: 0 auto;
-  width: 60px;
-  padding: 4px;
-  background: #ddd;
-  height: 58px;
-  cursor: pointer;
-  opacity: 0.8; }
-.student .description {
-  clear: both; }
-.student.unselected-student {
-  opacity: 0.5; }
-.student.unselected-student:hover {
-  opacity: 1.0; }
+.student {
+  margin-right: 10px; }
+  .student .student-photo {
+    text-align: center;
+    width: 85px; }
+  .student .student-name {
+    text-transform: uppercase;
+    font-size: 9px;
+    margin: 5px 0; }
+  .student .image-wrapper .image {
+    margin: 0 auto;
+    width: 60px;
+    padding: 4px;
+    background: #ddd;
+    height: 58px;
+    cursor: pointer;
+    opacity: 0.8; }
+  .student .description {
+    clear: both; }
+  .student.unselected-student {
+    opacity: 0.5; }
+  .student.unselected-student:hover {
+    opacity: 1.0; }
 
 .student-description {
   display: none;
