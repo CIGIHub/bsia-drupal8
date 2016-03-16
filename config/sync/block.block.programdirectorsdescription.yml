@@ -1,23 +1,23 @@
-uuid: 1badb9ad-3609-4217-ab3f-63ed8818df49
+uuid: e531f8c9-69c8-4ff2-8200-c13a558c3f86
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:03b11628-2212-4518-9907-7b80ec3d2cef'
+    - 'block_content:basic:420729d9-82e5-4da1-862c-4499b09f27ea'
   module:
     - block_content
     - system
   theme:
     - bsia
-id: cigichairdescription
+id: programdirectorsdescription
 theme: bsia
 region: content_header
-weight: -17
+weight: -16
 provider: null
-plugin: 'block_content:03b11628-2212-4518-9907-7b80ec3d2cef'
+plugin: 'block_content:420729d9-82e5-4da1-862c-4499b09f27ea'
 settings:
-  id: 'block_content:03b11628-2212-4518-9907-7b80ec3d2cef'
-  label: 'CIGI Chair Description'
+  id: 'block_content:420729d9-82e5-4da1-862c-4499b09f27ea'
+  label: 'Program Directors Description'
   provider: block_content
   label_display: '0'
   status: true
@@ -26,6 +26,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: /faculty/cigi-chairs
+    pages: /faculty/program-directors
     negate: false
     context_mapping: {  }
