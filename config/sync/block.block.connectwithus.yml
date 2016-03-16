@@ -1,0 +1,25 @@
+uuid: 44b703f8-3bdd-43b1-a608-08895e732cb6
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:36a7d9e0-4aba-4ab4-b962-986540730d86'
+  module:
+    - block_content
+  theme:
+    - bsia
+id: connectwithus
+theme: bsia
+region: connect_banner
+weight: -20
+provider: null
+plugin: 'block_content:36a7d9e0-4aba-4ab4-b962-986540730d86'
+settings:
+  id: 'block_content:36a7d9e0-4aba-4ab4-b962-986540730d86'
+  label: 'Connect with Us'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
