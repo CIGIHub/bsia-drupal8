@@ -8,7 +8,7 @@ namespace Drupal\import_publication\PublicationParser;
 class PublicationParser {
 
 	/*
-	 * Finds the year and returns it
+		 * Finds the year and returns it
 	*/
 	static public function getYear($publication) {
 		//finds the date wrapped in ()
@@ -33,7 +33,7 @@ class PublicationParser {
 	}
 
 	/*
-	 * Returns the title wrapped in <em> tags
+		 * Returns the title wrapped in <em> tags
 	*/
 	static public function getTitle($publication) {
 		$openEM = strpos($publication, "<em>") + 4;
@@ -43,26 +43,32 @@ class PublicationParser {
 	}
 
 	/*
-	 * Returns the periodical wrapped in quotes
+		 * Returns the periodical wrapped in quotes
 	*/
 	static public function getPeriodical($publication) {
-		preg_match("/“.*”|".*"/", $publication, $matches);
+		preg_match("/“.*”|\".*\"/", $publication, $matches);
 
 		if (!empty($matches)) {
 			$periodicalData = $matches[0];
-			return substr($periodicalData, 1, -1);
+			$periodicalData = str_replace("\"", "", $periodicalData);
+			$periodicalData = str_replace("“", "", $periodicalData);
+			$periodicalData = str_replace("”", "", $periodicalData);
+			return $periodicalData;
 		}
-		$logger->warning(t("Could not find periodical in " . $publication );
-		
+		$logger = \Drupal::logger('import_publication');
+		$logger->warning(t("Could not find periodical in " . $publication));
+
 		return "";
 	}
 
 	/*
-	 * Returns the author(s)
+		 * Returns the author(s)
 	*/
 	static public function getAuthors($publication) {
-		
-		//first start with data using "(with <author name>, yyyy)" 
+
+		$logger = \Drupal::logger('import_publication');
+
+		//first start with data using "(with <author name>, yyyy)"
 		preg_match("/\(?with (.*), \d{4}/", $publication, $matches);
 		if (!empty($matches)) {
 			$logger->notice(t("authors:<pre>" . print_r($matches, true)) . "</pre>");
@@ -77,7 +83,7 @@ class PublicationParser {
 		}
 
 		//Not found yet, so its probably at the start. remove strong tags
-		$publication= strip_tags($publication, "<em>");
+		$publication = strip_tags($publication, "<em>");
 
 		//not found, so strip the first part of the string, up to a (, ", or <em>, or YYYY characters
 		preg_match("/^([A-Za-z].*?) (\(|\"|“|<em>|\(?\d{4}\)?)/", $publication, $matches);
@@ -86,16 +92,15 @@ class PublicationParser {
 			$authors = $matches[0];
 
 			//check if authors ends with a comma, if so, remove.
-			if(stripos(strrev($authors), ",") === 0) {
+			if (stripos(strrev($authors), ",") === 0) {
 				$authors = substr($authors, 0, -1);
 			}
 			return $authors;
 		}
 
-		$logger->warning(t("Could not find author in " . $publication );
+		$logger->warning(t("Could not find author in " . $publication));
 		return "";
-		
-		
+
 	}
 
 }
