@@ -61,19 +61,27 @@
 
 <div id="main-menu" role="navigation">
   <div class="wrapper">
-    {% if page.main_menu %}
-        {{ page.main_menu }}
-    {% endif %}
+    <div class="row">
+      <div class="col-6">
+        {% if page.main_menu %}
+            {{ page.main_menu }}
+        {% endif %}
+      </div>
+    </div>
   </div>
 </div>
 
 <div class="watermark">
   <main role="main" class="wrapper"> 
-    {% if page.page_title %}
-        <div id="content-header" {% if is_front %} class="homepage" {% endif %}>
-          {{  page.page_title }}
-        </div>
-      {% endif %}
+    <div class="row">
+      <div class="col-6">
+        {% if page.page_title %}
+          <div id="content-header" {% if is_front %} class="homepage" {% endif %}>
+            {{  page.page_title }}
+          </div>
+        {% endif %}
+      </div>
+    </div>
     <div class="row">
         <div class='{% if page.right_sidebar or page.right_menu %}col-4{% else %}col-6{% endif %}'>
           <a id="main-content" tabindex="-1"></a>

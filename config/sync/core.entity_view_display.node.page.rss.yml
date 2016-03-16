@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.rss
     - field.field.node.page.body
     - field.field.node.page.field_alternative_url
+    - field.field.node.page.field_caption
     - field.field.node.page.field_credit
     - field.field.node.page.field_embed_code
     - field.field.node.page.field_feature_area
@@ -16,6 +17,7 @@ dependencies:
     - field.field.node.page.field_link_text
     - field.field.node.page.field_position
     - field.field.node.page.field_subtitle
+    - field.field.node.page.upload
     - node.type.page
   module:
     - image

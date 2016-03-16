@@ -38,13 +38,13 @@ content:
     third_party_settings: {  }
   field_caption:
     weight: 103
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
   field_image:
-    label: above
+    label: hidden
     weight: -1
     type: image
     settings:
@@ -53,6 +53,8 @@ content:
     third_party_settings: {  }
   links:
     weight: 101
+    settings: {  }
+    third_party_settings: {  }
   upload:
     label: hidden
     settings: {  }
