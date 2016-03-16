@@ -59,7 +59,7 @@ content:
       link: true
     third_party_settings: {  }
   event_type:
-    label: above
+    label: inline
     type: entity_reference_label
     weight: 14
     settings:
