@@ -1,5 +1,7 @@
 <?php
 
+use Drupal\import_publication\PublicationParser\PublicationParser;
+
 function import_publication_install() {
   
   	\Drupal\Core\Database\Database::setActiveConnection();
@@ -13,30 +15,29 @@ function import_publication_install() {
 	if ($results) {    
 		foreach ($results as $record) {
 
-			$field_publications_value = $record->field_publications_value;
-			$openEM = strpos($field_publications_value, "<em>") + 4;
-			$closeEM = strpos($field_publications_value, "</em>");
-			$title_length = $closeEM - $openEM;
+			$year = PublicationParser::getYear($record->field_publications_value);
+			$title = PublicationParser::getTitle($record->field_publications_value);
+			$periodical = PublicationParser::getPeriodical($record->field_publications_value);
+			$authors = PublicationParser::getAuthors($record->field_publications_value);
 
-			$title = substr($field_publications_value, $openEM, $title_length);
 
 			$publication = entity_create('field_collection_item', array(
 				"host_type" => "node",
 				"field_name" => "field_collection_publication",
 			));
 
-			$logger->notice(t("publication entity created. Used for Node ID ") . $record->entity_id);
+			$logger->notice(t("Publication entity created. Used for Node ID ") . $record->entity_id);
 			
 
 			$current_node = \Drupal\node\Entity\Node::load($record->entity_id);
 			$publication->setHostEntity($current_node);
 
-			$logger->notice(t("Host Entity Set."));
+			//$logger->notice(t("Host Entity Set."));
 			
-			$publication->field_publication_authors->value = 'Goosebumps';
+			$publication->field_publication_authors->value = $authors;
 			$publication->field_article_title->value = $title;
-			$publication->field_periodical_title->value = 'Alternate way of setting periodical';
-			$publication->field_publication_date->value = 'publication date';
+			$publication->field_periodical_title->value = $periodical;
+			$publication->field_publication_date->value = $year;
 			$publication->field_publication_location->value ='publication location data';
 			
 			$logger->notice(t("Publication Fields set."));
@@ -48,7 +49,7 @@ function import_publication_install() {
 			$logger->notice(t("Publication id: " . print_r($publication->id(), true) ));
 	
 						
-
+			//TODO: update to it doesnt override the first one each time.
 			$current_node->field_collection_publication =  array( array( 'target_id' => $publication->id() ));
 
 			$logger->notice(t("Node to add publication to:<pre> " . print_r($current_node->toArray(), true)  . "</pre>"));
