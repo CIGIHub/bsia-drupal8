@@ -10,7 +10,13 @@ field_name: field_link_label
 entity_type: node
 type: list_string
 settings:
-  allowed_values: {  }
+  allowed_values:
+    -
+      value: 'Visit Website'
+      label: 'Visit Website'
+    -
+      value: 'Purchase Book'
+      label: 'Purchase Book'
   allowed_values_function: ''
 module: options
 locked: false

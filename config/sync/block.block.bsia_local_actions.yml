@@ -9,7 +9,7 @@ _core:
 id: bsia_local_actions
 theme: bsia
 region: content
-weight: -13
+weight: -18
 provider: null
 plugin: local_actions_block
 settings:

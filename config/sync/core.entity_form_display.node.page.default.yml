@@ -11,7 +11,6 @@ dependencies:
     - field.field.node.page.field_feature_area
     - field.field.node.page.field_feature_line
     - field.field.node.page.field_feature_weight
-    - field.field.node.page.field_highlight_text
     - field.field.node.page.field_image
     - field.field.node.page.field_image_page
     - field.field.node.page.field_link_text
@@ -21,33 +20,10 @@ dependencies:
     - image.style.thumbnail
     - node.type.page
   module:
-    - field_group
     - file
     - image
     - path
     - text
-third_party_settings:
-  field_group:
-    group_pitch_space:
-      label: 'Pitch Space'
-      weight: 4
-      children:
-        - field_credit
-        - field_link_text
-        - field_position
-      format_type: fieldset
-      format_settings: {  }
-    group_features:
-      label: Features
-      weight: 5
-      children:
-        - field_alternative_url
-        - field_feature_area
-        - field_feature_line
-        - field_feature_weight
-        - field_image_page
-      format_type: fieldset
-      format_settings: {  }
 _core:
   default_config_hash: KSvzyFhdLuxniTsunUnUfpfMmod2l57GibtVjL8ymHM
 id: node.page.default
@@ -76,12 +52,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_caption:
-    weight: 0
-    type: text_textfield
+    weight: 33
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    type: string_textfield
   field_credit:
     weight: 6
     type: text_textfield
@@ -113,13 +89,6 @@ content:
     type: options_select
     settings: {  }
     third_party_settings: {  }
-  field_highlight_text:
-    weight: 3
-    type: text_textfield
-    settings:
-      size: 120
-      placeholder: ''
-    third_party_settings: {  }
   field_image:
     weight: -1
     settings:
@@ -134,11 +103,6 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
-  field_layout:
-    weight: 1
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
   field_link_text:
     weight: 7
     type: text_textfield

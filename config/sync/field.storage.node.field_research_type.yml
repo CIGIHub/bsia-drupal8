@@ -10,7 +10,16 @@ field_name: field_research_type
 entity_type: node
 type: list_string
 settings:
-  allowed_values: {  }
+  allowed_values:
+    -
+      value: 'Research Cluster'
+      label: 'Research Cluster'
+    -
+      value: 'Affiliated Research Project'
+      label: 'Affiliated Research Project'
+    -
+      value: 'Affiliated Centre'
+      label: 'Affiliated Centre'
   allowed_values_function: ''
 module: options
 locked: false

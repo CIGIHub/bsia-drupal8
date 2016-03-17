@@ -1,0 +1,27 @@
+uuid: 3ae2b24b-d90c-46ff-9904-4de500255e25
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.upload
+    - node.type.person
+  module:
+    - file
+id: node.person.upload
+field_name: upload
+entity_type: node
+bundle: person
+label: upload
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  description_field: true
+  file_extensions: 'jpg jpeg gif png txt doc xls pdf ppt pps odt ods odp'
+  max_filesize: 25MB
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

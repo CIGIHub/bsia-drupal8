@@ -1,0 +1,31 @@
+uuid: e8352818-b771-429e-8709-9f87385b13e6
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:a322ba42-0539-4a30-b262-98246355141f'
+  module:
+    - block_content
+    - system
+  theme:
+    - bsia
+id: fellowsdescription
+theme: bsia
+region: content_header
+weight: -17
+provider: null
+plugin: 'block_content:a322ba42-0539-4a30-b262-98246355141f'
+settings:
+  id: 'block_content:a322ba42-0539-4a30-b262-98246355141f'
+  label: 'Fellows Description'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /faculty/bsia-fellows
+    negate: false
+    context_mapping: {  }

@@ -10,7 +10,6 @@ dependencies:
     - field.field.node.person.field_board_order
     - field.field.node.person.field_board_position
     - field.field.node.person.field_caption
-    - field.field.node.person.field_collection_publication
     - field.field.node.person.field_courses
     - field.field.node.person.field_credit
     - field.field.node.person.field_current_student
@@ -48,64 +47,14 @@ dependencies:
     - field.field.node.person.person_type
     - field.field.node.person.program_type
     - field.field.node.person.topics
+    - field.field.node.person.upload
     - image.style.thumbnail
     - node.type.person
   module:
-    - field_collection
-    - field_group
+    - file
     - image
     - path
     - text
-third_party_settings:
-  field_group:
-    group_general:
-      label: 'General information'
-      weight: -2
-      children:
-        - field_board_order
-        - field_board_position
-        - field_courses
-        - field_department
-        - field_education
-        - field_email
-        - field_expertise
-        - field_given_names
-        - field_graduate_title
-        - field_languages
-        - field_linkedin_url
-        - field_office_location
-        - field_person_position
-        - field_phone
-        - field_photo
-        - field_square_image
-        - field_surname
-        - field_twitter_url
-        - field_user_link
-        - field_website
-        - field_year_graduated
-      format_type: fieldset
-      format_settings: {  }
-    group_features:
-      label: Features
-      weight: -1
-      children:
-        - field_alternative_url
-        - field_feature_area
-        - field_feature_line
-        - field_feature_weight
-        - field_image_page
-        - field_youtube_id
-      format_type: fieldset
-      format_settings: {  }
-    group_pitchspace:
-      label: 'Pitch Space'
-      weight: 1
-      children:
-        - field_credit
-        - field_link_text
-        - field_position
-      format_type: fieldset
-      format_settings: {  }
 id: node.person.default
 targetEntityType: node
 bundle: person
@@ -155,18 +104,13 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_collection_publication:
+  field_caption:
     weight: 33
     settings:
-      allow_new: true
-      allow_existing: false
-      match_operator: CONTAINS
-      form_mode: default
-      override_labels: false
-      label_singular: ''
-      label_plural: ''
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: field_collection_complex
+    type: string_textfield
   field_courses:
     weight: 20
     type: text_textfield
@@ -448,5 +392,4 @@ content:
     type: file_generic
     weight: 32
     third_party_settings: {  }
-hidden:
-  field_caption: true
+hidden: {  }

@@ -1,29 +1,12 @@
-/*******   CONNECT BANNER FOR HOMEPAGE    *******/
-
-.connect-banner{
-  background-image:url(../images/connect-banner.png);
-  background-repeat: no-repeat;
-  background-position: right;
-  background-color: $brand-secondary-color;
-  font-size: 34px;
-  a{
-    padding: 26px 0;
-    display: block;
-    color: $link-color;
-  }
-  a:hover{
-    text-decoration: none;
-    color: white;
-  }
-}
-
-@media(min-width: $mobile-bp){
-  background-position: right;
-}
-
 /***********  HOMEPAGE  **************/
 
-.region-homepage{
+.homepage{
+
+  h1{
+    @include hidden;
+    position: absolute;
+  }
+
   h2{
     text-transform: uppercase;
     border-bottom: solid 1px #666;

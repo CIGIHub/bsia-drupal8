@@ -18,18 +18,18 @@
 
   .image, .contact{
     display: table-cell;
-    float: left;
   }
   .image{
     img{
       display: block;
+      float: left;
     }
+    display: inline-block;
     margin-right: 20px;
     border: solid 10px $image-border-color;
   }
   .contact{
     vertical-align: middle;
-    width: 70%;
     text-transform: uppercase;
   }
   .description{
@@ -58,7 +58,15 @@
   .profile{
     margin-bottom: 10px;
     .image{
+      float: left;
       border: solid 5px $image-border-color;
+    }
+    .text{
+      float: left;
+      width: 75%;
+      h2{
+        font-size: 1.2em;
+      }
     }
   }
 }
@@ -70,22 +78,19 @@
 }
 
 #block-exposedformfacultypage-2{
-  #edit-keys--2{
+ 
+  .form-text{
     width: 200px;
     padding: 3px;
     font-size: 14px;
   }
-  #edit-actions--2{
-      @include hidden;
+  .form-actions{
+    @include hidden;
+    position: absolute;
+    margin: 0px;
   }
   .search-description{
     font-style: italic;
-  }
-  .edit-actions{
-    margin: 0px;
-  }
-  #edit-actions--2{
-    position: absolute;
   }
 }
 
@@ -178,9 +183,10 @@ ul.student-list{
 }
 
 .student{
+  margin-right: 10px;
   .student-photo{
     text-align: center;
-    width:95px;
+    width:85px;
   }
   .student-name{
     text-transform: uppercase;

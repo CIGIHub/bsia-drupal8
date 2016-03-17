@@ -10,7 +10,16 @@ field_name: field_feature_area
 entity_type: node
 type: list_string
 settings:
-  allowed_values: {  }
+  allowed_values:
+    -
+      value: 'Pitch Space'
+      label: 'Pitch Space'
+    -
+      value: 'Homepage Listing'
+      label: 'Homepage Listing'
+    -
+      value: 'Faculty/Student Tabs'
+      label: 'Faculty/Student Tabs'
   allowed_values_function: ''
 module: options
 locked: false

@@ -48,6 +48,7 @@ dependencies:
     - field.field.node.person.person_type
     - field.field.node.person.program_type
     - field.field.node.person.topics
+    - field.field.node.person.upload
     - node.type.person
   module:
     - image
@@ -300,3 +301,4 @@ hidden:
   person_type: true
   program_type: true
   topics: true
+  upload: true

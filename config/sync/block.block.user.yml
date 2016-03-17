@@ -1,0 +1,27 @@
+uuid: 04d48f6a-0c55-4fe7-b605-5a97bd3dd51b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - user
+  theme:
+    - seven
+_core:
+  default_config_hash: IItlF4SKHgxduIysVQdvirDJ_v3HGuAviOkidAOJYRE
+id: user
+theme: seven
+region: sidebar_first
+weight: 0
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: ''
+  provider: user
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: /node/38

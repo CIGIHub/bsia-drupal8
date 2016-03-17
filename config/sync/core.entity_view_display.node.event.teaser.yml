@@ -38,189 +38,116 @@ dependencies:
     - node.type.event
   module:
     - datetime
-    - field_group
     - text
     - user
-third_party_settings:
-  field_group:
-    group_attendance:
-      label: Attendance
-      weight: 5
-      children:
-        - field_email_subject
-        - field_event_management
-        - field_invitation
-        - field_rsvp
-      format_type: fieldset
-      format_settings: {  }
-    group_location:
-      label: Location
-      weight: 8
-      children:
-        - field_address_1
-        - field_city
-        - field_country
-        - field_location
-        - field_state_province
-      format_type: fieldset
-      format_settings: {  }
-    group_feature:
-      label: Features
-      weight: 9
-      children:
-        - field_alternative_url
-        - field_feature_area
-        - field_feature_line
-        - field_feature_weight
-        - field_image_page
-      format_type: fieldset
-      format_settings: {  }
-    group_pitchspace:
-      label: 'Pitch Space'
-      weight: 10
-      children:
-        - field_credit
-        - field_link_text
-        - field_position
-      format_type: fieldset
-      format_settings: {  }
-    group_event_recap:
-      label: 'Event Recap'
-      weight: 11
-      children:
-        - field_event_summary
-        - field_event_videos
-        - field_flickr_id
-      format_type: fieldset
-      format_settings: {  }
 id: node.event.teaser
 targetEntityType: node
 bundle: event
 mode: teaser
 content:
-  body:
+  event_series:
+    type: entity_reference_entity_view
+    weight: 8
     label: hidden
-    type: text_summary_or_trimmed
-    weight: 101
     settings:
-      trim_length: 600
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+  event_type:
+    type: entity_reference_label
+    weight: 9
+    label: hidden
+    settings:
+      link: true
     third_party_settings: {  }
   field_address_1:
-    label: above
-    weight: 9
-    type: text_default
-    settings: {  }
+    label: hidden
+    weight: 3
+    type: string
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
   field_city:
-    label: above
-    weight: 10
-    type: text_default
-    settings: {  }
+    label: hidden
+    weight: 4
+    type: string
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
   field_country:
-    label: above
-    weight: 12
-    type: text_default
-    settings: {  }
-    third_party_settings: {  }
-  field_email_subject:
-    label: above
-    weight: 8
-    type: text_default
-    settings: {  }
+    label: hidden
+    weight: 6
+    type: string
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
   field_event_date:
-    label: above
-    weight: 0
+    label: hidden
+    weight: 1
     type: datetime_default
     settings:
-      format_type: fallback
-      timezone_override: ''
+      timezone_override: America/Toronto
+      format_type: timestamp
     third_party_settings: {  }
-  field_event_management:
-    label: above
+  field_feature_line:
+    label: hidden
     weight: 7
     type: text_default
     settings: {  }
     third_party_settings: {  }
-  field_event_summary:
-    label: above
-    weight: 27
-    type: text_default
-    settings: {  }
-    third_party_settings: {  }
-  field_event_videos:
-    label: above
-    weight: 29
-    type: text_default
-    settings: {  }
-    third_party_settings: {  }
-  field_feature_line:
-    label: above
-    weight: 19
-    type: text_default
-    settings: {  }
-    third_party_settings: {  }
-  field_flickr_id:
-    label: above
-    weight: 28
-    type: text_default
-    settings: {  }
-    third_party_settings: {  }
-  field_invitation:
-    label: above
-    weight: 5
-    type: number_integer
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
   field_location:
-    label: above
-    weight: 8
-    type: text_default
-    settings: {  }
-    third_party_settings: {  }
-  field_rsvp:
-    label: above
-    weight: 6
-    type: number_integer
+    label: hidden
+    weight: 2
+    type: string
     settings:
-      thousand_separator: ''
-      prefix_suffix: true
+      link_to_entity: false
     third_party_settings: {  }
   field_short_description:
-    label: above
-    weight: -3
+    label: hidden
+    weight: 0
     type: text_default
     settings: {  }
+    third_party_settings: {  }
+  field_speakers:
+    type: entity_reference_entity_view
+    weight: 11
+    label: above
+    settings:
+      view_mode: default
+      link: false
     third_party_settings: {  }
   field_speakers_unlinked:
+    type: string
+    weight: 10
     label: above
-    weight: 6
-    type: text_default
-    settings: {  }
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
   field_state_province:
-    label: above
-    weight: 11
-    type: text_default
-    settings: {  }
+    label: hidden
+    weight: 5
+    type: string
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
-  links:
-    weight: 100
 hidden:
-  event_series: true
-  event_type: true
+  body: true
   field_alternative_url: true
   field_caption: true
   field_credit: true
+  field_email_subject: true
+  field_event_management: true
+  field_event_summary: true
+  field_event_videos: true
   field_feature_area: true
   field_feature_weight: true
+  field_flickr_id: true
   field_image: true
   field_image_page: true
+  field_invitation: true
   field_link_text: true
   field_position: true
-  field_speakers: true
+  field_rsvp: true
   field_website: true
+  links: true
   upload: true

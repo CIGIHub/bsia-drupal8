@@ -31,6 +31,10 @@
     padding: 0px; }
 
 /* Floats last ".cols-" to the right */
+[class*='col-']:last-of-type {
+  padding-right: 0.625em;
+  float: right; }
+
 .wrapper {
   margin: 0 auto;
   max-width: none !important;
@@ -107,9 +111,7 @@ h1, h2, h3 {
 h1 {
   font-size: 2.0em;
   color: #000;
-  padding: 0.4em 0 0.6em 0;
-  border-bottom: solid 1px #d2d2d2;
-  margin: 0 0 0.6em 0; }
+  border-bottom: solid 1px #d2d2d2; }
 
 h2 {
   font-size: 1.6em;
@@ -209,8 +211,6 @@ article ol.field--ordered-list-style-lower {
     color: #808080; }
 article .field-group {
   margin-bottom: 10px; }
-article .field--name-body {
-  margin: 20px 0; }
 article .field--name-field-short-description {
   margin-top: 10px; }
 article .field--name-topics {
@@ -468,7 +468,7 @@ header {
   border-top: solid 1px #19374f;
   border-bottom: solid 1px #d9dfe3;
   text-transform: uppercase; }
-  #main-menu .cols-6 {
+  #main-menu .col-6 {
     padding-top: 0px;
     padding-bottom: 0px; }
   #main-menu nav ul li {
@@ -610,9 +610,9 @@ footer {
     footer .contact nav ul li {
       padding: 0 5px;
       border-right: solid 1px #666; }
-      footer .contact nav ul li.last {
+      footer .contact nav ul li:last-child {
         border: none; }
-      footer .contact nav ul li.first {
+      footer .contact nav ul li:first-child {
         padding-left: 0px; }
   footer .region-footer-menu ul.menu {
     margin: 0px; }
@@ -647,74 +647,99 @@ footer {
     display: block;
     margin: 0; }
 
-#block-connectwithus {
+/*******   CONNECT BANNER FOR HOMEPAGE    *******/
+.footer-banner {
+  background-image: url(../images/connect-banner.png);
+  background-repeat: no-repeat;
+  background-color: #fed130; }
+  .footer-banner .connect-with-us {
+    font-size: 34px; }
+    .footer-banner .connect-with-us a {
+      padding: 17px 0px;
+      display: block;
+      color: #053b5b; }
+    .footer-banner .connect-with-us a:hover {
+      text-decoration: none;
+      color: white; }
+
+.right-menu .connect-with-us {
   background-image: url(../images/connect-button.png);
   background-color: #fff;
   background-repeat: no-repeat;
-  background-position: right; }
-  #block-connectwithus a {
+  background-position: right;
+  margin-bottom: 10px; }
+  .right-menu .connect-with-us a {
     padding: 30px 20px;
     display: block;
     color: #000;
     font-size: 16px;
     font-weight: bold;
     text-transform: uppercase; }
-  #block-connectwithus a:hover {
+  .right-menu .connect-with-us a:hover {
     text-decoration: none;
     color: white; }
+.right-menu ul.menu:first-child {
+  padding: 10px 0;
+  margin: 0 0 10px 0; }
+.right-menu ul.menu {
+  list-style: none;
+  background: #19374f;
+  text-transform: uppercase;
+  font-size: 13px; }
+  .right-menu ul.menu .menu-item--expanded {
+    list-style-image: none;
+    list-style: none; }
+  .right-menu ul.menu li {
+    padding: 5px 20px; }
+    .right-menu ul.menu li a {
+      color: white; }
+      .right-menu ul.menu li a:hover {
+        text-decoration: underline; }
+      .right-menu ul.menu li a.is-active {
+        color: #ccc; }
+      .right-menu ul.menu li a.is-active:hover {
+        color: white; }
+    .right-menu ul.menu li li {
+      padding: 3px 20px; }
 
-/*******   CONNECT BANNER FOR HOMEPAGE    *******/
-.connect-banner {
-  background-image: url(../images/connect-banner.png);
-  background-repeat: no-repeat;
-  background-position: right;
-  background-color: #fed130;
-  font-size: 34px; }
-  .connect-banner a {
-    padding: 26px 0;
-    display: block;
-    color: #053b5b; }
-  .connect-banner a:hover {
-    text-decoration: none;
-    color: white; }
-
-@media (min-width: 940px) {
-  background-position: right; }
 /***********  HOMEPAGE  **************/
-.region-homepage h2 {
+.homepage h1 {
+  text-indent: -9999px;
+  position: absolute; }
+.homepage h2 {
   text-transform: uppercase;
   border-bottom: solid 1px #666;
   color: #666;
   margin-top: 0px;
   font-size: 1.3em; }
-  .region-homepage h2 a {
+  .homepage h2 a {
     color: #666; }
-    .region-homepage h2 a:hover {
+    .homepage h2 a:hover {
       color: #053b5b;
       text-decoration: none; }
-.region-homepage ul {
+.homepage ul {
   list-style: none;
   padding: 0px; }
-  .region-homepage ul li {
+  .homepage ul li {
     list-style: none;
     list-style-image: none;
     float: left; }
-    .region-homepage ul li.menu-item--expanded ul {
+    .homepage ul li.menu-item--expanded ul {
       display: none; }
-  .region-homepage ul:after {
+  .homepage ul:after {
     content: '';
     display: block;
     clear: both; }
-.region-homepage li {
+.homepage li {
   width: 32%;
   padding: 1em;
   margin: 0 0 0.25em 0.5em; }
-  .region-homepage li .views-field-field-event-date,
-  .region-homepage li .views-field-field-news-date {
+  .homepage li .views-field-field-event-date,
+  .homepage li .views-field-field-news-date {
     font-size: 0.9em;
     color: #666;
     text-transform: uppercase; }
-  .region-homepage li .views-field-title {
+  .homepage li .views-field-title {
     font-size: 1.3em;
     font-weight: bold;
     line-height: 130%;
@@ -746,6 +771,10 @@ footer {
 /******  Gallery  ******/
 #gallery {
   overflow: hidden; }
+  #gallery li {
+    padding: 0px;
+    margin: 0px;
+    width: 100%; }
   #gallery .gallery {
     position: relative; }
   #gallery .box {
@@ -850,16 +879,16 @@ footer {
     line-height: 130%;
     margin-bottom: 10px; }
   .profile .image, .profile .contact {
-    display: table-cell;
-    float: left; }
+    display: table-cell; }
   .profile .image {
+    display: inline-block;
     margin-right: 20px;
     border: solid 10px #ddd; }
     .profile .image img {
-      display: block; }
+      display: block;
+      float: left; }
   .profile .contact {
     vertical-align: middle;
-    width: 70%;
     text-transform: uppercase; }
   .profile .description {
     margin-bottom: 10px; }
@@ -877,7 +906,13 @@ footer {
 .node--view-mode-teaser .profile, .view-content .profile {
   margin-bottom: 10px; }
   .node--view-mode-teaser .profile .image, .view-content .profile .image {
+    float: left;
     border: solid 5px #ddd; }
+  .node--view-mode-teaser .profile .text, .view-content .profile .text {
+    float: left;
+    width: 75%; }
+    .node--view-mode-teaser .profile .text h2, .view-content .profile .text h2 {
+      font-size: 1.2em; }
 
 .view-people .view-header {
   border: 1px solid #d2d2d2;
@@ -888,18 +923,16 @@ footer {
   -moz-border-radius: 3px;
   border-radius: 3px; }
 
-#block-exposedformfacultypage-2 #edit-keys--2 {
+#block-exposedformfacultypage-2 .form-text {
   width: 200px;
   padding: 3px;
   font-size: 14px; }
-#block-exposedformfacultypage-2 #edit-actions--2 {
-  text-indent: -9999px; }
+#block-exposedformfacultypage-2 .form-actions {
+  text-indent: -9999px;
+  position: absolute;
+  margin: 0px; }
 #block-exposedformfacultypage-2 .search-description {
   font-style: italic; }
-#block-exposedformfacultypage-2 .edit-actions {
-  margin: 0px; }
-#block-exposedformfacultypage-2 #edit-actions--2 {
-  position: absolute; }
 
 #block-exposedformstudentspage-2 #edit-keys--2 {
   width: 200px;
@@ -964,27 +997,29 @@ ul.student-list {
   ul.student-list hr {
     margin: 10px 0 5px 0; }
 
-.student .student-photo {
-  text-align: center;
-  width: 95px; }
-.student .student-name {
-  text-transform: uppercase;
-  font-size: 9px;
-  margin: 5px 0; }
-.student .image-wrapper .image {
-  margin: 0 auto;
-  width: 60px;
-  padding: 4px;
-  background: #ddd;
-  height: 58px;
-  cursor: pointer;
-  opacity: 0.8; }
-.student .description {
-  clear: both; }
-.student.unselected-student {
-  opacity: 0.5; }
-.student.unselected-student:hover {
-  opacity: 1.0; }
+.student {
+  margin-right: 10px; }
+  .student .student-photo {
+    text-align: center;
+    width: 85px; }
+  .student .student-name {
+    text-transform: uppercase;
+    font-size: 9px;
+    margin: 5px 0; }
+  .student .image-wrapper .image {
+    margin: 0 auto;
+    width: 60px;
+    padding: 4px;
+    background: #ddd;
+    height: 58px;
+    cursor: pointer;
+    opacity: 0.8; }
+  .student .description {
+    clear: both; }
+  .student.unselected-student {
+    opacity: 0.5; }
+  .student.unselected-student:hover {
+    opacity: 1.0; }
 
 .student-description {
   display: none;

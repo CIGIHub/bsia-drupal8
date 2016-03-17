@@ -11,13 +11,13 @@ dependencies:
     - field.field.node.page.field_feature_area
     - field.field.node.page.field_feature_line
     - field.field.node.page.field_feature_weight
-    - field.field.node.page.field_highlight_text
     - field.field.node.page.field_image
     - field.field.node.page.field_image_page
     - field.field.node.page.field_link_text
     - field.field.node.page.field_position
     - field.field.node.page.field_subtitle
     - field.field.node.page.upload
+    - image.style.page_wide_606_
     - node.type.page
   module:
     - file
@@ -38,21 +38,24 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_caption:
-    label: above
-    weight: 0
-    type: text_default
-    settings: {  }
+    weight: 103
+    label: hidden
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
+    type: string
   field_image:
-    label: above
+    label: hidden
     weight: -1
     type: image
     settings:
-      image_style: ''
+      image_style: page_wide_606_
       image_link: ''
     third_party_settings: {  }
   links:
     weight: 101
+    settings: {  }
+    third_party_settings: {  }
   upload:
     label: hidden
     settings: {  }
@@ -66,9 +69,7 @@ hidden:
   field_feature_area: true
   field_feature_line: true
   field_feature_weight: true
-  field_highlight_text: true
   field_image_page: true
-  field_layout: true
   field_link_text: true
   field_position: true
   field_subtitle: true

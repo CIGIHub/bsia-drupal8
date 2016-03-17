@@ -1,4 +1,4 @@
-uuid: 76ce9430-b4f4-42ee-8200-bf86497c5e03
+uuid: 9c72b856-d7c0-4a9f-bb00-bf9ba755a03f
 langcode: en
 status: true
 dependencies:
@@ -6,8 +6,10 @@ dependencies:
     - system.menu.tools
   module:
     - system
+  theme:
+    - seven
 id: user_1
-theme: null
+theme: seven
 region: sidebar_first
 weight: 0
 provider: null

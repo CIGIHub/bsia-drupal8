@@ -40,6 +40,15 @@
          {% if content.field_event_date %}
           {{ content.field_event_date }}
         {% endif %}
+        {% if speakers_string %}
+          <div class="speakers">Speakers: {{ speakers_string|raw }}</div>
+        {% endif %}
+        {% if content.event_series %}
+          <div class="event-series">{{ content.event_series }}</div>
+        {% endif %}
+        {% if content.event_type %}
+          <div class="event-type">{{ content.event_type }}</div>
+        {% endif %}
         <div class="location">
           {% if content.field_location %}
             {{ content.field_location }}

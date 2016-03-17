@@ -83,3 +83,70 @@ function code_driven_devel_override_uuids($config_name) {
     }
   }
 }
+
+/**
+ * Override all custom block UUIDs with the configured UUIDs for this website.
+ *
+ * @param $config_name
+ *   The name of the configuration directory to use, for example 'sync'.
+ */
+function code_driven_devel_override_block_uuids($config_name) {
+
+  // We need to parse all uuids from deploy dir and override local uuids
+  $dir = \Drupal::root() . '/' . config_get_config_directory($config_name) . '/';
+  $files = scandir($dir);
+
+  \Drupal\Core\Database\Database::setActiveConnection();
+  $connection = \Drupal\Core\Database\Database::getConnection();
+
+  $logger = \Drupal::logger('code_driven_devel');
+
+  // Gather all 'block_content' blocks; store the label and uuid
+  $labelled_blocks_to_uuids = array();
+  $labels = array();
+  foreach($files as $file) {
+    $ext = substr($file, -4);
+    if ($ext == '.yml') {
+      $info = Yaml::decode(file_get_contents($dir . $file));
+      $name = substr($file, 0, -4);
+      $isblock = substr($name, 0, 5);
+      if($isblock == 'block') {
+        if(is_array($info) && array_key_exists('settings', $info)) {
+          $id = $info['settings']['id'];
+          $id_parts = explode(':', $id);
+          if ($id_parts[0] == 'block_content') {
+            $uuid = $id_parts[1];
+            $label = $info['settings']['label'];
+            if (strlen($label) > 0) {
+              $labelled_blocks_to_uuids[$label] = $uuid;
+              array_push($labels, $label);
+            }
+          }
+        }
+      }
+    }
+  }
+  $logger->notice(t("Found " . count($labels) . " block_content config YML that may need to have their UUIDs synched..."));
+  var_dump($labelled_blocks_to_uuids);
+  var_dump($labels);
+  // Fetch block IDs using the block 'label'
+  $results = $connection->select('block_content_field_data', 't')
+    ->fields('t')
+    ->condition('info', $labels, 'IN')
+    ->execute();
+  // Update the block 'uuid' based on the value expected in the config YMLs
+  if ($results) {
+    foreach ($results as $record) {
+      $logger->notice(t("Updating UUID for block_content with id = " . $record->id . "..."));
+      var_dump($record->id);
+      $uuid = $labelled_blocks_to_uuids[$record->info];
+      $connection->update('block_content')
+        ->fields(array(
+            'uuid' => $uuid,
+            ))
+        ->condition('id', $record->id, '=')
+        ->execute();
+      $logger->notice(t("UUID for block_content with id = " . $record->id . " updated to " . $uuid));
+    }
+  }
+}

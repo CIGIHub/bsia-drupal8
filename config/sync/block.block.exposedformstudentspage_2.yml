@@ -1,0 +1,29 @@
+uuid: 84eacb97-3b39-4e31-830e-140b6e154947
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.students
+  module:
+    - system
+    - views
+  theme:
+    - bsia
+id: exposedformstudentspage_2
+theme: bsia
+region: content_header
+weight: -15
+provider: null
+plugin: 'views_exposed_filter_block:students-page_2'
+settings:
+  id: 'views_exposed_filter_block:students-page_2'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: '/current-students*'
+    negate: false
+    context_mapping: {  }

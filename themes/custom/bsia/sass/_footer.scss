@@ -30,10 +30,10 @@ footer {
       ul li{
         padding: 0 5px;
         border-right: solid 1px $footer-link-color;
-        &.last{
+        &:last-child{
           border: none;
         }
-        &.first{
+        &:first-child{
           padding-left: 0px;
         }
       }
