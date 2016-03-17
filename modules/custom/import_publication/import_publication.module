@@ -7,7 +7,7 @@ function import_publication_install() {
   	\Drupal\Core\Database\Database::setActiveConnection();
 	$connection = \Drupal\Core\Database\Database::getConnection();
 
-	$results = $connection->query('select bundle, entity_id, revision_id, langcode, delta, field_publications_value from node__field_publications limit 20 offset 20;')->fetchAll();
+	$results = $connection->query('select bundle, entity_id, revision_id, langcode, delta, field_publications_value from node__field_publications;')->fetchAll();
 
 	$logger = \Drupal::logger('import_publication');
 	//$logger->notice(t("Query Results:" . print_r($results, true)));
