@@ -3,9 +3,9 @@ name: 'Balsillie School of International Affairs'
 mail: stsoi@cigionline.org
 slogan: 'A centre for advanced research and teaching in a global network of scholars, and students and policy makers'
 page:
-  403: /node/121
-  404: /node/121
-  front: /home
+  403: /
+  404: /page-not-found
+  front: /node
 admin_compact_mode: false
 weight_select_max: 100
 langcode: en

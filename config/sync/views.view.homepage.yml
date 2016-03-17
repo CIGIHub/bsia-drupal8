@@ -1710,7 +1710,7 @@ display:
           field_api_classes: false
           plugin_id: field
       display_description: ''
-      title: 'The Balsillie School of International Affairs'
+      title: ''
     cache_metadata:
       max-age: -1
       contexts:

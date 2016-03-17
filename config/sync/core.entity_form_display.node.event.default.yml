@@ -75,49 +75,42 @@ content:
     third_party_settings: {  }
   field_address_1:
     weight: 9
-    type: string_textfield
+    type: text_textfield
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
   field_alternative_url:
     weight: 21
-    type: string_textfield
+    type: text_textfield
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_caption:
-    weight: 33
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
   field_city:
     weight: 10
-    type: string_textfield
+    type: text_textfield
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
   field_country:
     weight: 12
-    type: string_textfield
+    type: text_textfield
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
   field_credit:
     weight: 26
-    type: string_textfield
+    type: text_textfield
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
   field_email_subject:
     weight: 8
-    type: string_textfield
+    type: text_textfield
     settings:
       size: 60
       placeholder: ''
@@ -129,7 +122,7 @@ content:
     third_party_settings: {  }
   field_event_management:
     weight: 7
-    type: string_textfield
+    type: text_textfield
     settings:
       size: 60
       placeholder: ''
@@ -143,7 +136,7 @@ content:
     type: text_textarea
   field_event_videos:
     weight: 29
-    type: string_textfield
+    type: text_textfield
     settings:
       size: 60
       placeholder: ''
@@ -167,7 +160,7 @@ content:
     third_party_settings: {  }
   field_flickr_id:
     weight: 28
-    type: string_textfield
+    type: text_textfield
     settings:
       size: 60
       placeholder: ''
@@ -194,14 +187,14 @@ content:
     third_party_settings: {  }
   field_link_text:
     weight: 24
-    type: string_textfield
+    type: text_textfield
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
   field_location:
     weight: 8
-    type: string_textfield
+    type: text_textfield
     settings:
       size: 60
       placeholder: ''
@@ -231,21 +224,21 @@ content:
     third_party_settings: {  }
   field_speakers_unlinked:
     weight: 6
-    type: string_textfield
+    type: text_textfield
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
   field_state_province:
     weight: 11
-    type: string_textfield
+    type: text_textfield
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
   field_website:
     weight: 4
-    type: string_textfield
+    type: text_textfield
     settings:
       size: 60
       placeholder: ''
@@ -288,4 +281,5 @@ content:
     type: file_generic
     weight: 32
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_caption: true

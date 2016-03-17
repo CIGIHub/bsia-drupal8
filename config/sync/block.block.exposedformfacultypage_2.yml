@@ -5,14 +5,13 @@ dependencies:
   config:
     - views.view.faculty
   module:
-    - system
     - views
   theme:
     - bsia
 id: exposedformfacultypage_2
 theme: bsia
 region: content_header
-weight: -13
+weight: -11
 provider: null
 plugin: 'views_exposed_filter_block:faculty-page_2'
 settings:
@@ -21,9 +20,4 @@ settings:
   provider: views
   label_display: visible
   views_label: ''
-visibility:
-  request_path:
-    id: request_path
-    pages: "/faculty\r\n/faculty/search*"
-    negate: false
-    context_mapping: {  }
+visibility: {  }

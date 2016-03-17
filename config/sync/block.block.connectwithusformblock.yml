@@ -2,14 +2,17 @@ uuid: d9fad736-f971-421f-ab03-3b69ea98c5fb
 langcode: en
 status: true
 dependencies:
+  content:
+    - 'block_content:basic:93e3985e-7afd-4353-8500-0f3078e5cac0'
   module:
+    - block_content
     - system
   theme:
     - bsia
 id: connectwithusformblock
 theme: bsia
 region: content
-weight: -19
+weight: null
 provider: null
 plugin: 'block_content:93e3985e-7afd-4353-8500-0f3078e5cac0'
 settings:

@@ -51,13 +51,6 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_caption:
-    weight: 33
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
   field_credit:
     weight: 16
     type: text_textfield
@@ -163,4 +156,5 @@ content:
     type: file_generic
     weight: 32
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_caption: true

@@ -1,4 +1,4 @@
-uuid: 8b5d07b3-50ad-407f-b200-c743329ce4f8
+uuid: 1c390b65-9d29-4b09-a831-49f2db388a12
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ id: node.person.field_caption
 field_name: field_caption
 entity_type: node
 bundle: person
-label: field_caption
+label: 'Image Caption'
 description: ''
 required: false
 translatable: true

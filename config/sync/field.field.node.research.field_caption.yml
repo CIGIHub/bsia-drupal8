@@ -1,4 +1,4 @@
-uuid: c9b86b09-b73e-4787-9d00-d4515eccb571
+uuid: 9396a072-e621-40c4-a400-db40f5e9bd9e
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ id: node.research.field_caption
 field_name: field_caption
 entity_type: node
 bundle: research
-label: field_caption
+label: 'Image Caption'
 description: ''
 required: false
 translatable: true

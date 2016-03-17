@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.person.field_board_order
     - field.field.node.person.field_board_position
     - field.field.node.person.field_caption
+    - field.field.node.person.field_collection_publication
     - field.field.node.person.field_courses
     - field.field.node.person.field_credit
     - field.field.node.person.field_current_student
@@ -48,11 +49,8 @@ dependencies:
     - field.field.node.person.person_type
     - field.field.node.person.program_type
     - field.field.node.person.topics
-    - field.field.node.person.upload
-    - image.style.square_100x100
     - node.type.person
   module:
-    - image
     - text
     - user
 id: node.person.teaser
@@ -60,123 +58,135 @@ targetEntityType: node
 bundle: person
 mode: teaser
 content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  field_archived:
+    label: above
+    weight: -3
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+  field_board_order:
+    label: above
+    weight: 9
+    type: number_integer
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
   field_board_position:
-    label: hidden
-    weight: 1
-    type: string
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-  field_department:
-    type: string
-    weight: 11
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-  field_email:
-    type: string
+    label: above
     weight: 8
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+  field_courses:
+    label: above
+    weight: 20
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+  field_education:
     label: hidden
-    settings:
-      link_to_entity: false
+    weight: 19
+    type: text_default
+    settings: {  }
     third_party_settings: {  }
   field_feature_line:
-    label: hidden
+    label: above
+    weight: -1
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+  field_graduate_title:
+    label: above
+    weight: 24
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+  field_languages:
+    label: above
+    weight: 21
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+  field_linkedin_url:
+    label: above
+    weight: 17
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+  field_quote:
+    label: above
     weight: 0
     type: text_default
     settings: {  }
     third_party_settings: {  }
-  field_person_position:
-    type: string
-    weight: 2
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-  field_phone:
-    type: string
-    weight: 9
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-  field_photo:
-    type: image
-    weight: 6
-    label: hidden
-    settings:
-      image_style: square_100x100
-      image_link: ''
-    third_party_settings: {  }
-  field_short_bio:
+  field_research_focus:
+    label: above
+    weight: 3
     type: text_default
-    weight: 7
-    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_testimonial:
+    label: above
+    weight: 6
+    type: text_default
     settings: {  }
     third_party_settings: {  }
   field_twitter_url:
-    label: hidden
-    weight: 3
-    type: string
-    settings:
-      link_to_entity: false
+    label: above
+    weight: 16
+    type: text_default
+    settings: {  }
     third_party_settings: {  }
   field_year_graduated:
-    label: hidden
-    weight: 4
-    type: string
-    settings:
-      link_to_entity: false
+    label: above
+    weight: 23
+    type: text_default
+    settings: {  }
     third_party_settings: {  }
-  person_type:
-    type: entity_reference_entity_view
-    weight: 10
-    label: hidden
-    settings:
-      view_mode: default
-      link: false
+  field_youtube_id:
+    label: above
+    weight: 2
+    type: text_default
+    settings: {  }
     third_party_settings: {  }
-  program_type:
-    type: entity_reference_entity_view
-    weight: 5
-    label: hidden
-    settings:
-      view_mode: default
-      link: false
-    third_party_settings: {  }
+  links:
+    weight: 100
 hidden:
-  body: true
   field_alternative_url: true
-  field_archived: true
   field_awards: true
-  field_board_order: true
   field_caption: true
-  field_courses: true
+  field_collection_publication: true
   field_credit: true
   field_current_student: true
-  field_education: true
+  field_department: true
+  field_email: true
   field_expertise: true
   field_feature_area: true
   field_feature_weight: true
   field_given_names: true
-  field_graduate_title: true
   field_image_page: true
-  field_languages: true
   field_link_text: true
-  field_linkedin_url: true
   field_office_location: true
+  field_person_position: true
+  field_phone: true
+  field_photo: true
   field_position: true
   field_publications: true
-  field_quote: true
-  field_research_focus: true
+  field_short_bio: true
   field_square_image: true
   field_subtitle: true
   field_surname: true
-  field_testimonial: true
   field_user_link: true
   field_website: true
-  field_youtube_id: true
-  links: true
+  person_type: true
+  program_type: true
   topics: true
   upload: true

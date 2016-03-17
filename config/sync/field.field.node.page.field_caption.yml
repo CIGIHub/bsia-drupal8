@@ -1,4 +1,4 @@
-uuid: c6464060-ad41-4af4-ad02-2caa065812f1
+uuid: 5ddcbea1-60cc-4d47-8455-8546ab528444
 langcode: en
 status: true
 dependencies:
@@ -9,8 +9,8 @@ id: node.page.field_caption
 field_name: field_caption
 entity_type: node
 bundle: page
-label: field_caption
-description: ''
+label: 'Image Caption'
+description: 'If an image has been uploaded add a photo caption/credit'
 required: false
 translatable: true
 default_value: {  }

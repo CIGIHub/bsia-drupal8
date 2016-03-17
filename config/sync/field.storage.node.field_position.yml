@@ -10,19 +10,7 @@ field_name: field_position
 entity_type: node
 type: list_string
 settings:
-  allowed_values:
-    -
-      value: Top-Left
-      label: Top-Left
-    -
-      value: Top-Right
-      label: Top-Right
-    -
-      value: Bottom-Left
-      label: Bottom-Left
-    -
-      value: Bottom-Right
-      label: Bottom-Right
+  allowed_values: {  }
   allowed_values_function: ''
 module: options
 locked: false

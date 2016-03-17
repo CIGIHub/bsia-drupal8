@@ -1,6 +1,6 @@
 uuid: 1d45c955-d493-4acf-a900-a9ac29dbf97f
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - views.view.topics
@@ -10,8 +10,8 @@ dependencies:
     - bsia
 id: views_block__topics_block_1
 theme: bsia
-region: '-1'
-weight: -9
+region: right_sidebar
+weight: null
 provider: null
 plugin: 'views_block:topics-block_1'
 settings:

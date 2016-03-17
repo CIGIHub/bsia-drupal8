@@ -11,7 +11,7 @@ dependencies:
 id: menu_4
 theme: bsia
 region: main_menu
-weight: -17
+weight: -51
 provider: null
 plugin: 'system_menu_block:menu-main'
 settings:

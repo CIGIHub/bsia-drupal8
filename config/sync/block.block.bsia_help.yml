@@ -11,7 +11,7 @@ _core:
 id: bsia_help
 theme: bsia
 region: '-1'
-weight: -16
+weight: -5
 provider: null
 plugin: help_block
 settings:
