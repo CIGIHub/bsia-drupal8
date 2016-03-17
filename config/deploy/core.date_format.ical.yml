@@ -1,8 +1,0 @@
-uuid: 8e6a57c6-a604-4156-a62c-44e53bb31e91
-langcode: en
-status: true
-dependencies: {  }
-id: ical
-label: ical
-locked: false
-pattern: Ymd\THis

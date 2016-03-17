@@ -1,9 +1,0 @@
-uuid: 73141eb9-63d1-4415-a208-8b622b278d31
-langcode: en
-status: true
-dependencies: {  }
-name: Topics
-vid: topics
-description: 'General topic list'
-hierarchy: 1
-weight: 0
