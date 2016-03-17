@@ -3,6 +3,6 @@ langcode: en
 status: true
 dependencies: {  }
 id: menu-main
-label: Main
+label: 'BSIA Main'
 description: ''
 locked: false
