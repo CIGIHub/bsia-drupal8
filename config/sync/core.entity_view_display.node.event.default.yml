@@ -48,132 +48,146 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 19
     settings: {  }
     third_party_settings: {  }
   event_series:
     label: hidden
     type: entity_reference_label
-    weight: 20
+    weight: 13
     settings:
       link: true
     third_party_settings: {  }
   event_type:
-    label: hidden
+    label: inline
     type: entity_reference_label
-    weight: 20
+    weight: 14
     settings:
       link: true
     third_party_settings: {  }
   field_address_1:
-    label: above
-    weight: 9
-    type: text_default
-    settings: {  }
+    label: hidden
+    weight: 8
+    type: string
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
   field_city:
-    label: above
-    weight: 10
-    type: text_default
-    settings: {  }
+    label: hidden
+    weight: 9
+    type: string
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
   field_country:
-    label: above
-    weight: 12
-    type: text_default
-    settings: {  }
+    label: hidden
+    weight: 11
+    type: string
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
   field_email_subject:
-    label: above
-    weight: 8
-    type: text_default
-    settings: {  }
+    label: hidden
+    weight: 7
+    type: string
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
   field_event_date:
-    label: above
-    weight: 0
+    label: hidden
+    weight: 1
     type: datetime_default
     settings:
-      format_type: fallback
-      timezone_override: ''
+      timezone_override: America/Toronto
+      format_type: timestamp
     third_party_settings: {  }
   field_event_management:
-    label: above
-    weight: 7
-    type: text_default
-    settings: {  }
+    label: hidden
+    weight: 5
+    type: string
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
   field_event_summary:
     label: above
-    weight: 27
+    weight: 15
     type: text_default
     settings: {  }
     third_party_settings: {  }
   field_event_videos:
-    label: above
-    weight: 29
-    type: text_default
-    settings: {  }
+    label: hidden
+    weight: 17
+    type: string
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
   field_feature_line:
-    label: above
-    weight: 19
+    label: hidden
+    weight: 12
     type: text_default
     settings: {  }
     third_party_settings: {  }
   field_flickr_id:
-    label: above
-    weight: 28
-    type: text_default
-    settings: {  }
+    label: hidden
+    weight: 16
+    type: string
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
   field_invitation:
-    label: above
-    weight: 5
-    type: number_integer
+    label: hidden
+    weight: 2
+    type: boolean
     settings:
-      thousand_separator: ''
-      prefix_suffix: true
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
     third_party_settings: {  }
   field_location:
-    label: above
-    weight: 8
-    type: text_default
-    settings: {  }
+    label: hidden
+    weight: 6
+    type: string
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
   field_rsvp:
-    label: above
-    weight: 6
-    type: number_integer
+    label: hidden
+    weight: 4
+    type: boolean
     settings:
-      thousand_separator: ''
-      prefix_suffix: true
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
     third_party_settings: {  }
   field_short_description:
-    label: above
-    weight: -3
+    label: hidden
+    weight: 0
     type: text_default
     settings: {  }
     third_party_settings: {  }
   field_speakers_unlinked:
-    label: above
-    weight: 6
-    type: text_default
-    settings: {  }
+    label: hidden
+    weight: 3
+    type: string
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
   field_state_province:
-    label: above
-    weight: 11
-    type: text_default
-    settings: {  }
+    label: hidden
+    weight: 10
+    type: string
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
   links:
-    weight: 100
+    weight: 18
+    settings: {  }
+    third_party_settings: {  }
   upload:
     label: hidden
     settings: {  }
     type: file_default
-    weight: 102
+    weight: 20
     third_party_settings: {  }
 hidden:
   field_alternative_url: true
