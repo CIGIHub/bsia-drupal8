@@ -22,9 +22,11 @@ dependencies:
     - field.field.node.research.field_speakers_unlinked
     - field.field.node.research.field_square_image
     - field.field.node.research.field_website
+    - field.field.node.research.upload
     - image.style.thumbnail
     - node.type.research
   module:
+    - file
     - image
     - path
     - text
@@ -53,6 +55,13 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_caption:
+    weight: 33
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
   field_credit:
     weight: 13
     type: text_textfield
@@ -192,5 +201,4 @@ content:
     type: file_generic
     weight: 32
     third_party_settings: {  }
-hidden:
-  field_caption: true
+hidden: {  }

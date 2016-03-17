@@ -1,6 +1,6 @@
 uuid: 37f87a9d-57f6-4f0b-a41c-28f8fa87a030
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - views.view.homepage
@@ -11,8 +11,8 @@ dependencies:
     - bsia
 id: views_block__homepage_block_2
 theme: bsia
-region: '-1'
-weight: -11
+region: content
+weight: -13
 provider: null
 plugin: 'views_block:homepage-block_2'
 settings:

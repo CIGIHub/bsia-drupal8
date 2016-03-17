@@ -1,4 +1,4 @@
-uuid: c6f6e380-a7fc-4523-8d03-03d045452fc8
+uuid: 17327a2d-33e8-48b5-9e19-255523de68cb
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ id: node.blog.field_caption
 field_name: field_caption
 entity_type: node
 bundle: blog
-label: 'Image Caption'
+label: field_caption
 description: ''
 required: false
 translatable: true

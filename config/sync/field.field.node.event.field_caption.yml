@@ -1,4 +1,4 @@
-uuid: 95493c0c-21f7-40ac-b400-e95a1d214e3e
+uuid: 20cd9581-d87c-4ca1-bf08-8cb2533dc5c4
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ id: node.event.field_caption
 field_name: field_caption
 entity_type: node
 bundle: event
-label: 'Image Caption'
+label: field_caption
 description: ''
 required: false
 translatable: true
