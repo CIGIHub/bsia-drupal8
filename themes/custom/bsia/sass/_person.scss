@@ -18,18 +18,18 @@
 
   .image, .contact{
     display: table-cell;
-    float: left;
   }
   .image{
     img{
       display: block;
+      float: left;
     }
+    display: inline-block;
     margin-right: 20px;
     border: solid 10px $image-border-color;
   }
   .contact{
     vertical-align: middle;
-    width: 70%;
     text-transform: uppercase;
   }
   .description{
@@ -58,7 +58,15 @@
   .profile{
     margin-bottom: 10px;
     .image{
+      float: left;
       border: solid 5px $image-border-color;
+    }
+    .text{
+      float: left;
+      width: 75%;
+      h2{
+        font-size: 1.2em;
+      }
     }
   }
 }

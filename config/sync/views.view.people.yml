@@ -8,14 +8,13 @@ dependencies:
     - node.type.person
     - taxonomy.vocabulary.person_type
   content:
-    - 'block_content:basic:b61a16d3-01a6-48bc-bb16-22d8ece93117'
-    - 'taxonomy_term:person_type:292b3532-49ef-4371-8900-aac125a84a9c'
-    - 'taxonomy_term:person_type:39ffea33-2157-4855-9900-bdd928217816'
-    - 'taxonomy_term:person_type:4d8ec547-05a6-43a8-8904-4ac13b3b102b'
-    - 'taxonomy_term:person_type:6ddb9f8c-7ae1-45ed-9700-b1e1f0bd21a7'
-    - 'taxonomy_term:person_type:a379d35a-49d0-4bd3-9149-737c40244b85'
-    - 'taxonomy_term:person_type:afb87cea-bbb3-44eb-ac00-cb6c18736c79'
-    - 'taxonomy_term:person_type:d2d490b3-2e99-49fd-8148-725019989c72'
+    - 'taxonomy_term:person_type:1082a847-9b61-4353-8437-5524d501926f'
+    - 'taxonomy_term:person_type:3667eee0-4e09-4550-8300-0f728de8c108'
+    - 'taxonomy_term:person_type:434545d8-e80f-4a7e-8000-c885a22f647a'
+    - 'taxonomy_term:person_type:5717afd4-4bce-4b7c-8e00-d20edb84dabc'
+    - 'taxonomy_term:person_type:71843286-49e6-48d6-9809-9b3d9373358f'
+    - 'taxonomy_term:person_type:b36efbeb-38df-43dc-9719-2577b15ddf32'
+    - 'taxonomy_term:person_type:c16654e2-4fd0-49e1-bc00-a27bf7db8d71'
   module:
     - node
     - taxonomy
@@ -203,9 +202,26 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
-      sorts: {  }
+      sorts:
+        field_surname_value:
+          id: field_surname_value
+          table: node__field_surname
+          field: field_surname_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
       title: 'Staff Listing'
-      header: {  }
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          plugin_id: text
       footer: {  }
       empty: {  }
       relationships: {  }

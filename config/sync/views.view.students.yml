@@ -14,11 +14,11 @@ dependencies:
     - taxonomy.vocabulary.program_type
     - taxonomy.vocabulary.topics
   content:
-    - 'taxonomy_term:person_type:b6a2dc64-b7a7-4809-9800-c22d70164441'
-    - 'taxonomy_term:person_type:c288b6ec-5746-4297-9100-0aabdb117eda'
-    - 'taxonomy_term:program_type:2c57b747-6220-40de-b352-827e5daec884'
-    - 'taxonomy_term:program_type:c9dbbb71-d6f3-4e00-b904-4a98bf689def'
-    - 'taxonomy_term:program_type:f20429e8-78be-4b44-8f00-bbeee348bbba'
+    - 'taxonomy_term:person_type:38ab0742-c476-44b0-9003-3f5162f2c7ee'
+    - 'taxonomy_term:person_type:56949438-8454-49e8-bb58-88655d8ae4ca'
+    - 'taxonomy_term:program_type:50c07001-4ad0-4685-9d07-7acd8d07caf3'
+    - 'taxonomy_term:program_type:8f47b64d-9ebd-4aa7-9f09-09ba6df9dbc4'
+    - 'taxonomy_term:program_type:e1ed3a57-c071-42db-860f-15683561347e'
   module:
     - image
     - node
@@ -525,7 +525,19 @@ display:
           hierarchy: false
           error_message: true
           plugin_id: taxonomy_index_tid
-      sorts: {  }
+      sorts:
+        field_surname_value:
+          id: field_surname_value
+          table: node__field_surname
+          field: field_surname_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
       header: {  }
       footer: {  }
       empty: {  }

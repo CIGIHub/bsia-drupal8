@@ -879,16 +879,16 @@ footer {
     line-height: 130%;
     margin-bottom: 10px; }
   .profile .image, .profile .contact {
-    display: table-cell;
-    float: left; }
+    display: table-cell; }
   .profile .image {
+    display: inline-block;
     margin-right: 20px;
     border: solid 10px #ddd; }
     .profile .image img {
-      display: block; }
+      display: block;
+      float: left; }
   .profile .contact {
     vertical-align: middle;
-    width: 70%;
     text-transform: uppercase; }
   .profile .description {
     margin-bottom: 10px; }
@@ -906,7 +906,13 @@ footer {
 .node--view-mode-teaser .profile, .view-content .profile {
   margin-bottom: 10px; }
   .node--view-mode-teaser .profile .image, .view-content .profile .image {
+    float: left;
     border: solid 5px #ddd; }
+  .node--view-mode-teaser .profile .text, .view-content .profile .text {
+    float: left;
+    width: 75%; }
+    .node--view-mode-teaser .profile .text h2, .view-content .profile .text h2 {
+      font-size: 1.2em; }
 
 .view-people .view-header {
   border: 1px solid #d2d2d2;
