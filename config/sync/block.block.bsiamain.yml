@@ -1,0 +1,29 @@
+uuid: 68eabd3c-4cb5-46e9-8200-b4edadb94189
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.menu-main
+  module:
+    - system
+  theme:
+    - bsia
+id: bsiamain
+theme: bsia
+region: right_menu
+weight: -19
+provider: null
+plugin: 'system_menu_block:menu-main'
+settings:
+  id: 'system_menu_block:menu-main'
+  label: 'BSIA Main'
+  provider: system
+  label_display: visible
+  level: 2
+  depth: 3
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

@@ -1,0 +1,8 @@
+uuid: 138e429d-0cb5-4488-8501-1cacf5e79984
+langcode: en
+status: true
+dependencies: {  }
+id: embedded_blocks
+label: 'Embedded Blocks'
+revision: 0
+description: ''
