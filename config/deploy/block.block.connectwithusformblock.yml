@@ -1,0 +1,31 @@
+uuid: d9fad736-f971-421f-ab03-3b69ea98c5fb
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:93e3985e-7afd-4353-8500-0f3078e5cac0'
+  module:
+    - block_content
+    - system
+  theme:
+    - bsia
+id: connectwithusformblock
+theme: bsia
+region: content
+weight: null
+provider: null
+plugin: 'block_content:93e3985e-7afd-4353-8500-0f3078e5cac0'
+settings:
+  id: 'block_content:93e3985e-7afd-4353-8500-0f3078e5cac0'
+  label: 'Connect With Us Form Block'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /connect-with-us
+    negate: false
+    context_mapping: {  }

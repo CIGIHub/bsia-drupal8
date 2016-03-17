@@ -1,0 +1,30 @@
+uuid: 50d013bf-d0c2-4586-9b00-ad7f1aa6c69f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:b025a1f0-8c0b-45b5-bb00-a54b38522916'
+  module:
+    - block_content
+    - system
+  theme:
+    - bsia
+id: block_18
+theme: bsia
+region: content
+weight: -41
+provider: null
+plugin: 'block_content:b025a1f0-8c0b-45b5-bb00-a54b38522916'
+settings:
+  id: 'block_content:b025a1f0-8c0b-45b5-bb00-a54b38522916'
+  label: ''
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/connect-with-us\n/degree-programs"

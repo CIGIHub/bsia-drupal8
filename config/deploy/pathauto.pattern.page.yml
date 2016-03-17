@@ -1,0 +1,23 @@
+uuid: f674c77d-382e-40aa-8200-e2aea0d654fb
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - node
+id: page
+label: Page
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  9506fb4e-e9e0-404a-a904-4c437f083da5:
+    id: node_type
+    bundles:
+      page: page
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 9506fb4e-e9e0-404a-a904-4c437f083da5
+selection_logic: and
+weight: -5
+relationships: {  }

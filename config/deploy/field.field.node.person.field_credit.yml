@@ -1,0 +1,19 @@
+uuid: 23336b1c-e72c-4824-a604-4e99f1acf15d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_credit
+    - node.type.person
+id: node.person.field_credit
+field_name: field_credit
+entity_type: node
+bundle: person
+label: 'Image Credit'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

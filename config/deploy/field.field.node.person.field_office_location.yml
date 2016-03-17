@@ -1,0 +1,19 @@
+uuid: a1d0ac35-0709-460b-b15c-92f586865887
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_office_location
+    - node.type.person
+id: node.person.field_office_location
+field_name: field_office_location
+entity_type: node
+bundle: person
+label: 'Office Location'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

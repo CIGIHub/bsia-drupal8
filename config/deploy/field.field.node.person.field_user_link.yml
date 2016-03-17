@@ -1,0 +1,25 @@
+uuid: 88c7cd26-e0fe-46d0-a120-32274e905a5b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_user_link
+    - node.type.person
+id: node.person.field_user_link
+field_name: field_user_link
+entity_type: node
+bundle: person
+label: 'User Link'
+description: 'Select the system account that this Person should be linked to.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: false
+    filter:
+      type: _none
+    target_bundles: null
+field_type: entity_reference

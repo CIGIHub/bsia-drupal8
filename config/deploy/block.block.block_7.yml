@@ -1,0 +1,30 @@
+uuid: 52497ef5-ac46-49f3-8853-83bfe1b47e9b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:e28853fd-e2f0-432c-9923-35af2b3faa24'
+  module:
+    - block_content
+    - system
+  theme:
+    - bsia
+id: block_7
+theme: bsia
+region: content
+weight: -56
+provider: null
+plugin: 'block_content:e28853fd-e2f0-432c-9923-35af2b3faa24'
+settings:
+  id: 'block_content:e28853fd-e2f0-432c-9923-35af2b3faa24'
+  label: ''
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/publications*'

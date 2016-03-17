@@ -1,0 +1,21 @@
+uuid: efd70788-f5f6-4f9c-a960-966f6d7e2ef5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_feature_line
+    - node.type.person
+  module:
+    - text
+id: node.person.field_feature_line
+field_name: field_feature_line
+entity_type: node
+bundle: person
+label: 'Feature Line'
+description: 'Sentence to be displayed on the homepage.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

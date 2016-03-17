@@ -1,0 +1,22 @@
+uuid: dec9ac2a-34e7-4000-8e00-df86077235a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.menu-footer
+  module:
+    - system
+id: menu
+theme: null
+region: footer
+weight: -9
+provider: null
+plugin: 'system_menu_block:menu-footer'
+settings:
+  id: 'system_menu_block:menu-footer'
+  label: ''
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

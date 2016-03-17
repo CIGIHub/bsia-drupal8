@@ -1,0 +1,19 @@
+uuid: 77bb1b25-68ad-47e2-9106-6ab98047a768
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_publication_source
+    - node.type.external_publication
+id: node.external_publication.field_publication_source
+field_name: field_publication_source
+entity_type: node
+bundle: external_publication
+label: 'Publication source'
+description: 'Source of publication (journal/book etc)'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,21 @@
+uuid: 49f5931b-f068-4e9e-a704-4b6bd0b37267
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_feature_line
+    - node.type.page
+  module:
+    - text
+id: node.page.field_feature_line
+field_name: field_feature_line
+entity_type: node
+bundle: page
+label: 'Feature Line'
+description: 'Sentence to be displayed on the homepage. Allowed HTML tags: b, em, strong, sub.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

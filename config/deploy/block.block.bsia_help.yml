@@ -1,0 +1,22 @@
+uuid: 40855fa4-f828-49d3-ba07-7b1c3df7ab82
+langcode: en
+status: false
+dependencies:
+  module:
+    - help
+  theme:
+    - bsia
+_core:
+  default_config_hash: NU5A_49mwLHfs5xFzMFrZ850w9pgUolxMS9NNF3vv4c
+id: bsia_help
+theme: bsia
+region: '-1'
+weight: -5
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,11 @@
+uuid: 3cda2b3e-8495-4199-a900-b068a2c9540b
+langcode: en
+status: true
+dependencies: {  }
+name: 'Blog Post'
+type: blog
+description: 'A dated entry for the BSIA blog'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

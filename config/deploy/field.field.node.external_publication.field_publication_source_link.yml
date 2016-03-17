@@ -1,0 +1,19 @@
+uuid: f719fdec-21ce-4503-9814-20aa437a8c23
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_publication_source_link
+    - node.type.external_publication
+id: node.external_publication.field_publication_source_link
+field_name: field_publication_source_link
+entity_type: node
+bundle: external_publication
+label: 'Publication source link'
+description: 'External link to the publication source.  Must start with http://'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

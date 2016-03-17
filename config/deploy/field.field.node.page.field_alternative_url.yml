@@ -1,0 +1,19 @@
+uuid: d21dd638-46fc-4173-8b55-857e00f68fb6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_alternative_url
+    - node.type.page
+id: node.page.field_alternative_url
+field_name: field_alternative_url
+entity_type: node
+bundle: page
+label: 'Alternative URL'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

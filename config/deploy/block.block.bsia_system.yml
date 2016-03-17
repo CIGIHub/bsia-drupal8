@@ -1,0 +1,20 @@
+uuid: e954361c-f3ef-4cfd-822c-44017f2ea1e5
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - bsia
+id: bsia_system
+theme: bsia
+region: '-1'
+weight: -9
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: ''
+  provider: system
+  label_display: visible
+visibility: {  }

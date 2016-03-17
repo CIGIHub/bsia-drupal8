@@ -1,0 +1,23 @@
+uuid: 2c4a8365-3fd6-499c-a900-ead7b4e5cdba
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.faculty
+  module:
+    - views
+  theme:
+    - bsia
+id: exposedformfacultypage_2
+theme: bsia
+region: content_header
+weight: -11
+provider: null
+plugin: 'views_exposed_filter_block:faculty-page_2'
+settings:
+  id: 'views_exposed_filter_block:faculty-page_2'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+visibility: {  }

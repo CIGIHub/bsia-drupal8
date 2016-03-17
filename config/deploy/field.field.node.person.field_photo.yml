@@ -1,0 +1,38 @@
+uuid: ee2a2912-7ae5-4c50-9d00-a079cc51f674
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_photo
+    - node.type.person
+  module:
+    - image
+id: node.person.field_photo
+field_name: field_photo
+entity_type: node
+bundle: person
+label: Photo
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_extensions: 'png gif jpg jpeg'
+  file_directory: 'public://'
+  max_filesize: ''
+  alt_field: false
+  alt_field_required: false
+  title_field: false
+  title_field_required: false
+  max_resolution: '0'
+  min_resolution: '0'
+  default_image:
+    uuid: null
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

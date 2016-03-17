@@ -1,0 +1,23 @@
+uuid: d00753cb-2179-4b88-8400-a79c77f45bfa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_current_student
+    - node.type.person
+id: node.person.field_current_student
+field_name: field_current_student
+entity_type: node
+bundle: person
+label: 'Current Student(s)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      person: person
+field_type: entity_reference

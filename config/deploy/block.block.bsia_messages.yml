@@ -1,0 +1,22 @@
+uuid: 45af7d61-9629-463e-b800-e4a3814d91e2
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - bsia
+_core:
+  default_config_hash: XJqWwLt1LDCnazcEN6QkJmCLjk4R0__-8s0OO9xeNjg
+id: bsia_messages
+theme: bsia
+region: '-1'
+weight: -4
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

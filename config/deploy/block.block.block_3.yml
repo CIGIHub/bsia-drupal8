@@ -1,0 +1,28 @@
+uuid: 560008cb-882c-4347-8100-dca6ec05ceef
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:e4ec55a7-1f20-4c91-a111-1727d39bb396'
+  module:
+    - block_content
+    - system
+id: block_3
+theme: null
+region: content
+weight: -9
+provider: null
+plugin: 'block_content:e4ec55a7-1f20-4c91-a111-1727d39bb396'
+settings:
+  id: 'block_content:e4ec55a7-1f20-4c91-a111-1727d39bb396'
+  label: ''
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

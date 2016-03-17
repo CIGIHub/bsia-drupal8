@@ -1,0 +1,24 @@
+uuid: 3b696cdb-6d1f-4702-9900-f8ce4b846961
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - node
+id: publication
+label: Publication
+type: 'canonical_entities:node'
+pattern: 'publications/[node:title]'
+selection_criteria:
+  fe2e7c03-5acc-46c1-8b00-f60b9b7ac50c:
+    id: node_type
+    bundles:
+      external_publication: external_publication
+      publication: publication
+    negate: false
+    context_mapping:
+      node: node
+    uuid: fe2e7c03-5acc-46c1-8b00-f60b9b7ac50c
+selection_logic: and
+weight: -5
+relationships: {  }

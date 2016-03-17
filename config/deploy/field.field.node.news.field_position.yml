@@ -1,0 +1,21 @@
+uuid: 7470a31d-f317-4581-b000-b21e42e8550e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_position
+    - node.type.news
+  module:
+    - options
+id: node.news.field_position
+field_name: field_position
+entity_type: node
+bundle: news
+label: 'Caption Position'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

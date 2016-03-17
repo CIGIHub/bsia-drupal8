@@ -1,0 +1,39 @@
+uuid: 351dbc6d-f79e-4eb7-bc02-2a411e305798
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_result
+    - field.field.node.blog.body
+    - field.field.node.blog.field_image
+    - field.field.node.blog.field_published_date
+    - node.type.blog
+  module:
+    - datetime
+    - image
+    - user
+id: node.blog.search_result
+targetEntityType: node
+bundle: blog
+mode: search_result
+content:
+  field_image:
+    label: above
+    weight: -3
+    type: image
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+  field_published_date:
+    label: above
+    weight: 0
+    type: datetime_default
+    settings:
+      format_type: fallback
+      timezone_override: ''
+    third_party_settings: {  }
+  links:
+    weight: 100
+hidden:
+  body: true

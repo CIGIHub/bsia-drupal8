@@ -1,0 +1,48 @@
+uuid: a878873e-0739-4cfb-9e00-e4de0139fa5b
+langcode: en
+status: true
+dependencies:
+  config:
+    - migrate.migration.d6_node_revision__blog
+    - migrate.migration.d6_node_revision__event
+    - migrate.migration.d6_node_revision__external_publication
+    - migrate.migration.d6_node_revision__news
+    - migrate.migration.d6_node_revision__page
+    - migrate.migration.d6_node_revision__person
+    - migrate.migration.d6_node_revision__publication
+    - migrate.migration.d6_node_revision__research
+    - migrate.migration.d6_term_node__1
+    - migrate.migration.d6_term_node__2
+    - migrate.migration.d6_term_node__3
+    - migrate.migration.d6_term_node__4
+    - migrate.migration.d6_term_node__5
+    - migrate.migration.d6_term_node__8
+  module:
+    - node
+    - taxonomy
+id: d6_term_node_revision__2
+migration_tags:
+  - 'Drupal 6'
+label: 'Term/node relationship revisions'
+source:
+  plugin: d6_term_node_revision
+  database_state_key: migrate_upgrade_6
+  vid: 2
+process:
+  vid:
+    -
+      plugin: migration
+      migration: 'd6_node:*'
+      source: vid
+    -
+      plugin: skip_on_empty
+      method: row
+  type: type
+  program_type: tid
+destination:
+  plugin: 'entity_revision:node'
+template: d6_term_node_revision
+migration_dependencies:
+  required:
+    - 'd6_term_node:*'
+    - 'd6_node_revision:*'

@@ -1,0 +1,28 @@
+uuid: 99bd8533-8e5f-4736-8917-2358af4f2a9c
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:4576e266-6bfa-4368-914f-791705907717'
+  module:
+    - block_content
+    - system
+id: block
+theme: null
+region: content
+weight: -9
+provider: null
+plugin: 'block_content:4576e266-6bfa-4368-914f-791705907717'
+settings:
+  id: 'block_content:4576e266-6bfa-4368-914f-791705907717'
+  label: ''
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

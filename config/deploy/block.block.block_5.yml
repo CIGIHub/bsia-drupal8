@@ -1,0 +1,28 @@
+uuid: ad0aee0a-4635-4eaa-9343-6785c28fadd3
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:93bb4d2a-635c-40a1-ab00-e547f7311a0d'
+  module:
+    - block_content
+    - system
+id: block_5
+theme: null
+region: content
+weight: -10
+provider: null
+plugin: 'block_content:93bb4d2a-635c-40a1-ab00-e547f7311a0d'
+settings:
+  id: 'block_content:93bb4d2a-635c-40a1-ab00-e547f7311a0d'
+  label: ''
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "<front>\n/degree-programs/joint-university-phd-in-global-governance\n/degree-programs/masters-of-arts-in-international-public-policy\n/degree-programs/master-of-arts-in-global-governance\n/about/directors-message\n/degree-programs\n/prospective-students*\n/content/applying-joint-university-phd-global-governance\n/content/contact\n/current-students\n/faculty/*\n/faculty\n/prospective-students\n/about/*\n/event/*\n/events\n/about/news\n/news/*\n/blog\n/blog/*"

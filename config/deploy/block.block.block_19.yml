@@ -1,0 +1,30 @@
+uuid: 3277f579-f911-41b0-8d00-e7265d19b01b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:b32990d3-ed94-4ad4-833b-59672272a2c7'
+  module:
+    - block_content
+    - system
+  theme:
+    - bsia
+id: block_19
+theme: bsia
+region: content
+weight: -36
+provider: null
+plugin: 'block_content:b32990d3-ed94-4ad4-833b-59672272a2c7'
+settings:
+  id: 'block_content:b32990d3-ed94-4ad4-833b-59672272a2c7'
+  label: ''
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /graduates

@@ -1,0 +1,30 @@
+uuid: e3aa4220-9e46-46e3-b844-688059f1d1fb
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:bc2aef18-76ca-4a18-9a35-539e343fdac2'
+  module:
+    - block_content
+    - system
+  theme:
+    - bsia
+id: block_15
+theme: bsia
+region: content
+weight: -39
+provider: null
+plugin: 'block_content:bc2aef18-76ca-4a18-9a35-539e343fdac2'
+settings:
+  id: 'block_content:bc2aef18-76ca-4a18-9a35-539e343fdac2'
+  label: ''
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /degree-programs/master-arts-global-governance

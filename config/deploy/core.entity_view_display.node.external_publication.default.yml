@@ -1,0 +1,86 @@
+uuid: 60ca096e-e416-480a-9500-c498ab04cb17
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.external_publication.body
+    - field.field.node.external_publication.field_publication_source
+    - field.field.node.external_publication.field_publication_source_link
+    - field.field.node.external_publication.field_published_date
+    - field.field.node.external_publication.field_short_description
+    - field.field.node.external_publication.field_speakers
+    - field.field.node.external_publication.field_speakers_unlinked
+    - field.field.node.external_publication.publication_type
+    - field.field.node.external_publication.upload
+    - node.type.external_publication
+  module:
+    - datetime
+    - file
+    - text
+    - user
+id: node.external_publication.default
+targetEntityType: node
+bundle: external_publication
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+  comment:
+    label: hidden
+    type: comment_default
+    weight: 20
+    settings: {  }
+    third_party_settings: {  }
+  field_publication_source:
+    label: above
+    weight: -1
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+  field_publication_source_link:
+    label: above
+    weight: 0
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+  field_published_date:
+    label: hidden
+    weight: -4
+    type: datetime_default
+    settings:
+      format_type: fallback
+      timezone_override: ''
+    third_party_settings: {  }
+  field_short_description:
+    label: above
+    weight: 2
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+  field_speakers_unlinked:
+    label: hidden
+    weight: -2
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 100
+  publication_type:
+    label: hidden
+    type: entity_reference_label
+    weight: 20
+    settings:
+      link: true
+    third_party_settings: {  }
+  upload:
+    label: hidden
+    settings: {  }
+    type: file_default
+    weight: 102
+    third_party_settings: {  }
+hidden:
+  field_speakers: true

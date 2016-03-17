@@ -1,0 +1,19 @@
+uuid: eef29e6b-93ac-476d-a700-d89a36368730
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_year_graduated
+    - node.type.person
+id: node.person.field_year_graduated
+field_name: field_year_graduated
+entity_type: node
+bundle: person
+label: 'Year Graduated'
+description: 'Enter the year the student graduated.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

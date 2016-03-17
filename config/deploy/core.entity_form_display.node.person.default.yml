@@ -1,0 +1,401 @@
+uuid: 18422022-a27e-4520-b708-8e94fa42edf9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.person.body
+    - field.field.node.person.field_alternative_url
+    - field.field.node.person.field_archived
+    - field.field.node.person.field_awards
+    - field.field.node.person.field_board_order
+    - field.field.node.person.field_board_position
+    - field.field.node.person.field_caption
+    - field.field.node.person.field_collection_publication
+    - field.field.node.person.field_courses
+    - field.field.node.person.field_credit
+    - field.field.node.person.field_current_student
+    - field.field.node.person.field_department
+    - field.field.node.person.field_education
+    - field.field.node.person.field_email
+    - field.field.node.person.field_expertise
+    - field.field.node.person.field_feature_area
+    - field.field.node.person.field_feature_line
+    - field.field.node.person.field_feature_weight
+    - field.field.node.person.field_given_names
+    - field.field.node.person.field_graduate_title
+    - field.field.node.person.field_image_page
+    - field.field.node.person.field_languages
+    - field.field.node.person.field_link_text
+    - field.field.node.person.field_linkedin_url
+    - field.field.node.person.field_office_location
+    - field.field.node.person.field_person_position
+    - field.field.node.person.field_phone
+    - field.field.node.person.field_photo
+    - field.field.node.person.field_position
+    - field.field.node.person.field_publications
+    - field.field.node.person.field_quote
+    - field.field.node.person.field_research_focus
+    - field.field.node.person.field_short_bio
+    - field.field.node.person.field_square_image
+    - field.field.node.person.field_subtitle
+    - field.field.node.person.field_surname
+    - field.field.node.person.field_testimonial
+    - field.field.node.person.field_twitter_url
+    - field.field.node.person.field_user_link
+    - field.field.node.person.field_website
+    - field.field.node.person.field_year_graduated
+    - field.field.node.person.field_youtube_id
+    - field.field.node.person.person_type
+    - field.field.node.person.program_type
+    - field.field.node.person.topics
+    - image.style.thumbnail
+    - node.type.person
+  module:
+    - field_collection
+    - image
+    - path
+    - text
+id: node.person.default
+targetEntityType: node
+bundle: person
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 31
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+  field_alternative_url:
+    weight: 4
+    type: text_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_archived:
+    weight: -3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_awards:
+    weight: 7
+    type: text_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_board_order:
+    weight: 9
+    type: options_select
+    settings: {  }
+    third_party_settings: {  }
+  field_board_position:
+    weight: 8
+    type: text_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_collection_publication:
+    weight: 33
+    settings:
+      allow_new: true
+      allow_existing: false
+      match_operator: CONTAINS
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+    third_party_settings: {  }
+    type: field_collection_complex
+  field_courses:
+    weight: 20
+    type: text_textfield
+    settings:
+      size: 50
+      placeholder: ''
+    third_party_settings: {  }
+  field_credit:
+    weight: 19
+    type: text_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_current_student:
+    weight: 8
+    type: options_select
+    settings: {  }
+    third_party_settings: {  }
+  field_department:
+    weight: 6
+    type: text_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_education:
+    weight: 19
+    type: text_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_email:
+    weight: 13
+    type: text_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_expertise:
+    weight: 18
+    type: text_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_feature_area:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_feature_line:
+    weight: -1
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+  field_feature_weight:
+    weight: 3
+    type: options_select
+    settings: {  }
+    third_party_settings: {  }
+  field_given_names:
+    weight: 4
+    type: text_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_graduate_title:
+    weight: 24
+    type: text_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_image_page:
+    weight: 1
+    settings:
+      progress_indicator: bar
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+  field_languages:
+    weight: 21
+    type: text_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_link_text:
+    weight: 18
+    type: text_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_linkedin_url:
+    weight: 17
+    type: text_textfield
+    settings:
+      size: 40
+      placeholder: ''
+    third_party_settings: {  }
+  field_office_location:
+    weight: 12
+    type: text_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_person_position:
+    weight: 7
+    type: text_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_phone:
+    weight: 14
+    type: text_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_photo:
+    weight: 10
+    settings:
+      progress_indicator: bar
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+  field_position:
+    weight: 17
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_publications:
+    weight: 5
+    type: text_textfield
+    settings:
+      size: 100
+      placeholder: ''
+    third_party_settings: {  }
+  field_quote:
+    weight: 0
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+  field_research_focus:
+    weight: 3
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+  field_short_bio:
+    weight: 2
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+  field_square_image:
+    weight: 11
+    settings:
+      progress_indicator: bar
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+  field_subtitle:
+    weight: -4
+    type: text_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_surname:
+    weight: 5
+    type: text_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_testimonial:
+    weight: 6
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+  field_twitter_url:
+    weight: 16
+    type: text_textfield
+    settings:
+      size: 40
+      placeholder: ''
+    third_party_settings: {  }
+  field_user_link:
+    weight: 22
+    type: options_select
+    settings: {  }
+    third_party_settings: {  }
+  field_website:
+    weight: 15
+    type: text_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_year_graduated:
+    weight: 23
+    type: text_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_youtube_id:
+    weight: 2
+    type: text_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    settings: {  }
+    third_party_settings: {  }
+  person_type:
+    type: options_select
+    weight: 20
+    settings: {  }
+    third_party_settings: {  }
+  program_type:
+    type: options_select
+    weight: 20
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 15
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 16
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  topics:
+    type: options_select
+    weight: 20
+    settings: {  }
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  upload:
+    settings:
+      progress_indicator: throbber
+    type: file_generic
+    weight: 32
+    third_party_settings: {  }
+hidden:
+  field_caption: true

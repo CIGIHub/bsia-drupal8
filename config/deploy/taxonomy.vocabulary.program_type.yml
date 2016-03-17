@@ -1,0 +1,9 @@
+uuid: 045c3fee-4cf9-4681-9f00-c57a0d223354
+langcode: en
+status: true
+dependencies: {  }
+name: 'Program Type'
+vid: program_type
+description: ''
+hierarchy: 0
+weight: -8

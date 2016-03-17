@@ -1,0 +1,19 @@
+uuid: e4c2b3d4-a493-4eea-ad00-0d14247f9d60
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_alternative_url
+    - node.type.news
+id: node.news.field_alternative_url
+field_name: field_alternative_url
+entity_type: node
+bundle: news
+label: 'Alternative URL'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

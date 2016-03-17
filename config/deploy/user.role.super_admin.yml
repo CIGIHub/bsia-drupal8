@@ -1,0 +1,11 @@
+uuid: 4d53ee61-49c4-4e3f-ae07-7c267a97291c
+langcode: en
+status: true
+dependencies: {  }
+id: super_admin
+label: 'super admin'
+weight: 5
+is_admin: null
+permissions:
+  - 'access all views'
+  - 'administer views'

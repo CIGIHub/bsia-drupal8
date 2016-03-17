@@ -1,0 +1,21 @@
+uuid: aabbc100-98c0-4e7c-a901-1fc3100c8fa8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_quote
+    - node.type.person
+  module:
+    - text
+id: node.person.field_quote
+field_name: field_quote
+entity_type: node
+bundle: person
+label: Quote
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

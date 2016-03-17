@@ -1,0 +1,30 @@
+uuid: 14516d8d-67cd-4284-9e00-f5441c78b68e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:e27561c0-27a0-4617-8546-707cbbc7206d'
+  module:
+    - block_content
+    - system
+  theme:
+    - bsia
+id: block_16
+theme: bsia
+region: content
+weight: -57
+provider: null
+plugin: 'block_content:e27561c0-27a0-4617-8546-707cbbc7206d'
+settings:
+  id: 'block_content:e27561c0-27a0-4617-8546-707cbbc7206d'
+  label: ''
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /research/armageddon-letters
