@@ -2,6 +2,10 @@ uuid: 6c7bca0b-84e5-4435-b900-ba5e0d2f2ce6
 langcode: en
 status: false
 dependencies:
+  content:
+    - 'block_content:basic:f4b07aea-3d38-4992-8600-fab309ee5f0c'
+  module:
+    - block_content
   theme:
     - bsia
 id: quotestefanopagliari
