@@ -1,6 +1,6 @@
 uuid: 21d80724-e43b-40c1-b100-af8d10f6fab3
 langcode: en
-status: true
+status: false
 dependencies: {  }
 name: 'Filtered HTML'
 format: filtered_html
@@ -19,7 +19,7 @@ filters:
     status: true
     weight: -10
     settings:
-      allowed_html: '<br> <p> <a href hreflang> <em> <strong> <cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd>'
+      allowed_html: '<br> <p> <a hreflang href> <em> <strong> <cite> <code> <ul type> <ol type start> <li> <dl> <dt> <dd> <blockquote> <img src alt data-entity-type data-entity-uuid>'
       filter_html_help: true
       filter_html_nofollow: false
   filter_autop:
