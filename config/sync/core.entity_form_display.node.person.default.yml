@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.person.field_board_order
     - field.field.node.person.field_board_position
     - field.field.node.person.field_caption
+    - field.field.node.person.field_collection_publication
     - field.field.node.person.field_courses
     - field.field.node.person.field_credit
     - field.field.node.person.field_current_student
@@ -51,6 +52,7 @@ dependencies:
     - image.style.thumbnail
     - node.type.person
   module:
+    - field_collection
     - file
     - image
     - path
@@ -111,6 +113,18 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+  field_collection_publication:
+    weight: 33
+    settings:
+      allow_new: true
+      allow_existing: false
+      match_operator: CONTAINS
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      third_party_settings: {  }
+      type: field_collection_complex
   field_courses:
     weight: 20
     type: text_textfield

@@ -1,21 +1,31 @@
-uuid: 44b703f8-3bdd-43b1-a608-08895e732cb6
+uuid: 6e5323b7-2cde-478e-ba03-3ead88814613
 langcode: en
-status: false
+status: true
 dependencies:
+  content:
+    - 'block_content:basic:366cd2c3-0134-45a6-8707-7cdd58e4efd3'
+  module:
+    - block_content
+    - system
   theme:
     - bsia
 id: connectwithus
 theme: bsia
-region: '-1'
-weight: -17
+region: right_menu
+weight: -7
 provider: null
-plugin: 'block_content:36a7d9e0-4aba-4ab4-b962-986540730d86'
+plugin: 'block_content:366cd2c3-0134-45a6-8707-7cdd58e4efd3'
 settings:
-  id: 'block_content:36a7d9e0-4aba-4ab4-b962-986540730d86'
+  id: 'block_content:366cd2c3-0134-45a6-8707-7cdd58e4efd3'
   label: 'Connect with Us'
   provider: block_content
-  label_display: visible
+  label_display: '0'
   status: true
   info: ''
   view_mode: full
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

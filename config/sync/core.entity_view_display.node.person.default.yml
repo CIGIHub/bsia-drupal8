@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.person.field_board_order
     - field.field.node.person.field_board_position
     - field.field.node.person.field_caption
+    - field.field.node.person.field_collection_publication
     - field.field.node.person.field_courses
     - field.field.node.person.field_credit
     - field.field.node.person.field_current_student
@@ -106,6 +107,14 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+  field_collection_publication:
+    weight: 103
+    label: above 
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  } 
+    type: entity_reference_entity_view
   field_courses:
     label: hidden
     weight: 13
