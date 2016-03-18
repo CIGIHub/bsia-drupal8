@@ -2,10 +2,7 @@ uuid: 42634ba9-722d-4632-8c07-7e91b920f6e6
 langcode: en
 status: true
 dependencies:
-  content:
-    - 'block_content:basic:d31b2a5c-095e-4498-a43e-627bd1e76e7d'
   module:
-    - block_content
     - system
   theme:
     - bsia

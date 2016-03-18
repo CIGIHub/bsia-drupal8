@@ -66,6 +66,7 @@ content:
     weight: 100
 hidden:
   field_alternative_url: true
+  field_caption: true
   field_credit: true
   field_feature_area: true
   field_feature_weight: true
@@ -78,3 +79,4 @@ hidden:
   field_speakers: true
   field_square_image: true
   field_website: true
+  upload: true

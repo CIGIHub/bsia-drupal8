@@ -8,16 +8,19 @@ id: member
 label: 'Member profile'
 description: 'Configuration for site members'
 conf:
-  extensions: 'jpg png gif'
-  maxsize: !!float 2
-  quota: !!float 50
-  maxwidth: 1024
-  maxheight: 1024
+  extensions: 'jpg jpeg png gif pdf'
+  maxsize: !!float 10
+  quota: !!float 0
+  maxwidth: 1212
+  maxheight: 1212
   replace: 0
   folders:
     -
-      path: 'users/user[user:uid]'
+      path: content
       permissions:
         browse_files: true
+        browse_subfolders: true
+        create_subfolders: true
         upload_files: true
         delete_files: true
+        resize_images: true

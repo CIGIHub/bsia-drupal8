@@ -9,7 +9,7 @@ id: node.person.field_caption
 field_name: field_caption
 entity_type: node
 bundle: person
-label: field_caption
+label: 'Image Caption'
 description: ''
 required: false
 translatable: true

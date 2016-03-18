@@ -89,6 +89,7 @@ content:
 hidden:
   field_alternative_url: true
   field_book_cover: true
+  field_caption: true
   field_credit: true
   field_embed_code: true
   field_feature_area: true
@@ -98,3 +99,5 @@ hidden:
   field_link_text: true
   field_position: true
   field_speakers: true
+  publication_type: true
+  upload: true

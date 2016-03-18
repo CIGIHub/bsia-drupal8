@@ -11,24 +11,24 @@ id: node.page.field_image_page
 field_name: field_image_page
 entity_type: node
 bundle: page
-label: image_page
+label: 'Image Page'
 description: ''
 required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
+  file_directory: content/images/page
   file_extensions: 'png gif jpg jpeg'
-  file_directory: 'public://'
   max_filesize: ''
-  alt_field: false
-  alt_field_required: false
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
   title_field: false
   title_field_required: false
-  max_resolution: '0'
-  min_resolution: '0'
   default_image:
-    uuid: null
+    uuid: ''
     alt: ''
     title: ''
     width: null

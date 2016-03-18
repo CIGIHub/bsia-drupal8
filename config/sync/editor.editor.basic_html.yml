@@ -33,7 +33,7 @@ settings:
           name: Media
           items:
             - Blockquote
-            - DrupalImage
+            - ImceImage
         -
           name: 'Block Formatting'
           items:
@@ -50,7 +50,7 @@ settings:
 image_upload:
   status: true
   scheme: public
-  directory: inline-images
+  directory: content/inline-images
   max_size: ''
   max_dimensions:
     width: null
