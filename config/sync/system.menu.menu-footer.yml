@@ -3,6 +3,6 @@ langcode: en
 status: true
 dependencies: {  }
 id: menu-footer
-label: Footer
+label: 'BSIA Footer'
 description: ''
 locked: false
