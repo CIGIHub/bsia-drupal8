@@ -52,33 +52,46 @@
       {% endif %}
 
     {% elseif view_mode == 'teaser' %}
-      <h2><a href="{{ url }}" rel="bookmark">{{ label }}</a></h2>
-      {% if authors_string %}
-        <div class="authors">{{ authors_string|raw }}</div>
-      {% endif %}
-      <div class="type">{{ publication_type_name }}</div>
-      <div class="date">{{ content.field_published_date }}</div>
-      {{ content.field_short_description }}
+      <div class="profile">
+        <h2><a href="{{ url }}" rel="bookmark">{{ label }}</a></h2>
+        {% if content.field_book_cover and publication_type_name == 'Books' %}
+          <div class="image">
+            {{ content.field_book_cover }}
+          </div>
+          <div class="text">
+        {% else %}
+          <div class="text-full">    
+        {% endif %}
+        
+          {% if authors_string %}
+            <div class="authors">{{ authors_string|raw }}</div>
+          {% endif %}
+          <div class="type">{{ publication_type_name }}</div>
+          <div class="date">{{ content.field_published_date }}</div>
+          {{ content.field_short_description }}
+        
+      </div>
     {% endif %}
-
   {% else %}  
     <div{{ content_attributes }}>
     {% include 'themes/custom/bsia/templates/node/_partials/addthis.html.twig' %}
-      
-      <div class="authors">{{ speakers_string|raw }}</div>
+      <div class="metadata">
+        <div class="authors">{{ authors_string|raw }}</div>
     
-      {% if content.publication_type %}
-        <div class="type">
-        <a href="{{ publication_type_uri }}">{{ publication_type_name }}</a>
-        {% if content.field_publication_source %}
-            / {{ publication_source }}
+        {% if content.publication_type %}
+          <div class="type">
+          <a href="{{ publication_type_uri }}">{{ publication_type_name }}</a>
+          {% if content.field_publication_source %}
+              / {{ publication_source }}
+          {% endif %}
+        </div>
+        {% else %}
+          <div class="type">{{ content.publication_source }}</div>
         {% endif %}
-      </div>
-      {% else %}
-        <div class="type">{{ content.publication_source }}</div>
-      {% endif %}
 
-      {{ content.field_published_date }}
+        <div class="date">{{ content.field_published_date }}</div>
+      </div>
+      
       <div class="body">{{ content.body }}</div>
 
       {% if content.field_publication_source and content.field_publication_source_link %}

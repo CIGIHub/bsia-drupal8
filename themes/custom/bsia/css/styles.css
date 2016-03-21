@@ -146,7 +146,7 @@ article {
     margin-bottom: 15px; }
 
 hr, .row-divider {
-  margin: 20px 0;
+  margin-bottom: 20px;
   border: none;
   border-bottom: solid 1px #d2d2d2; }
 
@@ -227,6 +227,26 @@ article .field--name-upload span:before {
 .view-content {
   margin-bottom: 20px; }
 
+.node--view-mode-teaser .profile,
+.view-content .profile {
+  margin-bottom: 10px; }
+  .node--view-mode-teaser .profile h2,
+  .view-content .profile h2 {
+    font-size: 1.4em;
+    margin-bottom: 0.6em;
+    line-height: 125%; }
+  .node--view-mode-teaser .profile .image,
+  .view-content .profile .image {
+    float: left;
+    border: solid 5px #ddd; }
+  .node--view-mode-teaser .profile .text,
+  .view-content .profile .text {
+    float: left;
+    width: 70%; }
+  .node--view-mode-teaser .profile .text-full,
+  .view-content .profile .text-full {
+    width: 100%; }
+
 .region-content-header {
   border: 1px solid #d2d2d2;
   background-color: #f2f7f2;
@@ -273,6 +293,9 @@ dl.calendar {
     margin-left: 0px; }
 
 /*****  Publication  *****/
+.metadata {
+  margin-bottom: 10px; }
+
 .apply-now {
   background: #FBAD18;
   width: 120px;
@@ -286,6 +309,10 @@ dl.calendar {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px; }
+  .apply-now a {
+    color: white; }
+    .apply-now a:hover {
+      text-decoration: underline; }
 
 .publication-download {
   width: 180px;
@@ -347,7 +374,7 @@ dl.calendar {
 .view-students.view-display-id-page_3 .views-row,
 .view-students.view-display-id-page_5 .views-row,
 .view-students.view-display-id-page_6 .views-row {
-  margin: 20px 0;
+  margin-bottom: 20px;
   border: none;
   border-bottom: solid 1px #d2d2d2; }
 
@@ -903,16 +930,14 @@ footer {
 .node--type-person .field--name-program-type .field__item:after {
   content: ","; }
 
-.node--view-mode-teaser .profile, .view-content .profile {
-  margin-bottom: 10px; }
-  .node--view-mode-teaser .profile .image, .view-content .profile .image {
-    float: left;
-    border: solid 5px #ddd; }
-  .node--view-mode-teaser .profile .text, .view-content .profile .text {
-    float: left;
-    width: 75%; }
-    .node--view-mode-teaser .profile .text h2, .view-content .profile .text h2 {
-      font-size: 1.2em; }
+.node--type-person.node--view-mode-teaser .profile h2,
+.view-faculty .view-content .profile h2,
+.view-students .view-content .profile h2 {
+  font-size: 1.2em; }
+.node--type-person.node--view-mode-teaser .profile .text,
+.view-faculty .view-content .profile .text,
+.view-students .view-content .profile .text {
+  width: 75%; }
 
 .view-people .view-header {
   border: 1px solid #d2d2d2;

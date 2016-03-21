@@ -5,12 +5,15 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.external_publication.body
+    - field.field.node.external_publication.field_caption
     - field.field.node.external_publication.field_publication_source
     - field.field.node.external_publication.field_publication_source_link
     - field.field.node.external_publication.field_published_date
     - field.field.node.external_publication.field_short_description
     - field.field.node.external_publication.field_speakers
     - field.field.node.external_publication.field_speakers_unlinked
+    - field.field.node.external_publication.publication_type
+    - field.field.node.external_publication.upload
     - node.type.external_publication
   module:
     - datetime
@@ -29,27 +32,29 @@ content:
       trim_length: 600
     third_party_settings: {  }
   field_publication_source:
-    label: above
+    label: hidden
     weight: -1
-    type: text_default
-    settings: {  }
+    type: string
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
   field_publication_source_link:
-    label: above
+    label: hidden
     weight: 0
-    type: text_default
-    settings: {  }
+    type: string
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
   field_published_date:
     label: hidden
     weight: -4
     type: datetime_default
     settings:
-      format_type: fallback
-      timezone_override: ''
+      timezone_override: America/Toronto
+      format_type: short
     third_party_settings: {  }
   field_short_description:
-    label: above
+    label: hidden
     weight: 2
     type: text_default
     settings: {  }
@@ -57,10 +62,16 @@ content:
   field_speakers_unlinked:
     label: hidden
     weight: -2
-    type: text_default
-    settings: {  }
+    type: string
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
   links:
     weight: 100
+    settings: {  }
+    third_party_settings: {  }
 hidden:
+  field_caption: true
   field_speakers: true
+  publication_type: true
+  upload: true

@@ -99,10 +99,6 @@ article{
     margin-bottom: 10px;
   }
 
-  // .field--name-body{
-  //   margin: 20px 0;
-  // }
-
   .field--name-field-short-description{
     margin-top: 10px;
   }
@@ -126,6 +122,30 @@ article{
 }
 .view-content{
   margin-bottom: 20px;
+}
+
+.node--view-mode-teaser,
+.view-content{
+  .profile{
+    margin-bottom: 10px;
+    h2{
+        font-size: 1.4em;
+        margin-bottom: 0.6em;
+        line-height: 125%;
+      }
+    .image{
+      float: left;
+      border: solid 5px $image-border-color;
+    }
+    .text{
+      float: left;
+      width: 70%;
+    }
+    .text-full{
+      width: 100%;
+    }
+
+  }
 }
 
 .region-content-header{
@@ -164,8 +184,19 @@ dl.calendar{
 }
 
 /*****  Publication  *****/
+
+.metadata{
+  margin-bottom: 10px;
+}
+
 .apply-now{
   @include submit_button;
+  a{
+    color: white;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
 }
 
 .publication-download {
@@ -187,6 +218,8 @@ dl.calendar{
       }
     }
 }
+
+
 
 /*****  News and Events  *****/
 
