@@ -54,19 +54,16 @@
     } 
   }
 }
-.node--view-mode-teaser, .view-content{
+
+.node--type-person.node--view-mode-teaser,
+.view-faculty .view-content,
+.view-students .view-content{
   .profile{
-    margin-bottom: 10px;
-    .image{
-      float: left;
-      border: solid 5px $image-border-color;
-    }
-    .text{
-      float: left;
-      width: 75%;
-      h2{
+     h2{
         font-size: 1.2em;
       }
+    .text{
+      width: 75%;
     }
   }
 }
