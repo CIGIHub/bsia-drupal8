@@ -116,30 +116,44 @@ function code_driven_devel_override_block_uuids($config_name) {
           $id_parts = explode(':', $id);
           if ($id_parts[0] == 'block_content') {
             $uuid = $id_parts[1];
-            $label = $info['settings']['label'];
-            if (strlen($label) > 0) {
-              $labelled_blocks_to_uuids[$label] = $uuid;
-              array_push($labels, $label);
+            $label = strtolower($info['settings']['label']);
+            if (strlen($uuid) < 36) {
+                $logger->notice(t("UUID for block_content with label = " . $label . " has a bad UUID of " . $uuid));
+            }
+            elseif (strlen($label) > 0) {
+              if (in_array($label, $labels)) {
+                $logger->notice(t("Already parsed the configuration for a block with label = " . $label . ". This may be ok if the same block is used in more than one region."));
+              }
+              else {
+                $labelled_blocks_to_uuids[$label] = $uuid;
+                array_push($labels, $label);
+              }
             }
           }
         }
       }
     }
   }
-  $logger->notice(t("Found " . count($labels) . " block_content config YML that may need to have their UUIDs synched..."));
-  var_dump($labelled_blocks_to_uuids);
-  var_dump($labels);
+  $message = t("Found " . count($labels) . " block_content config YML that may need to have their UUIDs synched...");
+  $logger->notice($message);
+  print($message . "\n");
+  print_r($labelled_blocks_to_uuids);
+  $message = t("Using the following labels to find the block IDs...");
+  print($message . "\n");
+  print_r($labels);
   // Fetch block IDs using the block 'label'
   $results = $connection->select('block_content_field_data', 't')
     ->fields('t')
     ->condition('info', $labels, 'IN')
     ->execute();
   // Update the block 'uuid' based on the value expected in the config YMLs
+  $message = t("Updating the UUID in the block_content table for each match...");
+  print($message . "\n");
   if ($results) {
     foreach ($results as $record) {
       $logger->notice(t("Updating UUID for block_content with id = " . $record->id . "..."));
-      var_dump($record->id);
-      $uuid = $labelled_blocks_to_uuids[$record->info];
+      $uuid = $labelled_blocks_to_uuids[strtolower($record->info)];
+      print_r(array($record->id, $record->info, $uuid));
       $connection->update('block_content')
         ->fields(array(
             'uuid' => $uuid,
