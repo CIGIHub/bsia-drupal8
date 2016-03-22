@@ -1,0 +1,30 @@
+uuid: 653bbb8d-fa2f-45ee-a801-1db3bfd0c1f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.publications
+  module:
+    - system
+    - views
+  theme:
+    - bsia
+id: views_block__publications_block_2
+theme: bsia
+region: content_header
+weight: null
+provider: null
+plugin: 'views_block:publications-block_2'
+settings:
+  id: 'views_block:publications-block_2'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /publications
+    negate: false
+    context_mapping: {  }

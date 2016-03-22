@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.publication.field_feature_area
     - field.field.node.publication.field_feature_line
     - field.field.node.publication.field_feature_weight
+    - field.field.node.publication.field_features
     - field.field.node.publication.field_image
     - field.field.node.publication.field_image_page
     - field.field.node.publication.field_link_label
@@ -77,6 +78,18 @@ content:
     type: text_default
     settings: {  }
     third_party_settings: {  }
+  field_feature_weight:
+    type: list_default
+    weight: 19
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_features:
+    weight: 21
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
   field_image:
     type: image
     weight: 17
@@ -176,4 +189,3 @@ hidden:
   field_alternative_url: true
   field_credit: true
   field_embed_code: true
-  field_feature_weight: true

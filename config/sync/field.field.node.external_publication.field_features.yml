@@ -1,0 +1,21 @@
+uuid: 68a56119-1de1-4e31-860c-12fee67977b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_features
+    - node.type.external_publication
+  module:
+    - options
+id: node.external_publication.field_features
+field_name: field_features
+entity_type: node
+bundle: external_publication
+label: Features
+description: 'Select where this content should be featured.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

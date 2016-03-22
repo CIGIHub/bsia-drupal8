@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.news.field_feature_area
     - field.field.node.news.field_feature_line
     - field.field.node.news.field_feature_weight
+    - field.field.node.news.field_features
     - field.field.node.news.field_image_page
     - field.field.node.news.field_link_text
     - field.field.node.news.field_news_date
@@ -23,6 +24,7 @@ dependencies:
     - datetime
     - file
     - image
+    - options
     - text
     - user
 id: node.news.default
@@ -49,6 +51,12 @@ content:
     type: text_default
     settings: {  }
     third_party_settings: {  }
+  field_features:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
   field_news_date:
     label: above
     weight: -1
