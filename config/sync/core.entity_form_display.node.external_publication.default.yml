@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.external_publication.body
     - field.field.node.external_publication.field_caption
+    - field.field.node.external_publication.field_features
     - field.field.node.external_publication.field_publication_source
     - field.field.node.external_publication.field_publication_source_link
     - field.field.node.external_publication.field_published_date
@@ -49,6 +50,11 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+  field_features:
+    weight: 34
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
   field_publication_source:
     weight: -1
     type: text_textfield

@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.external_publication.body
     - field.field.node.external_publication.field_caption
+    - field.field.node.external_publication.field_features
     - field.field.node.external_publication.field_publication_source
     - field.field.node.external_publication.field_publication_source_link
     - field.field.node.external_publication.field_published_date
@@ -17,6 +18,7 @@ dependencies:
   module:
     - datetime
     - file
+    - options
     - text
     - user
 id: node.external_publication.default
@@ -43,6 +45,12 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+  field_features:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
   field_publication_source:
     label: hidden
     weight: -1

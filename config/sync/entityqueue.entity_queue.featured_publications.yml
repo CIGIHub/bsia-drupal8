@@ -1,0 +1,23 @@
+uuid: dc3d4763-b7bf-4108-8a00-abd9f2c71da2
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: featured_publications
+label: 'Featured Publications'
+handler: simple
+handler_configuration: {  }
+entity_settings:
+  target_type: node
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      external_publication: external_publication
+      publication: publication
+    sort:
+      field: _none
+queue_settings:
+  min_size: 0
+  max_size: 0
+  act_as_queue: false

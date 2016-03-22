@@ -21,6 +21,7 @@ dependencies:
     - field.field.node.person.field_feature_area
     - field.field.node.person.field_feature_line
     - field.field.node.person.field_feature_weight
+    - field.field.node.person.field_features
     - field.field.node.person.field_given_names
     - field.field.node.person.field_graduate_title
     - field.field.node.person.field_image_page
@@ -175,6 +176,12 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
+  field_features:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
   field_given_names:
     type: string
     weight: 33

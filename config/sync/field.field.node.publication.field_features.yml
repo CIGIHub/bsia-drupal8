@@ -1,0 +1,21 @@
+uuid: 45ce6c8f-ed9c-40b9-9517-23bf1f4d4544
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_features
+    - node.type.publication
+  module:
+    - options
+id: node.publication.field_features
+field_name: field_features
+entity_type: node
+bundle: publication
+label: Features
+description: 'Select the area to feature this content type'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
