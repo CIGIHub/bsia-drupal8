@@ -1,0 +1,21 @@
+uuid: 0a73da59-1a3b-4484-ac07-7c60acf3d3e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_features
+    - node.type.news
+  module:
+    - options
+id: node.news.field_features
+field_name: field_features
+entity_type: node
+bundle: news
+label: Features
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
