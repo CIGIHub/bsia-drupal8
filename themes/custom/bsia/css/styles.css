@@ -834,20 +834,20 @@ footer {
       text-decoration: none;
       color: white; }
 
-.right-menu .connect-with-us {
+.right-menu .connect-button {
   background-image: url(../images/connect-button.png);
   background-color: #fff;
   background-repeat: no-repeat;
   background-position: right;
   margin-bottom: 10px; }
-  .right-menu .connect-with-us a {
+  .right-menu .connect-button a {
     padding: 30px 20px;
     display: block;
     color: #000;
     font-size: 16px;
     font-weight: bold;
     text-transform: uppercase; }
-  .right-menu .connect-with-us a:hover {
+  .right-menu .connect-button a:hover {
     text-decoration: none;
     color: white; }
 .right-menu ul.menu:first-child {
