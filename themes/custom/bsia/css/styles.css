@@ -505,6 +505,90 @@ dl.calendar {
 #block-views-block-publications-block-2 .profile.video::before {
   content: '\f03d'; }
 
+/****** Connect with Us ******/
+#bsia-connect-form h3 {
+  font-size: 16px; }
+#bsia-connect-form .form-options fieldset .form-checkboxes {
+  margin-left: 40px; }
+#bsia-connect-form .form-options .form-item-weekly-bulletin label.option,
+#bsia-connect-form .form-options .form-item-campus-tour label.option {
+  font-weight: bold; }
+#bsia-connect-form .contact-info {
+  margin: 40px 0; }
+  #bsia-connect-form .contact-info .form-item-contact-title {
+    font-style: italic;
+    color: #7e7f7e; }
+  #bsia-connect-form .contact-info label {
+    text-indent: -9999px;
+    position: absolute; }
+  #bsia-connect-form .contact-info .form-item {
+    margin: 5px 0; }
+  #bsia-connect-form .contact-info .form-type-textfield, #bsia-connect-form .contact-info .form-type-email {
+    display: inline-block;
+    margin-right: 20px; }
+    #bsia-connect-form .contact-info .form-type-textfield input, #bsia-connect-form .contact-info .form-type-email input {
+      color: #999;
+      border: solid 1px #d2d2d2;
+      background: #d1dee2;
+      width: 280px;
+      padding: 5px;
+      text-transform: uppercase;
+      color: #7e7f7e; }
+    #bsia-connect-form .contact-info .form-type-textfield input::-webkit-input-placeholder, #bsia-connect-form .contact-info .form-type-email input::-webkit-input-placeholder {
+      color: #7e7f7e; }
+    #bsia-connect-form .contact-info .form-type-textfield input::-moz-placeholder, #bsia-connect-form .contact-info .form-type-email input::-moz-placeholder {
+      color: #7e7f7e; }
+    #bsia-connect-form .contact-info .form-type-textfield input:-moz-placeholder, #bsia-connect-form .contact-info .form-type-email input:-moz-placeholder {
+      color: #7e7f7e; }
+  #bsia-connect-form .contact-info .button {
+    margin: 0px;
+    background: #FBAD18;
+    width: 120px;
+    font-size: 1.0em;
+    line-height: 1.8em;
+    font-weight: normal;
+    text-transform: capitalize;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #d2d2d2;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    width: 100px;
+    font-weight: bold; }
+
+#block-bsiaconnectsocial h3 {
+  font-size: 16px;
+  font-weight: bold; }
+#block-bsiaconnectsocial .connect-social {
+  margin: 40px auto;
+  width: 360px;
+  overflow: hidden; }
+  #block-bsiaconnectsocial .connect-social .share-link {
+    margin-right: 50px;
+    float: left; }
+    #block-bsiaconnectsocial .connect-social .share-link::last-child {
+      margin-right: 0; }
+#block-bsiaconnectsocial .social-circle {
+  display: block;
+  background: #19374f;
+  width: 50px;
+  height: 50px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px; }
+  #block-bsiaconnectsocial .social-circle:hover {
+    background: #ccdae3; }
+  #block-bsiaconnectsocial .social-circle i {
+    color: white;
+    font-size: 25px; }
+    #block-bsiaconnectsocial .social-circle i.fa-twitter {
+      margin: 14px; }
+    #block-bsiaconnectsocial .social-circle i.fa-facebook {
+      margin: 14px 18px; }
+    #block-bsiaconnectsocial .social-circle i.fa-youtube {
+      margin: 12px 15px; }
+
 /*****  HEADER   ******/
 header {
   background-color: #d9dfe3; }
