@@ -824,13 +824,13 @@ footer {
   background-image: url(../images/connect-banner.png);
   background-repeat: no-repeat;
   background-color: #fed130; }
-  .footer-banner .connect-with-us {
+  .footer-banner .connect-button {
     font-size: 34px; }
-    .footer-banner .connect-with-us a {
+    .footer-banner .connect-button a {
       padding: 17px 0px;
       display: block;
       color: #053b5b; }
-    .footer-banner .connect-with-us a:hover {
+    .footer-banner .connect-button a:hover {
       text-decoration: none;
       color: white; }
 
