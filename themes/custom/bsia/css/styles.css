@@ -557,19 +557,19 @@ dl.calendar {
     width: 100px;
     font-weight: bold; }
 
-#block-bsiaconnectsocial h3 {
+#block-connectwithussocial h3 {
   font-size: 16px;
   font-weight: bold; }
-#block-bsiaconnectsocial .connect-social {
+#block-connectwithussocial .connect-social {
   margin: 40px auto;
   width: 360px;
   overflow: hidden; }
-  #block-bsiaconnectsocial .connect-social .share-link {
+  #block-connectwithussocial .connect-social .share-link {
     margin-right: 50px;
     float: left; }
-    #block-bsiaconnectsocial .connect-social .share-link::last-child {
+    #block-connectwithussocial .connect-social .share-link::last-child {
       margin-right: 0; }
-#block-bsiaconnectsocial .social-circle {
+#block-connectwithussocial .social-circle {
   display: block;
   background: #19374f;
   width: 50px;
@@ -577,16 +577,16 @@ dl.calendar {
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
   border-radius: 25px; }
-  #block-bsiaconnectsocial .social-circle:hover {
+  #block-connectwithussocial .social-circle:hover {
     background: #ccdae3; }
-  #block-bsiaconnectsocial .social-circle i {
+  #block-connectwithussocial .social-circle i {
     color: white;
     font-size: 25px; }
-    #block-bsiaconnectsocial .social-circle i.fa-twitter {
+    #block-connectwithussocial .social-circle i.fa-twitter {
       margin: 14px; }
-    #block-bsiaconnectsocial .social-circle i.fa-facebook {
+    #block-connectwithussocial .social-circle i.fa-facebook {
       margin: 14px 18px; }
-    #block-bsiaconnectsocial .social-circle i.fa-youtube {
+    #block-connectwithussocial .social-circle i.fa-youtube {
       margin: 12px 15px; }
 
 /*****  HEADER   ******/

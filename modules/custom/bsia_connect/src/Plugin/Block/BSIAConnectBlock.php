@@ -3,8 +3,8 @@
  * Provides a 'Hello' Block
  *
  * @Block(
- *   id = "hello_block",
- *   admin_label = @Translation("BSIA Connect Social"),
+ *   id = "connectwithus_social",
+ *   admin_label = @Translation("Connect With Us Social"),
  * )
  */
 
