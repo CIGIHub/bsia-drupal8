@@ -1,8 +1,0 @@
-name: BSIA Publication
-description: 'Extends Field Collection and updates the publication labels with appropriate titles'
-package: Post Migration
-dependencies:
-  - field_collection
-  - inline_entity_form
-type: module
-core: 8.x
