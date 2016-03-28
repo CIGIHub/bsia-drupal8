@@ -1,6 +1,6 @@
 abs_urls: false
 roles_profiles:
-  bsia_editor:
+  content_editor:
     public: member
   administrator:
     public: admin
