@@ -1234,4 +1234,37 @@ ul.student-list {
   .student-description a:hover {
     text-decoration: underline; }
 
+#block-views-block-event-calendar-block-1 .view-content {
+  margin-bottom: 0px; }
+
+nav.pager {
+  background-color: white;
+  border: solid 1px #d2d2d2;
+  padding: 5px 0; }
+  nav.pager ul {
+    display: table; }
+    nav.pager ul li {
+      display: table-cell; }
+      nav.pager ul li.pager__item--previous, nav.pager ul li.pager__item--next {
+        width: 40px; }
+      nav.pager ul li.pager__item--current {
+        width: 200px;
+        text-align: center; }
+
+.calendar-calendar table.mini tr:first-child {
+  border: solid 1px #d2d2d2;
+  border-bottom: solid 2px #d2d2d2; }
+  .calendar-calendar table.mini tr:first-child td {
+    border: none;
+    padding: 5px; }
+.calendar-calendar table.mini td {
+  padding: 3px 6px 18px 10px;
+  border: solid 1px #d2d2d2; }
+  .calendar-calendar table.mini td a {
+    text-decoration: none; }
+  .calendar-calendar table.mini td.has-events {
+    background-color: #f2f2f2; }
+  .calendar-calendar table.mini td.today {
+    background-color: #d1dee2; }
+
 /*# sourceMappingURL=styles.css.map */
