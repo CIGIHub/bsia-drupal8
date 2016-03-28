@@ -1,0 +1,21 @@
+uuid: 943e839d-90fd-45e0-a600-d166ce2a4770
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_features
+    - node.type.person
+  module:
+    - options
+id: node.person.field_features
+field_name: field_features
+entity_type: node
+bundle: person
+label: Features
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

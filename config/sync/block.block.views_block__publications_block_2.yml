@@ -1,22 +1,22 @@
-uuid: 37f87a9d-57f6-4f0b-a41c-28f8fa87a030
+uuid: 653bbb8d-fa2f-45ee-a801-1db3bfd0c1f6
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.homepage
+    - views.view.publications
   module:
     - system
     - views
   theme:
     - bsia
-id: views_block__homepage_block_2
+id: views_block__publications_block_2
 theme: bsia
-region: content
-weight: -18
+region: content_header
+weight: -23
 provider: null
-plugin: 'views_block:homepage-block_2'
+plugin: 'views_block:publications-block_2'
 settings:
-  id: 'views_block:homepage-block_2'
+  id: 'views_block:publications-block_2'
   label: ''
   provider: views
   label_display: visible
@@ -25,6 +25,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: '<front>'
+    pages: /publications
     negate: false
     context_mapping: {  }

@@ -34,12 +34,18 @@ class BSIAConnectSubmissionForm extends FormBase {
 	public function buildForm(array $form, FormStateInterface $form_state) {
 		$config = $this->config('bsia_connect.settings');
 
-		$form['bsia_connect_title'] = array(
+		$form['form-options'] = array(
+		  '#type' => 'container',
+		  '#attributes' => array(
+		    'class' => 'form-options',
+		  ),
+		);
+		$form['form-options']['bsia_connect_title'] = array(
 			'#type' => 'item',
-			'#markup' => "<h2>How would you like to connect with us? (Select all that apply)</h2>",
+			'#markup' => "<h3>How would you like to connect with us? (Select all that apply)</h3>",
 		);
 
-		$form['programs'] = array(
+		$form['form-options']['programs'] = array(
 			'#type' => 'checkboxes',
 			'#options' => array(
 				"phd" => t('PhD in Global Governance'),
@@ -49,22 +55,28 @@ class BSIAConnectSubmissionForm extends FormBase {
 			'#title' => $this->t('Find out more about our programs?'),
 		);
 
-		$form['weekly_bulletin'] = array(
+		$form['form-options']['weekly_bulletin'] = array(
 			'#type' => 'checkbox',
 			'#title' => $this->t('Sign up for our weekly bulletin to learn about upcoming events and opportunities.'),
 		);
 
-		$form['campus_tour'] = array(
+		$form['form-options']['campus_tour'] = array(
 			'#type' => 'checkbox',
 			'#title' => $this->t('Book a tour of our campus.'),
 		);
 
-		$form['contact_title'] = array(
+		$form['form-contact'] = array(
+		  '#type' => 'container',
+		  '#attributes' => array(
+		    'class' => 'contact-info',
+		  ),
+		);
+		$form['form-contact']['contact_title'] = array(
 			'#type' => 'item',
 			'#markup' => "Please provide us with your email address and name so we can connect with you.",
 		);
 
-		$form['first_name'] = array(
+		$form['form-contact']['first_name'] = array(
 			'#type' => 'textfield',
 			'#title' => t('First Name'),
 			'#placeholder' => t("First Name"),
@@ -72,7 +84,7 @@ class BSIAConnectSubmissionForm extends FormBase {
 			'#maxlength' => 128,
 		);
 
-		$form['last_name'] = array(
+		$form['form-contact']['last_name'] = array(
 			'#type' => 'textfield',
 			'#title' => t('Last Name'),
 			'#placeholder' => t("Last Name"),
@@ -80,7 +92,8 @@ class BSIAConnectSubmissionForm extends FormBase {
 			'#maxlength' => 128,
 		);
 
-		$form['email'] = array(
+
+		$form['form-contact']['email'] = array(
 			'#type' => 'email',
 			'#title' => t('Email'),
 			'#placeholder' => t("Email Address (Required)"),
@@ -88,36 +101,14 @@ class BSIAConnectSubmissionForm extends FormBase {
 			'#maxlength' => 128,
 			'#required' => true,
 		);
-
-		$form['actions']['#type'] = 'actions';
-		$form['actions']['submit'] = array(
+		
+		//$form['actions'] = array('#type' => 'actions');
+		$form['form-contact']['submit'] = array(
 			'#type' => 'submit',
 			'#value' => $this->t('Sign Up'),
 			'#button_type' => 'primary',
-			'#prefix' => '<div class="submit-wrapper">',
-			'#suffix' => '</div>
-				<div class="social">
-				<h3 class="strong">Connect with us on Social Media</h3>
-
-				<div class="connect-social">
-					<div class="share-link"><a class="social-circle" href="https://twitter.com/BalsillieSIA"><i class="fa fa-twitter"></i></a></div>
-					<div class="share-link"><a class="social-circle" href="https://www.facebook.com/balsillieschool/timeline/"><i class="fa fa-facebook"></i></a></div>
-					<div class="share-link"><a class="social-circle" href="https://www.youtube.com/user/BalsillieSchool"><i class="fa fa-youtube"></i></a></div>
-				</div>
-				<div class="clearfloat"></div>
-
-				<h3 class="strong">Find directions to the School</h3>
-				<p>Building Information: <br>
-					Balsillie School of International Affairs<br>
-					67 Erb Street West<br>
-					Waterloo, ON N2L 6C2<br>
-					Canada
-				</p>
-				<p>Phone: 1.226.772.3001</p>
-				<p><a href="https://www.google.ca/maps/place/67+Erb+St+W,+Waterloo,+ON+N2L+6C2/@43.463645,-80.525616,17z/data=!3m1!4b1!4m2!3m1!1s0x882bf4126eab0155:0x48ec3237e30666a0">Google Maps to the BSIA</a>.
-				</p>
-				</div>',
 		);
+
 
 		return $form;
 	}

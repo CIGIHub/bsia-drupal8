@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 id: content_editor
-label: 'content editor'
+label: 'BSIA Editor'
 weight: 4
 is_admin: null
 permissions:

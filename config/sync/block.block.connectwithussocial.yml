@@ -1,0 +1,26 @@
+uuid: 1ad73957-07af-4230-bb62-98ce8551f4a7
+langcode: en
+status: true
+dependencies:
+  module:
+    - bsia_connect
+    - system
+  theme:
+    - bsia
+id: connectwithussocial
+theme: bsia
+region: content
+weight: -16
+provider: null
+plugin: connectwithus_social
+settings:
+  id: connectwithus_social
+  label: 'Connect With Us Social'
+  provider: bsia_connect
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: /connect-with-us
+    negate: false
+    context_mapping: {  }

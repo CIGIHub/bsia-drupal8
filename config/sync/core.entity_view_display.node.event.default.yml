@@ -20,6 +20,7 @@ dependencies:
     - field.field.node.event.field_feature_area
     - field.field.node.event.field_feature_line
     - field.field.node.event.field_feature_weight
+    - field.field.node.event.field_features
     - field.field.node.event.field_flickr_id
     - field.field.node.event.field_image
     - field.field.node.event.field_image_page
@@ -38,6 +39,7 @@ dependencies:
   module:
     - datetime
     - file
+    - options
     - text
     - user
 id: node.event.default
@@ -127,6 +129,12 @@ content:
     type: text_default
     settings: {  }
     third_party_settings: {  }
+  field_features:
+    weight: 21
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
   field_flickr_id:
     label: hidden
     weight: 16
