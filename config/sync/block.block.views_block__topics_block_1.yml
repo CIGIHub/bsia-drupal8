@@ -1,17 +1,18 @@
 uuid: 1d45c955-d493-4acf-a900-a9ac29dbf97f
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - views.view.topics
   module:
+    - system
     - views
   theme:
     - bsia
 id: views_block__topics_block_1
 theme: bsia
-region: '-1'
-weight: -9
+region: right_sidebar
+weight: -11
 provider: null
 plugin: 'views_block:topics-block_1'
 settings:
@@ -21,4 +22,9 @@ settings:
   label_display: visible
   views_label: ''
   items_per_page: none
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: "category/topics/*\r\ncurrent-students\r\nfaculty"
+    negate: false
+    context_mapping: {  }

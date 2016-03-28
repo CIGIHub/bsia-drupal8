@@ -107,6 +107,7 @@ content:
     third_party_settings: {  }
 hidden:
   field_alternative_url: true
+  field_book_cover: true
   field_caption: true
   field_credit: true
   field_embed_code: true
