@@ -67,10 +67,13 @@ content:
     weight: 100
 hidden:
   field_alternative_url: true
+  field_caption: true
   field_credit: true
   field_feature_area: true
   field_feature_weight: true
+  field_features: true
   field_image_page: true
   field_link_text: true
   field_person: true
   field_position: true
+  upload: true

@@ -296,7 +296,9 @@ content:
 hidden:
   body: true
   field_caption: true
+  field_collection_publication: true
   field_current_student: true
+  field_features: true
   field_user_link: true
   person_type: true
   program_type: true
