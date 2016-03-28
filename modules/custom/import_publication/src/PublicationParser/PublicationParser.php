@@ -58,6 +58,9 @@ class PublicationParser {
 			$this->shortenRemainingData($title);
 
 			$title = substr($title, 4, -5);
+
+			$title = $this->limit255($title);
+
 			return $title;
 
 		}
@@ -79,6 +82,9 @@ class PublicationParser {
 
 			$this->shortenRemainingData($periodicalData);
 			$periodicalData = str_replace("\"", "", $periodicalData);
+
+			$periodicalData = $this->limit255($periodicalData);
+
 			return $periodicalData;
 		}
 		$this->logger->warning(t("Could not find periodical in " . $this->publication));
@@ -124,8 +130,8 @@ class PublicationParser {
 			//$this->logger->notice(t("authors (at start) :<pre>" . print_r($matches, true)) . "</pre>");
 			$authors = $matches[0];
 
-			//check if authors ends with a comma or quote, if so, remove.
-			if (stripos(strrev($authors), "\"") === 0) {
+			//check if authors ends with a quote or bracket. If yes, then remove.
+			if (stripos(strrev($authors), "\"") === 0 || stripos(strrev($authors), "(") === 0) {
 				$authors = trim(substr($authors, 0, -1));
 			}
 
@@ -155,7 +161,7 @@ class PublicationParser {
 		$this->remainingData = str_replace(",", "", $this->remainingData);
 		$this->remainingData = str_replace(".", "", $this->remainingData);
 
-		return trim(strip_tags($this->remainingData));
+		return $this->limit255(trim(strip_tags($this->remainingData)));
 	}
 
 	/*
@@ -191,6 +197,13 @@ class PublicationParser {
 		);
 
 		return str_replace($search, $replace, $string);
+	}
+
+	private function limit255($str) {
+		if (strlen($str) > 255) {
+			$str = substr($str, 0, 255);
+		}
+		return $str;
 	}
 
 }
