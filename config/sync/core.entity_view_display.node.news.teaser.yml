@@ -71,6 +71,7 @@ hidden:
   field_credit: true
   field_feature_area: true
   field_feature_weight: true
+  field_features: true
   field_image_page: true
   field_link_text: true
   field_person: true

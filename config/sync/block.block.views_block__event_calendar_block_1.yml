@@ -1,0 +1,30 @@
+uuid: bdb02446-8632-4e00-a908-8e32fd53293f
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.event_calendar
+  module:
+    - system
+    - views
+  theme:
+    - bsia
+id: views_block__event_calendar_block_1
+theme: bsia
+region: right_sidebar
+weight: -23
+provider: null
+plugin: 'views_block:event_calendar-block_1'
+settings:
+  id: 'views_block:event_calendar-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '/events*'
+    negate: false
+    context_mapping: {  }

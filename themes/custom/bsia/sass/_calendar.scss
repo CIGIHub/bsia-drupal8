@@ -1,0 +1,60 @@
+#block-views-block-event-calendar-block-1{
+	.view-content{
+		margin-bottom: 0px;
+	}
+}
+
+
+nav.pager{
+	background-color: white;
+	border: solid 1px $hr-border-color;
+
+	padding: 5px 0;
+	ul{
+		display: table;
+		li{
+			display: table-cell;
+			&.pager__item--previous,
+			&.pager__item--next{
+				width: 40px;
+			}
+			&.pager__item--current{
+				width: 200px;
+				text-align: center;
+			}
+		}
+	}
+}
+
+.calendar-calendar{
+	table.mini{
+	 	tr:first-child{
+			border: solid 1px $hr-border-color;
+			border-bottom: solid 2px $hr-border-color;
+
+			td{
+				border: none;
+				padding: 5px;
+			}
+		}
+		td{
+			padding: 3px 6px 18px 10px;
+			border: solid 1px $hr-border-color;
+			a{
+				text-decoration: none;
+			}
+			&.has-events{
+				background-color: #f2f2f2;
+			}
+			&.today{
+				background-color: $form-input-bg-color;
+			}
+			
+		}
+	}
+}
+
+
+
+
+	
