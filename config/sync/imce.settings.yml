@@ -1,12 +1,6 @@
 abs_urls: false
 roles_profiles:
-  blogger:
-    public: member
-  super_admin:
-    public: member
-  content_editor:
-    public: member
-  admin:
+  bsia_editor:
     public: member
   administrator:
     public: admin

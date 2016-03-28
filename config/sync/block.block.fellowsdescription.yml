@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   content:
-   - 'block_content:basic:a322ba42-0539-4a30-b262-98246355141f'
+    - 'block_content:basic:a322ba42-0539-4a30-b262-98246355141f'
   module:
     - block_content
     - system
