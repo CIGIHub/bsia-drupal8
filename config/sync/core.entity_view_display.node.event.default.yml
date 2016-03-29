@@ -117,7 +117,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_event_videos:
-    label: hidden
+    label: above
     weight: 17
     type: string
     settings:
@@ -136,7 +136,7 @@ content:
     third_party_settings: {  }
     type: list_default
   field_flickr_id:
-    label: hidden
+    label: above
     weight: 16
     type: string
     settings:

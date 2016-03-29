@@ -21,6 +21,7 @@ dependencies:
     - field.field.node.event.field_feature_area
     - field.field.node.event.field_feature_line
     - field.field.node.event.field_feature_weight
+    - field.field.node.event.field_features
     - field.field.node.event.field_flickr_id
     - field.field.node.event.field_image
     - field.field.node.event.field_image_page
@@ -215,5 +216,6 @@ hidden:
   event_series: true
   event_type: true
   field_caption: true
+  field_features: true
   field_speakers: true
   upload: true

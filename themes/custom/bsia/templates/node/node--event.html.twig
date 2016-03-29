@@ -50,13 +50,15 @@
           <div class="event-type">{{ content.event_type }}</div>
         {% endif %}
         <div class="location">
-          {% if content.field_location %}
-            {{ content.field_location }}
-          {% endif %}
-          {% if address %}
-            {{ address }}
+          {% if teaser_address %}
+            {{ teaser_address }}
           {% endif %}
         </div>
+        {% if content.field_event_summary|render %}
+          <div class="event-recap">
+            <a class="apply-now" href="{{ url }}">View Event Recap</a>
+          </div>
+        {% endif %}
         {{ content.field_short_description }}
       </div>
         
@@ -84,6 +86,7 @@
       {% endif %}
     </div> 
 
+    {% if not past_event %}
     <div class="event-signup-wrapper">
       <div class="event-signup">
         <dl class="event-registration button calendar">
@@ -110,6 +113,7 @@
         {% endif %}
       </div>
     </div> 
+  {% endif %}
 
     {% if speakers_string %}
       <div class="speakers">Speakers: {{ speakers_string|raw }}</div>
@@ -138,11 +142,11 @@
     {% endif %}
 
     {% if content.event_type %}
-      {{ content.event_type }}
+      <div class="tags inline-field">{{ content.event_type }}</div>
     {% endif %}
     
     {% if content.upload %}
-      {{ content.upload }}
+      <div class="upload inline-field">{{ content.upload }}</div>
     {% endif %}
 
 {% endif %}

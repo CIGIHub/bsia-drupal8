@@ -1,0 +1,31 @@
+uuid: 44088e34-c0d6-45d8-9b14-2062fbcc96ab
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:96c39365-613a-4a91-8d15-210c3873b727'
+  module:
+    - block_content
+    - system
+  theme:
+    - bsia
+id: eventsabout
+theme: bsia
+region: right_sidebar
+weight: -23
+provider: null
+plugin: 'block_content:96c39365-613a-4a91-8d15-210c3873b727'
+settings:
+  id: 'block_content:96c39365-613a-4a91-8d15-210c3873b727'
+  label: 'Events - About'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: "/events*\r\n/event*"
+    negate: false
+    context_mapping: {  }
