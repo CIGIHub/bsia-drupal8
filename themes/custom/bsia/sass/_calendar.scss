@@ -2,29 +2,29 @@
 	.view-content{
 		margin-bottom: 0px;
 	}
-}
+	nav.pager{
+		background-color: white;
+		border: solid 1px $hr-border-color;
 
-
-nav.pager{
-	background-color: white;
-	border: solid 1px $hr-border-color;
-
-	padding: 5px 0;
-	ul{
-		display: table;
-		li{
-			display: table-cell;
-			&.pager__item--previous,
-			&.pager__item--next{
-				width: 40px;
-			}
-			&.pager__item--current{
-				width: 200px;
-				text-align: center;
+		padding: 5px 0;
+		ul{
+			display: table;
+			li{
+				display: table-cell;
+				&.pager__item--previous,
+				&.pager__item--next{
+					width: 40px;
+				}
+				&.pager__item--current{
+					width: 200px;
+					text-align: center;
+				}
 			}
 		}
 	}
 }
+
+
 
 .calendar-calendar{
 	table.mini{

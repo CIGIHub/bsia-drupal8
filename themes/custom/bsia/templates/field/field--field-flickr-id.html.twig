@@ -37,8 +37,9 @@
  * @see template_preprocess_field()
  */
 #}
+<h3>Event Photos</h3>
 {% for item in items %}
 	<div class="field-group">
- 		<iframe src="http://www.flickr.com/photos/{{ item }}/player/" width="618" height="464" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+ 		<iframe src="https://www.flickr.com/photos/{{ item.content }}/player/" width="618" height="464" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
  	</div>
 {% endfor %}

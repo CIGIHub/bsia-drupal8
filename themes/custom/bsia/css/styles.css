@@ -190,9 +190,10 @@ ul.inline, ol.inline {
   font-size: 12px; }
 
 .pager .pager__item {
-  padding: 0.4em; }
+  padding: 3px;
+  font-size: 13px; }
   .pager .pager__item a {
-    padding: 4px 8px;
+    padding: 2px 6px;
     border: solid 1px #d2d2d2;
     border-radius: 15px;
     background: #f2f7f2; }
@@ -218,11 +219,9 @@ article .field--name-topics {
   font-size: 12px; }
   article .field--name-topics a:hover {
     text-decoration: underline; }
-article .field--name-upload h3 {
-  margin-bottom: 10px; }
 article .field--name-upload span:before {
   font-family: FontAwesome;
-  content: '\f019 - '; }
+  content: '\f019  - '; }
 
 .view-content {
   margin-bottom: 20px; }
@@ -292,6 +291,18 @@ dl.calendar {
     z-index: 10;
     margin-left: 0px; }
 
+.node--type-event .event-recap a {
+  color: white;
+  padding: 2px 5px; }
+.node--type-event .field__label, .node--type-event h3 {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #19374f; }
+
+.field--name-field-event-summary
+.inline-field {
+  margin-bottom: 20px; }
+
 /*****  Publication  *****/
 .metadata {
   margin-bottom: 10px; }
@@ -342,30 +353,32 @@ dl.calendar {
       text-decoration: underline; }
 
 /*****  News and Events  *****/
-.region-right-sidebar .views-element-container {
+.region-right-sidebar div[id^='block-'] {
   background: #D1DEE2;
   border: solid 5px #f2f2f2;
   padding: 10px;
   margin-bottom: 10px; }
-  .region-right-sidebar .views-element-container .views-row {
-    margin-bottom: 10px; }
-  .region-right-sidebar .views-element-container .views-field-title,
-  .region-right-sidebar .views-element-container .views-field-field-event-date {
-    padding-bottom: 5px; }
-  .region-right-sidebar .views-element-container .views-field-publication-type a {
-    color: #808080; }
-    .region-right-sidebar .views-element-container .views-field-publication-type a:hover {
-      text-decoration: underline; }
-  .region-right-sidebar .views-element-container .views-field-field-event-date {
-    text-transform: uppercase;
-    font-size: 12px; }
-  .region-right-sidebar .views-element-container a {
-    color: #053b5b; }
-    .region-right-sidebar .views-element-container a:hover {
-      text-decoration: underline; }
-  .region-right-sidebar .views-element-container h2 {
+  .region-right-sidebar div[id^='block-'] h2 {
     color: #053b5b;
     font-size: 20px; }
+  .region-right-sidebar div[id^='block-'] p {
+    margin-bottom: 10px; }
+.region-right-sidebar .views-element-container .views-row {
+  margin-bottom: 10px; }
+.region-right-sidebar .views-element-container .views-field-title,
+.region-right-sidebar .views-element-container .views-field-field-event-date {
+  padding-bottom: 5px; }
+.region-right-sidebar .views-element-container .views-field-publication-type a {
+  color: #808080; }
+  .region-right-sidebar .views-element-container .views-field-publication-type a:hover {
+    text-decoration: underline; }
+.region-right-sidebar .views-element-container .views-field-field-event-date {
+  text-transform: uppercase;
+  font-size: 12px; }
+.region-right-sidebar .views-element-container a {
+  color: #053b5b; }
+  .region-right-sidebar .views-element-container a:hover {
+    text-decoration: underline; }
 
 .views-row article,
 .views-row .research-listing,
@@ -1236,18 +1249,17 @@ ul.student-list {
 
 #block-views-block-event-calendar-block-1 .view-content {
   margin-bottom: 0px; }
-
-nav.pager {
+#block-views-block-event-calendar-block-1 nav.pager {
   background-color: white;
   border: solid 1px #d2d2d2;
   padding: 5px 0; }
-  nav.pager ul {
+  #block-views-block-event-calendar-block-1 nav.pager ul {
     display: table; }
-    nav.pager ul li {
+    #block-views-block-event-calendar-block-1 nav.pager ul li {
       display: table-cell; }
-      nav.pager ul li.pager__item--previous, nav.pager ul li.pager__item--next {
+      #block-views-block-event-calendar-block-1 nav.pager ul li.pager__item--previous, #block-views-block-event-calendar-block-1 nav.pager ul li.pager__item--next {
         width: 40px; }
-      nav.pager ul li.pager__item--current {
+      #block-views-block-event-calendar-block-1 nav.pager ul li.pager__item--current {
         width: 200px;
         text-align: center; }
 

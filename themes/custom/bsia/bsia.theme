@@ -188,6 +188,11 @@ function bsia_preprocess_node(&$variables){
 		//set a endstamp to compare in templates as a flag for showing past material
 		$variables['endstamp'] = format_date($end_datetime, 'custom', 'U', 'Etc/GMT+10');
 		$variables['current_datetime'] = time();
+		$variables['past_event'] = FALSE;
+
+		if($variables['current_datetime'] > $variables['endstamp']){
+			$variables['past_event'] = TRUE;
+		}
 
 		// set dates for datemark on views/teasers
 		$variables['event_month'] = format_date($start_datetime, 'custom', 'M', 'Etc/GMT+10');
@@ -200,6 +205,9 @@ function bsia_preprocess_node(&$variables){
 		$province_state = null;
 		$country = null;
 
+		if($variables['node']->	field_location->getValue()){
+			$location = $variables['node']->field_location->getValue()[0]['value'];
+		}		
 		if($variables['node']->field_address_1->getValue()){
 			$street = $variables['node']->field_address_1->getValue()[0]['value'];
 		}
@@ -226,6 +234,19 @@ function bsia_preprocess_node(&$variables){
 			}
 		}
 		$variables['address'] = $address;
+		
+		$teaser_address = '';
+		if($location != ''){
+			$teaser_address = $location;
+			if($city != ''){
+				$teaser_address .= ', ' . $city;
+			}
+		}
+		elseif($city != ''){
+			$teaser_address = $city;
+		}
+		$variables['teaser_address'] = $teaser_address;
+
 
 		if($variables['node']->field_location->getValue()){
 			$ical_location = $variables['node']->field_location->getValue()[0]['value'] . $address;
