@@ -13,6 +13,7 @@
       #block-bsia-local-tasks nav ul li a:hover {
         background: #999; }
 
+/* MOBILE GRID */
 *,
 *:after,
 *:before {
@@ -298,8 +299,11 @@ dl.calendar {
   font-size: 16px;
   margin: 10px 0;
   color: #19374f; }
+.node--type-event .field--name-event-type .field__label {
+  font-size: 14px;
+  color: black;
+  margin: 0; }
 
-.field--name-field-event-summary
 .inline-field {
   margin-bottom: 20px; }
 
@@ -518,7 +522,7 @@ dl.calendar {
 #block-views-block-publications-block-2 .profile.video::before {
   content: '\f03d'; }
 
-/****** Connect with Us ******/
+/****** Connect with Us Form Page ******/
 #bsia-connect-form h3 {
   font-size: 16px; }
 #bsia-connect-form .form-options fieldset .form-checkboxes {
@@ -601,6 +605,33 @@ dl.calendar {
       margin: 14px 18px; }
     #block-connectwithussocial .social-circle i.fa-youtube {
       margin: 12px 15px; }
+
+/*** SEARCH ***/
+.item-list ol.search-results li {
+  margin: 0px;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: solid 1px #d2d2d2; }
+.item-list ol.search-results .search-result__title {
+  font-size: 16px; }
+.item-list ol.search-results .search-result__snippet-info {
+  margin: 10px 0 20px 40px; }
+
+.search-advanced,
+.search-help-link {
+  display: none; }
+
+.search-page-form {
+  font-size: 14px;
+  border: 1px solid #d2d2d2;
+  background-color: #f2f7f2;
+  padding: 20px;
+  margin-bottom: 20px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px; }
+  .search-page-form input {
+    font-size: 16px; }
 
 /*****  HEADER   ******/
 header {
@@ -832,11 +863,13 @@ footer {
     display: block;
     margin: 0; }
 
-/*******   CONNECT BANNER FOR HOMEPAGE    *******/
+/*******   BLOCKS    *******/
+/* footer banner */
 .footer-banner {
   background-image: url(../images/connect-banner.png);
   background-repeat: no-repeat;
-  background-color: #fed130; }
+  background-color: #fed130;
+  /* connect with us block */ }
   .footer-banner .connect-button {
     font-size: 34px; }
     .footer-banner .connect-button a {
@@ -953,7 +986,7 @@ footer {
 
   #block-views-homepage-block_2 .cell .views-field-title {
     font-size: 170%; } }
-/******  Gallery  ******/
+/******  HOMEPAGE GALLERY  ******/
 #gallery {
   overflow: hidden; }
   #gallery li {
@@ -1247,6 +1280,7 @@ ul.student-list {
   .student-description a:hover {
     text-decoration: underline; }
 
+/*******   CALENDAR    *******/
 #block-views-block-event-calendar-block-1 .view-content {
   margin-bottom: 0px; }
 #block-views-block-event-calendar-block-1 nav.pager {

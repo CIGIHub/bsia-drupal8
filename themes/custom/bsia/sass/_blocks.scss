@@ -1,9 +1,13 @@
-/*******   CONNECT BANNER FOR HOMEPAGE    *******/
+/*******   BLOCKS    *******/
+
+
+/* footer banner */
 .footer-banner{
     background-image:url(../images/connect-banner.png);
     background-repeat: no-repeat;
     background-color: $brand-secondary-color;
 
+  /* connect with us block */
   .connect-button{
     font-size: 34px;
     a{

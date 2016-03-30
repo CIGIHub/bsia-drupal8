@@ -7,12 +7,9 @@ function bsia_theme_suggestions_block_alter(&$suggestions, $variables) {
   }
 }
 
-// function bsia_preprocess_page(&$variables){
+function bsia_preprocess_search_result(&$variables) {
 
-// 	kint($variables);
-// 	dsm($variables['contexts']);
-// }
-
+}
 
 function bsia_preprocess_field(&$variables, $hook) {
  	
