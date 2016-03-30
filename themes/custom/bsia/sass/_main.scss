@@ -194,10 +194,12 @@ dl.calendar{
     margin: 10px 0;
     color: $brand-primary-color;
   }
+  .field--name-event-type .field__label{
+    font-size: 14px;
+    color: black;
+    margin: 0;
+  }
 }
-
-
-.field--name-field-event-summary 
 
 .inline-field{
   margin-bottom: 20px;
@@ -454,7 +456,7 @@ dl.calendar{
 }
 
 
-/****** Connect with Us ******/
+/****** Connect with Us Form Page ******/
 
 #bsia-connect-form{
 
@@ -570,5 +572,35 @@ dl.calendar{
     }
   }
 
+}
+
+
+/*** SEARCH ***/
+
+.item-list ol.search-results{
+
+  li{
+    margin: 0px;
+    @include divider;
+  }
+  .search-result__title{
+    font-size: 16px;
+  }
+  .search-result__snippet-info{
+    margin: 10px 0 20px 40px;
+  }
+}
+
+.search-advanced,
+.search-help-link{
+  display: none;
+}
+
+.search-page-form{
+  font-size: 14px;
+  @include header_box;
+  input{
+    font-size: 16px;
+  }
 }
 
