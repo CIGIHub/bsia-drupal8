@@ -5,8 +5,6 @@ dependencies:
   config:
     - field.storage.node.field_testimonial
     - node.type.person
-  module:
-    - text
 id: node.person.field_testimonial
 field_name: field_testimonial
 entity_type: node
@@ -18,4 +16,4 @@ translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: text_long
+field_type: string_long
