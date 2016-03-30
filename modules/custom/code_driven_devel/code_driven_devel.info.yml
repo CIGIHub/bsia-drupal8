@@ -15,5 +15,6 @@ dependencies:
   - pathauto
   - sitemap
   - token
+  - metatag
 type: module
 core: 8.x

@@ -13,7 +13,6 @@ module:
   color: 0
   comment: 0
   config: 0
-  contact: 0
   contextual: 0
   ctools: 0
   datetime: 0
@@ -36,6 +35,8 @@ module:
   inline_entity_form: 0
   link: 0
   menu_ui: 0
+  metatag: 0
+  metatag_open_graph: 0
   migrate: 0
   migrate_drupal: 0
   node: 0
