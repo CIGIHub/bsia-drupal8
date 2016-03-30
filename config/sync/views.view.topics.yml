@@ -6,7 +6,7 @@ dependencies:
     - taxonomy.vocabulary.person_type
     - taxonomy.vocabulary.topics
   content:
-    - 'taxonomy_term:person_type:c288b6ec-5746-4297-9100-0aabdb117eda'
+    - 'taxonomy_term:person_type:13f536e7-8972-4daf-965f-95508e855571'
   module:
     - node
     - taxonomy
@@ -406,7 +406,7 @@ display:
     position: 2
     display_options:
       display_extenders: {  }
-      path: all-topics/%
+      path: category/topics
       pager:
         type: none
         options:
@@ -505,48 +505,11 @@ display:
         operator: AND
         groups:
           1: AND
-      arguments:
-        person_type_target_id:
-          id: person_type_target_id
-          table: node__person_type
-          field: person_type_target_id
-          relationship: reverse__node__topics
-          group_type: group
-          admin_label: ''
-          default_action: default
-          exception:
-            value: all
-            title_enable: false
-            title: All
-          title_enable: true
-          title: '{{ arguments.person_type_target_id }} Topics'
-          default_argument_type: raw
-          default_argument_options:
-            index: 1
-            use_alias: false
-          default_argument_skip_url: false
-          summary_options:
-            base_path: ''
-            count: true
-            items_per_page: 25
-            override: false
-          summary:
-            sort_order: asc
-            number_of_records: 0
-            format: default_summary
-          specify_validation: false
-          validate:
-            type: none
-            fail: 'not found'
-          validate_options: {  }
-          break_phrase: false
-          not: false
-          plugin_id: numeric
+      arguments: {  }
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url
         - user.permissions
       tags: {  }

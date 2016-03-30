@@ -25,6 +25,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "category/topics/*\r\ncurrent-students\r\nfaculty"
+    pages: "/category/topics/*\r\n/current-students*\r\n/faculty*"
     negate: false
     context_mapping: {  }
