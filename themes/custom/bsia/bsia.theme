@@ -197,6 +197,7 @@ function bsia_preprocess_node(&$variables){
 		$variables['event_year'] = format_date($start_datetime, 'custom', 'Y', 'Etc/GMT+10');
 
 		/* build address from fields and return to event node template */
+		$location = null;
 		$street = null;
 		$city = null;
 		$province_state = null;
@@ -244,7 +245,7 @@ function bsia_preprocess_node(&$variables){
 		}
 		$variables['teaser_address'] = $teaser_address;
 
-
+		$ical_location = '';
 		if($variables['node']->field_location->getValue()){
 			$ical_location = $variables['node']->field_location->getValue()[0]['value'] . $address;
 		}
