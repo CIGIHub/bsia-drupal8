@@ -1,4 +1,4 @@
-uuid: 89d806df-9965-4fb7-8700-ed00e826543a
+uuid: 0dd71ad9-e8de-440f-8c61-97c4b87f4378
 langcode: en
 status: true
 dependencies:
@@ -9,14 +9,14 @@ dependencies:
     - views
   theme:
     - bsia
-id: views_block__research_block_1
+id: views_block__research_block_2
 theme: bsia
 region: content
-weight: -21
+weight: -20
 provider: null
-plugin: 'views_block:research-block_1'
+plugin: 'views_block:research-block_2'
 settings:
-  id: 'views_block:research-block_1'
+  id: 'views_block:research-block_2'
   label: ''
   provider: views
   label_display: '0'

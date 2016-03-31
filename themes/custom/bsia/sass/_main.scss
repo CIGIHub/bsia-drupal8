@@ -101,7 +101,7 @@ article{
   }
 
   .field--name-field-short-description{
-    margin-top: 10px;
+    margin: 10px 0;
   }
 
   .field--name-topics{
@@ -268,6 +268,7 @@ dl.calendar{
   .views-element-container{
     .views-row{
       margin-bottom: 10px;
+      border: none;
     }
 
     .views-field-title,
@@ -369,6 +370,18 @@ dl.calendar{
   }
   .short-description{
     margin-bottom: 20px;
+  }
+}
+
+.view-research.view-display-id-block_2{
+  h2{
+    font-size: 18px;
+  }
+  h3{
+    @include type(12px);
+    color: $type-grey;
+    border-bottom: solid 1px $hr-border-color;
+    margin: 20px 0 10px 0;
   }
 }
 

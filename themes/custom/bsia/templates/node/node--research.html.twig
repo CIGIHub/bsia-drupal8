@@ -41,7 +41,10 @@
   {% else %}
   
   <div{{ content_attributes }}>
-    <div class="image">{{ content.field_image }}</div>
+    <div class="image">{{ content.field_image }}
+      <div class="caption">{{ content.field_caption }}</div>
+    </div>
+
     <div class="body">{{ content.body }}</div>
 
     {% if content.field_related_publications|render %}

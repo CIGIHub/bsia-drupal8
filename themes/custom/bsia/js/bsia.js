@@ -73,34 +73,24 @@
         
         var page_url = window.location.pathname;
      
-            $(".alphalist a").each(function () {
-                if ($(this).attr("href") == page_url) {
-                    $(this).attr("href", "#");
-                    $(this).addClass("active");
-                }
-                
-            });
-         //function mark_current_page_link_in_directory() {
-         //    var page_url = window.location.pathname;
-         //    $(".result a").each(function () {
-         //        if ($(this).attr("href") == page_url) {
-         //            $(this).attr("href", "#");
-         //            $(this).parent().addClass("active");
-         //        }
-         //    });
-         //
-         //    var path = page_url.split("/");
-         //    if (path[1] == 'publication') {
-         //        $("#sidebar .subnav a").each(function () {
-         //            if ($(this).attr('href') == '/phd-publications') {
-         //                $(this).addClass('active');
-         //            }
-         //        });
-         //    }
-         //}
-         //
-         
-    //Calendar drop down on events nodes
+        $(".alphalist a").each(function () {
+            if ($(this).attr("href") == page_url) {
+                $(this).attr("href", "#");
+                $(this).addClass("active");
+            }
+            
+        });
+        
+        //Research anchors
+        if($(".research-listing").length > 0){
+            $('.research-listing h3:first').attr('id', 'cluster');
+            $('.research-listing h3:last').attr('id', 'projects');
+        }
+        if($(".view-research.view-display-id-block_2").length > 0){
+            $('.view-display-id-block_2 h3').attr('id', 'centres');
+        }
+
+        //Calendar drop down on events nodes
          $(".calendar dd").hide();
          $("dl.calendar").hover(
             function () {
