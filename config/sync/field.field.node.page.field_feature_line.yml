@@ -5,8 +5,6 @@ dependencies:
   config:
     - field.storage.node.field_feature_line
     - node.type.page
-  module:
-    - text
 id: node.page.field_feature_line
 field_name: field_feature_line
 entity_type: node
@@ -18,4 +16,4 @@ translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: text_long
+field_type: string_long
