@@ -6,10 +6,12 @@ dependencies:
     - core.entity_view_mode.node.search_result
     - field.field.node.research.body
     - field.field.node.research.field_alternative_url
+    - field.field.node.research.field_caption
     - field.field.node.research.field_credit
     - field.field.node.research.field_feature_area
     - field.field.node.research.field_feature_line
     - field.field.node.research.field_feature_weight
+    - field.field.node.research.field_features
     - field.field.node.research.field_image
     - field.field.node.research.field_image_page
     - field.field.node.research.field_link_text
@@ -22,6 +24,7 @@ dependencies:
     - field.field.node.research.field_speakers_unlinked
     - field.field.node.research.field_square_image
     - field.field.node.research.field_website
+    - field.field.node.research.upload
     - node.type.research
   module:
     - image
@@ -128,6 +131,9 @@ content:
     weight: 100
 hidden:
   body: true
+  field_caption: true
+  field_features: true
   field_related_events: true
   field_related_publications: true
   field_speakers: true
+  upload: true
