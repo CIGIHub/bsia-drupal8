@@ -1,5 +1,6 @@
 global-js:
   js:
+    js/jquery.colorbox.js: {}
     js/bsia_menu.js: {}
     js/bsia.js: {}
 

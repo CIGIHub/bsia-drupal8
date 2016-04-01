@@ -54,7 +54,7 @@
     {% elseif view_mode == 'teaser' %}
       <div class="profile">
         <h2><a href="{{ url }}" rel="bookmark">{{ label }}</a></h2>
-        {% if content.field_book_cover and publication_type_name == 'Books' %}
+        {% if content.field_book_cover|render and publication_type_name == 'Books' %}
           <div class="image">
             {{ content.field_book_cover }}
           </div>

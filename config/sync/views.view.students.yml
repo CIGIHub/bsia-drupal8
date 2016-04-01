@@ -16,8 +16,8 @@ dependencies:
     - taxonomy.vocabulary.person_type
     - taxonomy.vocabulary.topics
   content:
-    - 'taxonomy_term:person_type:38ab0742-c476-44b0-9003-3f5162f2c7ee'
-    - 'taxonomy_term:person_type:56949438-8454-49e8-bb58-88655d8ae4ca'
+    - 'taxonomy_term:person_type:b714f8f8-e1ae-4f53-8a00-eb33549fa89e'
+    - 'taxonomy_term:person_type:f7d644f7-a823-49c5-a200-a518b71725ed'
   module:
     - image
     - node
@@ -1104,7 +1104,7 @@ display:
           plugin_id: field
       css_class: featured
       cache:
-        type: tag
+        type: none
         options: {  }
     cache_metadata:
       max-age: 0

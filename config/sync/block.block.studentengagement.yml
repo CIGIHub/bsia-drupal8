@@ -1,23 +1,23 @@
-uuid: 9ace53fa-2579-491b-a221-33f2613ca1fa
+uuid: a668fac8-43c6-43c1-bc09-9a9c730171ad
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:eee089eb-3945-49eb-9307-7b0294a7e6e3'
+    - 'block_content:basic:38a5ecc6-d010-43ca-9207-7b13e9e547b5'
   module:
     - block_content
     - system
   theme:
     - bsia
-id: guidebook
+id: studentengagement
 theme: bsia
 region: right_sidebar
-weight: -17
+weight: -11
 provider: null
-plugin: 'block_content:eee089eb-3945-49eb-9307-7b0294a7e6e3'
+plugin: 'block_content:38a5ecc6-d010-43ca-9207-7b13e9e547b5'
 settings:
-  id: 'block_content:eee089eb-3945-49eb-9307-7b0294a7e6e3'
-  label: Guidebook
+  id: 'block_content:38a5ecc6-d010-43ca-9207-7b13e9e547b5'
+  label: 'Student Engagement'
   provider: block_content
   label_display: visible
   status: true
@@ -26,6 +26,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: /degree-programs
+    pages: /current-students
     negate: false
     context_mapping: {  }
