@@ -24,7 +24,6 @@ dependencies:
     - datetime
     - file
     - image
-    - options
     - text
     - user
 id: node.news.default
@@ -35,64 +34,48 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 3
     settings: {  }
     third_party_settings: {  }
   field_caption:
-    weight: 103
-    label: above
+    weight: 2
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-  field_feature_line:
-    label: above
-    weight: 13
-    type: text_default
-    settings: {  }
-    third_party_settings: {  }
-  field_features:
-    weight: 104
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
   field_news_date:
-    label: above
-    weight: -1
+    label: hidden
+    weight: 0
     type: datetime_default
     settings:
-      format_type: fallback
-      timezone_override: ''
+      timezone_override: America/Toronto
+      format_type: medium
     third_party_settings: {  }
   field_news_image:
-    label: above
-    weight: 0
+    label: hidden
+    weight: 1
     type: image
     settings:
       image_style: ''
       image_link: ''
     third_party_settings: {  }
-  field_short_description:
-    label: above
-    weight: -1
-    type: text_default
-    settings: {  }
-    third_party_settings: {  }
-  links:
-    weight: 100
   upload:
     label: hidden
     settings: {  }
     type: file_default
-    weight: 102
+    weight: 4
     third_party_settings: {  }
 hidden:
   field_alternative_url: true
   field_credit: true
   field_feature_area: true
+  field_feature_line: true
   field_feature_weight: true
+  field_features: true
   field_image_page: true
   field_link_text: true
   field_person: true
   field_position: true
+  field_short_description: true
+  links: true

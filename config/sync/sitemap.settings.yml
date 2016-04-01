@@ -1,14 +1,33 @@
 page_title: Sitemap
 message:
   value: ''
-  format: restricted_html
-show_front: true
+  format: full_html
+show_front: false
 show_titles: true
 show_books: {  }
 books_expanded: true
-show_menus: {  }
+show_menus:
+  menu-main: menu-main
+  account: '0'
+  admin: '0'
+  devel: '0'
+  features: '0'
+  footer: '0'
+  main: '0'
+  menu-footer: '0'
+  navigation: '0'
+  primary-links: '0'
+  secondary-links: '0'
+  tools: '0'
 show_menus_hidden: false
-show_vocabularies: {  }
+show_vocabularies:
+  event_series: '0'
+  event_type: '0'
+  person_type: '0'
+  program_type: '0'
+  publication_type: '0'
+  tags: '0'
+  topics: '0'
 show_description: true
 show_count: true
 vocabulary_depth: -1
@@ -20,5 +39,24 @@ rss_taxonomy: -1
 css: false
 order:
   front: -50
+  menus_account: -49
+  menus_admin: -48
+  menus_devel: -47
+  menus_features: -46
+  menus_footer: -45
+  menus_main: -44
+  menus_menu-main: -43
+  menus_menu-footer: -42
+  menus_navigation: -41
+  menus_primary-links: -40
+  menus_secondary-links: -39
+  menus_tools: -38
+  vocabularies_event_series: -37
+  vocabularies_event_type: -36
+  vocabularies_person_type: -35
+  vocabularies_program_type: -34
+  vocabularies_publication_type: -33
+  vocabularies_tags: -32
+  vocabularies_topics: -31
 _core:
   default_config_hash: qZeaiLq06xBUfw-JNZtgetxUUMz-J8YCzw_LuhPrk2E

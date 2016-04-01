@@ -6,10 +6,12 @@ dependencies:
     - core.entity_view_mode.node.search_result
     - field.field.node.news.body
     - field.field.node.news.field_alternative_url
+    - field.field.node.news.field_caption
     - field.field.node.news.field_credit
     - field.field.node.news.field_feature_area
     - field.field.node.news.field_feature_line
     - field.field.node.news.field_feature_weight
+    - field.field.node.news.field_features
     - field.field.node.news.field_image_page
     - field.field.node.news.field_link_text
     - field.field.node.news.field_news_date
@@ -17,6 +19,7 @@ dependencies:
     - field.field.node.news.field_person
     - field.field.node.news.field_position
     - field.field.node.news.field_short_description
+    - field.field.node.news.upload
     - node.type.news
   module:
     - datetime
@@ -106,4 +109,7 @@ content:
     weight: 100
 hidden:
   body: true
+  field_caption: true
+  field_features: true
   field_person: true
+  upload: true

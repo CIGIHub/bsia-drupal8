@@ -261,8 +261,6 @@ dl.calendar{
     p{
       margin-bottom: 10px;
     }
-
-    
   }
 
   .views-element-container{
@@ -290,6 +288,12 @@ dl.calendar{
     }
     @include sidebar_link;
   }
+  #block-views-block-news-block-1{
+      font-size: 16px;
+      .views-summary-unformatted{
+        margin-bottom: 5px;
+      }
+  }
 }
 
 .views-row article,
@@ -299,7 +303,8 @@ dl.calendar{
 .view-students.view-display-id-page_3 .views-row,
 .view-students.view-display-id-page_5 .views-row,
 .view-students.view-display-id-page_6 .views-row{
-  @include divider
+  @include divider;
+  min-height: 110px;
 }
 
 .teaser-text{
