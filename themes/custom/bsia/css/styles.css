@@ -137,6 +137,20 @@ a[href$=".pdf"]:after {
   font-style: italic;
   color: #7e7f7e; }
 
+ul.sitemap-menu li {
+  list-style: none;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-weight: bold; }
+
+.sitemap .sitemap-box ul {
+  margin-top: 20px;
+  padding-left: 0px; }
+  .sitemap .sitemap-box ul ul {
+    margin: 5px 0 15px 30px; }
+    .sitemap .sitemap-box ul ul li {
+      font-weight: normal; }
+
 /************ MAIN  ***********/
 article {
   line-height: 130%; }
@@ -384,6 +398,10 @@ dl.calendar {
   color: #053b5b; }
   .region-right-sidebar .views-element-container a:hover {
     text-decoration: underline; }
+.region-right-sidebar #block-views-block-news-block-1 {
+  font-size: 16px; }
+  .region-right-sidebar #block-views-block-news-block-1 .views-summary-unformatted {
+    margin-bottom: 5px; }
 
 .views-row article,
 .views-row .research-listing,
@@ -394,7 +412,8 @@ dl.calendar {
 .view-students.view-display-id-page_6 .views-row {
   margin-bottom: 20px;
   border: none;
-  border-bottom: solid 1px #d2d2d2; }
+  border-bottom: solid 1px #d2d2d2;
+  min-height: 110px; }
 
 .teaser-text h2 {
   font-size: 20px; }

@@ -6,10 +6,12 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.news.body
     - field.field.node.news.field_alternative_url
+    - field.field.node.news.field_caption
     - field.field.node.news.field_credit
     - field.field.node.news.field_feature_area
     - field.field.node.news.field_feature_line
     - field.field.node.news.field_feature_weight
+    - field.field.node.news.field_features
     - field.field.node.news.field_image_page
     - field.field.node.news.field_link_text
     - field.field.node.news.field_news_date
@@ -17,55 +19,38 @@ dependencies:
     - field.field.node.news.field_person
     - field.field.node.news.field_position
     - field.field.node.news.field_short_description
+    - field.field.node.news.upload
     - node.type.news
   module:
     - datetime
-    - image
-    - text
     - user
 id: node.news.teaser
 targetEntityType: node
 bundle: news
 mode: teaser
 content:
-  body:
-    label: hidden
-    type: text_summary_or_trimmed
-    weight: 101
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
   field_feature_line:
-    label: above
-    weight: 13
-    type: text_default
+    label: hidden
+    weight: 2
+    type: basic_string
     settings: {  }
     third_party_settings: {  }
   field_news_date:
-    label: above
-    weight: -1
+    label: hidden
+    weight: 1
     type: datetime_default
     settings:
       format_type: fallback
       timezone_override: ''
     third_party_settings: {  }
-  field_news_image:
-    label: above
-    weight: 0
-    type: image
-    settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
   field_short_description:
-    label: above
-    weight: -1
-    type: text_default
+    label: hidden
+    weight: 0
+    type: basic_string
     settings: {  }
     third_party_settings: {  }
-  links:
-    weight: 100
 hidden:
+  body: true
   field_alternative_url: true
   field_caption: true
   field_credit: true
@@ -74,6 +59,8 @@ hidden:
   field_features: true
   field_image_page: true
   field_link_text: true
+  field_news_image: true
   field_person: true
   field_position: true
+  links: true
   upload: true

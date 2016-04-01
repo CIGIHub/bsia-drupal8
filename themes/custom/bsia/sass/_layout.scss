@@ -63,3 +63,25 @@ a[href$=".pdf"]:after {
   color: #7e7f7e;
 }
 
+ul.sitemap-menu{
+  
+  li{
+    list-style: none;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}
+
+.sitemap .sitemap-box ul{
+  margin-top: 20px;
+  padding-left: 0px;
+
+  ul{
+    margin: 5px 0 15px 30px;
+    li{
+      font-weight: normal;
+    }
+  }
+} 
+
