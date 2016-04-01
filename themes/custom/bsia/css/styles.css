@@ -382,8 +382,7 @@ dl.calendar {
   .region-right-sidebar div[id^='block-'] p {
     margin-bottom: 10px; }
 .region-right-sidebar .views-element-container .views-row {
-  margin-bottom: 10px;
-  border: none; }
+  margin-bottom: 10px; }
 .region-right-sidebar .views-element-container .views-field-title,
 .region-right-sidebar .views-element-container .views-field-field-event-date {
   padding-bottom: 5px; }
@@ -403,13 +402,13 @@ dl.calendar {
   .region-right-sidebar #block-views-block-news-block-1 .views-summary-unformatted {
     margin-bottom: 5px; }
 
-.views-row article,
-.views-row .research-listing,
-.view-faculty .views-row,
-.view-students.view-display-id-page_2 .views-row,
-.view-students.view-display-id-page_3 .views-row,
-.view-students.view-display-id-page_5 .views-row,
-.view-students.view-display-id-page_6 .views-row {
+#main-content .views-row article,
+#main-content .views-row .research-listing,
+#main-content .view-faculty .views-row,
+#main-content .view-students.view-display-id-page_2 .views-row,
+#main-content .view-students.view-display-id-page_3 .views-row,
+#main-content .view-students.view-display-id-page_5 .views-row,
+#main-content .view-students.view-display-id-page_6 .views-row {
   margin-bottom: 20px;
   border: none;
   border-bottom: solid 1px #d2d2d2;
@@ -518,8 +517,7 @@ dl.calendar {
   #block-views-block-publications-block-2 .featured-item .title {
     color: #7e7f7e;
     margin: 3px 0 5px 0; }
-  #block-views-block-students-block-1 .featured-item .title, #block-views-block-students-block-1 .featured-item .feature-line,
-  #block-views-block-publications-block-2 .featured-item .title,
+  #block-views-block-students-block-1 .featured-item .feature-line,
   #block-views-block-publications-block-2 .featured-item .feature-line {
     font-style: italic; }
   #block-views-block-students-block-1 .featured-item .type,
@@ -1115,7 +1113,8 @@ footer {
 /*****  Person  *****/
 .profile {
   display: table;
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 20px; }
   .profile h2 {
     font-size: 18px;
     margin-bottom: 0px; }
@@ -1128,13 +1127,12 @@ footer {
   .profile .image, .profile .contact {
     display: table-cell; }
   .profile .image {
-    display: inline-block;
-    margin-right: 20px;
-    border: solid 10px #ddd; }
+    border: solid 10px #ddd;
+    width: 28%; }
     .profile .image img {
-      display: block;
-      float: left; }
+      display: block; }
   .profile .contact {
+    padding-left: 20px;
     vertical-align: middle;
     text-transform: uppercase; }
   .profile .description {
@@ -1149,6 +1147,17 @@ footer {
   padding-right: 0; }
 .node--type-person .field--name-program-type .field__item:after {
   content: ","; }
+.node--type-person .notice-box {
+  text-align: center;
+  background: #dff2d5;
+  border: solid 1px #d2d2d2;
+  border-radius: 3px;
+  padding: 5px;
+  margin-bottom: 10px;
+  width: 95%; }
+.node--type-person .social div {
+  display: inline-block;
+  margin-right: 5px; }
 
 .node--type-person.node--view-mode-teaser .profile h2,
 .view-faculty .view-content .profile h2,
@@ -1209,7 +1218,7 @@ footer {
 #views-exposed-form-students-page-2 label {
   text-indent: -9999px;
   position: absolute; }
-#views-exposed-form-students-page-2 #edit-keys--2 {
+#views-exposed-form-students-page-2 .form-text {
   width: 200px;
   padding: 3px;
   font-size: 14px; }

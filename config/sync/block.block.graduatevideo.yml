@@ -1,31 +1,31 @@
-uuid: 9ace53fa-2579-491b-a221-33f2613ca1fa
+uuid: 08750fa9-613f-40f5-b71c-285ab65d195e
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:eee089eb-3945-49eb-9307-7b0294a7e6e3'
+    - 'block_content:basic:35df4050-f485-4a17-a003-3cdc2bb3b545'
   module:
     - block_content
     - system
   theme:
     - bsia
-id: guidebook
+id: graduatevideo
 theme: bsia
 region: right_sidebar
-weight: -17
+weight: -23
 provider: null
-plugin: 'block_content:eee089eb-3945-49eb-9307-7b0294a7e6e3'
+plugin: 'block_content:35df4050-f485-4a17-a003-3cdc2bb3b545'
 settings:
-  id: 'block_content:eee089eb-3945-49eb-9307-7b0294a7e6e3'
-  label: Guidebook
+  id: 'block_content:35df4050-f485-4a17-a003-3cdc2bb3b545'
+  label: 'Graduate Video'
   provider: block_content
-  label_display: visible
+  label_display: '0'
   status: true
   info: ''
   view_mode: full
 visibility:
   request_path:
     id: request_path
-    pages: /degree-programs
+    pages: /graduates
     negate: false
     context_mapping: {  }

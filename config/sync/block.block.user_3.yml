@@ -2,28 +2,25 @@ uuid: 04d48f6a-0c55-4fe7-b605-5a97bd3dd51b
 langcode: en
 status: true
 dependencies:
+  config:
+    - system.menu.tools
   module:
     - system
-    - user
   theme:
-    - seven
+    - bartik
 _core:
-  default_config_hash: IItlF4SKHgxduIysVQdvirDJ_v3HGuAviOkidAOJYRE
+  default_config_hash: NeHSoqm4XFqA7_0bDmR429ZZQt3LRbZMNRJTMsFyOfI
 id: user_3
-theme: seven
+theme: bartik
 region: sidebar_first
-weight: 0
+weight: -58
 provider: null
-plugin: user_login_block
+plugin: 'system_menu_block:tools'
 settings:
-  id: user_login_block
+  id: 'system_menu_block:tools'
   label: ''
-  provider: user
+  provider: system
   label_display: visible
   level: 1
   depth: 0
-visibility:
-  request_path:
-    id: request_path
-    negate: true
-    pages: /node/38
+visibility: {  }

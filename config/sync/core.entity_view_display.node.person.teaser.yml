@@ -161,6 +161,7 @@ hidden:
   field_expertise: true
   field_feature_area: true
   field_feature_weight: true
+  field_features: true
   field_given_names: true
   field_graduate_title: true
   field_image_page: true

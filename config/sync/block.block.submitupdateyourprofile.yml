@@ -1,23 +1,23 @@
-uuid: 9ace53fa-2579-491b-a221-33f2613ca1fa
+uuid: f8c8c650-9bee-463b-8b00-b48c746e8f1e
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:eee089eb-3945-49eb-9307-7b0294a7e6e3'
+    - 'block_content:basic:4c7f60c2-1771-4719-b300-d9c3022346a7'
   module:
     - block_content
     - system
   theme:
     - bsia
-id: guidebook
+id: submitupdateyourprofile
 theme: bsia
 region: right_sidebar
-weight: -17
+weight: -24
 provider: null
-plugin: 'block_content:eee089eb-3945-49eb-9307-7b0294a7e6e3'
+plugin: 'block_content:4c7f60c2-1771-4719-b300-d9c3022346a7'
 settings:
-  id: 'block_content:eee089eb-3945-49eb-9307-7b0294a7e6e3'
-  label: Guidebook
+  id: 'block_content:4c7f60c2-1771-4719-b300-d9c3022346a7'
+  label: 'Submit/Update your profile'
   provider: block_content
   label_display: visible
   status: true
@@ -26,6 +26,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: /degree-programs
+    pages: /graduates
     negate: false
     context_mapping: {  }

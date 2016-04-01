@@ -149,6 +149,7 @@ hidden:
   body: true
   field_caption: true
   field_embed_code: true
+  field_features: true
   field_speakers: true
   publication_type: true
   upload: true

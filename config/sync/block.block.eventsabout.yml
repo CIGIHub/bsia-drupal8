@@ -12,7 +12,7 @@ dependencies:
 id: eventsabout
 theme: bsia
 region: right_sidebar
-weight: -23
+weight: -22
 provider: null
 plugin: 'block_content:96c39365-613a-4a91-8d15-210c3873b727'
 settings:
