@@ -16,8 +16,8 @@ dependencies:
     - taxonomy.vocabulary.person_type
     - taxonomy.vocabulary.topics
   content:
-    - 'taxonomy_term:person_type:b714f8f8-e1ae-4f53-8a00-eb33549fa89e'
-    - 'taxonomy_term:person_type:f7d644f7-a823-49c5-a200-a518b71725ed'
+    - 'taxonomy_term:person_type:6c99da66-e544-46e9-bd3d-6180e40454e7'
+    - 'taxonomy_term:person_type:a11b4d37-0c48-4f47-805b-911d3ebfa5bb'
   module:
     - image
     - node
@@ -1989,7 +1989,7 @@ display:
             title_enable: false
             title: All
           title_enable: true
-          title: '{{ arguments.tid }}'
+          title: 'Students in {{ arguments.tid }}'
           default_argument_type: fixed
           default_argument_options:
             argument: ''
