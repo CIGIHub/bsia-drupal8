@@ -1,23 +1,23 @@
-uuid: d321fc17-246a-4f10-9a2b-437dc7dc7c33
+uuid: b2935711-e531-438c-a109-9fac8d6852cb
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:5dcd432d-ea54-4635-a504-4e427a70b123'
+    - 'block_content:basic:7bec6e46-ec95-4144-bd00-0aa9646589b1'
   module:
     - block_content
     - system
   theme:
     - bsia
-id: facultydescription
+id: mippdescription
 theme: bsia
 region: content_header
-weight: -16
+weight: -26
 provider: null
-plugin: 'block_content:5dcd432d-ea54-4635-a504-4e427a70b123'
+plugin: 'block_content:7bec6e46-ec95-4144-bd00-0aa9646589b1'
 settings:
-  id: 'block_content:5dcd432d-ea54-4635-a504-4e427a70b123'
-  label: 'Faculty Description'
+  id: 'block_content:7bec6e46-ec95-4144-bd00-0aa9646589b1'
+  label: 'MIPP description'
   provider: block_content
   label_display: '0'
   status: true
@@ -26,6 +26,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: /faculty
+    pages: /current-students/master-of-international-public-policy
     negate: false
     context_mapping: {  }
