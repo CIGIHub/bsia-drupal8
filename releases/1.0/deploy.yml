@@ -1,0 +1,18 @@
+name: update_menus
+  command: '{{ drush_path }} update-menu --user=admin'
+  with_items: '{{ content/mainmenu.yml }}'
+													
+ 
+name: delete nodes
+  command: drush node_delete 9
+  command: drush node_delete 12
+  command: drush node_delete 47
+  command: drush node_delete 29
+  command: drush node_delete 80
+  command: drush node_delete 81
+  command: drush node_delete 83
+  command: drush node_delete 593
+  command: drush node_delete 613
+  command: drush node_delete 614
+  command: drush node_delete 1361					
+ 

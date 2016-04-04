@@ -1,0 +1,51 @@
+menus:
+  - menu: menu-main
+    action: update
+    mlid: 174
+    path: /events
+
+  - menu: menu-main
+    action: update
+    mlid: 177
+    path: /faculty
+
+  - menu: menu-main
+    action: update
+    mlid: 788
+    path: /students
+
+  - menu: menu-main
+    action: update
+    mlid: 1016
+    path: /about/staff-listing
+
+  - menu: menu-main
+    action: update
+    mlid: 851
+    path: /faculty/cigi-chairs
+
+  - menu: menu-main
+    action: update
+    mlid: 853
+    path: /faculty/program-directors
+
+  - menu: menu-main
+    action: update
+    mlid: 983
+    path: /events/archive
+
+  - menu: menu-main
+    action: update
+    mlid: 1893
+    path: /faculty/postdoctoral-fellows
+
+  - menu: menu-main
+    action: update
+    mlid: 1943
+    path: /faculty/external-fellows
+    
+  - menu: menu-main
+    action: update
+    mlid: 1948
+    path: /faculty/visiting-fellows	
+

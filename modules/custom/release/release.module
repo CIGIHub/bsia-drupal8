@@ -1,0 +1,30 @@
+<?php
+
+use Drupal\menu_link_content\Entity\MenuLinkContent;
+
+/**
+ * Updates the $menu menu. Depending on the options, do different things.
+ * $options is an array and needs an 'action' item. All other items relate to that action 
+ */
+function release_update_menu($menu, $options) {
+	$logger = \Drupal::logger('release');
+  	
+	if ($options['action'] == 'update') {
+		$logger->notice(t("Updating menu" . $menu));
+
+		$menuLinkEntity =  MenuLinkContent::load($options['mlid']);
+
+		$logger->notice(t("Menu_Entity <pre>" . print_r($menuLinkEntity, true) . "</pre>"));
+
+
+		if($options['path']){
+	        //$menuLinkEntity['link']['uri'] = "internal:" . $options['path'];        
+	    }
+
+		//$menuLinkEntity->save();
+
+		}
+
+	//$logger->notice(t("Inside update menu<pre>" . print_r($options, true) . "</pre>"));
+
+}
