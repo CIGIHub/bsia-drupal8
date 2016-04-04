@@ -953,6 +953,72 @@ footer {
       .right-menu ul.menu li a.is-active:hover {
         color: white; }
 
+/***********  HOMEPAGE  **************/
+.homepage h1 {
+  text-indent: -9999px;
+  position: absolute; }
+.homepage h2 {
+  text-transform: uppercase;
+  border-bottom: solid 1px #666;
+  color: #666;
+  margin-top: 0px;
+  font-size: 1.3em; }
+  .homepage h2 a {
+    color: #666; }
+    .homepage h2 a:hover {
+      color: #053b5b;
+      text-decoration: none; }
+.homepage ul {
+  list-style: none;
+  padding: 0px; }
+  .homepage ul li {
+    list-style: none;
+    list-style-image: none;
+    float: left; }
+    .homepage ul li.menu-item--expanded ul {
+      display: none; }
+  .homepage ul:after {
+    content: '';
+    display: block;
+    clear: both; }
+.homepage li {
+  width: 32%;
+  padding: 1em;
+  margin: 0 0 0.25em 0.5em; }
+  .homepage li .views-field-field-event-date,
+  .homepage li .views-field-field-news-date {
+    font-size: 0.9em;
+    color: #666;
+    text-transform: uppercase; }
+  .homepage li .views-field-title {
+    font-size: 1.3em;
+    font-weight: bold;
+    line-height: 130%;
+    margin-top: 0.4em; }
+
+#block-views-block-homepage-block-1-2 {
+  margin-bottom: 1.5em; }
+  #block-views-block-homepage-block-1-2 li {
+    background: #1a374e; }
+    #block-views-block-homepage-block-1-2 li a {
+      color: #fff; }
+      #block-views-block-homepage-block-1-2 li a:hover {
+        text-decoration: none;
+        color: #666; }
+    #block-views-block-homepage-block-1-2 li .views-field-title {
+      font-size: 1.6em;
+      margin-top: 0px;
+      font-weight: normal; }
+
+@media (min-width: 992px) {
+  .view-homepage h2,
+  .view-homepage .cell .views-field-title,
+  .view-homepage .views-field-field-event-date-value,
+  .view-homepage .views-field-field-news-date-value {
+    font-size: 140%; }
+
+  #block-views-homepage-block_2 .cell .views-field-title {
+    font-size: 170%; } }
 /******  HOMEPAGE GALLERY  ******/
 #gallery {
   overflow: hidden; }
