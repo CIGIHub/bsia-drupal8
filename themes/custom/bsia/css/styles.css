@@ -243,7 +243,8 @@ article .field--name-upload span:before {
 
 .node--view-mode-teaser .profile,
 .view-content .profile {
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  overflow: auto; }
   .node--view-mode-teaser .profile h2,
   .view-content .profile h2 {
     font-size: 1.4em;
@@ -252,7 +253,11 @@ article .field--name-upload span:before {
   .node--view-mode-teaser .profile .image,
   .view-content .profile .image {
     float: left;
-    border: solid 5px #ddd; }
+    border: solid 5px #ddd;
+    margin-right: 20px; }
+    .node--view-mode-teaser .profile .image img,
+    .view-content .profile .image img {
+      display: block; }
   .node--view-mode-teaser .profile .text,
   .view-content .profile .text {
     float: left;
@@ -260,6 +265,9 @@ article .field--name-upload span:before {
   .node--view-mode-teaser .profile .text-full,
   .view-content .profile .text-full {
     width: 100%; }
+  .node--view-mode-teaser .profile .description,
+  .view-content .profile .description {
+    margin-bottom: 10px; }
 
 .region-content-header {
   border: 1px solid #d2d2d2;
@@ -402,13 +410,13 @@ dl.calendar {
   .region-right-sidebar #block-views-block-news-block-1 .views-summary-unformatted {
     margin-bottom: 5px; }
 
-#main-content .views-row article,
-#main-content .views-row .research-listing,
-#main-content .view-faculty .views-row,
-#main-content .view-students.view-display-id-page_2 .views-row,
-#main-content .view-students.view-display-id-page_3 .views-row,
-#main-content .view-students.view-display-id-page_5 .views-row,
-#main-content .view-students.view-display-id-page_6 .views-row {
+.region-content .views-row article,
+.region-content .views-row .research-listing,
+.region-content .view-faculty .views-row,
+.region-content .view-students.view-display-id-page_2 .views-row,
+.region-content .view-students.view-display-id-page_3 .views-row,
+.region-content .view-students.view-display-id-page_5 .views-row,
+.region-content .view-students.view-display-id-page_6 .views-row {
   margin-bottom: 20px;
   border: none;
   border-bottom: solid 1px #d2d2d2;
@@ -944,8 +952,6 @@ footer {
         color: #ccc; }
       .right-menu ul.menu li a.is-active:hover {
         color: white; }
-    .right-menu ul.menu li li {
-      padding: 3px 20px; }
 
 /***********  HOMEPAGE  **************/
 .homepage h1 {
@@ -1111,31 +1117,31 @@ footer {
       top: 45%; } }
 
 /*****  Person  *****/
-.profile {
+.node--type-person.node--view-mode-full .profile {
   display: table;
   width: 100%;
   margin-bottom: 20px; }
-  .profile h2 {
+  .node--type-person.node--view-mode-full .profile h2 {
     font-size: 18px;
     margin-bottom: 0px; }
-  .profile .position {
+  .node--type-person.node--view-mode-full .profile .position {
     font-style: italic;
     color: #666;
     font-size: 0.95em;
     line-height: 130%;
     margin-bottom: 10px; }
-  .profile .image, .profile .contact {
+  .node--type-person.node--view-mode-full .profile .image, .node--type-person.node--view-mode-full .profile .contact, .node--type-person.node--view-mode-full .profile .text {
     display: table-cell; }
-  .profile .image {
+  .node--type-person.node--view-mode-full .profile .image {
     border: solid 10px #ddd;
     width: 28%; }
-    .profile .image img {
+    .node--type-person.node--view-mode-full .profile .image img {
       display: block; }
-  .profile .contact {
+  .node--type-person.node--view-mode-full .profile .contact {
     padding-left: 20px;
     vertical-align: middle;
     text-transform: uppercase; }
-  .profile .description {
+  .node--type-person.node--view-mode-full .profile .description {
     margin-bottom: 10px; }
 
 .node--type-person .field--name-field-graduate-title {

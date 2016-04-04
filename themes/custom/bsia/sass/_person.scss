@@ -1,40 +1,42 @@
 /*****  Person  *****/
+.node--type-person.node--view-mode-full{
 
-.profile{
-  display: table;
-  width: 100%;
-  margin-bottom: 20px;
+  .profile{
+    display: table;
+    width: 100%;
+    margin-bottom: 20px;
 
-  h2{
-    font-size: 18px;
-    margin-bottom: 0px;
-  }
-  .position{
-    font-style: italic;
-    color: $type-grey;
-    font-size: 0.95em;
-    line-height: 130%;
-    margin-bottom: 10px;
-  }
-
-  .image, .contact{
-    display: table-cell;
-  }
-  .image{
-    border: solid 10px $image-border-color;
-    width: 28%;
-    img{
-      display: block;
+    h2{
+      font-size: 18px;
+      margin-bottom: 0px;
     }
-    
-  }
-  .contact{
-    padding-left: 20px;
-    vertical-align: middle;
-    text-transform: uppercase;
-  }
-  .description{
-    margin-bottom: 10px;
+    .position{
+      font-style: italic;
+      color: $type-grey;
+      font-size: 0.95em;
+      line-height: 130%;
+      margin-bottom: 10px;
+    }
+
+    .image, .contact, .text{
+      display: table-cell;
+    }
+    .image{
+      border: solid 10px $image-border-color;
+      width: 28%;
+      img{
+        display: block;
+      }
+      
+    }
+    .contact{
+      padding-left: 20px;
+      vertical-align: middle;
+      text-transform: uppercase;
+    }
+    .description{
+      margin-bottom: 10px;
+    }
   }
 }
 
