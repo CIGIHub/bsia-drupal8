@@ -35,13 +35,14 @@ h1{
 }
 
 h2 {
-  font-size: 1.6em;
+  font-size: 1.4em;
   color: $header2-color;
   margin: 0 0 0.4em 0;
 }
 
 h3{
-  font-size: 1.3em;
+  font-size: 1.1em;
+  margin-bottom: 5px;
 }
 
 a{
@@ -84,4 +85,16 @@ ul.sitemap-menu{
     }
   }
 } 
+
+.top{
+  font-size: 2em;
+  text-align: center;
+}
+.top a{text-decoration: none; color: #fbad18;}
+.top a:hover{opacity: 0.5}
+
+.divider{
+  @include divider;
+  margin-top: 10px;
+}
 

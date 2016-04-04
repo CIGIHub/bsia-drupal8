@@ -9,6 +9,9 @@ article{
   p{
     margin-bottom: 15px;
   }
+  #content-header{
+    @include header_box;
+  }
 }
 
 hr, .row-divider{
@@ -118,6 +121,7 @@ article{
     }
   }
 }
+
 .view-content{
   margin-bottom: 20px;
 }
