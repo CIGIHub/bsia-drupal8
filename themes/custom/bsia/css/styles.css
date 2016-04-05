@@ -572,7 +572,7 @@ dl.calendar {
   font-size: 12px; }
   #block-views-block-students-block-1 .profile.video,
   #block-views-block-publications-block-2 .profile.video {
-    right: -460px; }
+    right: 0; }
 #block-views-block-students-block-1 .profile::before,
 #block-views-block-publications-block-2 .profile::before {
   font-family: FontAwesome;
@@ -1382,5 +1382,3 @@ ul.student-list {
     background-color: #f2f2f2; }
   .calendar-calendar table.mini td.today {
     background-color: #d1dee2; }
-
-/*# sourceMappingURL=styles.css.map */
