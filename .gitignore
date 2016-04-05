@@ -2,6 +2,8 @@
 .DS_Store
 *.map
 *.sass-cache
+themes/custom/bsia/config.codekit
+
 
 # Config ignores
 
