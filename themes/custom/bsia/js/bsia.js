@@ -101,20 +101,10 @@
             }
          );
 
+
          if ($("a.vimeo").length > 0) {
              $("a.vimeo").colorbox({iframe: true, innerWidth: 625, innerHeight: 444});
-
-             try {
-                 $("a[rel]").overlay({
-                     // some mask tweaks suitable for modal dialogs
-                     mask: {
-                         color: '#666666',
-                         loadSpeed: 200,
-                         opacity: 0.9
-                     }
-                 });
-             } catch (err) {
-             }
+             $(".play").colorbox({iframe: true, innerWidth: 625, innerHeight: 444});
          }
      });
 
