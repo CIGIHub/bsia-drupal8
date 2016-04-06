@@ -1016,6 +1016,8 @@ footer {
   .right-menu ul.menu .menu-item--expanded {
     list-style-image: none;
     list-style: none; }
+  .right-menu ul.menu ul {
+    padding: 10px 0 0 0; }
   .right-menu ul.menu li {
     padding: 5px 0 5px 20px; }
     .right-menu ul.menu li a {
@@ -1445,5 +1447,3 @@ ul.student-list {
     background-color: #f2f2f2; }
   .calendar-calendar table.mini td.today {
     background-color: #d1dee2; }
-
-/*# sourceMappingURL=styles.css.map */
