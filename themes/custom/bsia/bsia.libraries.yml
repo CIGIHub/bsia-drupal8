@@ -10,8 +10,9 @@ global-js:
 global-css:
   css:
     theme:
-      css/styles.css: {}
+      css/colorbox.css: {}
       css/font-awesome.min.css: {}
+      css/styles.css: {}
 
 homepage-slider:
   js:
