@@ -167,7 +167,7 @@ content:
   field_feature_line:
     label: hidden
     weight: 1
-    type: text_default
+    type: basic_string
     settings: {  }
     third_party_settings: {  }
   field_feature_weight:
@@ -263,17 +263,17 @@ content:
   field_quote:
     label: hidden
     weight: 2
-    type: text_default
+    type: basic_string
     settings: {  }
     third_party_settings: {  }
   field_research_focus:
     label: above
     weight: 4
-    type: text_default
+    type: basic_string
     settings: {  }
     third_party_settings: {  }
   field_short_bio:
-    type: text_default
+    type: basic_string
     weight: 27
     label: hidden
     settings: {  }
@@ -296,7 +296,7 @@ content:
   field_testimonial:
     label: above
     weight: 5
-    type: text_default
+    type: basic_string
     settings: {  }
     third_party_settings: {  }
   field_twitter_url:

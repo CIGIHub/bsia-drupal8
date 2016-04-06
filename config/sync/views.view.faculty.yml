@@ -14,9 +14,7 @@ dependencies:
     - node.type.person
     - taxonomy.vocabulary.person_type
   content:
-    - 'taxonomy_term:person_type:b714f8f8-e1ae-4f53-8a00-eb33549fa89e'
-    - 'taxonomy_term:person_type:f0b19673-2a72-4c49-b943-6765d6bb8f77'
-    - 'taxonomy_term:person_type:f7d644f7-a823-49c5-a200-a518b71725ed'
+    - 'taxonomy_term:person_type:5c44c917-204b-4d46-8700-ad3798ed801b'
   module:
     - image
     - node
@@ -741,7 +739,7 @@ display:
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
-          hide_empty: false
+          hide_empty: true
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
@@ -791,7 +789,7 @@ display:
             sort_order: asc
             number_of_records: 0
             format: default_summary
-          specify_validation: true
+          specify_validation: false
           validate:
             type: none
             fail: 'not found'
@@ -895,6 +893,7 @@ display:
         sorts: false
         filters: false
         filter_groups: false
+        pager: false
       arguments:
         nid:
           id: nid
@@ -910,9 +909,11 @@ display:
             title: All
           title_enable: false
           title: ''
-          default_argument_type: node
-          default_argument_options: {  }
-          default_argument_skip_url: false
+          default_argument_type: raw
+          default_argument_options:
+            index: 1
+            use_alias: false
+          default_argument_skip_url: true
           summary_options:
             base_path: ''
             count: true
@@ -922,9 +923,9 @@ display:
             sort_order: asc
             number_of_records: 0
             format: default_summary
-          specify_validation: false
+          specify_validation: true
           validate:
-            type: none
+            type: numeric
             fail: 'not found'
           validate_options: {  }
           break_phrase: false
@@ -966,8 +967,6 @@ display:
           operator: or
           value:
             2: 2
-            42: 42
-            5: 5
           group: 1
           exposed: false
           expose:
@@ -1006,13 +1005,16 @@ display:
         operator: AND
         groups:
           1: AND
+      pager:
+        type: none
+        options:
+          offset: 0
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - url.query_args
         - user
         - 'user.node_grants:view'
         - user.permissions

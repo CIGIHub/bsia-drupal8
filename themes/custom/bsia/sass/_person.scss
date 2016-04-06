@@ -285,3 +285,40 @@ ul.student-list{
     text-decoration: underline;
   }
 }
+
+/* person's publications */
+.field--type-field-collection {
+
+  .field__label {
+    font-size: 1.4em;
+    margin:0 0 0.4em 0;
+    color:$header2-color;
+  }
+
+  li .list-item {
+    padding:2px 0;
+  }
+
+  .field__item {
+    color:$list-text-grey;
+    display: inline;
+    
+
+    &.field--name-field-article-title {
+      font-style: italic;
+    }
+
+    &.field--name-field-publication-date:after {
+      content:".";
+    }
+  }
+}
+
+
+
+
+
+
+
+
+

@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.person.field_board_order
     - field.field.node.person.field_board_position
     - field.field.node.person.field_caption
+    - field.field.node.person.field_collection_publication
     - field.field.node.person.field_courses
     - field.field.node.person.field_credit
     - field.field.node.person.field_current_student
@@ -21,6 +22,7 @@ dependencies:
     - field.field.node.person.field_feature_area
     - field.field.node.person.field_feature_line
     - field.field.node.person.field_feature_weight
+    - field.field.node.person.field_features
     - field.field.node.person.field_given_names
     - field.field.node.person.field_graduate_title
     - field.field.node.person.field_image_page
