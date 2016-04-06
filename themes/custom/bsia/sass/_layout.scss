@@ -50,10 +50,13 @@ a{
   color: $link-color;
 }
 
-a[href$=".pdf"]:after {
-  font-family: FontAwesome;
-  content: ' \f1c1';
+#content{
+  a[href$=".pdf"]:after {
+    font-family: FontAwesome;
+    content: ' \f1c1';
+  }
 }
+
 
 .strong{
   font-weight: bold;

@@ -12,14 +12,14 @@ dependencies:
 id: guidebook
 theme: bsia
 region: right_sidebar
-weight: -17
+weight: -16
 provider: null
 plugin: 'block_content:eee089eb-3945-49eb-9307-7b0294a7e6e3'
 settings:
   id: 'block_content:eee089eb-3945-49eb-9307-7b0294a7e6e3'
   label: Guidebook
   provider: block_content
-  label_display: visible
+  label_display: '0'
   status: true
   info: ''
   view_mode: full

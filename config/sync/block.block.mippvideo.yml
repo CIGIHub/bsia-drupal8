@@ -1,23 +1,23 @@
-uuid: 44088e34-c0d6-45d8-9b14-2062fbcc96ab
+uuid: 47d5a058-cc66-4d4b-9c00-a172449544cc
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:96c39365-613a-4a91-8d15-210c3873b727'
+    - 'block_content:basic:2673a728-83f4-4dbd-8555-8520529b2648'
   module:
     - block_content
     - system
   theme:
     - bsia
-id: eventsabout
+id: mippvideo
 theme: bsia
 region: right_sidebar
-weight: -21
+weight: -24
 provider: null
-plugin: 'block_content:96c39365-613a-4a91-8d15-210c3873b727'
+plugin: 'block_content:2673a728-83f4-4dbd-8555-8520529b2648'
 settings:
-  id: 'block_content:96c39365-613a-4a91-8d15-210c3873b727'
-  label: 'Events - About'
+  id: 'block_content:2673a728-83f4-4dbd-8555-8520529b2648'
+  label: 'MIPP Video'
   provider: block_content
   label_display: '0'
   status: true
@@ -26,6 +26,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "/events*\r\n/event*"
+    pages: /degree-programs/masters-of-international-public-policy
     negate: false
     context_mapping: {  }
