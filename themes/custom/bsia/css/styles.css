@@ -244,6 +244,15 @@ ul.inline, ol.inline {
   .pager .pager__item.is-active a {
     background: #ccdae3; }
 
+.view-taxonomy-term .field--name-description {
+  border: 1px solid #d2d2d2;
+  background-color: #f2f7f2;
+  padding: 20px;
+  margin-bottom: 20px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px; }
+
 article .field__label {
   font-weight: normal; }
 article ol.field--ordered-list-style-lower {
@@ -542,7 +551,7 @@ dl.calendar {
 #block-views-block-students-block-1 .featured-item,
 #block-views-block-publications-block-2 .featured-item {
   color: #666;
-  width: 55%; }
+  width: 70%; }
   #block-views-block-students-block-1 .featured-item .title,
   #block-views-block-publications-block-2 .featured-item .title {
     color: #7e7f7e;
@@ -578,6 +587,10 @@ dl.calendar {
 #block-views-block-students-block-1 .profile.video::before,
 #block-views-block-publications-block-2 .profile.video::before {
   content: '\f03d'; }
+
+#block-views-block-students-block-1 .featured-item {
+  color: #666;
+  width: 55%; }
 
 /****** Connect with Us Form Page ******/
 #bsia-connect-form h3 {
@@ -1313,11 +1326,15 @@ footer {
   display: inline-block; }
 
 .students-all-programs h3 {
-  margin-top: 20px; }
+  margin-top: 20px;
+  font-size: 1.3em; }
 .students-all-programs .fa-list-ul {
   font-size: 14px;
   margin-left: 10px;
   color: #9da5b2; }
+
+.view-students.view-display-id-page_4 h3:before {
+  content: 'Graduates in '; }
 
 ul.student-list {
   margin-bottom: 40px; }

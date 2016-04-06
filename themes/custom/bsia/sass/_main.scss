@@ -85,6 +85,11 @@ ul, ol{
   }
 }
 
+.view-taxonomy-term{
+  .field--name-description{
+    @include header_box;
+  }
+}
 
 article{
   .field__label{
@@ -441,7 +446,7 @@ dl.calendar{
   }
   .featured-item{
     color: $type-grey;
-    width: 55%;
+    width: 70%;
     .title{
       color: $light-grey-text;
       margin: 3px 0 5px 0;
@@ -478,6 +483,13 @@ dl.calendar{
   }
   .profile.video::before{
     content: '\f03d';
+  }
+}
+
+#block-views-block-students-block-1{
+  .featured-item{
+    color: $type-grey;
+    width: 55%;
   }
 }
 
