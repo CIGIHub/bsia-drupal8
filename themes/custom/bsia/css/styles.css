@@ -274,7 +274,7 @@ article .field--name-upload span:before {
   .node--view-mode-teaser .profile h2,
   .view-content .profile h2 {
     font-size: 1.4em;
-    margin-bottom: 0.6em;
+    margin-bottom: 0.3em;
     line-height: 125%; }
   .node--view-mode-teaser .profile .image,
   .view-content .profile .image {
@@ -1196,12 +1196,6 @@ footer {
   .node--type-person.node--view-mode-full .profile h2 {
     font-size: 18px;
     margin-bottom: 0px; }
-  .node--type-person.node--view-mode-full .profile .position {
-    font-style: italic;
-    color: #666;
-    font-size: 0.95em;
-    line-height: 130%;
-    margin-bottom: 10px; }
   .node--type-person.node--view-mode-full .profile .image, .node--type-person.node--view-mode-full .profile .contact, .node--type-person.node--view-mode-full .profile .text {
     display: table-cell; }
   .node--type-person.node--view-mode-full .profile .image {
@@ -1215,6 +1209,13 @@ footer {
     text-transform: uppercase; }
   .node--type-person.node--view-mode-full .profile .description {
     margin-bottom: 10px; }
+
+.position {
+  font-style: italic;
+  color: #666;
+  font-size: 0.95em;
+  line-height: 100%;
+  margin-bottom: 10px; }
 
 .node--type-person .field--name-field-graduate-title {
   font-weight: bold; }
@@ -1244,7 +1245,7 @@ footer {
 .node--type-person.node--view-mode-teaser .profile .text,
 .view-faculty .view-content .profile .text,
 .view-students .view-content .profile .text {
-  width: 75%; }
+  width: 78%; }
 
 .view-people .view-header {
   border: 1px solid #d2d2d2;

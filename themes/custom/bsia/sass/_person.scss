@@ -10,13 +10,6 @@
       font-size: 18px;
       margin-bottom: 0px;
     }
-    .position{
-      font-style: italic;
-      color: $type-grey;
-      font-size: 0.95em;
-      line-height: 130%;
-      margin-bottom: 10px;
-    }
 
     .image, .contact, .text{
       display: table-cell;
@@ -39,6 +32,14 @@
     }
   }
 }
+
+.position{
+    font-style: italic;
+    color: $type-grey;
+    font-size: 0.95em;
+    line-height: 100%;
+    margin-bottom: 10px;
+  }
 
 .node--type-person{
   .field--name-field-graduate-title{
@@ -83,7 +84,7 @@
         font-size: 1.2em;
       }
     .text{
-      width: 75%;
+      width: 78%;
     }
   }
 }
