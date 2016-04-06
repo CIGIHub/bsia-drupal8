@@ -969,7 +969,7 @@ footer {
     list-style-image: none;
     list-style: none; }
   .right-menu ul.menu li {
-    padding: 5px 20px; }
+    padding: 5px 0 5px 20px; }
     .right-menu ul.menu li a {
       color: white; }
       .right-menu ul.menu li a:hover {
