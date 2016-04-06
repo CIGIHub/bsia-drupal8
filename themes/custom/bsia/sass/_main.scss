@@ -234,7 +234,7 @@ dl.calendar{
 }
 
 .publication-download {
-    width: 180px;
+    width: 200px;
     height: 30px;
     margin: 0 auto;
     margin-bottom: 20px;
@@ -663,15 +663,11 @@ dl.calendar{
   opacity: 0.6;
   margin:-29px 0 0 -29px;
   cursor: pointer;
-  
-}
-.play:before{
-  content: '\f04b';
-  font-family: FontAwesome;
-  color: white;
-  padding-left: 9px;
-  padding-top: 6px;
-  position: absolute;
+  i{
+    color: white;
+    margin-left: 9px;
+    margin-top: 5px;
+  }
   
 }
 

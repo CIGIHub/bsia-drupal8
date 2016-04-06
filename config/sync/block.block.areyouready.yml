@@ -1,23 +1,23 @@
-uuid: 44088e34-c0d6-45d8-9b14-2062fbcc96ab
+uuid: 17a89628-d980-4fd3-9d00-c4d216727096
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:96c39365-613a-4a91-8d15-210c3873b727'
+    - 'block_content:basic:462f23b8-4981-4eed-8c2c-449ffa2da346'
   module:
     - block_content
     - system
   theme:
     - bsia
-id: eventsabout
+id: areyouready
 theme: bsia
 region: right_sidebar
-weight: -21
+weight: -25
 provider: null
-plugin: 'block_content:96c39365-613a-4a91-8d15-210c3873b727'
+plugin: 'block_content:462f23b8-4981-4eed-8c2c-449ffa2da346'
 settings:
-  id: 'block_content:96c39365-613a-4a91-8d15-210c3873b727'
-  label: 'Events - About'
+  id: 'block_content:462f23b8-4981-4eed-8c2c-449ffa2da346'
+  label: 'Are you ready?'
   provider: block_content
   label_display: '0'
   status: true
@@ -26,6 +26,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "/events*\r\n/event*"
+    pages: /about
     negate: false
     context_mapping: {  }

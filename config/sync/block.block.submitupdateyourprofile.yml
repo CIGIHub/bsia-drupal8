@@ -12,7 +12,7 @@ dependencies:
 id: submitupdateyourprofile
 theme: bsia
 region: right_sidebar
-weight: -24
+weight: -23
 provider: null
 plugin: 'block_content:4c7f60c2-1771-4719-b300-d9c3022346a7'
 settings:

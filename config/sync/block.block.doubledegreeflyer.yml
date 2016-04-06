@@ -1,23 +1,23 @@
-uuid: 44088e34-c0d6-45d8-9b14-2062fbcc96ab
+uuid: 720dc1bc-d531-4b42-8c04-4b17811946b8
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:96c39365-613a-4a91-8d15-210c3873b727'
+    - 'block_content:basic:df9f4695-7333-4c9a-ac12-18b426484d9e'
   module:
     - block_content
     - system
   theme:
     - bsia
-id: eventsabout
+id: doubledegreeflyer
 theme: bsia
 region: right_sidebar
-weight: -21
+weight: -26
 provider: null
-plugin: 'block_content:96c39365-613a-4a91-8d15-210c3873b727'
+plugin: 'block_content:df9f4695-7333-4c9a-ac12-18b426484d9e'
 settings:
-  id: 'block_content:96c39365-613a-4a91-8d15-210c3873b727'
-  label: 'Events - About'
+  id: 'block_content:df9f4695-7333-4c9a-ac12-18b426484d9e'
+  label: 'Double Degree Flyer'
   provider: block_content
   label_display: '0'
   status: true
@@ -26,6 +26,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "/events*\r\n/event*"
+    pages: /degree-programs/master-arts-global-governance
     negate: false
     context_mapping: {  }
