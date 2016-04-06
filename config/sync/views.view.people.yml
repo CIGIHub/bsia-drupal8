@@ -8,13 +8,13 @@ dependencies:
     - node.type.person
     - taxonomy.vocabulary.person_type
   content:
-    - 'taxonomy_term:person_type:1082a847-9b61-4353-8437-5524d501926f'
-    - 'taxonomy_term:person_type:3667eee0-4e09-4550-8300-0f728de8c108'
-    - 'taxonomy_term:person_type:434545d8-e80f-4a7e-8000-c885a22f647a'
-    - 'taxonomy_term:person_type:5717afd4-4bce-4b7c-8e00-d20edb84dabc'
-    - 'taxonomy_term:person_type:71843286-49e6-48d6-9809-9b3d9373358f'
-    - 'taxonomy_term:person_type:b36efbeb-38df-43dc-9719-2577b15ddf32'
-    - 'taxonomy_term:person_type:c16654e2-4fd0-49e1-bc00-a27bf7db8d71'
+    - 'taxonomy_term:person_type:087801cd-04f6-41c1-8805-5c64cc3d19a4'
+    - 'taxonomy_term:person_type:62abf24e-28d9-4fb2-bf00-f8248ee0e42e'
+    - 'taxonomy_term:person_type:74535089-c0f1-4218-8b02-2e9bb05f57cc'
+    - 'taxonomy_term:person_type:7e5b7c45-444c-466e-ac00-ba4c46a828d8'
+    - 'taxonomy_term:person_type:816ae5d1-5f7d-437b-a23e-62b09d40072c'
+    - 'taxonomy_term:person_type:b6b6ddac-c4c1-4dc8-8b20-322708278f59'
+    - 'taxonomy_term:person_type:d59e5b12-1816-4559-8f1f-315d0fc9f2a7'
   module:
     - node
     - taxonomy
@@ -66,6 +66,10 @@ display:
           offset: 0
       style:
         type: default
+        options:
+          row_class: ''
+          default_row_class: true
+          uses_fields: false
       row:
         type: 'entity:node'
         options:

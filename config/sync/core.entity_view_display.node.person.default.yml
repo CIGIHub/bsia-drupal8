@@ -228,7 +228,7 @@ content:
   field_office_location:
     type: string
     weight: 29
-    label: hidden
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
