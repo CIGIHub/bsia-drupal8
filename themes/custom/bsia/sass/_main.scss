@@ -305,18 +305,14 @@ dl.calendar{
   }
 }
 .region-content{
-  .views-row article,
-  .views-row .research-listing,
-  .view-faculty .views-row,
-  .view-students.view-display-id-page_2 .views-row,
-  .view-students.view-display-id-page_3 .views-row,
-  .view-students.view-display-id-page_5 .views-row,
-  .view-students.view-display-id-page_6 .views-row{
+  .views-row{
     @include divider;
     min-height: 110px;
   }
+  .views-row:last-child{
+    border-bottom: none;
+  }
 }
-
 
 .teaser-text{
   h2{

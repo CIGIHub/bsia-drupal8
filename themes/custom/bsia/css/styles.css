@@ -436,17 +436,13 @@ dl.calendar {
   .region-right-sidebar #block-views-block-news-block-1 .views-summary-unformatted {
     margin-bottom: 5px; }
 
-.region-content .views-row article,
-.region-content .views-row .research-listing,
-.region-content .view-faculty .views-row,
-.region-content .view-students.view-display-id-page_2 .views-row,
-.region-content .view-students.view-display-id-page_3 .views-row,
-.region-content .view-students.view-display-id-page_5 .views-row,
-.region-content .view-students.view-display-id-page_6 .views-row {
+.region-content .views-row {
   margin-bottom: 20px;
   border: none;
   border-bottom: solid 1px #d2d2d2;
   min-height: 110px; }
+.region-content .views-row:last-child {
+  border-bottom: none; }
 
 .teaser-text h2 {
   font-size: 20px; }
@@ -1447,3 +1443,5 @@ ul.student-list {
     background-color: #f2f2f2; }
   .calendar-calendar table.mini td.today {
     background-color: #d1dee2; }
+
+/*# sourceMappingURL=styles.css.map */
