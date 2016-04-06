@@ -1,0 +1,31 @@
+uuid: ce348368-1d55-4927-ad53-83881d7b59a5
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:2261e157-afb4-4f69-8208-8ddd64e16cb9'
+  module:
+    - block_content
+    - system
+  theme:
+    - bsia
+id: eventdisclaimer
+theme: bsia
+region: content
+weight: null
+provider: null
+plugin: 'block_content:2261e157-afb4-4f69-8208-8ddd64e16cb9'
+settings:
+  id: 'block_content:2261e157-afb4-4f69-8208-8ddd64e16cb9'
+  label: 'Event Disclaimer'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '/event/*'
+    negate: false
+    context_mapping: {  }
