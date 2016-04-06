@@ -182,11 +182,18 @@
 .students-all-programs{
   h3{
     margin-top: 20px;
+    font-size: 1.3em;
   }
   .fa-list-ul{
     font-size: 14px;
     margin-left: 10px;
     color: $program-header-icon-color;
+  }
+}
+
+.view-students.view-display-id-page_4{
+  h3:before{
+    content:'Graduates in ';
   }
 }
 
@@ -314,12 +321,3 @@ ul.student-list{
     }
   }
 }
-
-
-
-
-
-
-
-
-
