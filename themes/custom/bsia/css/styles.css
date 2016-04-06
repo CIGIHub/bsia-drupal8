@@ -1350,6 +1350,21 @@ ul.student-list {
   .student-description a:hover {
     text-decoration: underline; }
 
+/* person's publications */
+.field--type-field-collection .field__label {
+  font-size: 1.4em;
+  margin: 0 0 0.4em 0;
+  color: #053b5b; }
+.field--type-field-collection li .list-item {
+  padding: 2px 0; }
+.field--type-field-collection .field__item {
+  color: #808080;
+  display: inline; }
+  .field--type-field-collection .field__item.field--name-field-article-title {
+    font-style: italic; }
+  .field--type-field-collection .field__item.field--name-field-publication-date:after {
+    content: "."; }
+
 /*******   CALENDAR    *******/
 #block-views-block-event-calendar-block-1 .view-content {
   margin-bottom: 0px; }
