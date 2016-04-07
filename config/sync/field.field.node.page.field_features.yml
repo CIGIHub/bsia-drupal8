@@ -1,0 +1,21 @@
+uuid: da60885c-a59b-43d0-9520-329c7db2bf08
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_features
+    - node.type.page
+  module:
+    - options
+id: node.page.field_features
+field_name: field_features
+entity_type: node
+bundle: page
+label: Features
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
