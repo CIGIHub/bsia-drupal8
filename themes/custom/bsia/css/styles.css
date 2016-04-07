@@ -717,11 +717,12 @@ dl.calendar {
   font-size: 13px; }
 
 .lightbox {
-  margin-bottom: 5px; }
+  margin-bottom: 5px;
+  position: relative; }
 
 .play {
   position: absolute;
-  top: 25%;
+  bottom: 45%;
   left: 90%;
   width: 28px;
   height: 28px;
