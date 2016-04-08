@@ -12,7 +12,7 @@ dependencies:
 id: views_block__research_block_2
 theme: bsia
 region: content
-weight: -20
+weight: -24
 provider: null
 plugin: 'views_block:research-block_2'
 settings:
