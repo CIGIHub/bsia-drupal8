@@ -360,6 +360,8 @@ dl.calendar {
   font-size: 14px;
   color: black;
   margin: 0; }
+.node--type-event .event-type ul.inline li {
+  padding: 0; }
 
 .inline-field {
   margin-bottom: 20px; }
