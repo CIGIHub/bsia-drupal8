@@ -12,7 +12,7 @@ dependencies:
 id: eventdisclaimer
 theme: bsia
 region: content
-weight: -27
+weight: -19
 provider: null
 plugin: 'block_content:2261e157-afb4-4f69-8208-8ddd64e16cb9'
 settings:
