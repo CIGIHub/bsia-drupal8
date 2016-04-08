@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.publication.field_feature_area
     - field.field.node.publication.field_feature_line
     - field.field.node.publication.field_feature_weight
+    - field.field.node.publication.field_features
     - field.field.node.publication.field_image
     - field.field.node.publication.field_image_page
     - field.field.node.publication.field_link_label
