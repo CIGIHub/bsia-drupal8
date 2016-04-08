@@ -317,6 +317,13 @@ dl.calendar{
   .views-row:last-child{
     border-bottom: none;
   }
+
+  .view-topics {
+    .views-row{
+      min-height: 0px;
+      border-bottom: none;
+    }
+  }
 }
 
 .teaser-text{

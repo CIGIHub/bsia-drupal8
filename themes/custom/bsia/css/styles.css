@@ -452,6 +452,9 @@ dl.calendar {
   min-height: 110px; }
 .region-content .views-row:last-child {
   border-bottom: none; }
+.region-content .view-topics .views-row {
+  min-height: 0px;
+  border-bottom: none; }
 
 .teaser-text h2 {
   font-size: 20px; }
@@ -1458,5 +1461,3 @@ ul.student-list {
     background-color: #f2f2f2; }
   .calendar-calendar table.mini td.today {
     background-color: #d1dee2; }
-
-/*# sourceMappingURL=styles.css.map */
