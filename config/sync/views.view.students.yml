@@ -2507,7 +2507,7 @@ display:
           1: AND
       relationships: {  }
       sorts: {  }
-      title: ''
+      title: 'Students by Program'
     cache_metadata:
       max-age: -1
       contexts:
