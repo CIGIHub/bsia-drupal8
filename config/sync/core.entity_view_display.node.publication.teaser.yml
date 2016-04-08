@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.publication.field_feature_area
     - field.field.node.publication.field_feature_line
     - field.field.node.publication.field_feature_weight
+    - field.field.node.publication.field_features
     - field.field.node.publication.field_image
     - field.field.node.publication.field_image_page
     - field.field.node.publication.field_link_label
@@ -57,7 +58,7 @@ content:
   field_feature_line:
     label: above
     weight: 7
-    type: text_default
+    type: basic_string
     settings: {  }
     third_party_settings: {  }
   field_link_label:
@@ -86,12 +87,12 @@ content:
     type: datetime_default
     settings:
       timezone_override: America/Toronto
-      format_type: short
+      format_type: publication_date
     third_party_settings: {  }
   field_short_description:
     label: hidden
     weight: 6
-    type: text_default
+    type: basic_string
     settings: {  }
     third_party_settings: {  }
   field_speakers_unlinked:
@@ -107,7 +108,6 @@ content:
     third_party_settings: {  }
 hidden:
   field_alternative_url: true
-  field_book_cover: true
   field_caption: true
   field_credit: true
   field_embed_code: true
