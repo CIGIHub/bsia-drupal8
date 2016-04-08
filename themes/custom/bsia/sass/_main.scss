@@ -215,6 +215,14 @@ dl.calendar{
     color: black;
     margin: 0;
   }
+
+  .event-type {
+    ul.inline {
+      li {
+        padding:0;
+      }
+    }
+  }
 }
 
 .inline-field{
