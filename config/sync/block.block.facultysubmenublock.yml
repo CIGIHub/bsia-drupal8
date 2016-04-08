@@ -1,0 +1,25 @@
+uuid: dd575b47-07c6-412b-8a00-d5fd4aaad5fa
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:beb381cd-0409-442d-a100-a32be632292f'
+  module:
+    - block_content
+  theme:
+    - bsia
+id: facultysubmenublock
+theme: bsia
+region: '-1'
+weight: null
+provider: null
+plugin: 'block_content:beb381cd-0409-442d-a100-a32be632292f'
+settings:
+  id: 'block_content:beb381cd-0409-442d-a100-a32be632292f'
+  label: 'Faculty Submenu block'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

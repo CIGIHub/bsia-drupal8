@@ -304,7 +304,7 @@ article .field--name-upload span:before {
   .view-content .profile .description {
     margin-bottom: 10px; }
 
-.region-content-header {
+#content-header {
   border: 1px solid #d2d2d2;
   background-color: #f2f7f2;
   padding: 20px;
