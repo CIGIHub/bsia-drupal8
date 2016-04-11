@@ -10,8 +10,8 @@ dependencies:
     - bsia
 id: facultysubmenublock
 theme: bsia
-region: '-1'
-weight: null
+region: programatically_enabled
+weight: -29
 provider: null
 plugin: 'block_content:beb381cd-0409-442d-a100-a32be632292f'
 settings:

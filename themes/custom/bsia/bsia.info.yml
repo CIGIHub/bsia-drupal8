@@ -28,4 +28,5 @@ regions:
   right_sidebar: 'Right Sidebar'
   footer_banner: 'Footer Banner'
   footer_menu: 'Footer Menu'
+  programatically_enabled: "Programatically Enabled"
  
