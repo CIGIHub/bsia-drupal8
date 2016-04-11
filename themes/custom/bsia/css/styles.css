@@ -38,8 +38,9 @@
 
 .wrapper {
   margin: 0 auto;
-  max-width: none !important;
-  width: 940px; }
+  max-width: none !important; }
+  .non-mobile .wrapper {
+    width: 940px; }
 
 /* Clearfix */
 .row:after {
@@ -47,43 +48,67 @@
   display: table;
   clear: both; }
 
-/*
-.cols-1,
-.cols-2,
-.cols-3,
-.cols-4,
-.cols-5,
-.cols-6{
-  width: 100%;
-}
-
-.cols-lg-1  {width: 16.67%;}
-.cols-lg-2  {width: 33.33%;}
-.cols-lg-3  {width: 50%;}
-.cols-lg-4  {width: 66.67%;}
-.cols-lg-5  {width: 83.33%;}
-.cols-lg-6  {width: 100%;}
-
-@media (min-width: $mobile-bp){
-*/
-.col-1 {
-  width: 16.67%; }
-
-.col-2 {
-  width: 33.33%; }
-
-.col-3 {
-  width: 50%; }
-
-.col-4 {
-  width: 66.67%; }
-
-.col-5 {
-  width: 83.33%; }
-
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
 .col-6 {
   width: 100%; }
 
+.col-lg-1 {
+  width: 16.67%; }
+
+.col-lg-2 {
+  width: 33.33%; }
+
+.col-lg-3 {
+  width: 50%; }
+
+.col-lg-4 {
+  width: 66.67%; }
+
+.col-lg-5 {
+  width: 83.33%; }
+
+.col-lg-6 {
+  width: 100%; }
+
+/* force widths on non-mobile pages */
+.non-mobile .col-1 {
+  width: 16.67%; }
+.non-mobile .col-2 {
+  width: 33.33%; }
+.non-mobile .col-3 {
+  width: 50%; }
+.non-mobile .col-4 {
+  width: 66.67%; }
+.non-mobile .col-5 {
+  width: 83.33%; }
+.non-mobile .col-6 {
+  width: 100%; }
+
+@media (min-width: 940px) {
+  .wrapper {
+    width: 940px; }
+
+  .col-1 {
+    width: 16.67%; }
+
+  .col-2 {
+    width: 33.33%; }
+
+  .col-3 {
+    width: 50%; }
+
+  .col-4 {
+    width: 66.67%; }
+
+  .col-5 {
+    width: 83.33%; }
+
+  .col-6 {
+    width: 100%; } }
 body {
   font-size: 14px;
   font-family: Arial, Helvetica, sans-serif; }
@@ -761,10 +786,12 @@ header {
     text-indent: -9999px;
     background: url("../images/bsia-logo-2015.png") no-repeat 10px;
     width: 300px;
+    min-height: 75px;
     background-size: 175% auto; }
   header .search {
     display: none; }
   header .main-nav {
+    margin-top: 1.5em;
     font-size: 130%;
     color: #053b5b;
     text-align: center; }
@@ -799,7 +826,6 @@ header {
 
 /***********  MAIN NAV  **************/
 #main-menu {
-  background: url(../_images/BSIA-watermark.png) no-repeat center;
   background-position: top center;
   border-top: solid 1px #19374f;
   border-bottom: solid 1px #d9dfe3;
@@ -807,16 +833,19 @@ header {
   #main-menu .col-6 {
     padding-top: 0px;
     padding-bottom: 0px; }
-  #main-menu nav ul li {
-    font-size: 1.2em;
-    padding: 0.3em 0;
-    text-align: right; }
-    #main-menu nav ul li a {
-      padding: 0.3em 0.5em;
-      text-decoration: none; }
-      #main-menu nav ul li a:hover, #main-menu nav ul li a:focus {
-        background: #d9dfe3;
-        border-radius: 0.13em; }
+  #main-menu nav ul {
+    margin: 1em 0.8em; }
+    #main-menu nav ul li {
+      font-size: 1.2em;
+      padding: 0.3em 0;
+      text-align: right;
+      list-style: none; }
+      #main-menu nav ul li a {
+        padding: 0.3em 0.5em;
+        text-decoration: none; }
+        #main-menu nav ul li a:hover, #main-menu nav ul li a:focus {
+          background: #d9dfe3;
+          border-radius: 0.13em; }
   @media (min-width: 940px) {
     #main-menu {
       background: #19374f;
@@ -982,6 +1011,27 @@ footer {
   footer .copyright {
     display: block;
     margin: 0; }
+  @media (max-width: 940px) {
+    footer .contact .sharelinks, footer .contact nav {
+      float: none; }
+    footer .contact nav a {
+      color: #666;
+      text-decoration: none;
+      margin-right: 1em; }
+      footer .contact nav a:hover, footer .contact nav a:focus {
+        color: #1A374E;
+        text-decoration: underline; }
+    footer .partners {
+      margin-top: 1em; }
+      footer .partners ul {
+        display: block;
+        margin: 0; }
+        footer .partners ul li {
+          margin-right: 15px;
+          float: left; }
+    footer .copyright {
+      margin: 0;
+      display: block; } }
 
 /*******   BLOCKS    *******/
 /* footer banner */
@@ -989,6 +1039,7 @@ footer {
   background-image: url(../images/connect-banner.png);
   background-repeat: no-repeat;
   background-color: #fed130;
+  background-position: right;
   /* connect with us block */ }
   .footer-banner .connect-button {
     font-size: 34px; }
@@ -1068,36 +1119,37 @@ footer {
     content: '';
     display: block;
     clear: both; }
-.homepage li {
-  width: 32%;
-  padding: 1em;
-  margin: 0 0 0.25em 0.5em; }
-  .homepage li .views-field-field-event-date,
-  .homepage li .views-field-field-news-date {
+.homepage .cell {
+  height: 100%;
+  padding: 0em; }
+  .homepage .cell .views-field-field-event-date-value,
+  .homepage .cell .views-field-field-news-date-value {
     font-size: 0.9em;
     color: #666;
     text-transform: uppercase; }
-  .homepage li .views-field-title {
-    font-size: 1.3em;
+  .homepage .cell .views-field-title {
+    font-size: 1.1em;
     font-weight: bold;
     line-height: 130%;
     margin-top: 0.4em; }
-
-#block-views-block-homepage-block-1-2 {
+.homepage #block-views-block-homepage-block-1-2 {
   margin-bottom: 1.5em; }
-  #block-views-block-homepage-block-1-2 li {
+  .homepage #block-views-block-homepage-block-1-2 .row .col-2 {
+    height: 100%; }
+  .homepage #block-views-block-homepage-block-1-2 .cell {
+    padding: 1em;
     background: #1a374e; }
-    #block-views-block-homepage-block-1-2 li a {
+    .homepage #block-views-block-homepage-block-1-2 .cell a {
       color: #fff; }
-      #block-views-block-homepage-block-1-2 li a:hover {
+      .homepage #block-views-block-homepage-block-1-2 .cell a:hover {
         text-decoration: none;
         color: #666; }
-    #block-views-block-homepage-block-1-2 li .views-field-title {
-      font-size: 1.6em;
+    .homepage #block-views-block-homepage-block-1-2 .cell .views-field-title {
+      font-size: 1.3em;
       margin-top: 0px;
       font-weight: normal; }
 
-@media (min-width: 992px) {
+@media (min-width: 940px) {
   .view-homepage h2,
   .view-homepage .cell .views-field-title,
   .view-homepage .views-field-field-event-date-value,
@@ -1105,7 +1157,10 @@ footer {
     font-size: 140%; }
 
   #block-views-homepage-block_2 .cell .views-field-title {
-    font-size: 170%; } }
+    font-size: 170%; }
+
+  #block-views-block-homepage-block-1-2 .row {
+    height: 95px; } }
 /******  HOMEPAGE GALLERY  ******/
 #gallery {
   overflow: hidden; }
@@ -1115,6 +1170,9 @@ footer {
     width: 100%; }
   #gallery .gallery {
     position: relative; }
+  #gallery img {
+    width: 100%;
+    height: auto; }
   #gallery .box {
     position: absolute;
     top: 10%;
@@ -1463,3 +1521,5 @@ ul.student-list {
     background-color: #f2f2f2; }
   .calendar-calendar table.mini td.today {
     background-color: #d1dee2; }
+
+/*# sourceMappingURL=styles.css.map */
