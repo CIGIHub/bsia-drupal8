@@ -8,6 +8,7 @@ header {
     @include hidden;
     background: url('../images/bsia-logo-2015.png') no-repeat 10px;
     width: 300px;
+    min-height: 75px;
     background-size: 175% auto;
   }
 
@@ -15,6 +16,7 @@ header {
     display:none;
   }
   .main-nav{
+    margin-top: 1.5em;
     font-size: 130%;
     color: $link-color;
     text-align: center;
@@ -35,8 +37,6 @@ header {
 
 /***********  MAIN NAV  **************/
 #main-menu {
-
-  background: url(../_images/BSIA-watermark.png) no-repeat center;
   background-position: top center;
   border-top: solid 1px $nav-bg-color;
   border-bottom: solid 1px $header-bg-color;
@@ -48,10 +48,12 @@ header {
   }
 
   nav ul{
+    margin: 1em 0.8em;
     li{
       font-size: 1.2em;
       padding: 0.3em 0;
       text-align: right;
+      list-style: none;
       a{
         padding: 0.3em 0.5em;
         text-decoration: none;

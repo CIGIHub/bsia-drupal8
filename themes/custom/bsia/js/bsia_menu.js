@@ -16,45 +16,50 @@ var Menu = Menu || {
       if(mobile === true){
         if(windowWidth >= mobileBp){
           $('.main-nav').hide();
-          $('#main-menu nav').show();
+          $('#main-menu').show();
           Menu.close();
         }
         else{
           $('.main-nav').show();
-          $('#main-menu nav').hide();
+          $('#main-menu').hide();
           Menu.close();
         }
 
         $(".main-nav").off('click').on('click', function (e) {
-          console.log(e);
+          //console.log(e);
           Menu.toggle();
         });
       }
       else{
           $('.main-nav').hide();
-          $('nav').show();
+          $('#main-menu').show();
           Menu.close();
       }
     },
     close: function(){
-        if ($('#main-menu nav').hasClass('open')) {
-            $('#main-menu nav').removeClass('open').hide();
+        if ($('#main-menu').hasClass('open')) {
+            $('#main-menu').removeClass('open').hide();
         }
     },
     open: function() {
-        if (!($('#main-menu nav').hasClass('open'))) {
-          $('#main-menu nav').addClass('open').show();
+        if (!($('#main-menu').hasClass('open'))) {
+          console.log('open class');
+          $('#main-menu').addClass('open').show();
         }
+
     },
     isOpen: function(){
-        return $('#main-menu nav').hasClass('open');
+        return $('#main-menu').hasClass('open');
     },
     toggle: function () {
+        console.log('toggle');
         if (Menu.isOpen()) {
             Menu.close();
+            console.log('closing');
         }
         else {
             Menu.open();
+            console.log('opening');
         }
     },
 };
