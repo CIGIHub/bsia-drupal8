@@ -1,0 +1,24 @@
+uuid: 0875be09-c21c-479a-ab30-48880bd1db88
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.menu-footer
+  module:
+    - system
+  theme:
+    - bsia
+id: bsiafooter
+theme: bsia
+region: footer_menu
+weight: -29
+provider: null
+plugin: 'system_menu_block:menu-footer'
+settings:
+  id: 'system_menu_block:menu-footer'
+  label: 'BSIA Footer'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

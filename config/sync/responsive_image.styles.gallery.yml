@@ -1,0 +1,24 @@
+uuid: cc1bffcd-37e9-4bc7-a901-1ab9fac63b57
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.gallery
+    - image.style.square_100x100
+  theme:
+    - bsia
+id: gallery
+label: Gallery
+image_style_mappings:
+  -
+    breakpoint_id: bartik.full
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: gallery
+  -
+    breakpoint_id: bsia.mobile
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: gallery
+breakpoint_group: bsia
+fallback_image_style: square_100x100
