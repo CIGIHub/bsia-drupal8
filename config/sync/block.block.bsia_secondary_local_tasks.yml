@@ -9,7 +9,7 @@ _core:
 id: bsia_secondary_local_tasks
 theme: bsia
 region: '-1'
-weight: -12
+weight: -21
 provider: null
 plugin: local_tasks_block
 settings:

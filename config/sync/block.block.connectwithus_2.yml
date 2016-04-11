@@ -1,6 +1,6 @@
 uuid: 20527fc2-58da-4537-a11f-310e559bb15c
 langcode: en
-status: true
+status: false
 dependencies:
   content:
     - 'block_content:basic:487faa71-d5c4-4dcd-be00-0bc3c7f46226'
@@ -11,8 +11,8 @@ dependencies:
     - bsia
 id: connectwithus_2
 theme: bsia
-region: footer_banner
-weight: -21
+region: '-1'
+weight: -18
 provider: null
 plugin: 'block_content:487faa71-d5c4-4dcd-be00-0bc3c7f46226'
 settings:

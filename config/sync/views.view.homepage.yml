@@ -21,6 +21,7 @@ dependencies:
     - image
     - node
     - options
+    - responsive_image
     - text
     - user
 id: homepage
@@ -1632,9 +1633,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: image
+          type: responsive_image
           settings:
-            image_style: gallery
+            responsive_image_style: gallery
             image_link: ''
           group_column: ''
           group_columns: {  }
@@ -1696,7 +1697,7 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: text_default
+          type: basic_string
           settings: {  }
           group_column: value
           group_columns: {  }

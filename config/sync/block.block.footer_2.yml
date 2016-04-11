@@ -1,6 +1,6 @@
 uuid: 6f019acf-2d8b-4945-9812-1889a8289fb3
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.menu-footer
@@ -10,8 +10,8 @@ dependencies:
     - bsia
 id: footer_2
 theme: bsia
-region: footer_menu
-weight: -20
+region: '-1'
+weight: -17
 provider: null
 plugin: 'system_menu_block:menu-footer'
 settings:
