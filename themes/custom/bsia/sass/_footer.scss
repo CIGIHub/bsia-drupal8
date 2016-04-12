@@ -60,7 +60,7 @@ footer {
         }
       }
     }
-    
+
     a {
       height: 37px; 
       background: url("../images/bsia-partners.png") no-repeat 0 0; 
@@ -123,6 +123,10 @@ footer {
 
         &:first-child {
           margin-right:15px;
+        }
+
+        &:last-child {
+          margin-right: 0;
         }
       }
      }

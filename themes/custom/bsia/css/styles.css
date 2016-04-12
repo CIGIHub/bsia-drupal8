@@ -1030,6 +1030,8 @@ footer {
           float: left; }
           footer .partners ul li:first-child {
             margin-right: 15px; }
+          footer .partners ul li:last-child {
+            margin-right: 0; }
     footer .copyright {
       margin: 0;
       display: block; } }
