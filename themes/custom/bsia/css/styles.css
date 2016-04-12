@@ -1457,7 +1457,7 @@ footer {
   @media (max-width: 940px) {
     .footer-banner {
       background-image: url(../images/connect-button.png);
-      text-align: center; }
+      text-align: left; }
       .footer-banner .col-6 {
         padding: 0; }
         .footer-banner .col-6 .connect-button a {
