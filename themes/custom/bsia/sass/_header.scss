@@ -3,25 +3,54 @@
 header {
   background-color: $header-bg-color;
 
+  .col-lg-2{
+    text-align: right;
+  }
+
   a.logo{
     display: block;
     @include hidden;
     background: url('../images/bsia-logo-2015.png') no-repeat 10px;
-    width: 300px;
+    width: 260px;
     min-height: 75px;
     background-size: 175% auto;
   }
 
   .search{
+    margin-top: 1.5em;
     display:none;
   }
-  .main-nav{
-    margin-top: 1.5em;
-    font-size: 130%;
+
+  .main-nav,
+  .search-button{
+    border: solid 1px #19374f;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 0.2em 0.35em;
+    margin: 1.0em 0em 0em 0.4em;
+    font-size: 140%;
     color: $link-color;
     text-align: center;
     &:hover{
       cursor: pointer;
+
+    }
+  }
+  .search-box{
+    display: none;
+    text-align: center;
+    background: white;
+    z-index: 10;
+    border-bottom: solid 1px #19374f;
+    padding-bottom: 1.5em;
+    input[type=search]{
+      @include search_form_input;
+      float: none;
+      margin-right: 1em;
+    }
+    input[type=submit]{
+      @include search_form_submit;
+      margin-left: -2.6em;
     }
   }
 
@@ -78,7 +107,6 @@ header {
 
 .search{
   float:right;
-  margin-top: 16%;
   .form-item,
   .form-submit{
     float: left;

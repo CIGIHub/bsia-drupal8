@@ -44,12 +44,15 @@
 <header role="banner">
   <div class="wrapper">
     <div class="row">
-      <div class="col-lg-5 no-padding">
+      <div class="col-lg-4 no-padding">
         <a class="logo" href="{{ front_page }}">Balsillie School of International Affairs</a>
       </div>
-      <div class="col-lg-1 no-padding">
+      <div class="col-lg-2 no-padding">
         <div class="main-nav">
           <i class="fa fa-list"></i>
+        </div>
+        <div class="search-button">
+          <i class="fa fa-search"></i>
         </div>
         <div class="search">
           {{ page.search }}
@@ -57,8 +60,14 @@
       </div>
     </div>
   </div>
+  <div class="wrapper search-box">
+    <div class="row">
+      <div class="col-6">
+        {{ page.search }}
+      </div>
+    </div>
+  </div>
 </header>
-
 <div id="main-menu" role="navigation">
   <div class="wrapper">
     <div class="row">
@@ -70,11 +79,10 @@
     </div>
   </div>
 </div>
-
 <div class="watermark">
   <main role="main" class="wrapper"> 
     <div class="row">
-      <div class="col-6">
+      <div class="col-6 no-padding">
         {% if page.page_title %}
           <div id="page-title-header" {% if is_front %} class="homepage" {% endif %}>
             {{  page.page_title }}
