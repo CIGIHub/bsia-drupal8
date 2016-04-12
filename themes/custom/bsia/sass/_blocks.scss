@@ -11,7 +11,18 @@
     
 
     @media(max-width: $mobile-bp ){
-      background-position: center center;
+      background-image:url(../images/connect-button.png);;
+      text-align: left;
+
+      .col-6 {
+        padding:0;
+
+        .connect-button a {
+          font-size: 0.8em;
+          padding:25px;
+
+        }
+      }
     }
 
   /* connect with us block */
