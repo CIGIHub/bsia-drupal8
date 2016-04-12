@@ -11,7 +11,16 @@
     
 
     @media(max-width: $mobile-bp ){
-      background-position: center center;
+      background-image:none;
+      text-align: center;
+
+      .col-6 {
+        padding:0;
+
+        a {
+          font-size: 0.8em;
+        }
+      }
     }
 
   /* connect with us block */

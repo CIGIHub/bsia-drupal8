@@ -1456,7 +1456,12 @@ footer {
   /* connect with us block */ }
   @media (max-width: 940px) {
     .footer-banner {
-      background-position: center center; } }
+      background-image: none;
+      text-align: center; }
+      .footer-banner .col-6 {
+        padding: 0; }
+        .footer-banner .col-6 a {
+          font-size: 0.8em; } }
   .footer-banner .connect-button {
     font-size: 34px; }
     .footer-banner .connect-button a {
