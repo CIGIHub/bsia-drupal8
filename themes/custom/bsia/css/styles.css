@@ -989,25 +989,24 @@ footer {
       footer .partners ul li {
         margin-right: 15px;
         float: right; }
-      footer .partners ul li:last {
-        margin-right: 0; }
-    footer .partners a.wlu-logo {
-      width: 100px;
-      height: 45px;
-      background: url("../images/bsia-partners-2014.png") no-repeat 5%;
+        footer .partners ul li:first-child {
+          margin-right: 0; }
+    footer .partners a {
+      height: 37px;
+      background: url("../images/bsia-partners.png") no-repeat 0 0;
+      background-size: cover;
       display: block; }
-    footer .partners a.cigi-logo {
-      width: 105px;
-      height: 45px;
-      background: url("../images/bsia-partners-2014.png") no-repeat 45%;
-      display: block; }
-    footer .partners a.uw-logo {
-      width: 145px;
-      height: 45px;
-      background: url("../images/bsia-partners-2014.png") no-repeat 100%;
-      display: block; }
-    footer .partners a:hover {
-      opacity: 0.6; }
+      footer .partners a.wlu-logo {
+        width: 85px;
+        background-position: 0 0; }
+      footer .partners a.cigi-logo {
+        width: 94px;
+        background-position: -123px 0; }
+      footer .partners a.uw-logo {
+        width: 125px;
+        background-position: 100% 0; }
+      footer .partners a:hover {
+        opacity: 0.6; }
   footer .copyright {
     display: block;
     margin: 0; }
@@ -1029,6 +1028,8 @@ footer {
         footer .partners ul li {
           margin-right: 15px;
           float: left; }
+          footer .partners ul li:first-child {
+            margin-right: 15px; }
     footer .copyright {
       margin: 0;
       display: block; } }
@@ -1521,5 +1522,3 @@ ul.student-list {
     background-color: #f2f2f2; }
   .calendar-calendar table.mini td.today {
     background-color: #d1dee2; }
-
-/*# sourceMappingURL=styles.css.map */
