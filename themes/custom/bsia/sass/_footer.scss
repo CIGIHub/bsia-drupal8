@@ -60,7 +60,7 @@ footer {
         }
       }
     }
-    
+
     a {
       height: 37px; 
       background: url("../images/bsia-partners.png") no-repeat 0 0; 
@@ -95,15 +95,24 @@ footer {
 
   @media(max-width: $mobile-bp ){
    
-   .contact{
-     .sharelinks, nav{
-       float: none;
-     }
+    .contact{
+      float: none;
+      text-align: center;
+
+      .sharelinks, nav{
+        display: inline-block;
+        text-align: center;
+
+        li:last-child {
+          padding-right: 0;
+        }
+      }
+
      nav{
-       a{
+      a{
          color: $footer-link-color;
          text-decoration: none;
-         margin-right: 1em;
+         
          &:hover,
          &:focus{
            color: $footer-link-hover-color;
@@ -112,24 +121,38 @@ footer {
        }
      }
    }
-   .partners{
-     margin-top: 1em;
-     ul{
-       display: block;
-       margin: 0;
-       li{
+
+  .partners{
+    margin-top: 1em;
+    padding:20px 0;
+    display:block;
+    text-align: center;
+    text-indent: 0;
+    font-size: 0;
+
+    ul{
+      display: inline-block;
+      margin: 0;
+
+      li{
         margin-right: 15px;
-        float: left;
+        display: inline-block;
+        float:none;
 
         &:first-child {
           margin-right:15px;
         }
+
+        &:last-child {
+          margin-right: 0;
+        }
       }
-     }
-   }
+    }
+  }
    .copyright{
      margin: 0;
      display: block;
+     text-align: center;
    }
   }
 
