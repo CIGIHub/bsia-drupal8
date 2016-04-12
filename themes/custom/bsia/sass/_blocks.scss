@@ -11,14 +11,16 @@
     
 
     @media(max-width: $mobile-bp ){
-      background-image:none;
+      background-image:url(../images/connect-button.png);;
       text-align: center;
 
       .col-6 {
         padding:0;
 
-        a {
+        .connect-button a {
           font-size: 0.8em;
+          padding:25px;
+         
         }
       }
     }

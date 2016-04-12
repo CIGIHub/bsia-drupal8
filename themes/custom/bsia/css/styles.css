@@ -1451,17 +1451,18 @@ footer {
 .footer-banner {
   background-image: url(../images/connect-banner.png);
   background-repeat: no-repeat;
-  background-color: #fed130;
+  background-color: #fecd2f;
   background-position: right;
   /* connect with us block */ }
   @media (max-width: 940px) {
     .footer-banner {
-      background-image: none;
+      background-image: url(../images/connect-button.png);
       text-align: center; }
       .footer-banner .col-6 {
         padding: 0; }
-        .footer-banner .col-6 a {
-          font-size: 0.8em; } }
+        .footer-banner .col-6 .connect-button a {
+          font-size: 0.8em;
+          padding: 25px; } }
   .footer-banner .connect-button {
     font-size: 34px; }
     .footer-banner .connect-button a {
