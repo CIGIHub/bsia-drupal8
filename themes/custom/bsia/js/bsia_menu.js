@@ -16,6 +16,7 @@ var Menu = Menu || {
 
       if ($('.search-box').hasClass('open')) {
           $('.search-box').removeClass('open');
+          $('.search-box').hide();
       }
 
       if(mobile === true){
@@ -53,16 +54,25 @@ var Menu = Menu || {
     },
     close: function(selectedItem){
         if (selectedItem.hasClass('open')) {
-            selectedItem.removeClass('open').hide();
-           
+          selectedItem.removeClass('open').hide();
+          if (selectedItem.hasClass('search-box')) {
+            $('.search-button i').addClass('fa-search').removeClass('fa-close');
+          }
+          if (selectedItem.is('#main-menu')) {
+            $('.main-nav i').addClass('fa-list').removeClass('fa-close');
+          }
         }
     },
     open: function(selectedItem) {
         if (!(selectedItem.hasClass('open'))) {
           selectedItem.addClass('open').show();
-
-         }
-
+          if (selectedItem.hasClass('search-box')) {
+            $('.search-button i').addClass('fa-close').removeClass('fa-search');
+          }
+          if (selectedItem.is('#main-menu')) {
+            $('.main-nav i').addClass('fa-close').removeClass('fa-list');
+          }
+        }
     },
     isOpen: function(selectedItem){
         return selectedItem.hasClass('open');
