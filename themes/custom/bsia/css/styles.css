@@ -1011,29 +1011,42 @@ footer {
     display: block;
     margin: 0; }
   @media (max-width: 940px) {
-    footer .contact .sharelinks, footer .contact nav {
-      float: none; }
-    footer .contact nav a {
-      color: #666;
-      text-decoration: none; }
-      footer .contact nav a:hover, footer .contact nav a:focus {
-        color: #1A374E;
-        text-decoration: underline; }
+    footer .contact {
+      float: none;
+      text-align: center; }
+      footer .contact .sharelinks, footer .contact nav {
+        display: inline-block;
+        text-align: center; }
+        footer .contact .sharelinks li:last-child, footer .contact nav li:last-child {
+          padding-right: 0; }
+      footer .contact nav a {
+        color: #666;
+        text-decoration: none; }
+        footer .contact nav a:hover, footer .contact nav a:focus {
+          color: #1A374E;
+          text-decoration: underline; }
     footer .partners {
-      margin-top: 1em; }
+      margin-top: 1em;
+      padding: 20px 0;
+      display: block;
+      text-align: center;
+      text-indent: 0;
+      font-size: 0; }
       footer .partners ul {
-        display: block;
+        display: inline-block;
         margin: 0; }
         footer .partners ul li {
           margin-right: 15px;
-          float: left; }
+          display: inline-block;
+          float: none; }
           footer .partners ul li:first-child {
             margin-right: 15px; }
           footer .partners ul li:last-child {
             margin-right: 0; }
     footer .copyright {
       margin: 0;
-      display: block; } }
+      display: block;
+      text-align: center; } }
 
 /*******   BLOCKS    *******/
 /* footer banner */
@@ -1043,6 +1056,9 @@ footer {
   background-color: #fed130;
   background-position: right;
   /* connect with us block */ }
+  @media (max-width: 940px) {
+    .footer-banner {
+      background-position: center center; } }
   .footer-banner .connect-button {
     font-size: 34px; }
     .footer-banner .connect-button a {
