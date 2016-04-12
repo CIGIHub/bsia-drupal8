@@ -60,8 +60,8 @@
 
   .notice-box{
     text-align: center;
-    background: #dff2d5;
-    border: solid 1px #d2d2d2;
+    background: $mint-green;
+    border: solid 1px $light-grey;
     border-radius: 3px;
     padding: 5px;
     margin-bottom: 10px;
@@ -148,7 +148,7 @@
     left: 248px;
     top: 35px;
     z-index: 500;
-    color: #9DA5B2;
+    color: $mishka-blue;
 }
 
 #views-exposed-form-students-page-2{
@@ -163,9 +163,9 @@
   }
   .form-submit{
     padding: 0 5px;
-    border: 1px solid #D2D2D2;
-    background: #F7F6F6;
-    color: #036;
+    border: 1px solid $light-grey;
+    background: $white-smoke;
+    color: $regal-blue;
     font-weight: normal;
     font-size: 11px;
     text-transform: uppercase;
@@ -223,7 +223,7 @@ ul.student-list{
       margin: 0 auto;
       width: 60px;
       padding: 4px;
-      background: #ddd;
+      background: $gainsboro-grey;
       height: 58px;
       cursor: pointer;
       opacity: 0.8;

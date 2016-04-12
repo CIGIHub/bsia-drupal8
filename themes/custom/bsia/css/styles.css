@@ -364,8 +364,6 @@ textarea {
   font: inherit;
   /* 2 */ }
 
-/* blue */
-/* yellow */
 #block-bsia-local-tasks {
   margin-bottom: 0.5em; }
   #block-bsia-local-tasks nav ul li {
@@ -374,10 +372,10 @@ textarea {
       text-decoration: none;
       padding: 0.5em 1.5em;
       color: black;
-      border: solid 1px #999;
+      border: solid 1px #999999;
       display: block; }
       #block-bsia-local-tasks nav ul li a:hover {
-        background: #999; }
+        background: #999999; }
 
 /* MOBILE GRID */
 *,
@@ -676,7 +674,7 @@ article .field--name-upload span:before {
   .node--view-mode-teaser .profile .image,
   .view-content .profile .image {
     float: left;
-    border: solid 5px #ddd;
+    border: solid 5px #dddddd;
     margin-right: 20px; }
     .node--view-mode-teaser .profile .image img,
     .view-content .profile .image img {
@@ -715,7 +713,7 @@ article .field--name-upload span:before {
   margin-right: 10px;
   line-height: 1.6em; }
   .event-registration.button {
-    background: #FBAD18;
+    background: #fbad18;
     width: 120px;
     font-size: 1.0em;
     line-height: 1.8em;
@@ -759,7 +757,7 @@ dl.calendar {
   margin-bottom: 10px; }
 
 .apply-now {
-  background: #FBAD18;
+  background: #fbad18;
   width: 120px;
   font-size: 1.0em;
   line-height: 1.8em;
@@ -786,7 +784,7 @@ dl.calendar {
   .publication-download .field--name-upload span:before {
     content: ''; }
   .publication-download a {
-    background: #FBAD18;
+    background: #fbad18;
     width: 120px;
     font-size: 1.0em;
     line-height: 1.8em;
@@ -855,7 +853,7 @@ dl.calendar {
   height: 90px;
   padding: 10px;
   margin-bottom: 10px;
-  background: #f1f1f1;
+  background: #f2f2f2;
   border-radius: 50%;
   text-align: center;
   font-weight: bold; }
@@ -1007,9 +1005,9 @@ dl.calendar {
     display: inline-block;
     margin-right: 20px; }
     #bsia-connect-form .contact-info .form-type-textfield input, #bsia-connect-form .contact-info .form-type-email input {
-      color: #999;
+      color: #999999;
       border: solid 1px #d2d2d2;
-      background: #d1dee2;
+      background: #D1DEE2;
       width: 280px;
       padding: 5px;
       text-transform: uppercase;
@@ -1022,7 +1020,7 @@ dl.calendar {
       color: #7e7f7e; }
   #bsia-connect-form .contact-info .button {
     margin: 0px;
-    background: #FBAD18;
+    background: #fbad18;
     width: 120px;
     font-size: 1.0em;
     line-height: 1.8em;
@@ -1179,10 +1177,10 @@ header {
     header .search-box input[type=search] {
       -webkit-appearance: textfield;
       font-family: Arial, Helvetica, sans-serif;
-      color: #999;
+      color: #999999;
       text-transform: uppercase;
       font-size: 13px;
-      border: solid 1px #999;
+      border: solid 1px #999999;
       border-radius: 5px;
       float: left;
       padding: 5px;
@@ -1329,10 +1327,10 @@ header {
   .search #search-block-form input[type="search"] {
     -webkit-appearance: textfield;
     font-family: Arial, Helvetica, sans-serif;
-    color: #999;
+    color: #999999;
     text-transform: uppercase;
     font-size: 13px;
-    border: solid 1px #999;
+    border: solid 1px #999999;
     border-radius: 5px;
     float: left;
     padding: 5px; }
@@ -1370,7 +1368,7 @@ footer {
       color: #666;
       text-decoration: none; }
       footer .contact nav a:hover, footer .contact nav a:focus {
-        color: #1A374E;
+        color: #19374f;
         text-decoration: underline; }
     footer .contact nav ul li {
       padding: 0 5px;
@@ -1411,7 +1409,6 @@ footer {
     display: block;
     margin: 0; }
   @media (max-width: 940px) {
-<<<<<<< cb23b8516692aef02b0b11ef985709bb2bcbc247
     footer .contact {
       float: none;
       text-align: center; }
@@ -1424,18 +1421,8 @@ footer {
         color: #666;
         text-decoration: none; }
         footer .contact nav a:hover, footer .contact nav a:focus {
-          color: #1A374E;
+          color: #19374f;
           text-decoration: underline; }
-=======
-    footer .contact .sharelinks, footer .contact nav {
-      float: none; }
-    footer .contact nav a {
-      color: #666;
-      text-decoration: none; }
-      footer .contact nav a:hover, footer .contact nav a:focus {
-        color: #1A374E;
-        text-decoration: underline; }
->>>>>>> adding mobile support for menu and search
     footer .partners {
       margin-top: 1em;
       padding: 20px 0;
@@ -1516,7 +1503,7 @@ footer {
       .right-menu ul.menu li a:hover {
         text-decoration: underline; }
       .right-menu ul.menu li a.is-active {
-        color: #ccc; }
+        color: #cccccc; }
       .right-menu ul.menu li a.is-active:hover {
         color: white; }
 
@@ -1567,7 +1554,7 @@ footer {
     height: 100%; }
   .homepage #block-views-block-homepage-block-1-2 .cell {
     padding: 1em;
-    background: #1a374e; }
+    background: #19374f; }
     .homepage #block-views-block-homepage-block-1-2 .cell a {
       color: #fff; }
       .homepage #block-views-block-homepage-block-1-2 .cell a:hover {
@@ -1608,6 +1595,7 @@ footer {
     top: 10%;
     left: 15%;
     width: 70%;
+    background: #19374f;
     background: rgba(25, 55, 79, 0.9);
     padding: 1.0em; }
     #gallery .box a {
@@ -1663,7 +1651,8 @@ footer {
     height: 1em;
     font-size: 2.5em;
     text-align: center; }
-    #gallery #prev a:focus,
+    #gallery #prev a:hover, #gallery #prev a:focus,
+    #gallery #next a:hover,
     #gallery #next a:focus {
       color: #666; }
   #gallery #prev a {
@@ -1708,7 +1697,7 @@ footer {
   .node--type-person.node--view-mode-full .profile .image, .node--type-person.node--view-mode-full .profile .contact, .node--type-person.node--view-mode-full .profile .text {
     display: table-cell; }
   .node--type-person.node--view-mode-full .profile .image {
-    border: solid 10px #ddd;
+    border: solid 10px #dddddd;
     width: 28%; }
     .node--type-person.node--view-mode-full .profile .image img {
       display: block; }
@@ -1812,9 +1801,9 @@ footer {
   font-size: 14px; }
 #views-exposed-form-students-page-2 .form-submit {
   padding: 0 5px;
-  border: 1px solid #D2D2D2;
-  background: #F7F6F6;
-  color: #036;
+  border: 1px solid #d2d2d2;
+  background: #f2f2f2;
+  color: #19374f;
   font-weight: normal;
   font-size: 11px;
   text-transform: uppercase;
@@ -1831,7 +1820,7 @@ footer {
 .students-all-programs .fa-list-ul {
   font-size: 14px;
   margin-left: 10px;
-  color: #9da5b2; }
+  color: #9DA5B2; }
 
 .view-students.view-display-id-page_4 h3:before {
   content: 'Graduates in '; }
@@ -1856,7 +1845,7 @@ ul.student-list {
     margin: 0 auto;
     width: 60px;
     padding: 4px;
-    background: #ddd;
+    background: #dddddd;
     height: 58px;
     cursor: pointer;
     opacity: 0.8; }
@@ -1956,4 +1945,4 @@ ul.student-list {
   .calendar-calendar table.mini td.has-events {
     background-color: #f2f2f2; }
   .calendar-calendar table.mini td.today {
-    background-color: #d1dee2; }
+    background-color: #D1DEE2; }

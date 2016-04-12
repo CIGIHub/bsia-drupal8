@@ -1,44 +1,74 @@
 $desktop-breakpoint: 992px;
 $mobile-bp: 940px;
 
+
 $sans-serif: Arial, Helvetica, sans-serif;
 
-$brand-primary-color: #19374f; /* blue */
-$brand-secondary-color: #fed130; /* yellow */
-$dark-tangerine: #fbad18; 
+$sunglow-orange: #fed130;
+$dark-tangerine: #fbad18;
 
-$link-color: #053b5b;
-$link-hover-color: #58595B;
-$sidebar-link-color: #053b5b;
+$paris-green: #cbcecb;
+$mint-green: #dff2d5;
 
-$header2-color: #053b5b;
+$white-smoke: #f2f2f2;
+$dew-green: #f2f7f2;
+$oyster-blue: #ccdae3;
+$lake-water-blue: #D1DEE2;
+$mishka-blue: #9DA5B2;
 
-$list-marker-blue: #053b5b;
-$list-text-grey: #808080;
+$very-light-grey: #cccccc;
+$light-grey: #d2d2d2;
+$gainsboro-grey: #dddddd;
+$zircon-grey: #d9dfe3;
+$mortar-grey: #5a5a5a;
+$dim-grey: #666;
+$bright-grey: #58595B;
+$boulder-grey: #7e7f7e;
+$grey: #808080;
+$nobel-grey: #999999;
+$mountain-mist-grey: #a3a29e;
 
-$type-grey: #666;
-$light-grey-text: #7e7f7e;
-$extralight-grey-text: #cbcecb;
 
-$hr-border-color: #d2d2d2;
+$regal-blue: #19374f;
+$sapphire: #053b5b;
 
-$student-description-box-color: #f2f7f2;
-$program-header-icon-color: #9da5b2;
 
-$header-bg-color: #d9dfe3;
-$nav-bg-color: $brand-primary-color;
+
+$brand-primary-color: $regal-blue; 
+$brand-secondary-color: $sunglow-orange; 
+
+
+$link-color: $sapphire;
+$link-hover-color: $bright-grey;
+$sidebar-link-color: $sapphire;
+$header2-color: $sapphire;
+$list-marker-blue: $sapphire;
+
+$list-text-grey: $grey;
+
+$type-grey: $dim-grey;
+$light-grey-text: $boulder-grey;
+$extralight-grey-text: $paris-green;
+
+$hr-border-color: $light-grey;
+
+$student-description-box-color: $dew-green;
+$program-header-icon-color: $mishka-blue;
+
+$header-bg-color: $zircon-grey;
+$nav-bg-color: $regal-blue;
 $nav-link-color: #fff;
-$nav-link-active-color: #ccc;
+$nav-link-active-color: $very-light-grey;
 
-$footer-link-color: #666;
-$footer-link-hover-color: #1A374E;
+$footer-link-color: $dim-grey;
+$footer-link-hover-color: $regal-blue;
 
-$form-input-color: #999;
-$form-input-bg-color: #d1dee2;
+$form-input-color: $nobel-grey;
+$form-input-bg-color: $lake-water-blue;
 
-$system-button-bg-color: #999;
+$system-button-bg-color: $nobel-grey;
 
-$image-border-color: #ddd;
+$image-border-color: $gainsboro-grey;
 
-$label-grey: #a3a29e;
+$label-grey: $mountain-mist-grey;
 
