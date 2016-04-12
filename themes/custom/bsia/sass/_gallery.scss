@@ -2,6 +2,7 @@
 
 #gallery{
   overflow: hidden;
+  position: relative;
 
   li{
     padding: 0px;
@@ -23,11 +24,9 @@
       top: 10%;
       left: 15%;
       width: 70%;
-      background: rgb(25,55,79);
       background: rgba(25,55,79, 0.90);
       padding: 1.0em;
       a{
-        font-size: 1.0em;
         color: #fff;
         text-decoration: none;
         display: block;
@@ -36,17 +35,26 @@
           font-weight: normal;
         }
       }
-
+  }
+  .gallery-caption{
+    margin-top: 0.3em;
+    @include type;
+    color: $light-grey-text;
+    &:before{
+      content: '\F030';
+      font-family: fontAwesome;
+      padding-right: 0.5em;
+    }
   }
 
   .bx-wrapper .bx-pager,
   .bx-wrapper .bx-controls-auto {
-    margin-top: -1.0em;
+    margin-top: -1.5em;
     float: right;
   }
 
   .bx-wrapper .bx-pager {
-      font-size: 1.0em;
+      font-size: 0.6em;
       font-family: Arial;
       font-weight: bold;
       color: $dark-tangerine;
@@ -79,24 +87,24 @@
   #prev a,
   #next a{
       position: absolute;
-      top: 30%;
+      top: 33%;
       font-family: FontAwesome;
       color: $dark-tangerine;
       width: 1em;
       height: 1em;
       font-size: 2.5em;
       text-align: center;
-      &:hover{
+      &:hover, &:focus{
         color: $type-grey;
       }
   }
 
   #prev a{
-      left: 0.5em;
+      left: 0.2em;
   }
 
   #next a{
-      right: 0.5em;
+      right: 0.2em;
   }
   #next a:hover, #prev a:hover{
     text-decoration: none;
@@ -104,20 +112,10 @@
 
   @media (min-width: $mobile-bp){
     .box{
-      font-size: 120%;
-    }
-    #prev a,
-    #next a{
-      top: 40%;
-    }
-
-  }
-
-  @media (min-width: $mobile-bp){
-
-    .box{
       width: 40%;
-      font-size: 140%;
+      a{
+        font-size: 1.5em;
+      }
     }
 
     .box-top-left{
@@ -143,6 +141,14 @@
     #next a{
       top: 45%;
     }
+    #prev a{
+      left: 0.5em;
+    }
+
+    #next a{
+        right: 0.5em;
+    }
+
   }
 }
 
