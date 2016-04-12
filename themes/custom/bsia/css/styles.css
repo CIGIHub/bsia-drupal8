@@ -1015,8 +1015,7 @@ footer {
       float: none; }
     footer .contact nav a {
       color: #666;
-      text-decoration: none;
-      margin-right: 1em; }
+      text-decoration: none; }
       footer .contact nav a:hover, footer .contact nav a:focus {
         color: #1A374E;
         text-decoration: underline; }

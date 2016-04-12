@@ -103,7 +103,7 @@ footer {
        a{
          color: $footer-link-color;
          text-decoration: none;
-         margin-right: 1em;
+         
          &:hover,
          &:focus{
            color: $footer-link-hover-color;
@@ -112,12 +112,15 @@ footer {
        }
      }
    }
-   .partners{
-     margin-top: 1em;
-     ul{
-       display: block;
-       margin: 0;
-       li{
+
+  .partners{
+    margin-top: 1em;
+
+    ul{
+      display: block;
+      margin: 0;
+
+      li{
         margin-right: 15px;
         float: left;
 
@@ -129,8 +132,8 @@ footer {
           margin-right: 0;
         }
       }
-     }
-   }
+    }
+  }
    .copyright{
      margin: 0;
      display: block;
