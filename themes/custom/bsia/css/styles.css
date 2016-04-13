@@ -516,6 +516,9 @@ a {
   text-decoration: none;
   color: #053b5b; }
 
+main.wrapper {
+  border-bottom: 1px solid #d2d2d2; }
+
 #content a[href$=".pdf"]:after {
   font-family: FontAwesome;
   content: ' \f1c1'; }
@@ -1453,6 +1456,7 @@ footer {
   background-repeat: no-repeat;
   background-color: #fecd2f;
   background-position: right;
+  margin-top: -1px;
   /* connect with us block */ }
   @media (max-width: 940px) {
     .footer-banner {

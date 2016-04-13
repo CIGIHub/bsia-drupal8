@@ -50,6 +50,10 @@ a{
   color: $link-color;
 }
 
+main.wrapper {
+  border-bottom:1px solid $light-grey; 
+}
+
 #content{
   a[href$=".pdf"]:after {
     font-family: FontAwesome;
