@@ -1834,8 +1834,10 @@ footer {
   margin-left: 10px;
   color: #9DA5B2; }
 
-.view-students.view-display-id-page_4 h3:before {
-  content: 'Graduates in '; }
+.view-students.view-display-id-page_4 h3 {
+  font-size: 1.3em; }
+  .view-students.view-display-id-page_4 h3:before {
+    content: 'Graduates in '; }
 
 ul.student-list {
   margin-bottom: 40px; }

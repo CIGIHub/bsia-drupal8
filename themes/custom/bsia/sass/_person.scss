@@ -192,8 +192,11 @@
 }
 
 .view-students.view-display-id-page_4{
-  h3:before{
-    content:'Graduates in ';
+  h3 {
+    font-size: 1.3em;
+    &:before{
+      content:'Graduates in ';
+    }
   }
 }
 
