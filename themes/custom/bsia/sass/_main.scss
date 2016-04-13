@@ -659,16 +659,23 @@ dl.calendar{
   background: $mortar-grey;
 }
 
-#cboxClose{
-  background: white;
-  text-indent: 0px;
-  border-radius: 3px;
-  border: solid 1px $hr-border-color;
-  top: -10px;
-  width: 50px;
-  font-size: 13px;
+#colorbox, #cboxOverlay, #cboxWrapper{
+  overflow: visible;
 }
 
+#cboxClose{
+  text-indent: 0px;
+  border-radius: 23px;
+  top: -10px;
+  right: -10px;
+  width: 23px;
+  height: 23px;
+  text-indent: -9999px;
+  background-position: -49px 0px;
+}
+#cboxClose:hover {
+    background-position: -49px -25px;
+}
 .lightbox{
   margin-bottom:5px;
   position: relative;
