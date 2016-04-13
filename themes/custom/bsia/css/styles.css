@@ -516,6 +516,9 @@ a {
   text-decoration: none;
   color: #053b5b; }
 
+main.wrapper {
+  border-bottom: 1px solid #d2d2d2; }
+
 #content a[href$=".pdf"]:after {
   font-family: FontAwesome;
   content: ' \f1c1'; }
@@ -1453,6 +1456,7 @@ footer {
   background-repeat: no-repeat;
   background-color: #fecd2f;
   background-position: right;
+  margin-top: -1px;
   /* connect with us block */ }
   @media (max-width: 940px) {
     .footer-banner {
@@ -1516,7 +1520,8 @@ footer {
 /***********  HOMEPAGE  **************/
 .homepage h1 {
   text-indent: -9999px;
-  position: absolute; }
+  position: absolute;
+  border-bottom: 0; }
 .homepage h2 {
   text-transform: uppercase;
   border-bottom: solid 1px #666;
@@ -1829,8 +1834,10 @@ footer {
   margin-left: 10px;
   color: #9DA5B2; }
 
-.view-students.view-display-id-page_4 h3:before {
-  content: 'Graduates in '; }
+.view-students.view-display-id-page_4 h3 {
+  font-size: 1.3em; }
+  .view-students.view-display-id-page_4 h3:before {
+    content: 'Graduates in '; }
 
 ul.student-list {
   margin-bottom: 40px; }

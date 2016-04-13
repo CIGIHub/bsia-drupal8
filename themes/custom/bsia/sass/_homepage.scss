@@ -5,6 +5,7 @@
   h1{
     @include hidden;
     position: absolute;
+    border-bottom:0;
   }
 
   h2{
