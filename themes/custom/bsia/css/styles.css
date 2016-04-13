@@ -1520,7 +1520,8 @@ footer {
 /***********  HOMEPAGE  **************/
 .homepage h1 {
   text-indent: -9999px;
-  position: absolute; }
+  position: absolute;
+  border-bottom: 0; }
 .homepage h2 {
   text-transform: uppercase;
   border-bottom: solid 1px #666;
