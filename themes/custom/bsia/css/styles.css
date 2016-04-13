@@ -1098,6 +1098,12 @@ dl.calendar {
     font-size: 16px; }
 
 /******  Videos   ********/
+#colorbox {
+  border: 5px solid #ccdae3; }
+
+#cboxContent {
+  margin: 0; }
+
 #cboxOverlay {
   background: #5a5a5a; }
 

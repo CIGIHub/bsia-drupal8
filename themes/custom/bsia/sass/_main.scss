@@ -655,6 +655,14 @@ dl.calendar{
 
 /******  Videos   ********/
 
+#colorbox {
+  border:5px solid $oyster-blue;
+}
+
+#cboxContent {
+  margin:0;
+}
+
 #cboxOverlay {
   background: $mortar-grey;
 }
