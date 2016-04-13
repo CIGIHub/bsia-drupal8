@@ -47,6 +47,10 @@ header {
       @include search_form_input;
       float: none;
       margin-right: 1em;
+
+      @media(max-width: $mobile-bp){
+        width:70%;
+      }
     }
     input[type=submit]{
       @include search_form_submit;
