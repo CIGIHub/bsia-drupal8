@@ -1120,6 +1120,9 @@ dl.calendar {
 .lightbox {
   margin-bottom: 5px;
   position: relative; }
+  .lightbox img {
+    max-width: 100%;
+    height: auto; }
 
 .play {
   position: absolute;

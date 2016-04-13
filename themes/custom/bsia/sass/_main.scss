@@ -679,6 +679,11 @@ dl.calendar{
 .lightbox{
   margin-bottom:5px;
   position: relative;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 .play{
