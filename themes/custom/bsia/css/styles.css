@@ -1189,6 +1189,9 @@ header {
       padding: 5px;
       float: none;
       margin-right: 1em; }
+      @media (max-width: 940px) {
+        header .search-box input[type=search] {
+          width: 70%; } }
     header .search-box input[type=submit] {
       text-indent: -9999px;
       border: none;
@@ -1959,5 +1962,3 @@ ul.student-list {
     background-color: #f2f2f2; }
   .calendar-calendar table.mini td.today {
     background-color: #D1DEE2; }
-
-/*# sourceMappingURL=styles.css.map */
