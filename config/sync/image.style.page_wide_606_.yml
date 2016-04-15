@@ -3,12 +3,13 @@ langcode: en
 status: true
 dependencies: {  }
 name: page_wide_606_
-label: 'content width (606x312)'
+label: 'content width (606)'
 effects:
-  e2d7450f-45eb-4100-be09-09014f834ae9:
-    uuid: e2d7450f-45eb-4100-be09-09014f834ae9
-    id: image_scale_and_crop
+  e44e6332-e36c-480d-8608-087f9b5200d5:
+    uuid: e44e6332-e36c-480d-8608-087f9b5200d5
+    id: image_scale
     weight: 1
     data:
       width: 606
-      height: 312
+      height: null
+      upscale: false

@@ -49,11 +49,11 @@ content:
     third_party_settings: {  }
   field_book_cover:
     type: image
-    weight: 1
+    weight: 0
     label: hidden
     settings:
       image_style: featured_publication
-      image_link: ''
+      image_link: content
     third_party_settings: {  }
   field_feature_line:
     label: above
