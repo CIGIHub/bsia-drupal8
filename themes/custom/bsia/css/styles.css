@@ -585,6 +585,8 @@ hr, .row-divider {
 
 .image {
   margin-bottom: 10px; }
+  .image img {
+    border: 1px solid #d2d2d2; }
 
 .caption {
   background: #d2d2d2;
