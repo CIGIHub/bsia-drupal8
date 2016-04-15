@@ -1,0 +1,31 @@
+uuid: db55d451-2361-4cbf-bd1a-26b1fa82a4ba
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:2a1c7f98-e581-4108-ac00-e8f7aaa43993'
+  module:
+    - block_content
+    - system
+  theme:
+    - bsia
+id: phdvideo
+theme: bsia
+region: right_sidebar
+weight: null
+provider: null
+plugin: 'block_content:2a1c7f98-e581-4108-ac00-e8f7aaa43993'
+settings:
+  id: 'block_content:2a1c7f98-e581-4108-ac00-e8f7aaa43993'
+  label: 'PhD Video'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /degree-programs/master-arts-global-governance
+    negate: false
+    context_mapping: {  }
