@@ -20,6 +20,11 @@ hr, .row-divider{
 
 .image{
   margin-bottom: 10px;
+  
+  img {
+    border:1px solid $light-grey;
+  }
+
 }
 
 .caption{
