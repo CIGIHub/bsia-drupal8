@@ -1820,11 +1820,16 @@ footer {
   background: none;
   border: none;
   position: absolute;
-  left: 248px;
-  top: 35px;
+  right: 6px;
+  top: 6px;
   z-index: 500;
   color: #9DA5B2; }
 
+#views-exposed-form-faculty-page-2 .form-item {
+  position: relative; }
+
+#views-exposed-form-students-page-2 .form-item {
+  position: relative; }
 #views-exposed-form-students-page-2 label {
   text-indent: -9999px;
   position: absolute; }
