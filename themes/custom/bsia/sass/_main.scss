@@ -234,7 +234,9 @@ dl.calendar{
 
 .apply-now{
   @include submit_button;
-  a{
+  margin-bottom: 1em;
+  
+  a {
     color: white;
     &:hover{
       text-decoration: underline;

@@ -771,7 +771,8 @@ dl.calendar {
   border: 1px solid #d2d2d2;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  border-radius: 3px; }
+  border-radius: 3px;
+  margin-bottom: 1em; }
   .apply-now a {
     color: white; }
     .apply-now a:hover {
