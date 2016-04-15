@@ -227,7 +227,14 @@ dl.calendar{
 
 
 /*****  Publication  *****/
-
+.view-publications {
+  .field--name-field-book-cover {
+    img {
+      max-width: 85px;
+      height:auto;
+    }
+  }
+}
 .metadata{
   margin-bottom: 10px;
 }
