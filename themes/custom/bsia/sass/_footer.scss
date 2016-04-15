@@ -49,13 +49,14 @@ footer {
 
     ul{
       display: block;
+      float: right;
       margin: 0;
     
       li{
         margin-right: 15px;
-        float: right;
+        
 
-        &:first-child{
+        &:last-child{
           margin-right: 0;
         }
       }
@@ -131,6 +132,7 @@ footer {
 
     ul{
       display: inline-block;
+      float:none;
       margin: 0;
 
       li{

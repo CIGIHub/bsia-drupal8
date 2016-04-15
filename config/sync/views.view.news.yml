@@ -196,6 +196,10 @@ display:
         css_class: false
       style:
         type: default
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
       row:
         type: fields
       pager:

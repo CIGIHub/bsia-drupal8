@@ -234,7 +234,9 @@ dl.calendar{
 
 .apply-now{
   @include submit_button;
-  a{
+  margin-bottom: 1em;
+  
+  a {
     color: white;
     &:hover{
       text-decoration: underline;
@@ -346,6 +348,7 @@ dl.calendar{
   border-radius: 50%;
   text-align: center;
   font-weight: bold;
+  text-transform: uppercase;
 
   .month, .year{
     font-size: 14px;
@@ -651,6 +654,10 @@ dl.calendar{
   input{
     font-size: 16px;
   }
+}
+
+#block-eventdisclaimer {
+  font-size: 0.85em;
 }
 
 /******  Videos   ********/
