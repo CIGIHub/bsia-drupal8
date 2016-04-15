@@ -34,6 +34,7 @@ module:
   imce: 0
   inline_entity_form: 0
   link: 0
+  link_css: 0
   menu_ui: 0
   metatag: 0
   metatag_open_graph: 0
