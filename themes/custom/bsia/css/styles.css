@@ -1099,6 +1099,9 @@ dl.calendar {
   .search-page-form input {
     font-size: 16px; }
 
+#block-eventdisclaimer {
+  font-size: 0.85em; }
+
 /******  Videos   ********/
 #colorbox {
   border: 5px solid #ccdae3; }
