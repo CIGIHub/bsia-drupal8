@@ -1405,11 +1405,11 @@ footer {
     text-indent: -9999px; }
     footer .partners ul {
       display: block;
+      float: right;
       margin: 0; }
       footer .partners ul li {
-        margin-right: 15px;
-        float: right; }
-        footer .partners ul li:first-child {
+        margin-right: 15px; }
+        footer .partners ul li:last-child {
           margin-right: 0; }
     footer .partners a {
       height: 37px;
@@ -1454,6 +1454,7 @@ footer {
       font-size: 0; }
       footer .partners ul {
         display: inline-block;
+        float: none;
         margin: 0; }
         footer .partners ul li {
           margin-right: 15px;
