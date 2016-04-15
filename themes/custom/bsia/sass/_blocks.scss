@@ -99,6 +99,36 @@
       }
     }
   }
+
+  .archive-list {
+    background: $regal-blue;
+    padding:0px 0 10px 0;
+    display: block;
+
+    .view-content {
+      margin-bottom: 0;
+      column-count: 2;
+      -moz-column-count: 2;
+      -webkit-column-count: 2;
+    }
+
+    .views-summary {
+      padding:2px 20px;
+
+    
+      a {
+        color:white;
+      }
+    }
+  }
+}
+
+#block-views-block-news-block-1 {
+  background: $regal-blue;
+  h2 {
+    color:white;
+    padding:10px 20px 0;
+  }
 }
 
 

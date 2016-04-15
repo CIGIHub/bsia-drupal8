@@ -1541,6 +1541,25 @@ footer {
         color: #cccccc; }
       .right-menu ul.menu li a.is-active:hover {
         color: white; }
+.right-menu .archive-list {
+  background: #19374f;
+  padding: 0px 0 10px 0;
+  display: block; }
+  .right-menu .archive-list .view-content {
+    margin-bottom: 0;
+    column-count: 2;
+    -moz-column-count: 2;
+    -webkit-column-count: 2; }
+  .right-menu .archive-list .views-summary {
+    padding: 2px 20px; }
+    .right-menu .archive-list .views-summary a {
+      color: white; }
+
+#block-views-block-news-block-1 {
+  background: #19374f; }
+  #block-views-block-news-block-1 h2 {
+    color: white;
+    padding: 10px 20px 0; }
 
 /***********  HOMEPAGE  **************/
 .homepage h1 {
