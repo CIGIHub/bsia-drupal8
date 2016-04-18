@@ -104,7 +104,6 @@
 
          if ($("a.vimeo").length > 0) {
              $("a.vimeo").colorbox({iframe: true, innerWidth: 625, innerHeight: 444});
-             $(".play").colorbox({iframe: true, innerWidth: 625, innerHeight: 444});
          }
      });
 
