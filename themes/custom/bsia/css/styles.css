@@ -1176,7 +1176,8 @@ header {
     text-align: right; }
   header a.logo {
     display: block;
-    text-indent: -9999px;
+    font-size: 0;
+    line-height: 0;
     background: url("../images/bsia-logo-2015.png") no-repeat 10px;
     width: 260px;
     min-height: 75px;
@@ -1220,7 +1221,8 @@ header {
         header .search-box input[type=search] {
           width: 70%; } }
     header .search-box input[type=submit] {
-      text-indent: -9999px;
+      font-size: 0;
+      line-height: 0;
       border: none;
       background-color: none;
       background-image: url("../images/search-icon.png");
@@ -1349,7 +1351,8 @@ header {
   .search .form-submit {
     float: left; }
   .search .form-submit {
-    text-indent: -9999px;
+    font-size: 0;
+    line-height: 0;
     border: none;
     background-color: none;
     background-image: url("../images/search-icon.png");
@@ -1413,7 +1416,8 @@ footer {
   footer .region-footer-menu ul.menu {
     margin: 0px; }
   footer .partners {
-    text-indent: -9999px; }
+    font-size: 0;
+    line-height: 0; }
     footer .partners ul {
       display: block;
       float: right;
@@ -1569,7 +1573,8 @@ footer {
 
 /***********  HOMEPAGE  **************/
 .homepage h1 {
-  text-indent: -9999px;
+  font-size: 0;
+  line-height: 0;
   position: absolute;
   border-bottom: 0; }
 .homepage h2 {
@@ -1821,7 +1826,8 @@ footer {
   padding: 3px;
   font-size: 14px; }
 #block-exposedformfacultypage-2 .form-actions {
-  text-indent: -9999px;
+  font-size: 0;
+  line-height: 0;
   position: absolute;
   margin: 0px; }
 #block-exposedformfacultypage-2 .search-description {
@@ -1860,7 +1866,8 @@ footer {
 #views-exposed-form-students-page-2 .form-item {
   position: relative; }
 #views-exposed-form-students-page-2 label {
-  text-indent: -9999px;
+  font-size: 0;
+  line-height: 0;
   position: absolute; }
 #views-exposed-form-students-page-2 .form-text {
   width: 200px;

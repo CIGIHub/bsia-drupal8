@@ -547,8 +547,8 @@ dl.calendar{
     }
 
     label{
-      @include hidden;
-      position: absolute;
+     text-indent:-9999px;
+     position: absolute;
     }
 
     .form-item{
