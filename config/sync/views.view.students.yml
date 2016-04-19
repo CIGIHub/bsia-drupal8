@@ -1385,7 +1385,7 @@ display:
           alter:
             alter_text: false
             text: ''
-            make_link: true
+            make_link: false
             path: '/current-students/{{ program_type__target_id }}'
             absolute: false
             external: false
