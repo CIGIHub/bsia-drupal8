@@ -1,23 +1,23 @@
-uuid: 720dc1bc-d531-4b42-8c04-4b17811946b8
+uuid: 36b2b7b3-17b6-465f-8391-b2bf473c7f91
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:df9f4695-7333-4c9a-ac12-18b426484d9e'
+    - 'block_content:basic:28ecd5e9-7064-40db-a53c-60204b7632a8'
   module:
     - block_content
     - system
   theme:
     - bsia
-id: doubledegreeflyer
+id: armageddonlettersvideo
 theme: bsia
 region: right_sidebar
-weight: -26
+weight: -31
 provider: null
-plugin: 'block_content:df9f4695-7333-4c9a-ac12-18b426484d9e'
+plugin: 'block_content:28ecd5e9-7064-40db-a53c-60204b7632a8'
 settings:
-  id: 'block_content:df9f4695-7333-4c9a-ac12-18b426484d9e'
-  label: 'Double Degree Flyer'
+  id: 'block_content:28ecd5e9-7064-40db-a53c-60204b7632a8'
+  label: 'Armageddon Letters Video'
   provider: block_content
   label_display: '0'
   status: true
@@ -26,6 +26,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: /degree-programs/master-arts-global-governance
+    pages: /research/armageddon-letters
     negate: false
     context_mapping: {  }

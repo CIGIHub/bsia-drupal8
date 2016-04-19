@@ -1,15 +1,18 @@
 uuid: 5dd0db41-913d-41c7-9508-8b06ba016cd6
 langcode: en
-status: true
+status: false
 dependencies:
+  content:
+    - 'block_content:basic:f759996d-89ba-4e3c-855c-9248da14da22'
   module:
+    - block_content
     - system
   theme:
     - bsia
 id: maggvideo
 theme: bsia
-region: right_sidebar
-weight: -27
+region: '-1'
+weight: -18
 provider: null
 plugin: 'block_content:f759996d-89ba-4e3c-855c-9248da14da22'
 settings:
