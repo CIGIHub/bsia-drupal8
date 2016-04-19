@@ -1062,6 +1062,7 @@ display:
         fields: false
         sorts: false
         title: false
+        footer: false
       row:
         type: fields
         options:
@@ -1117,8 +1118,9 @@ display:
           entity_field: nid
           plugin_id: node_nid
       pager:
-        type: none
+        type: some
         options:
+          items_per_page: 10
           offset: 0
       fields:
         title:
@@ -1267,6 +1269,18 @@ display:
       block_description: 'Related Events'
       display_description: ''
       title: 'Related Events'
+      footer:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content: '<div class="more"><a href="/events">See all events</a></div>'
+          plugin_id: text_custom
     cache_metadata:
       max-age: -1
       contexts:
