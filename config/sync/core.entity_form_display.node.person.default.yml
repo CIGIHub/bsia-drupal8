@@ -64,6 +64,7 @@ third_party_settings:
     group_homepage_feature:
       children:
         - field_image_page
+        - field_feature_weight
         - field_credit
         - field_feature_line
         - field_position
@@ -253,6 +254,11 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
+  field_feature_weight:
+    type: options_select
+    weight: 30
+    settings: {  }
+    third_party_settings: {  }
   field_features:
     type: options_select
     weight: 16
@@ -448,7 +454,6 @@ hidden:
   field_courses: true
   field_current_student: true
   field_feature_area: true
-  field_feature_weight: true
   field_link_text: true
   field_publications: true
   field_user_link: true

@@ -37,6 +37,7 @@ third_party_settings:
     group_homepage:
       children:
         - field_features
+        - field_feature_weight
         - field_image_page
         - field_credit
         - field_feature_line
@@ -84,7 +85,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_alternative_url:
-    weight: 13
+    weight: 14
     type: string_textfield
     settings:
       size: 60
@@ -98,19 +99,24 @@ content:
     third_party_settings: {  }
     type: string_textfield
   field_credit:
-    weight: 10
+    weight: 11
     type: string_textfield
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
   field_feature_line:
-    weight: 11
+    weight: 12
     settings:
       rows: 2
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
+  field_feature_weight:
+    type: options_select
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
   field_features:
     weight: 8
     settings: {  }
@@ -124,14 +130,14 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
   field_image_page:
-    weight: 9
+    weight: 10
     settings:
       progress_indicator: bar
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
   field_position:
-    weight: 12
+    weight: 13
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -214,7 +220,6 @@ content:
     third_party_settings: {  }
 hidden:
   field_feature_area: true
-  field_feature_weight: true
   field_link_text: true
   promote: true
   sticky: true

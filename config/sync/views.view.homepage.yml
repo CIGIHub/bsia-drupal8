@@ -1341,11 +1341,24 @@ display:
     display_options:
       display_extenders: {  }
       path: home
-      sorts: {  }
+      sorts:
+        field_feature_weight_value:
+          id: field_feature_weight_value
+          table: node__field_feature_weight
+          field: field_feature_weight_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
       defaults:
         sorts: false
         fields: false
         title: false
+        pager: false
       fields:
         field_alternative_url:
           id: field_alternative_url
@@ -1712,6 +1725,10 @@ display:
           plugin_id: field
       display_description: ''
       title: 'The Balsillie School of International Affairs'
+      pager:
+        type: none
+        options:
+          offset: 0
     cache_metadata:
       max-age: -1
       contexts:
