@@ -1853,6 +1853,8 @@ footer {
   width: 200px;
   padding: 3px;
   font-size: 14px; }
+#block-exposedformstudentspage-2 .search-description {
+  font-style: italic; }
 
 #block-views-block-faculty-block-1 {
   border-top: solid 1px #d2d2d2;
