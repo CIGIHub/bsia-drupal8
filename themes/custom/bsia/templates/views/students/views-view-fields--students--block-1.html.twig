@@ -34,7 +34,7 @@
   <div class="photo">{{ fields.field_image_page.content }}</div>
   <div class="featured-item">
     <h3>{{ fields.title.content }}</h3>
-    <div class="title">{{ fields.field_year_graduated.content }}/{{ fields.program_type.content }}</div>
+    <div class="title">{{ fields.program_type.content }}, {{ fields.field_year_graduated.content }}</div>
     <div class="feature-line"><p>{{ fields.field_feature_line.content }}<p></div>
     <div class="profile">{{ fields.view_node.content }}</div>
     {% if fields.field_youtube_id.content|render %}

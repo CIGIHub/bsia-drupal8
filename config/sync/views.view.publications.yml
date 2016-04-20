@@ -194,7 +194,7 @@ display:
           table: views
           field: random
           plugin_id: random
-      title: Publications
+      title: 'Select Publications'
       header: {  }
       footer: {  }
       empty: {  }

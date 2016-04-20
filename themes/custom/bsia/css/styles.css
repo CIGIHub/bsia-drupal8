@@ -1574,6 +1574,14 @@ footer {
     color: white;
     padding: 10px 20px 0; }
 
+.view-footer .more {
+  border-top: 1px solid #999999;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 0.85em; }
+  .view-footer .more a {
+    text-transform: uppercase; }
+
 /***********  HOMEPAGE  **************/
 .homepage h1 {
   font-size: 0;
