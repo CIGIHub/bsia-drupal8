@@ -6,6 +6,7 @@ module:
   block_content: 0
   breakpoint: 0
   bsia_connect: 0
+  bsia_ical: 0
   calendar: 0
   calendar_datetime: 0
   ckeditor: 0
