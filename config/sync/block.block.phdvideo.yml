@@ -12,7 +12,7 @@ dependencies:
 id: phdvideo
 theme: bsia
 region: right_sidebar
-weight: -30
+weight: -29
 provider: null
 plugin: 'block_content:2a1c7f98-e581-4108-ac00-e8f7aaa43993'
 settings:

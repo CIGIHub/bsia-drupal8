@@ -12,7 +12,7 @@ dependencies:
 id: doubledegreeflyer
 theme: bsia
 region: right_sidebar
-weight: -26
+weight: -28
 provider: null
 plugin: 'block_content:df9f4695-7333-4c9a-ac12-18b426484d9e'
 settings:

@@ -1,0 +1,7 @@
+bsia_ical.content:
+  path: '/calendar/ical/{nid}'
+  defaults:
+    _controller: '\Drupal\bsia_ical\Controller\ICalController::createICal'
+    _title: 'Calendar'
+  requirements:
+    _permission: 'access content'

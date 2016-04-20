@@ -14,7 +14,9 @@ dependencies:
     - node.type.person
     - taxonomy.vocabulary.person_type
   content:
-    - 'taxonomy_term:person_type:5c44c917-204b-4d46-8700-ad3798ed801b'
+    - 'taxonomy_term:person_type:4766e2f8-1af4-4666-bd04-4eef63e3b309'
+    - 'taxonomy_term:person_type:87b4463f-18eb-4abc-b216-22409130e717'
+    - 'taxonomy_term:person_type:b6cd333e-caa9-4b87-9003-3d64fd25b155'
   module:
     - image
     - node
@@ -487,6 +489,8 @@ display:
           operator: or
           value:
             2: 2
+            42: 42
+            5: 5
           group: 1
           exposed: false
           expose:
@@ -979,6 +983,8 @@ display:
           operator: or
           value:
             2: 2
+            42: 42
+            5: 5
           group: 1
           exposed: false
           expose:

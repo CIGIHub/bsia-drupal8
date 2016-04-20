@@ -12,7 +12,7 @@ dependencies:
 id: areyouready
 theme: bsia
 region: right_sidebar
-weight: -25
+weight: -27
 provider: null
 plugin: 'block_content:462f23b8-4981-4eed-8c2c-449ffa2da346'
 settings:

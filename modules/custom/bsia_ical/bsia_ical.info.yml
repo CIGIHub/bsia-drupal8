@@ -1,0 +1,6 @@
+name: BSIA iCal
+description: 'Creates a downloadable calendar.ics file for event nodes.'
+package: Custom
+
+type: module
+core: 8.x

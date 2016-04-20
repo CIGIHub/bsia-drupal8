@@ -1810,9 +1810,11 @@ footer {
   padding: 5px;
   margin-bottom: 10px;
   width: 95%; }
-.node--type-person .social div {
-  display: inline-block;
-  margin-right: 5px; }
+.node--type-person .social {
+  font-size: 16px; }
+  .node--type-person .social div {
+    display: inline-block;
+    margin-right: 5px; }
 
 .node--type-person.node--view-mode-teaser .profile h2,
 .view-faculty .view-content .profile h2,

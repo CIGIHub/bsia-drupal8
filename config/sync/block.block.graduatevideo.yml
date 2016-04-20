@@ -12,7 +12,7 @@ dependencies:
 id: graduatevideo
 theme: bsia
 region: right_sidebar
-weight: -22
+weight: -24
 provider: null
 plugin: 'block_content:35df4050-f485-4a17-a003-3cdc2bb3b545'
 settings:
