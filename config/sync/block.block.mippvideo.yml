@@ -12,7 +12,7 @@ dependencies:
 id: mippvideo
 theme: bsia
 region: right_sidebar
-weight: -24
+weight: -26
 provider: null
 plugin: 'block_content:2673a728-83f4-4dbd-8555-8520529b2648'
 settings:

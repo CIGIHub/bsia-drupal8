@@ -12,7 +12,7 @@ dependencies:
 id: armageddonlettersvideo
 theme: bsia
 region: right_sidebar
-weight: -31
+weight: -30
 provider: null
 plugin: 'block_content:28ecd5e9-7064-40db-a53c-60204b7632a8'
 settings:
