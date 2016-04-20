@@ -1,22 +1,22 @@
-uuid: e3958a95-b6e7-46cd-b92f-4740c2ef7849
+uuid: 4d33d2de-3b67-4035-89d0-6a5f6cdeb726
 langcode: en
-status: true
+status: false
 dependencies:
   config:
-    - views.view.students
+    - views.view.faculty
   module:
     - system
     - views
   theme:
     - bsia
-id: views_block__students_block_1
+id: views_block__faculty_block_4
 theme: bsia
-region: content_header
-weight: -22
+region: '-1'
+weight: -17
 provider: null
-plugin: 'views_block:students-block_1'
+plugin: 'views_block:faculty-block_4'
 settings:
-  id: 'views_block:students-block_1'
+  id: 'views_block:faculty-block_4'
   label: ''
   provider: views
   label_display: visible
@@ -25,6 +25,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: /graduates
+    pages: '/people/*'
     negate: false
     context_mapping: {  }

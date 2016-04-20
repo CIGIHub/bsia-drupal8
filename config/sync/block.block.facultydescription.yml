@@ -12,7 +12,7 @@ dependencies:
 id: facultydescription
 theme: bsia
 region: content_header
-weight: -23
+weight: -16
 provider: null
 plugin: 'block_content:5dcd432d-ea54-4635-a504-4e427a70b123'
 settings:

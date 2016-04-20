@@ -2,17 +2,14 @@ uuid: b2935711-e531-438c-a109-9fac8d6852cb
 langcode: en
 status: true
 dependencies:
-  content:
-    - 'block_content:basic:7bec6e46-ec95-4144-bd00-0aa9646589b1'
   module:
-    - block_content
     - system
   theme:
     - bsia
 id: mippdescription
 theme: bsia
 region: content_header
-weight: -30
+weight: -26
 provider: null
 plugin: 'block_content:7bec6e46-ec95-4144-bd00-0aa9646589b1'
 settings:
