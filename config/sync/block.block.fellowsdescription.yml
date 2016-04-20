@@ -12,7 +12,7 @@ dependencies:
 id: fellowsdescription
 theme: bsia
 region: content_header
-weight: -24
+weight: -17
 provider: null
 plugin: 'block_content:a322ba42-0539-4a30-b262-98246355141f'
 settings:
