@@ -12,7 +12,7 @@ dependencies:
 id: cigichairdescription
 theme: bsia
 region: content_header
-weight: -19
+weight: -26
 provider: null
 plugin: 'block_content:03b11628-2212-4518-9907-7b80ec3d2cef'
 settings:

@@ -12,7 +12,7 @@ dependencies:
 id: programdirectorsdescription
 theme: bsia
 region: content_header
-weight: -18
+weight: -25
 provider: null
 plugin: 'block_content:420729d9-82e5-4da1-862c-4499b09f27ea'
 settings:

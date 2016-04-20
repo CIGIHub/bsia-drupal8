@@ -12,7 +12,7 @@ dependencies:
 id: views_block__students_block_1
 theme: bsia
 region: content_header
-weight: -22
+weight: -27
 provider: null
 plugin: 'views_block:students-block_1'
 settings:

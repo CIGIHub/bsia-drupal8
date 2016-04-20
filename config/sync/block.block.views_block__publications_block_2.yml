@@ -12,7 +12,7 @@ dependencies:
 id: views_block__publications_block_2
 theme: bsia
 region: content_header
-weight: -23
+weight: -28
 provider: null
 plugin: 'views_block:publications-block_2'
 settings:
