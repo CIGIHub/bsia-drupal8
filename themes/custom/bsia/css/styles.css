@@ -1463,6 +1463,9 @@ footer {
         footer .contact nav a:hover, footer .contact nav a:focus {
           color: #19374f;
           text-decoration: underline; }
+    .non-mobile footer .contact {
+      float: left;
+      text-align: left; }
     footer .partners {
       margin-top: 1em;
       padding: 20px 0;

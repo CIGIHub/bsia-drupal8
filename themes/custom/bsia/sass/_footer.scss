@@ -122,6 +122,11 @@ footer {
      }
    }
 
+   .non-mobile & .contact{
+    float: left;
+    text-align: left;
+   }
+
   .partners{
     margin-top: 1em;
     padding:20px 0;
