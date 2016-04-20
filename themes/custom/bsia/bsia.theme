@@ -235,24 +235,25 @@ function bsia_preprocess_node(&$variables){
 	
 		//set ical time formats
 		$timezone = date_default_timezone_get();
-		//echo $variables['event_date'];
-
+		
 		$tz = new DateTimeZone('UTC');
 
 		$date = DateTime::createFromFormat('Y-m-d\TH:i:s', $variables['event_date'], $tz);
 		$date->setTimeZone(new DateTimeZone($timezone));
 		$ical_start_date = $date->format('Ymd\THis');
 
+		// set dates for datemark on views/teasers
+		$variables['event_month'] = $date->format('M');
+		$variables['event_day'] = $date->format('d');
+		$variables['event_year'] = $date->format('Y');
+
+
 		$date = DateTime::createFromFormat('Y-m-d\TH:i:s', $variables['event_date_2'], $tz);
 		$date->setTimeZone(new DateTimeZone($timezone));
 		$ical_end_date = $date->format('Ymd\THis');
 		
-		//echo "<br>" . $ical_start_date;
-		//echo "<br>" . $ical_end_date;
-		
-		
 		//set a endstamp to compare in templates as a flag for showing past material
-		$variables['endstamp'] = format_date($end_datetime_timestamp, 'custom', 'U', 'Etc/GMT+10');
+		$variables['endstamp'] = $date->format('U');
 		$variables['current_datetime'] = time();
 		$variables['past_event'] = FALSE;
 
@@ -260,11 +261,7 @@ function bsia_preprocess_node(&$variables){
 			$variables['past_event'] = TRUE;
 		}
 
-		// set dates for datemark on views/teasers
-		$variables['event_month'] = format_date($start_datetime_timestamp, 'custom', 'M', 'Etc/GMT+10');
-		$variables['event_day'] = format_date($start_datetime_timestamp, 'custom', 'd', 'Etc/GMT+10');
-		$variables['event_year'] = format_date($start_datetime_timestamp, 'custom', 'Y', 'Etc/GMT+10');
-
+		
 		/* build address from fields and return to event node template */
 		$location = null;
 		$street = null;
