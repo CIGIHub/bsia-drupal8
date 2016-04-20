@@ -1848,6 +1848,8 @@ footer {
   margin: 0px; }
 #block-exposedformfacultypage-2 .search-description {
   font-style: italic; }
+#block-exposedformfacultypage-2 #edit-submit-faculty {
+  display: none; }
 
 #block-exposedformstudentspage-2 #edit-keys--2 {
   width: 200px;
