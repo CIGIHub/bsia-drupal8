@@ -92,8 +92,8 @@
         <dl class="event-registration button calendar">
           <dt>Add to Calendar</dt>
             <dd><a href="{{ google_ical }}" target="_blank" class="cal_google">Google</a></dd>
-            <dd><a href="/calendar/ical/adf{{ nid }}">Outlook</a></dd>
-            <dd><a href="/calendar/ical/{{ nid }}">iCal</a></dd>
+            <dd><a href="/calendar/ical/{{ node.id }}">Outlook</a></dd>
+            <dd><a href="/calendar/ical/{{ node.id }}">iCal</a></dd>
         </dl>
      
         {% if content.field_event_management|render %}
