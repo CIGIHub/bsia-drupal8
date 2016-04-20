@@ -57,7 +57,7 @@ $(document).ready(function(){
 
     function position_arrow(studentId){
         var arrowDiv = $("<div class='uparrowdiv'></div>");
-        var left = $(studentId).offset().left - $('.view-content').offset().left + 50;
+        var left = $(studentId).offset().left - $('.view-content').offset().left + 35;
         
         if (left > 9900){
             left -= 10000;
