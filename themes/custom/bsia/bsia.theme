@@ -1,5 +1,22 @@
 <?php
 
+ function bsia_page_attachments_alter(array &$page) {
+	$current_path = \Drupal::service('path.current')->getPath();
+ 
+	if($current_path != '/home'){
+		$viewport = array(
+	      '#type' => 'html_tag',
+	      '#tag' => 'meta',
+	      '#attributes' => array(
+	        'name' => 'viewport',
+	        'content' => 'width=940',
+	      ),
+	    );
+	    $page['#attached']['html_head'][] = [$viewport, 'viewport'];
+	}
+}
+
+
 function bsia_theme_suggestions_block_alter(&$suggestions, $variables) {
   $content = $variables['elements']['content'];
   if (isset($content['#block_content']) && $content['#block_content'] instanceof \Drupal\block_content\BlockContentInterface) {
@@ -29,7 +46,6 @@ function bsia_preprocess_field(&$variables, $hook) {
 }
 
 function bsia_preprocess_html(&$variables){
-	
 
 	//show faculty green box stuff above the faculty when on /faculty/X  and /faculty/search pages
 	$showFacultyHeader = false;
@@ -414,21 +430,6 @@ function speakers_or_authors($node_speakers_linked, $node_speakers_unlinked, $di
 
 	return $speaker_string;
 	
-}
-
-
-function bsia_page_attachments_alter(array &$page){
-	//'Content-type: text/calendar; charset=utf-8'
-	// $viewport = array(
- //      '#type' => 'html_tag',
- //      '#tag' => 'meta',
- //      '#attributes' => array(
- //        'name' => 'viewport',
- //        'content' => 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no',
- //      ),
- //    );
- //    $page['#attached']['html_head'][] = [$viewport, 'viewport'];
-    //print_r($page['#attached']['html_head']);
 }
 
 ?>
