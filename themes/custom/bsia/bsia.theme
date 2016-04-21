@@ -16,6 +16,7 @@
 	    	"og_url",
 	    	"system_meta_content_type",
 	    	"system_meta_generator",
+	    	"content_language",
 
 	    );
 
