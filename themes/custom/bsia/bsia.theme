@@ -4,40 +4,22 @@
 	$current_path = \Drupal::service('path.current')->getPath();
  
 	if($current_path != '/home'){
-		$viewport = array(
-	      '#type' => 'html_tag',
-	      '#tag' => 'meta',
-	      '#attributes' => array(
-	        'name' => 'viewport',
-	        'content' => 'width=940',
-	      ),
-	    );
 
-		$mobileOptmized  = array(
-	      '#type' => 'html_tag',
-	      '#tag' => 'meta',
-	      '#attributes' => array(
-	        'name' => 'MobileOptimized',
-	        'content' => '940',
-	      ),
-	    );
+	    $mobile = array("MobileOptimized", "HandheldFriendly", "viewport");
 
-	    $handheld  = array(
-	      '#type' => 'html_tag',
-	      '#tag' => 'meta',
-	      '#attributes' => array(
-	        'name' => 'HandheldFriendly',
-	        'content' => 'false',
-	      ),
-	    );
-	    $page['#attached']['html_head'][] = [$viewport, 'viewport'];
-	    $page['#attached']['html_head'][] = [$mobileOptmized, 'MobileOptimized'];
-	    $page['#attached']['html_head'][] = [$handheld, 'HandheldFriendly'];
+	    //build a new html head array without the mobile meta tags.
+	    $html_head = array();
 
+	    foreach ($page['#attached']['html_head'] as $key => $value) {
+	    	if (!in_array($value[1], $mobile)) {
+	    		$html_head[] = $value;
+	    	}
+	    }
+	   
+	    //now that oour new array is built, clear out the old one, and set it to the new one.
 	    unset($page['#attached']['html_head']);
+	    $page['#attached']['html_head'] = $html_head;
 
-	   // print "<pre>" . print_r($page['#attached']['html_head'], true) . "</pre>";
-	    
 	}
 }
 
