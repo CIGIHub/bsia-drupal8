@@ -2518,7 +2518,19 @@ display:
         groups:
           1: AND
       relationships: {  }
-      sorts: {  }
+      sorts:
+        field_surname_value:
+          id: field_surname_value
+          table: node__field_surname
+          field: field_surname_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
       title: 'Students by Program'
     cache_metadata:
       max-age: -1
