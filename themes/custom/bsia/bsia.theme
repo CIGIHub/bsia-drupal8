@@ -33,6 +33,11 @@
 	    $page['#attached']['html_head'][] = [$viewport, 'viewport'];
 	    $page['#attached']['html_head'][] = [$mobileOptmized, 'MobileOptimized'];
 	    $page['#attached']['html_head'][] = [$handheld, 'HandheldFriendly'];
+
+	    unset($page['#attached']['html_head']);
+
+	   // print "<pre>" . print_r($page['#attached']['html_head'], true) . "</pre>";
+	    
 	}
 }
 
