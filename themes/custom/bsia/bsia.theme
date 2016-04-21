@@ -16,9 +16,11 @@
 	    	}
 	    }
 	   
-	    //now that oour new array is built, clear out the old one, and set it to the new one.
+	    //print "<pre>" . print_r($html_head, true) . "</pre>";
+
+	    //now that our new array is built, clear out the old one, and set it to the new one.
 	    unset($page['#attached']['html_head']);
-	    $page['#attached']['html_head'] = $html_head;
+	    //$page['#attached']['html_head'] = $html_head;
 
 	}
 }
