@@ -5,7 +5,19 @@
  
 	if($current_path != '/home'){
 
-	    $mobile = array("MobileOptimized", "HandheldFriendly", "viewport");
+	    $mobile = array(
+	    	"MobileOptimized", 
+	    	"HandheldFriendly", 
+	    	"viewport", 
+	    	"og_description", 
+	    	"og_image", 
+	    	"og_title", 
+	    	"og_type",
+	    	"og_url",
+	    	"system_meta_content_type",
+	    	"system_meta_generator",
+
+	    );
 
 	    //build a new html head array without the mobile meta tags.
 	    $html_head = array();
@@ -20,7 +32,9 @@
 
 	    //now that our new array is built, clear out the old one, and set it to the new one.
 	    unset($page['#attached']['html_head']);
-	    //$page['#attached']['html_head'] = $html_head;
+	    $page['#attached']['html_head'] = $html_head;
+
+	    //print "<pre>" . print_r($page['#attached']['html_head'], true) . "</pre>";
 
 	}
 }
