@@ -12,7 +12,27 @@
 	        'content' => 'width=940',
 	      ),
 	    );
+
+		$mobileOptmized  = array(
+	      '#type' => 'html_tag',
+	      '#tag' => 'meta',
+	      '#attributes' => array(
+	        'name' => 'MobileOptimized',
+	        'content' => '940',
+	      ),
+	    );
+
+	    $handheld  = array(
+	      '#type' => 'html_tag',
+	      '#tag' => 'meta',
+	      '#attributes' => array(
+	        'name' => 'HandheldFriendly',
+	        'content' => 'false',
+	      ),
+	    );
 	    $page['#attached']['html_head'][] = [$viewport, 'viewport'];
+	    $page['#attached']['html_head'][] = [$mobileOptmized, 'MobileOptimized'];
+	    $page['#attached']['html_head'][] = [$handheld, 'HandheldFriendly'];
 	}
 }
 
