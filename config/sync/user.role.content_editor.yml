@@ -193,3 +193,4 @@ permissions:
   - 'use text format full_html'
   - 'use text format basic_html'
   - 'administer imce'
+  - 'access toolbar'
