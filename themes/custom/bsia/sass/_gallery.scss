@@ -58,7 +58,7 @@
       font-size: 0.6em;
       font-family: Arial;
       font-weight: bold;
-      color: $dark-tangerine;
+      color: $sunglow-orange;
   }
 
   .bx-wrapper .bx-pager .bx-pager-item,
@@ -69,7 +69,7 @@
   }
 
   .bx-wrapper .bx-pager.bx-default-pager a {
-      background: $dark-tangerine;
+      background: $sunglow-orange;
       text-indent: -500em;
       display: block;
       width: 1.5em;
@@ -82,7 +82,7 @@
 
   .bx-wrapper .bx-pager.bx-default-pager a:hover,
   .bx-wrapper .bx-pager.bx-default-pager a.active {
-      background: $type-grey;
+      background: $very-light-grey;
   }
 
   #prev a,
@@ -90,14 +90,14 @@
       position: absolute;
       top: 33%;
       font-family: FontAwesome;
-      color: $dark-tangerine;
+      color: $sunglow-orange;
       width: 1em;
       height: 1em;
       font-size: 2.5em;
       text-align: center;
 
-      &:hover, &:focus{
-        color: $type-grey;
+      &:hover {
+        color: $very-light-grey;
       }
   }
 

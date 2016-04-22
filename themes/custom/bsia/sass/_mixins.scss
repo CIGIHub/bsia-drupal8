@@ -82,7 +82,7 @@
 }
 
 @mixin desktop_nav{
-  background: $nav-bg-color;
+  background: $regal-blue;
   display: block;
 
   @include horizontal_menu;
@@ -117,7 +117,7 @@
 }
 
 @mixin submit_button{
-  background: $dark-tangerine;
+  background: $sunglow-orange;
   width: 120px;
   
   font-size: 1.0em;

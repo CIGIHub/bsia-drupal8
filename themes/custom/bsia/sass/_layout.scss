@@ -92,9 +92,16 @@ ul.sitemap-menu{
 .top{
   font-size: 2em;
   text-align: center;
+
+  a {
+    text-decoration: none; 
+    color: $sunglow-orange;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
 }
-.top a{text-decoration: none; color: $dark-tangerine;}
-.top a:hover{opacity: 0.5}
 
 .divider{
   @include divider;
