@@ -514,7 +514,10 @@ h3 {
 
 a {
   text-decoration: none;
-  color: #053b5b; }
+  color: #053b5b;
+  transition: background 0.2s ease; }
+  a:hover {
+    transition: background 0.2s ease; }
 
 #content a[href$=".pdf"]:after {
   font-family: FontAwesome;
@@ -1617,7 +1620,8 @@ footer {
     #gallery .gallery-caption:before {
       content: '\F030';
       font-family: fontAwesome;
-      padding-right: 0.5em; }
+      padding-right: 0.5em;
+      padding-left: 1px; }
   #gallery .bx-wrapper .bx-pager,
   #gallery .bx-wrapper .bx-controls-auto {
     margin-top: -1.5em;

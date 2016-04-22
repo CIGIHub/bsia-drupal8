@@ -48,6 +48,11 @@ h3{
 a{
   text-decoration: none;
   color: $link-color;
+  transition: background 0.2s ease;
+
+  &:hover {
+    transition: background 0.2s ease;
+  }
 }
 
 #content{
