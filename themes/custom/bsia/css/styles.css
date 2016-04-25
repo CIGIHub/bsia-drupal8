@@ -1185,6 +1185,12 @@ header {
     width: 260px;
     min-height: 75px;
     background-size: 175% auto; }
+    @media (max-width: 360px) {
+      header a.logo {
+        min-height: 60px;
+        width: auto;
+        margin-top: 5px;
+        margin-bottom: 5px; } }
   header .search {
     margin-top: 1.5em;
     display: none; }
@@ -1489,6 +1495,22 @@ footer {
       margin: 0;
       display: block;
       text-align: center; } }
+  @media (max-width: 360px) {
+    footer .contact nav {
+      font-size: 0.9em; }
+    footer .partners a {
+      height: 30px; }
+      footer .partners a.wlu-logo {
+        width: 70px;
+        background-position: 0 0; }
+      footer .partners a.cigi-logo {
+        width: 76px;
+        background-position: -99px 0; }
+      footer .partners a.uw-logo {
+        width: 102px;
+        background-position: 100% 0; }
+    footer .copyright {
+      font-size: 0.9em; } }
 
 /*******   BLOCKS    *******/
 /* footer banner */
@@ -1704,6 +1726,9 @@ footer {
     font-family: Arial;
     font-weight: bold;
     color: #fbad18; }
+    @media (max-width: 360px) {
+      #gallery .bx-wrapper .bx-pager {
+        display: none; } }
   #gallery .bx-wrapper .bx-pager .bx-pager-item,
   #gallery .bx-wrapper .bx-controls-auto .bx-controls-auto-item {
     display: inline-block;
