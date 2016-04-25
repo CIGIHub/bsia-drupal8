@@ -1450,6 +1450,8 @@ footer {
     font-size: 32px; }
     footer .contact .sharelinks li {
       padding-right: 25px; }
+      footer .contact .sharelinks li a:hover {
+        color: #999999; }
   footer .contact nav {
     margin-top: 22px; }
     footer .contact nav a {
@@ -1460,7 +1462,7 @@ footer {
         text-decoration: underline; }
     footer .contact nav ul li {
       padding: 0 5px;
-      border-right: solid 1px #666; }
+      border-right: solid 1px #999999; }
       footer .contact nav ul li:last-child {
         border: none; }
       footer .contact nav ul li:first-child {
@@ -1507,7 +1509,7 @@ footer {
         footer .contact .sharelinks li:last-child, footer .contact nav li:last-child {
           padding-right: 0; }
       footer .contact nav a {
-        color: #666;
+        color: #999999;
         text-decoration: none; }
         footer .contact nav a:hover, footer .contact nav a:focus {
           color: #19374f;
@@ -1693,6 +1695,9 @@ footer {
     font-weight: bold;
     line-height: 130%;
     margin-top: 0.4em; }
+    .homepage .cell .views-field-title a:hover {
+      text-decoration: none;
+      color: black; }
 .homepage #block-views-block-homepage-block-1-2 {
   margin-bottom: 1.5em; }
   .homepage #block-views-block-homepage-block-1-2 .row .col-2 {
