@@ -515,9 +515,13 @@ h3 {
 a {
   text-decoration: none;
   color: #053b5b;
-  transition: background 0.2s ease; }
+  transition: all 0.2s ease; }
   a:hover {
-    transition: background 0.2s ease; }
+    text-decoration: underline;
+    transition: all 0.2s ease; }
+
+img {
+  max-width: 100%; }
 
 #content a[href$=".pdf"]:after {
   font-family: FontAwesome;
@@ -551,7 +555,7 @@ ul.sitemap-menu li {
     text-decoration: none;
     color: #fecd2f; }
     .top a:hover {
-      opacity: 0.5; }
+      color: #19374f; }
 
 .divider {
   margin-bottom: 20px;
@@ -715,7 +719,9 @@ article .field--name-upload span:before {
   line-height: 1.6em; }
   .event-registration.button {
     background: #fecd2f;
-    width: 120px;
+    display: inline-block;
+    width: auto;
+    padding: 1px 10px;
     font-size: 1.0em;
     line-height: 1.8em;
     font-weight: normal;
@@ -725,7 +731,13 @@ article .field--name-upload span:before {
     border: 1px solid #d2d2d2;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
-    border-radius: 3px; }
+    border-radius: 3px;
+    color: black;
+    transition: border 0.2s ease; }
+    .event-registration.button:hover {
+      border-color: black;
+      transition: border 0.2s ease;
+      text-decoration: none; }
 
 dl.calendar {
   height: 100%;
@@ -757,9 +769,11 @@ dl.calendar {
 .metadata {
   margin-bottom: 10px; }
 
-.apply-now {
+.apply-now a {
   background: #fecd2f;
-  width: 120px;
+  display: inline-block;
+  width: auto;
+  padding: 1px 10px;
   font-size: 1.0em;
   line-height: 1.8em;
   font-weight: normal;
@@ -769,11 +783,13 @@ dl.calendar {
   border: 1px solid #d2d2d2;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  border-radius: 3px; }
-  .apply-now a {
-    color: white; }
-    .apply-now a:hover {
-      text-decoration: underline; }
+  border-radius: 3px;
+  color: black;
+  transition: border 0.2s ease; }
+  .apply-now a:hover {
+    border-color: black;
+    transition: border 0.2s ease;
+    text-decoration: none; }
 
 .publication-download {
   width: 200px;
@@ -786,7 +802,9 @@ dl.calendar {
     content: ''; }
   .publication-download a {
     background: #fecd2f;
-    width: 120px;
+    display: inline-block;
+    width: auto;
+    padding: 1px 10px;
     font-size: 1.0em;
     line-height: 1.8em;
     font-weight: normal;
@@ -797,10 +815,12 @@ dl.calendar {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
-    color: white;
-    padding: 5px 10px; }
+    color: black;
+    transition: border 0.2s ease; }
     .publication-download a:hover {
-      text-decoration: underline; }
+      border-color: black;
+      transition: border 0.2s ease;
+      text-decoration: none; }
 
 /*****  News and Events  *****/
 .region-right-sidebar div[id^='block-'] {
@@ -813,6 +833,12 @@ dl.calendar {
     font-size: 20px; }
   .region-right-sidebar div[id^='block-'] p {
     margin-bottom: 10px; }
+  .region-right-sidebar div[id^='block-'] a img {
+    opacity: 0.8; }
+  .region-right-sidebar div[id^='block-'] a:hover {
+    text-decoration: none; }
+    .region-right-sidebar div[id^='block-'] a:hover img {
+      opacity: 1; }
 .region-right-sidebar .views-element-container .views-row {
   margin-bottom: 10px; }
 .region-right-sidebar .views-element-container .views-field-title,
@@ -847,6 +873,8 @@ dl.calendar {
 
 .teaser-text h2 {
   font-size: 20px; }
+  .teaser-text h2 a:hover {
+    text-decoration: none; }
 
 .datemark {
   float: right;
@@ -1022,7 +1050,9 @@ dl.calendar {
   #bsia-connect-form .contact-info .button {
     margin: 0px;
     background: #fecd2f;
-    width: 120px;
+    display: inline-block;
+    width: auto;
+    padding: 1px 10px;
     font-size: 1.0em;
     line-height: 1.8em;
     font-weight: normal;
@@ -1033,8 +1063,14 @@ dl.calendar {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
+    color: black;
+    transition: border 0.2s ease;
     width: 100px;
     font-weight: bold; }
+    #bsia-connect-form .contact-info .button:hover {
+      border-color: black;
+      transition: border 0.2s ease;
+      text-decoration: none; }
 
 #block-connectwithussocial h3 {
   font-size: 16px;
@@ -1785,8 +1821,9 @@ footer {
     margin-top: 20px; }
     #block-views-block-faculty-block-1 .search-by-letter span {
       padding: 0 3px; }
-      #block-views-block-faculty-block-1 .search-by-letter span a.active {
-        color: #cbcecb; }
+      #block-views-block-faculty-block-1 .search-by-letter span a:hover, #block-views-block-faculty-block-1 .search-by-letter span a.active {
+        color: #19374f;
+        text-decoration: underline; }
     #block-views-block-faculty-block-1 .search-by-letter .showall {
       margin-right: 10px; }
 

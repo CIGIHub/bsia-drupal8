@@ -48,11 +48,16 @@ h3{
 a{
   text-decoration: none;
   color: $link-color;
-  transition: background 0.2s ease;
+  transition: all 0.2s ease;
 
   &:hover {
-    transition: background 0.2s ease;
+    text-decoration: underline;
+    transition: all 0.2s ease;
   }
+}
+
+img {
+  max-width: 100%;
 }
 
 #content{
@@ -103,7 +108,7 @@ ul.sitemap-menu{
     color: $sunglow-orange;
 
     &:hover {
-      opacity: 0.5;
+      color:$regal-blue;
     }
   }
 }

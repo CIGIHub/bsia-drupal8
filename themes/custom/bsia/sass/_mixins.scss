@@ -118,7 +118,9 @@
 
 @mixin submit_button{
   background: $sunglow-orange;
-  width: 120px;
+  display: inline-block;
+  width: auto;
+  padding:1px 10px;
   
   font-size: 1.0em;
   line-height: 1.8em;
@@ -131,6 +133,15 @@
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
+
+  color: black;
+  transition: border 0.2s ease;
+    
+  &:hover{
+    border-color:black;
+    transition: border 0.2s ease;
+    text-decoration: none;
+  }
  
 }
 
