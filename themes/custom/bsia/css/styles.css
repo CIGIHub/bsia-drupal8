@@ -1769,14 +1769,10 @@ footer {
     font-size: 0.6em;
     font-family: Arial;
     font-weight: bold;
-<<<<<<< HEAD
     color: #fecd2f; }
-=======
-    color: #fbad18; }
     @media (max-width: 360px) {
       #gallery .bx-wrapper .bx-pager {
         display: none; } }
->>>>>>> 1dfd48508984ff41f4f019984696667067cf7ccf
   #gallery .bx-wrapper .bx-pager .bx-pager-item,
   #gallery .bx-wrapper .bx-controls-auto .bx-controls-auto-item {
     display: inline-block;
