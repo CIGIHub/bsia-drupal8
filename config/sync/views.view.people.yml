@@ -8,13 +8,13 @@ dependencies:
     - node.type.person
     - taxonomy.vocabulary.person_type
   content:
-    - 'taxonomy_term:person_type:087801cd-04f6-41c1-8805-5c64cc3d19a4'
-    - 'taxonomy_term:person_type:62abf24e-28d9-4fb2-bf00-f8248ee0e42e'
-    - 'taxonomy_term:person_type:74535089-c0f1-4218-8b02-2e9bb05f57cc'
-    - 'taxonomy_term:person_type:7e5b7c45-444c-466e-ac00-ba4c46a828d8'
-    - 'taxonomy_term:person_type:816ae5d1-5f7d-437b-a23e-62b09d40072c'
-    - 'taxonomy_term:person_type:b6b6ddac-c4c1-4dc8-8b20-322708278f59'
-    - 'taxonomy_term:person_type:d59e5b12-1816-4559-8f1f-315d0fc9f2a7'
+    - 'taxonomy_term:person_type:50ed2b16-b841-4f26-9201-1a891f16cec3'
+    - 'taxonomy_term:person_type:550d05ed-2486-4ef0-ad24-36d223e1a827'
+    - 'taxonomy_term:person_type:9ca04ccd-42d0-4398-bd00-dea94649e8b4'
+    - 'taxonomy_term:person_type:9f2a703f-8e7f-476e-a500-abae58d90aea'
+    - 'taxonomy_term:person_type:afe6f5c3-d233-423b-9900-fcd31b32c511'
+    - 'taxonomy_term:person_type:b906536e-3345-45d5-a11f-31454f71b1cc'
+    - 'taxonomy_term:person_type:e139ad64-adeb-4540-ab4e-78c40630ce1f'
   module:
     - node
     - taxonomy
@@ -437,6 +437,18 @@ display:
           id: field_board_order_value
           table: node__field_board_order
           field: field_board_order_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
+        field_surname_value:
+          id: field_surname_value
+          table: node__field_surname
+          field: field_surname_value
           relationship: none
           group_type: group
           admin_label: ''

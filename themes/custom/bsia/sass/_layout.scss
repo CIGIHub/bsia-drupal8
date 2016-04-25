@@ -32,6 +32,7 @@ h1{
   font-size: 2.0em;
   color: #000;
   border-bottom: solid 1px $light-grey;
+  margin-bottom: 0;
 }
 
 h2 {
@@ -60,12 +61,17 @@ img {
   max-width: 100%;
 }
 
+main.wrapper {
+  border-bottom:1px solid $light-grey; 
+}
+
 #content{
   a[href$=".pdf"]:after {
     font-family: FontAwesome;
     content: ' \f1c1';
   }
 }
+
 
 
 .strong{

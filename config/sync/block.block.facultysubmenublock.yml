@@ -1,9 +1,9 @@
-uuid: dd575b47-07c6-412b-8a00-d5fd4aaad5fa
+uuid: f90b5792-dd06-42ac-ac79-c067d05f5397
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:beb381cd-0409-442d-a100-a32be632292f'
+    - 'block_content:basic:d38f27a5-2c31-4796-ae95-10888edf27e9'
   module:
     - block_content
   theme:
@@ -11,11 +11,11 @@ dependencies:
 id: facultysubmenublock
 theme: bsia
 region: programatically_enabled
-weight: -29
+weight: -30
 provider: null
-plugin: 'block_content:beb381cd-0409-442d-a100-a32be632292f'
+plugin: 'block_content:d38f27a5-2c31-4796-ae95-10888edf27e9'
 settings:
-  id: 'block_content:beb381cd-0409-442d-a100-a32be632292f'
+  id: 'block_content:d38f27a5-2c31-4796-ae95-10888edf27e9'
   label: 'Faculty Submenu block'
   provider: block_content
   label_display: '0'

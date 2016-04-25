@@ -1,0 +1,6 @@
+{
+    "name": "drupal/bsia_ical",
+    "description": "Creates a downloadable calendar.ics file for event nodes.",
+    "type": "drupal-module",
+    "license": "GPL-2.0+"
+}

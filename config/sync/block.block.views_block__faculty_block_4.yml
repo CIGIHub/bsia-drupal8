@@ -1,0 +1,30 @@
+uuid: 4d33d2de-3b67-4035-89d0-6a5f6cdeb726
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.faculty
+  module:
+    - system
+    - views
+  theme:
+    - bsia
+id: views_block__faculty_block_4
+theme: bsia
+region: '-1'
+weight: -17
+provider: null
+plugin: 'views_block:faculty-block_4'
+settings:
+  id: 'views_block:faculty-block_4'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '/people/*'
+    negate: false
+    context_mapping: {  }

@@ -71,12 +71,12 @@ content:
     type: datetime_default
     settings:
       timezone_override: America/Toronto
-      format_type: medium
+      format_type: publication_date
     third_party_settings: {  }
   field_short_description:
     label: hidden
     weight: 2
-    type: text_default
+    type: basic_string
     settings: {  }
     third_party_settings: {  }
   field_speakers_unlinked:

@@ -606,6 +606,7 @@ display:
         row: false
         fields: false
         sorts: false
+        pager: false
       block_description: 'Affiliated Centres Block'
       filters:
         status:
@@ -1025,12 +1026,16 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: standard
+      pager:
+        type: some
+        options:
+          items_per_page: 20
+          offset: 0
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -1057,6 +1062,7 @@ display:
         fields: false
         sorts: false
         title: false
+        footer: false
       row:
         type: fields
         options:
@@ -1112,8 +1118,9 @@ display:
           entity_field: nid
           plugin_id: node_nid
       pager:
-        type: none
+        type: some
         options:
+          items_per_page: 10
           offset: 0
       fields:
         title:
@@ -1262,6 +1269,18 @@ display:
       block_description: 'Related Events'
       display_description: ''
       title: 'Related Events'
+      footer:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content: '<div class="more"><a href="/events">See all events</a></div>'
+          plugin_id: text_custom
     cache_metadata:
       max-age: -1
       contexts:
@@ -1288,6 +1307,7 @@ display:
         sorts: false
         relationships: false
         arguments: false
+        pager: false
       row:
         type: fields
         options:
@@ -1360,13 +1380,17 @@ display:
       block_description: 'Research: Person Node'
       display_description: ''
       block_hide_empty: true
+      pager:
+        type: some
+        options:
+          items_per_page: 20
+          offset: 0
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }

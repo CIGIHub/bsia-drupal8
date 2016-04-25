@@ -20,6 +20,11 @@ hr, .row-divider{
 
 .image{
   margin-bottom: 10px;
+  
+  img {
+    border:1px solid $light-grey;
+  }
+
 }
 
 .caption{
@@ -227,7 +232,14 @@ dl.calendar{
 
 
 /*****  Publication  *****/
-
+.view-publications {
+  .field--name-field-book-cover {
+    img {
+      max-width: 85px;
+      height:auto;
+    }
+  }
+}
 .metadata{
   margin-bottom: 10px;
 }
@@ -235,7 +247,6 @@ dl.calendar{
 .apply-now{
   a {
     @include submit_button;
-
   }
 }
 
@@ -335,6 +346,14 @@ dl.calendar{
   }
 }
 
+.view-topics {
+    .views-row{
+      .views-field-nid {
+        padding-left: 0.25em;
+      }
+    }
+  }
+
 .teaser-text{
   h2{
     font-size: 20px;
@@ -355,6 +374,7 @@ dl.calendar{
   border-radius: 50%;
   text-align: center;
   font-weight: bold;
+  text-transform: uppercase;
 
   .month, .year{
     font-size: 14px;
@@ -541,8 +561,8 @@ dl.calendar{
     }
 
     label{
-      @include hidden;
-      position: absolute;
+     text-indent:-9999px;
+     position: absolute;
     }
 
     .form-item{
@@ -663,25 +683,49 @@ dl.calendar{
   }
 }
 
+#block-eventdisclaimer {
+  font-size: 0.85em;
+}
+
 /******  Videos   ********/
+
+#colorbox {
+  border:5px solid $oyster-blue;
+}
+
+#cboxContent {
+  margin:0;
+}
 
 #cboxOverlay {
   background: $mortar-grey;
 }
 
-#cboxClose{
-  background: white;
-  text-indent: 0px;
-  border-radius: 3px;
-  border: solid 1px $hr-border-color;
-  top: -10px;
-  width: 50px;
-  font-size: 13px;
+#colorbox, #cboxOverlay, #cboxWrapper{
+  overflow: visible;
 }
 
+#cboxClose{
+  text-indent: 0px;
+  border-radius: 23px;
+  top: -10px;
+  right: -10px;
+  width: 23px;
+  height: 23px;
+  text-indent: -9999px;
+  background-position: -49px 0px;
+}
+#cboxClose:hover {
+    background-position: -49px -25px;
+}
 .lightbox{
   margin-bottom:5px;
   position: relative;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 .play{

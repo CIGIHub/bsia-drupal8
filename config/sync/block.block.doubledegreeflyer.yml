@@ -2,14 +2,17 @@ uuid: 720dc1bc-d531-4b42-8c04-4b17811946b8
 langcode: en
 status: true
 dependencies:
+  content:
+    - 'block_content:basic:df9f4695-7333-4c9a-ac12-18b426484d9e'
   module:
+    - block_content
     - system
   theme:
     - bsia
 id: doubledegreeflyer
 theme: bsia
 region: right_sidebar
-weight: -26
+weight: -28
 provider: null
 plugin: 'block_content:df9f4695-7333-4c9a-ac12-18b426484d9e'
 settings:

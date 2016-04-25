@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.search_index
     - field.field.node.external_publication.body
     - field.field.node.external_publication.field_caption
+    - field.field.node.external_publication.field_features
     - field.field.node.external_publication.field_publication_source
     - field.field.node.external_publication.field_publication_source_link
     - field.field.node.external_publication.field_published_date
@@ -17,7 +18,6 @@ dependencies:
     - node.type.external_publication
   module:
     - datetime
-    - text
     - user
 id: node.external_publication.search_index
 targetEntityType: node
@@ -27,37 +27,42 @@ content:
   field_publication_source:
     label: above
     weight: -1
-    type: text_default
-    settings: {  }
+    type: string
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
   field_publication_source_link:
     label: above
     weight: 0
-    type: text_default
-    settings: {  }
+    type: string
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
   field_published_date:
     label: hidden
     weight: -4
     type: datetime_default
     settings:
-      format_type: fallback
       timezone_override: ''
+      format_type: publication_date
     third_party_settings: {  }
   field_short_description:
     label: above
     weight: 2
-    type: text_default
+    type: basic_string
     settings: {  }
     third_party_settings: {  }
   field_speakers_unlinked:
     label: hidden
     weight: -2
-    type: text_default
-    settings: {  }
+    type: string
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
   links:
     weight: 100
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   body: true
   field_caption: true

@@ -111,4 +111,5 @@ content:
 hidden:
   body: true
   comment: true
+  field_features: true
   upload: true

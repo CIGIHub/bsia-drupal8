@@ -38,7 +38,6 @@ dependencies:
     - field.field.node.event.upload
     - node.type.event
   module:
-    - datetime
     - image
     - options
     - text
@@ -90,14 +89,6 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-  field_event_date:
-    label: hidden
-    weight: 0
-    type: datetime_default
-    settings:
-      timezone_override: America/Toronto
-      format_type: timestamp
-    third_party_settings: {  }
   field_event_management:
     label: above
     weight: 7
@@ -127,7 +118,7 @@ content:
   field_feature_line:
     label: above
     weight: 19
-    type: text_default
+    type: basic_string
     settings: {  }
     third_party_settings: {  }
   field_feature_weight:
@@ -200,7 +191,7 @@ content:
   field_short_description:
     label: hidden
     weight: -3
-    type: text_default
+    type: basic_string
     settings: {  }
     third_party_settings: {  }
   field_speakers_unlinked:
@@ -233,6 +224,7 @@ hidden:
   event_series: true
   event_type: true
   field_caption: true
+  field_event_date: true
   field_features: true
   field_speakers: true
   upload: true

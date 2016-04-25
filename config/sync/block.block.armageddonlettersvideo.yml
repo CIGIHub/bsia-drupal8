@@ -1,0 +1,31 @@
+uuid: 36b2b7b3-17b6-465f-8391-b2bf473c7f91
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:28ecd5e9-7064-40db-a53c-60204b7632a8'
+  module:
+    - block_content
+    - system
+  theme:
+    - bsia
+id: armageddonlettersvideo
+theme: bsia
+region: right_sidebar
+weight: -30
+provider: null
+plugin: 'block_content:28ecd5e9-7064-40db-a53c-60204b7632a8'
+settings:
+  id: 'block_content:28ecd5e9-7064-40db-a53c-60204b7632a8'
+  label: 'Armageddon Letters Video'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /research/armageddon-letters
+    negate: false
+    context_mapping: {  }

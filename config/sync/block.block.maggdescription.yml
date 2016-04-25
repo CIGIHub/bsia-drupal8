@@ -1,0 +1,31 @@
+uuid: a9946c58-199d-443e-a219-253af716005e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:3820c5bb-864a-44ed-ae46-70e90a9ed36e'
+  module:
+    - block_content
+    - system
+  theme:
+    - bsia
+id: maggdescription
+theme: bsia
+region: content_header
+weight: -29
+provider: null
+plugin: 'block_content:3820c5bb-864a-44ed-ae46-70e90a9ed36e'
+settings:
+  id: 'block_content:3820c5bb-864a-44ed-ae46-70e90a9ed36e'
+  label: 'MAGG Description'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /current-students/master-of-arts-in-global-governance
+    negate: false
+    context_mapping: {  }

@@ -15,7 +15,7 @@ $(document).ready(function(){
         if($('.selected-student').length > 0){
 
             var activeStudentRowId =  $(".selected-student").parent().attr("data-row-id");
-            var activeStudentId = '#' + $(".selected-student").attr("id");
+            //var activeStudentId = '#' + $(".selected-student").attr("id");
             var activeDescriptionRow =  $("#description-" + activeStudentRowId);
 
             clear_selection(activeDescriptionRow);
@@ -48,7 +48,7 @@ $(document).ready(function(){
         descriptionRow.append($(studentDescription)).slideDown(800);
     }
 
-    function clear_selection(descriptionRow){
+    function clear_selection(){
         $("[id^='description-']").hide();
         var all_photos = $("[id^='student-']");
         all_photos.removeClass('unselected-student');
@@ -57,8 +57,8 @@ $(document).ready(function(){
 
     function position_arrow(studentId){
         var arrowDiv = $("<div class='uparrowdiv'></div>");
-        var left = $(studentId).position().left - ($(studentId).width() / 2) + 15;
-       
+        var left = $(studentId).offset().left - $('.view-content').offset().left + 35;
+        
         if (left > 9900){
             left -= 10000;
         }
@@ -66,7 +66,6 @@ $(document).ready(function(){
 
         arrowDiv.css({
             'left':  left,
-            'position': 'absolute'
         });
 
         return arrowDiv;
@@ -88,12 +87,12 @@ $(document).ready(function(){
     function insert_description_ids(){
         
         var row_id = 0;
-        $("ul.student-list").each(function(section_index){
+        $("ul.student-list").each(function(){
             var items = $(this).children("li");
             var total = items.length;
             items.each(function(item_index){
                 $(this).attr('data-row-id', 'row-'+row_id);
-                if ((item_index + 1) % 6 == 0 || item_index === total - 1){
+                if ((item_index + 1) % 6 ===  0 || item_index === total - 1){
                     $(this).after("<hr><div class='student-description' id='description-row-" + row_id + "'></div>");
                     row_id += 1;
                 }
@@ -112,7 +111,7 @@ $(document).ready(function(){
     //attach chosen dropdown plugin to student topic filter
     $("#edit-tid option").eq(0).text("Filter by Topic");
     $("#edit-tid").removeClass('form-select').addClass('chosen-select');
-    $(".chosen-select").chosen()
+    $(".chosen-select").chosen();
 
     insert_icon();
     insert_description_ids();

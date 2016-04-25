@@ -12,7 +12,7 @@ dependencies:
 id: studentengagement
 theme: bsia
 region: right_sidebar
-weight: -10
+weight: -12
 provider: null
 plugin: 'block_content:38a5ecc6-d010-43ca-9207-7b13e9e547b5'
 settings:

@@ -6,6 +6,7 @@ module:
   block_content: 0
   breakpoint: 0
   bsia_connect: 0
+  bsia_ical: 0
   calendar: 0
   calendar_datetime: 0
   ckeditor: 0
@@ -28,10 +29,13 @@ module:
   file: 0
   filter: 0
   google_analytics: 0
+  graduate_title: 0
   help: 0
   history: 0
   image: 0
   imce: 0
+  import_caption: 0
+  import_publication: 0
   inline_entity_form: 0
   link: 0
   menu_ui: 0

@@ -501,7 +501,8 @@ h1, h2, h3 {
 h1 {
   font-size: 2.0em;
   color: #000;
-  border-bottom: solid 1px #d2d2d2; }
+  border-bottom: solid 1px #d2d2d2;
+  margin-bottom: 0; }
 
 h2 {
   font-size: 1.4em;
@@ -522,6 +523,9 @@ a {
 
 img {
   max-width: 100%; }
+
+main.wrapper {
+  border-bottom: 1px solid #d2d2d2; }
 
 #content a[href$=".pdf"]:after {
   font-family: FontAwesome;
@@ -587,6 +591,8 @@ hr, .row-divider {
 
 .image {
   margin-bottom: 10px; }
+  .image img {
+    border: 1px solid #d2d2d2; }
 
 .caption {
   background: #d2d2d2;
@@ -766,6 +772,10 @@ dl.calendar {
   margin-bottom: 20px; }
 
 /*****  Publication  *****/
+.view-publications .field--name-field-book-cover img {
+  max-width: 85px;
+  height: auto; }
+
 .metadata {
   margin-bottom: 10px; }
 
@@ -871,6 +881,9 @@ dl.calendar {
   min-height: 0px;
   border-bottom: none; }
 
+.view-topics .views-row .views-field-nid {
+  padding-left: 0.25em; }
+
 .teaser-text h2 {
   font-size: 20px; }
   .teaser-text h2 a:hover {
@@ -885,7 +898,8 @@ dl.calendar {
   background: #f2f2f2;
   border-radius: 50%;
   text-align: center;
-  font-weight: bold; }
+  font-weight: bold;
+  text-transform: uppercase; }
   .datemark .month, .datemark .year {
     font-size: 14px; }
   .datemark .day {
@@ -1131,22 +1145,41 @@ dl.calendar {
   .search-page-form input {
     font-size: 16px; }
 
+#block-eventdisclaimer {
+  font-size: 0.85em; }
+
 /******  Videos   ********/
+#colorbox {
+  border: 5px solid #ccdae3; }
+
+#cboxContent {
+  margin: 0; }
+
 #cboxOverlay {
   background: #5a5a5a; }
 
+#colorbox, #cboxOverlay, #cboxWrapper {
+  overflow: visible; }
+
 #cboxClose {
-  background: white;
   text-indent: 0px;
-  border-radius: 3px;
-  border: solid 1px #d2d2d2;
+  border-radius: 23px;
   top: -10px;
-  width: 50px;
-  font-size: 13px; }
+  right: -10px;
+  width: 23px;
+  height: 23px;
+  text-indent: -9999px;
+  background-position: -49px 0px; }
+
+#cboxClose:hover {
+  background-position: -49px -25px; }
 
 .lightbox {
   margin-bottom: 5px;
   position: relative; }
+  .lightbox img {
+    max-width: 100%;
+    height: auto; }
 
 .play {
   position: absolute;
@@ -1183,7 +1216,8 @@ header {
     text-align: right; }
   header a.logo {
     display: block;
-    text-indent: -9999px;
+    font-size: 0;
+    line-height: 0;
     background: url("../images/bsia-logo-2015.png") no-repeat 10px;
     width: 260px;
     min-height: 75px;
@@ -1223,8 +1257,12 @@ header {
       padding: 5px;
       float: none;
       margin-right: 1em; }
+      @media (max-width: 940px) {
+        header .search-box input[type=search] {
+          width: 70%; } }
     header .search-box input[type=submit] {
-      text-indent: -9999px;
+      font-size: 0;
+      line-height: 0;
       border: none;
       background-color: none;
       background-image: url("../images/search-icon.png");
@@ -1353,7 +1391,8 @@ header {
   .search .form-submit {
     float: left; }
   .search .form-submit {
-    text-indent: -9999px;
+    font-size: 0;
+    line-height: 0;
     border: none;
     background-color: none;
     background-image: url("../images/search-icon.png");
@@ -1417,14 +1456,15 @@ footer {
   footer .region-footer-menu ul.menu {
     margin: 0px; }
   footer .partners {
-    text-indent: -9999px; }
+    font-size: 0;
+    line-height: 0; }
     footer .partners ul {
       display: block;
+      float: right;
       margin: 0; }
       footer .partners ul li {
-        margin-right: 15px;
-        float: right; }
-        footer .partners ul li:first-child {
+        margin-right: 15px; }
+        footer .partners ul li:last-child {
           margin-right: 0; }
     footer .partners a {
       height: 37px;
@@ -1460,6 +1500,9 @@ footer {
         footer .contact nav a:hover, footer .contact nav a:focus {
           color: #19374f;
           text-decoration: underline; }
+    .non-mobile footer .contact {
+      float: left;
+      text-align: left; }
     footer .partners {
       margin-top: 1em;
       padding: 20px 0;
@@ -1469,6 +1512,7 @@ footer {
       font-size: 0; }
       footer .partners ul {
         display: inline-block;
+        float: none;
         margin: 0; }
         footer .partners ul li {
           margin-right: 15px;
@@ -1490,6 +1534,7 @@ footer {
   background-repeat: no-repeat;
   background-color: #fecd2f;
   background-position: right;
+  margin-top: -1px;
   /* connect with us block */ }
   @media (max-width: 940px) {
     .footer-banner {
@@ -1549,11 +1594,40 @@ footer {
         color: #cccccc; }
       .right-menu ul.menu li a.is-active:hover {
         color: white; }
+.right-menu .archive-list {
+  background: #19374f;
+  padding: 0px 0 10px 0;
+  display: block; }
+  .right-menu .archive-list .view-content {
+    margin-bottom: 0;
+    column-count: 2;
+    -moz-column-count: 2;
+    -webkit-column-count: 2; }
+  .right-menu .archive-list .views-summary {
+    padding: 2px 20px; }
+    .right-menu .archive-list .views-summary a {
+      color: white; }
+
+#block-views-block-news-block-1 {
+  background: #19374f; }
+  #block-views-block-news-block-1 h2 {
+    color: white;
+    padding: 10px 20px 0; }
+
+.view-footer .more {
+  border-top: 1px solid #999999;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 0.85em; }
+  .view-footer .more a {
+    text-transform: uppercase; }
 
 /***********  HOMEPAGE  **************/
 .homepage h1 {
-  text-indent: -9999px;
-  position: absolute; }
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  border-bottom: 0; }
 .homepage h2 {
   text-transform: uppercase;
   border-bottom: solid 1px #666;
@@ -1650,6 +1724,7 @@ footer {
         font-weight: normal; }
   #gallery .gallery-caption {
     margin-top: 0.3em;
+    margin-left: 0.2em;
     text-transform: uppercase;
     font-size: 12px;
     color: #7e7f7e; }
@@ -1775,9 +1850,11 @@ footer {
   padding: 5px;
   margin-bottom: 10px;
   width: 95%; }
-.node--type-person .social div {
-  display: inline-block;
-  margin-right: 5px; }
+.node--type-person .social {
+  font-size: 16px; }
+  .node--type-person .social div {
+    display: inline-block;
+    margin-right: 5px; }
 
 .node--type-person.node--view-mode-teaser .profile h2,
 .view-faculty .view-content .profile h2,
@@ -1802,16 +1879,21 @@ footer {
   padding: 3px;
   font-size: 14px; }
 #block-exposedformfacultypage-2 .form-actions {
-  text-indent: -9999px;
+  font-size: 0;
+  line-height: 0;
   position: absolute;
   margin: 0px; }
 #block-exposedformfacultypage-2 .search-description {
   font-style: italic; }
+#block-exposedformfacultypage-2 #edit-submit-faculty {
+  display: none; }
 
 #block-exposedformstudentspage-2 #edit-keys--2 {
   width: 200px;
   padding: 3px;
   font-size: 14px; }
+#block-exposedformstudentspage-2 .search-description {
+  font-style: italic; }
 
 #block-views-block-faculty-block-1 {
   border-top: solid 1px #d2d2d2;
@@ -1831,13 +1913,19 @@ footer {
   background: none;
   border: none;
   position: absolute;
-  left: 248px;
-  top: 35px;
+  right: 6px;
+  top: 6px;
   z-index: 500;
   color: #9DA5B2; }
 
+#views-exposed-form-faculty-page-2 .form-item {
+  position: relative; }
+
+#views-exposed-form-students-page-2 .form-item {
+  position: relative; }
 #views-exposed-form-students-page-2 label {
-  text-indent: -9999px;
+  font-size: 0;
+  line-height: 0;
   position: absolute; }
 #views-exposed-form-students-page-2 .form-text {
   width: 200px;
@@ -1866,8 +1954,10 @@ footer {
   margin-left: 10px;
   color: #9DA5B2; }
 
-.view-students.view-display-id-page_4 h3:before {
-  content: 'Graduates in '; }
+.view-students.view-display-id-page_4 h3 {
+  font-size: 1.3em; }
+  .view-students.view-display-id-page_4 h3:before {
+    content: 'Graduates in '; }
 
 ul.student-list {
   margin-bottom: 40px; }
@@ -1913,10 +2003,10 @@ ul.student-list {
     font-size: 20px;
     cursor: pointer; }
   .student-description .uparrowdiv {
+    position: absolute;
     display: block;
     height: 20px;
     width: 20px;
-    margin-left: 70px;
     background: #f2f7f2;
     transform: rotate(45deg);
     -moz-transform: rotate(45deg);
@@ -1924,7 +2014,6 @@ ul.student-list {
     -ms-transform: rotate(45deg);
     border-left: 1px solid #d2d2d2;
     border-top: 1px solid #d2d2d2;
-    position: absolute;
     top: -10px; }
   .student-description .program {
     font-style: italic;

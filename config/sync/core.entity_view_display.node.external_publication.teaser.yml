@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.external_publication.body
     - field.field.node.external_publication.field_caption
+    - field.field.node.external_publication.field_features
     - field.field.node.external_publication.field_publication_source
     - field.field.node.external_publication.field_publication_source_link
     - field.field.node.external_publication.field_published_date
@@ -51,12 +52,12 @@ content:
     type: datetime_default
     settings:
       timezone_override: America/Toronto
-      format_type: short
+      format_type: publication_date
     third_party_settings: {  }
   field_short_description:
     label: hidden
     weight: 2
-    type: text_default
+    type: basic_string
     settings: {  }
     third_party_settings: {  }
   field_speakers_unlinked:
