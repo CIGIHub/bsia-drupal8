@@ -1,7 +1,7 @@
 /*****  HEADER   ******/
 
 header {
-  background-color: $header-bg-color;
+  background-color: $zircon-grey;
 
   .col-lg-2{
     text-align: right;
@@ -23,7 +23,7 @@ header {
 
   .main-nav,
   .search-button{
-    border: solid 1px #19374f;
+    border: solid 1px $regal-blue;
     border-radius: 5px;
     display: inline-block;
     padding: 0.2em 0.35em;
@@ -41,7 +41,7 @@ header {
     text-align: center;
     background: white;
     z-index: 10;
-    border-bottom: solid 1px #19374f;
+    border-bottom: solid 1px $regal-blue;
     padding-bottom: 1.5em;
     input[type=search]{
       @include search_form_input;
@@ -71,8 +71,8 @@ header {
 /***********  MAIN NAV  **************/
 #main-menu {
   background-position: top center;
-  border-top: solid 1px $nav-bg-color;
-  border-bottom: solid 1px $header-bg-color;
+  border-top: solid 1px $regal-blue;
+  border-bottom: solid 1px $zircon-grey;
   text-transform:uppercase;
 
   .col-6{
@@ -91,7 +91,7 @@ header {
         padding: 0.3em 0.5em;
         text-decoration: none;
         &:hover, &:focus{
-          background: $header-bg-color;
+          background: $zircon-grey;
           border-radius: 0.13em;
         }
       }

@@ -245,14 +245,8 @@ dl.calendar{
 }
 
 .apply-now{
-  @include submit_button;
-  margin-bottom: 1em;
-  
   a {
-    color: white;
-    &:hover{
-      text-decoration: underline;
-    }
+    @include submit_button;
   }
 }
 
@@ -268,11 +262,7 @@ dl.calendar{
     }
     a{
       @include submit_button;
-      color: white;
-      padding: 5px 10px;
-      &:hover{
-        text-decoration: underline;
-      }
+      
     }
 }
 
@@ -293,6 +283,18 @@ dl.calendar{
     }
     p{
       margin-bottom: 10px;
+    }
+
+    a img {
+      opacity: 0.8;
+    }
+
+    a:hover {
+      text-decoration: none;
+
+      img {
+        opacity: 1;
+      }
     }
   }
 
@@ -355,6 +357,10 @@ dl.calendar{
 .teaser-text{
   h2{
     font-size: 20px;
+
+    a:hover {
+      text-decoration: none;
+    }
   }
 }
 
@@ -628,6 +634,7 @@ dl.calendar{
     border-radius: 25px;
     &:hover{
       background: $oyster-blue;
+      
     }
     i{
       color: white;
