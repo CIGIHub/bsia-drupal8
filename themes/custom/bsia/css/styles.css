@@ -765,6 +765,12 @@ dl.calendar {
 
 .metadata {
   margin-bottom: 10px; }
+  .metadata .image {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 4px; }
+    .metadata .image img {
+      border: 5px solid #dddddd; }
 
 .apply-now {
   background: #fbad18;
