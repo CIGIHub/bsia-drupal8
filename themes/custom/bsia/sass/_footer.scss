@@ -14,12 +14,16 @@ footer {
       font-size: 32px;
       li{
         padding-right: 25px;
+
+        a:hover {
+          color:$nobel-grey;
+        }
       }
     }
     nav{
       margin-top: 22px;
       a{
-        color: $footer-link-color; 
+        color: $dim-grey; 
         text-decoration: none;
         &:hover,
         &:focus{
@@ -29,7 +33,7 @@ footer {
       }
       ul li{
         padding: 0 5px;
-        border-right: solid 1px $footer-link-color;
+        border-right: solid 1px $nobel-grey;
         &:last-child{
           border: none;
         }
@@ -111,7 +115,7 @@ footer {
 
      nav{
       a{
-         color: $footer-link-color;
+         color: $nobel-grey;
          text-decoration: none;
          &:hover,
          &:focus{
