@@ -778,6 +778,12 @@ dl.calendar {
 
 .metadata {
   margin-bottom: 10px; }
+  .metadata .image {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 4px; }
+    .metadata .image img {
+      border: 5px solid #dddddd; }
 
 .apply-now a {
   background: #fecd2f;
@@ -1222,6 +1228,12 @@ header {
     width: 260px;
     min-height: 75px;
     background-size: 175% auto; }
+    @media (max-width: 360px) {
+      header a.logo {
+        min-height: 60px;
+        width: auto;
+        margin-top: 5px;
+        margin-bottom: 5px; } }
   header .search {
     margin-top: 1.5em;
     display: none; }
@@ -1526,6 +1538,22 @@ footer {
       margin: 0;
       display: block;
       text-align: center; } }
+  @media (max-width: 360px) {
+    footer .contact nav {
+      font-size: 0.9em; }
+    footer .partners a {
+      height: 30px; }
+      footer .partners a.wlu-logo {
+        width: 70px;
+        background-position: 0 0; }
+      footer .partners a.cigi-logo {
+        width: 76px;
+        background-position: -99px 0; }
+      footer .partners a.uw-logo {
+        width: 102px;
+        background-position: 100% 0; }
+    footer .copyright {
+      font-size: 0.9em; } }
 
 /*******   BLOCKS    *******/
 /* footer banner */
@@ -1741,7 +1769,14 @@ footer {
     font-size: 0.6em;
     font-family: Arial;
     font-weight: bold;
+<<<<<<< HEAD
     color: #fecd2f; }
+=======
+    color: #fbad18; }
+    @media (max-width: 360px) {
+      #gallery .bx-wrapper .bx-pager {
+        display: none; } }
+>>>>>>> 1dfd48508984ff41f4f019984696667067cf7ccf
   #gallery .bx-wrapper .bx-pager .bx-pager-item,
   #gallery .bx-wrapper .bx-controls-auto .bx-controls-auto-item {
     display: inline-block;

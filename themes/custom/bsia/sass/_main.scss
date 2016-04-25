@@ -242,6 +242,21 @@ dl.calendar{
 }
 .metadata{
   margin-bottom: 10px;
+
+  .image {
+    float:left;
+    margin-right: 20px;
+    margin-bottom: 4px;
+    
+    img {
+      border: 5px solid $gainsboro-grey;
+
+    }
+  }
+}
+
+.body {
+  //clear: both;
 }
 
 .apply-now{

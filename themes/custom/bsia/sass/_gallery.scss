@@ -60,7 +60,13 @@
       font-size: 0.6em;
       font-family: Arial;
       font-weight: bold;
+
       color: $sunglow-orange;
+
+
+      @media(max-width: $tiny-mobile-bp){
+        display: none; 
+      }
   }
 
   .bx-wrapper .bx-pager .bx-pager-item,
