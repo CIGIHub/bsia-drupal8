@@ -162,4 +162,37 @@ footer {
    }
   }
 
+  @media(max-width: $tiny-mobile-bp ){
+    .contact {
+      nav {
+        font-size: 0.9em;
+      }
+    }
+
+    .partners{
+      a {
+        height: 30px; 
+
+        &.wlu-logo {
+          width: 70px;
+          background-position: 0 0;
+        }
+
+        &.cigi-logo {
+          width: 76px;
+          background-position: -99px 0;
+        }
+
+        &.uw-logo {
+          width: 102px;
+          background-position: 100% 0;
+        }
+      }
+    }
+
+    .copyright{ 
+      font-size: 0.9em;
+    }
+  }
+
 }

@@ -60,6 +60,10 @@
       font-family: Arial;
       font-weight: bold;
       color: $dark-tangerine;
+
+      @media(max-width: $tiny-mobile-bp){
+        display: none; 
+      }
   }
 
   .bx-wrapper .bx-pager .bx-pager-item,

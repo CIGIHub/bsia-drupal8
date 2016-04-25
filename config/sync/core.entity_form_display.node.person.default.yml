@@ -63,8 +63,9 @@ third_party_settings:
   field_group:
     group_homepage_feature:
       children:
-        - field_image_page
+        - field_features
         - field_feature_weight
+        - field_image_page
         - field_credit
         - field_feature_line
         - field_position
@@ -163,7 +164,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_alternative_url:
-    weight: 34
+    weight: 22
     type: string_textfield
     settings:
       size: 60
@@ -213,7 +214,7 @@ content:
     type: field_collection_complex
     third_party_settings: {  }
   field_credit:
-    weight: 31
+    weight: 19
     type: string_textfield
     settings:
       size: 60
@@ -248,7 +249,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_feature_line:
-    weight: 32
+    weight: 20
     settings:
       rows: 2
       placeholder: ''
@@ -256,7 +257,7 @@ content:
     type: string_textarea
   field_feature_weight:
     type: options_select
-    weight: 30
+    weight: 17
     settings: {  }
     third_party_settings: {  }
   field_features:
@@ -279,7 +280,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_image_page:
-    weight: 29
+    weight: 18
     settings:
       progress_indicator: bar
       preview_image_style: thumbnail
@@ -328,7 +329,7 @@ content:
     third_party_settings: {  }
     type: image_image
   field_position:
-    weight: 33
+    weight: 21
     settings: {  }
     third_party_settings: {  }
     type: options_select
