@@ -1739,7 +1739,6 @@ footer {
     position: relative; }
   #gallery img {
     width: 100%;
-    max-width: auto;
     height: auto; }
   #gallery .box {
     position: absolute;
