@@ -744,6 +744,8 @@ article .field--name-upload span:before {
       border-color: black;
       transition: border 0.2s ease;
       text-decoration: none; }
+  .event-registration.apply-now {
+    margin-left: 5px; }
 
 dl.calendar {
   height: 100%;

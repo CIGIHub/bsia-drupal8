@@ -185,6 +185,10 @@ article{
   &.button{
     @include submit_button;
   }
+
+  &.apply-now {
+    margin-left:5px;
+  }
 }
 
 dl.calendar{
