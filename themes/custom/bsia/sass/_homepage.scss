@@ -38,6 +38,11 @@
       font-weight: bold;
       line-height: 130%;
       margin-top: 0.4em;
+
+      a:hover {
+        text-decoration: none;
+        color:black;
+      }
     }
   }
 
@@ -55,7 +60,7 @@
         color: #fff;
         &:hover{
           text-decoration: none;
-          color: $dim-grey;
+          color: $very-light-grey;
         }
       }
       .views-field-title{

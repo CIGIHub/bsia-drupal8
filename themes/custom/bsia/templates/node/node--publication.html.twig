@@ -75,7 +75,15 @@
   {% else %}  
     <div{{ content_attributes }}>
     {% include 'themes/custom/bsia/templates/node/_partials/addthis.html.twig' %}
+
       <div class="metadata">
+        {% if content.field_book_cover|render %}
+          <div class="image">
+            {{ content.field_book_cover }}
+          </div>
+        {% endif %}
+
+
         <div class="authors">{{ authors_string|raw }}</div>
     
         {% if content.publication_type %}

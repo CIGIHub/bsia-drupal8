@@ -242,17 +242,26 @@ dl.calendar{
 }
 .metadata{
   margin-bottom: 10px;
+
+  .image {
+    float:left;
+    margin-right: 20px;
+    margin-bottom: 4px;
+    
+    img {
+      border: 5px solid $gainsboro-grey;
+
+    }
+  }
+}
+
+.body {
+  //clear: both;
 }
 
 .apply-now{
-  @include submit_button;
-  margin-bottom: 1em;
-  
   a {
-    color: white;
-    &:hover{
-      text-decoration: underline;
-    }
+    @include submit_button;
   }
 }
 
@@ -268,11 +277,7 @@ dl.calendar{
     }
     a{
       @include submit_button;
-      color: white;
-      padding: 5px 10px;
-      &:hover{
-        text-decoration: underline;
-      }
+      
     }
 }
 
@@ -293,6 +298,18 @@ dl.calendar{
     }
     p{
       margin-bottom: 10px;
+    }
+
+    a img {
+      opacity: 0.8;
+    }
+
+    a:hover {
+      text-decoration: none;
+
+      img {
+        opacity: 1;
+      }
     }
   }
 
@@ -355,6 +372,10 @@ dl.calendar{
 .teaser-text{
   h2{
     font-size: 20px;
+
+    a:hover {
+      text-decoration: none;
+    }
   }
 }
 
@@ -628,6 +649,7 @@ dl.calendar{
     border-radius: 25px;
     &:hover{
       background: $oyster-blue;
+      
     }
     i{
       color: white;
