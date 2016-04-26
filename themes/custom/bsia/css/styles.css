@@ -738,11 +738,8 @@ article .field--name-upload span:before {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
-    color: black;
-    transition: border 0.2s ease; }
+    color: black; }
     .event-registration.button:hover {
-      border-color: black;
-      transition: border 0.2s ease;
       text-decoration: none; }
   .event-registration.apply-now {
     margin-left: 5px; }
@@ -804,11 +801,8 @@ dl.calendar {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
-    color: black;
-    transition: border 0.2s ease; }
+    color: black; }
     .apply-now a:hover {
-      border-color: black;
-      transition: border 0.2s ease;
       text-decoration: none; }
 
 .publication-download {
@@ -835,11 +829,8 @@ dl.calendar {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
-    color: black;
-    transition: border 0.2s ease; }
+    color: black; }
     .publication-download a:hover {
-      border-color: black;
-      transition: border 0.2s ease;
       text-decoration: none; }
 
 /*****  News and Events  *****/
@@ -1088,12 +1079,9 @@ dl.calendar {
     -moz-border-radius: 3px;
     border-radius: 3px;
     color: black;
-    transition: border 0.2s ease;
     width: 100px;
     font-weight: bold; }
     #bsia-connect-form .contact-info .button:hover {
-      border-color: black;
-      transition: border 0.2s ease;
       text-decoration: none; }
 
 #block-connectwithussocial h3 {
