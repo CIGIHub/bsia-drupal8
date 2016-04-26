@@ -260,6 +260,8 @@ dl.calendar{
 }
 
 .apply-now{
+  margin-bottom: 1em; 
+
   a {
     @include submit_button;
   }
