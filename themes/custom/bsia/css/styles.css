@@ -1940,8 +1940,8 @@ footer {
     #block-views-block-faculty-block-1 .search-by-letter span {
       padding: 0 3px; }
       #block-views-block-faculty-block-1 .search-by-letter span a:hover, #block-views-block-faculty-block-1 .search-by-letter span a.active {
-        color: #19374f;
-        text-decoration: underline; }
+        color: #999999;
+        text-decoration: none; }
     #block-views-block-faculty-block-1 .search-by-letter .showall {
       margin-right: 10px; }
 
