@@ -14,12 +14,16 @@ footer {
       font-size: 32px;
       li{
         padding-right: 25px;
+
+        a:hover {
+          color:$nobel-grey;
+        }
       }
     }
     nav{
       margin-top: 22px;
       a{
-        color: $footer-link-color; 
+        color: $dim-grey; 
         text-decoration: none;
         &:hover,
         &:focus{
@@ -29,7 +33,7 @@ footer {
       }
       ul li{
         padding: 0 5px;
-        border-right: solid 1px $footer-link-color;
+        border-right: solid 1px $nobel-grey;
         &:last-child{
           border: none;
         }
@@ -111,7 +115,7 @@ footer {
 
      nav{
       a{
-         color: $footer-link-color;
+         color: $nobel-grey;
          text-decoration: none;
          &:hover,
          &:focus{
@@ -160,6 +164,39 @@ footer {
      display: block;
      text-align: center;
    }
+  }
+
+  @media(max-width: $tiny-mobile-bp ){
+    .contact {
+      nav {
+        font-size: 0.9em;
+      }
+    }
+
+    .partners{
+      a {
+        height: 30px; 
+
+        &.wlu-logo {
+          width: 70px;
+          background-position: 0 0;
+        }
+
+        &.cigi-logo {
+          width: 76px;
+          background-position: -99px 0;
+        }
+
+        &.uw-logo {
+          width: 102px;
+          background-position: 100% 0;
+        }
+      }
+    }
+
+    .copyright{ 
+      font-size: 0.9em;
+    }
   }
 
 }

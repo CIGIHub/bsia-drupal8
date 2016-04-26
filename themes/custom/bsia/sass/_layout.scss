@@ -32,6 +32,7 @@ h1{
   font-size: 2.0em;
   color: #000;
   border-bottom: solid 1px $light-grey;
+  margin-bottom: 0;
 }
 
 h2 {
@@ -48,6 +49,16 @@ h3{
 a{
   text-decoration: none;
   color: $link-color;
+  transition: all 0.2s ease;
+
+  &:hover {
+    text-decoration: underline;
+    transition: all 0.2s ease;
+  }
+}
+
+img {
+  max-width: 100%;
 }
 
 main.wrapper {
@@ -97,9 +108,16 @@ ul.sitemap-menu{
 .top{
   font-size: 2em;
   text-align: center;
+
+  a {
+    text-decoration: none; 
+    color: $sunglow-orange;
+
+    &:hover {
+      color:$regal-blue;
+    }
+  }
 }
-.top a{text-decoration: none; color: $dark-tangerine;}
-.top a:hover{opacity: 0.5}
 
 .divider{
   @include divider;

@@ -137,12 +137,21 @@
 
   .search-by-letter{
     margin-top: 20px;
+    
     span{
       padding: 0 3px;
-      a.active{
-        color: $extralight-grey-text;
+      
+      a {
+        
+        &:hover, &.active {
+          color: $regal-blue;
+          text-decoration: underline;
+        
+
+        }
       }
     }
+    
     .showall{
       margin-right: 10px; 
     }
