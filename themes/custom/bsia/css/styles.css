@@ -2078,7 +2078,7 @@ ul.student-list {
 .field--type-field-collection .field__item {
   color: #808080;
   display: inline; }
-  .field--type-field-collection .field__item.field--name-field-article-title {
+  .field--type-field-collection .field__item.field--name-field-periodical-title {
     font-style: italic; }
   .field--type-field-collection .field__item.field--name-field-publication-date:after {
     content: "."; }
