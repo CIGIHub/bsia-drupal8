@@ -342,14 +342,14 @@ ul.student-list{
   .field__item {
     color:$list-text-grey;
     display: inline;
-    
 
-    &.field--name-field-periodical-title {
-      font-style: italic;
-    }
-
-    &.field--name-field-publication-date:after {
+    &:after {
       content:".";
     }
   }
+
+  .field--name-field-publication-title-2 {
+    font-style: italic;
+  }
+  
 }

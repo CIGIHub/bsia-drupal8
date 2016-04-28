@@ -2072,10 +2072,10 @@ ul.student-list {
 .field--type-field-collection .field__item {
   color: #808080;
   display: inline; }
-  .field--type-field-collection .field__item.field--name-field-periodical-title {
-    font-style: italic; }
-  .field--type-field-collection .field__item.field--name-field-publication-date:after {
+  .field--type-field-collection .field__item:after {
     content: "."; }
+.field--type-field-collection .field--name-field-publication-title-2 {
+  font-style: italic; }
 
 /*******   CALENDAR    *******/
 #block-views-block-event-calendar-block-1 .view-content {

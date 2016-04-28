@@ -21,14 +21,14 @@ bundle: field_collection_publication
 mode: default
 content:
   field_publication_author:
-    weight: 6
+    weight: 0
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
   field_publication_author_2:
-    weight: 10
+    weight: 4
     label: hidden
     settings:
       link_to_entity: false
@@ -42,35 +42,35 @@ content:
     third_party_settings: {  }
     type: string
   field_publication_location:
-    weight: 11
+    weight: 5
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
   field_publication_publisher_info:
-    weight: 12
+    weight: 6
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
   field_publication_title:
-    weight: 8
+    weight: 2
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
   field_publication_title_2:
-    weight: 9
+    weight: 3
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
   field_publication_url:
-    weight: 13
+    weight: 7
     label: hidden
     settings:
       trim_length: 80
