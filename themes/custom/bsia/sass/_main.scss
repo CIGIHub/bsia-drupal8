@@ -12,6 +12,10 @@ article{
   #content-header{
     @include header_box;
   }
+
+  &.node--unpublished {
+    background: $misty-rose;
+  }
 }
 
 hr, .row-divider{
