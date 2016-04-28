@@ -1,15 +1,15 @@
-uuid: 49f6ec6a-02f0-48d6-9b00-df647a8c30b6
+uuid: 16d20cd2-b243-4163-93b6-0c2ccd7c76ef
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.field_collection_item.field_article_title
+    - field.storage.field_collection_item.field_publication_title
     - field_collection.field_collection.field_collection_publication
-id: field_collection_item.field_collection_publication.field_article_title
-field_name: field_article_title
+id: field_collection_item.field_collection_publication.field_publication_title
+field_name: field_publication_title
 entity_type: field_collection_item
 bundle: field_collection_publication
-label: 'Article Title'
+label: Title
 description: ''
 required: true
 translatable: false

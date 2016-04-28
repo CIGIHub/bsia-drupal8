@@ -9,7 +9,7 @@ id: field_collection_item.field_collection_publication.field_publication_date
 field_name: field_publication_date
 entity_type: field_collection_item
 bundle: field_collection_publication
-label: 'Publication Date'
+label: Year
 description: ''
 required: true
 translatable: false
