@@ -583,6 +583,8 @@ article {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px; }
+  article.node--unpublished {
+    background: #FFD3DA; }
 
 hr, .row-divider {
   margin-bottom: 20px;
