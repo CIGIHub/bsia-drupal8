@@ -12,7 +12,6 @@ module:
   ckeditor: 0
   code_driven_devel: 0
   color: 0
-  comment: 0
   config: 0
   contextual: 0
   ctools: 0
@@ -38,6 +37,7 @@ module:
   import_publication: 0
   inline_entity_form: 0
   link: 0
+  link_css: 0
   menu_ui: 0
   metatag: 0
   metatag_open_graph: 0
