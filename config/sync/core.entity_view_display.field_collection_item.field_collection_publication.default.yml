@@ -15,62 +15,69 @@ dependencies:
     - field_collection.field_collection.field_collection_publication
   module:
     - link
+    - options
 id: field_collection_item.field_collection_publication.default
 targetEntityType: field_collection_item
 bundle: field_collection_publication
 mode: default
 content:
   field_publication_author:
-    weight: 0
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-  field_publication_author_2:
-    weight: 4
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-  field_publication_date:
     weight: 1
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-  field_publication_location:
+  field_publication_author_2:
     weight: 5
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-  field_publication_publisher_info:
-    weight: 6
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-  field_publication_title:
+  field_publication_date:
     weight: 2
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-  field_publication_title_2:
+  field_publication_location:
+    weight: 6
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_publication_publisher_info:
+    weight: 7
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_publication_title:
     weight: 3
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+  field_publication_title_2:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_publication_type:
+    type: list_key
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
   field_publication_url:
-    weight: 7
+    weight: 8
     label: hidden
     settings:
       trim_length: 80
@@ -80,5 +87,4 @@ content:
       url_plain: false
     third_party_settings: {  }
     type: link
-hidden:
-  field_publication_type: true
+hidden: {  }
