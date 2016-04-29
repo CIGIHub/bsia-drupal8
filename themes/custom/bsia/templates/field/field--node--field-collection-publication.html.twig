@@ -33,9 +33,6 @@
 		{% set publisher = item.content['#field_collection_item'].field_publication_publisher_info.value %}	
 		{% set url = item.content['#field_collection_item'].field_publication_url.0.uri %}	
 		{% set urlTitle = item.content['#field_collection_item'].field_publication_url.0.title %}	
-
-
-		{#[{{reference_type }}] #}
 		
 		{% if author %}
 			<span>{{author}}</span>
