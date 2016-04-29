@@ -104,6 +104,10 @@ class PublicationParser {
 			$authors = $matches[0];
 			$authors = trim(substr($authors, 5, -7));
 			$this->shortenRemainingData($authors);
+
+			if (stripos(strrev($authors), ".") === 0) {
+				$authors = trim(substr($authors, 0, -1));
+			}
 			return $authors;
 		}
 
@@ -116,6 +120,10 @@ class PublicationParser {
 			$this->shortenRemainingData($authors);
 
 			$authors = trim(substr($authors, 5, -1));
+
+			if (stripos(strrev($authors), ".") === 0) {
+				$authors = trim(substr($authors, 0, -1));
+			}
 
 			return $authors;
 		}
@@ -139,7 +147,12 @@ class PublicationParser {
 				$authors = trim(substr($authors, 0, -4));
 			}
 
-			if (stripos(strrev($authors), ",") === 0) {
+			//some author data ends with the year, so strip out the last 4 digits.
+			if (preg_match("/^([A-Za-z].*?)\d{4}/", $authors, $newmatches)) {
+				$authors = trim(substr($authors, 0, -4)); 
+			} 
+
+			if (stripos(strrev($authors), ",") === 0 || stripos(strrev($authors), ".") === 0) {
 				$authors = trim(substr($authors, 0, -1));
 			}
 

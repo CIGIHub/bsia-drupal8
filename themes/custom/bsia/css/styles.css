@@ -2069,12 +2069,7 @@ ul.student-list {
   color: #053b5b; }
 .field--type-field-collection li .list-item {
   padding: 2px 0; }
-.field--type-field-collection .field__item {
-  color: #808080;
-  display: inline; }
-  .field--type-field-collection .field__item.field--name-field-periodical-title {
-    font-style: italic; }
-  .field--type-field-collection .field__item.field--name-field-publication-date:after {
+  .field--type-field-collection li .list-item span:after {
     content: "."; }
 
 /*******   CALENDAR    *******/

@@ -337,19 +337,10 @@ ul.student-list{
 
   li .list-item {
     padding:2px 0;
-  }
 
-  .field__item {
-    color:$list-text-grey;
-    display: inline;
-    
-
-    &.field--name-field-periodical-title {
-      font-style: italic;
-    }
-
-    &.field--name-field-publication-date:after {
+    span:after {
       content:".";
     }
   }
+
 }

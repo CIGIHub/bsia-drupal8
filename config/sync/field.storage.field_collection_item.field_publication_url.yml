@@ -1,18 +1,16 @@
-uuid: 72f024b3-328a-45f2-8f1c-2858dfe5e97f
+uuid: 377ea3d7-5faf-484c-b7e8-ca946759b972
 langcode: en
 status: true
 dependencies:
   module:
     - field_collection
-id: field_collection_item.field_article_title
-field_name: field_article_title
+    - link
+id: field_collection_item.field_publication_url
+field_name: field_publication_url
 entity_type: field_collection_item
-type: string
-settings:
-  max_length: 255
-  is_ascii: false
-  case_sensitive: false
-module: core
+type: link
+settings: {  }
+module: link
 locked: false
 cardinality: 1
 translatable: true
