@@ -1,4 +1,3 @@
-
 {%
   set classes = [
     'field',
@@ -16,11 +15,9 @@
 
 {% set italicTitles = ['book', 'edited_book', 'e_book'] %}
 
-
 <h2{{ title_attributes.addClass(title_classes) }}>{{ label }}</h2>
 <ol{{ attributes.addClass(classes) }}>
   {% for item in items %}
-
 
 	<li><div class="list-item">
 		{% set reference_type = item.content['#field_collection_item'].field_publication_type.value %}
@@ -33,7 +30,7 @@
 		{% set publisher = item.content['#field_collection_item'].field_publication_publisher_info.value %}	
 		{% set url = item.content['#field_collection_item'].field_publication_url.0.uri %}	
 		{% set urlTitle = item.content['#field_collection_item'].field_publication_url.0.title %}	
-		
+
 		{% if author %}
 			<span>{{author}}</span>
 		{% endif %}
@@ -50,16 +47,28 @@
 			{% endif %}
 		{% endif %}
 
-		{% if secondary_title %}
+		{% if secondary_title and (reference_type == "report" or reference_type == "thesis")  %}
+			<span>{{secondary_title}}</span>
+		{% elseif secondary_title and reference_type != "book"  and reference_type != "edited_book" %}
+			{% if (reference_type == "generic" or reference_type == "book_section" )  %}
+				In 
+			{% endif %}
 			<span><em>{{secondary_title}}</em></span>
 		{% endif %}
 
 		{% if secondary_author %}
+			{% if (reference_type == "generic" or reference_type == "book_section" or reference_type == "book" or reference_type == "e_book" or reference_type == "edited_book" )  %}
+				Edited by 
+			{% endif %}
 			<span>{{secondary_author}}</span>
 		{% endif %}
 
 		{% if location %}
 			<span>{{location}}</span>
+		{% endif %}
+
+		{% if secondary_title and ( reference_type == "book" or reference_type == "edited_book" ) %}
+			<span><em>{{secondary_title}}</em></span>
 		{% endif %}
 
 		{% if publisher %}
@@ -71,12 +80,6 @@
 		{% elseif url  %}
 			<span><a href="{{ url }}">{{ url }}</a></span>	
 		{% endif %}
-
-
-
-		
-
-		
 
 	</div></li>
   {% endfor %}
