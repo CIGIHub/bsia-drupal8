@@ -41,9 +41,26 @@
 
 		{% if title %}
 			{% if reference_type in italicTitles %}
-				<span><em>{{ title }}</em></span>
+				<span><em>
+
+					{% if url and not urlTitle  %}
+						<span><a href="{{ url }}">{{ title }}</a></span>
+
+					{% else %} 	
+						{{ title }}
+					{% endif %}
+					
+				</em></span>
 			{% else %}
-				<span>"{{title}}"</span>
+				<span>"{% spaceless %}
+					
+					{% if url and not urlTitle  %}
+						<span><a href="{{ url }}">{{ title }}</a></span>	
+					{% else %} 	
+						{{ title }}
+					{% endif %}
+
+				{% endspaceless %}"</span>
 			{% endif %}
 		{% endif %}
 
@@ -51,14 +68,14 @@
 			<span>{{secondary_title}}</span>
 		{% elseif secondary_title and reference_type != "book"  and reference_type != "edited_book" %}
 			{% if (reference_type == "generic" or reference_type == "book_section" )  %}
-				In 
+				{# In #}
 			{% endif %}
 			<span><em>{{secondary_title}}</em></span>
 		{% endif %}
 
 		{% if secondary_author %}
 			{% if (reference_type == "generic" or reference_type == "book_section" or reference_type == "book" or reference_type == "e_book" or reference_type == "edited_book" )  %}
-				Edited by 
+				{# Edited by #}
 			{% endif %}
 			<span>{{secondary_author}}</span>
 		{% endif %}
@@ -77,8 +94,6 @@
 
 		{% if url and urlTitle %}
 			<span><a href="{{ url }}">{{ urlTitle }}</a></span>
-		{% elseif url  %}
-			<span><a href="{{ url }}">{{ url }}</a></span>	
 		{% endif %}
 
 	</div></li>
