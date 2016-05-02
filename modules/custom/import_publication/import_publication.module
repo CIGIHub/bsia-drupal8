@@ -34,10 +34,11 @@ function import_publication_install() {
 
 			$current_node = \Drupal\node\Entity\Node::load($record->entity_id);
 			$publication->setHostEntity($current_node);
-
-			$publication->field_publication_authors->value = $authors;
+				
+			$publication->field_publication_type->value = "generic";
+			$publication->field_publication_author->value = $authors;
 			$publication->field_article_title->value = $title;
-			$publication->field_periodical_title->value = $periodical;
+			$publication->field_publication_title_2->value = $periodical;
 			$publication->field_publication_date->value = $year;
 			$publication->field_publication_location->value =$location;
 			

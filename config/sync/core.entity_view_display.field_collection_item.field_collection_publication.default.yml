@@ -3,50 +3,88 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.field_collection_item.field_collection_publication.field_article_title
-    - field.field.field_collection_item.field_collection_publication.field_periodical_title
-    - field.field.field_collection_item.field_collection_publication.field_publication_authors
+    - field.field.field_collection_item.field_collection_publication.field_publication_author
+    - field.field.field_collection_item.field_collection_publication.field_publication_author_2
     - field.field.field_collection_item.field_collection_publication.field_publication_date
     - field.field.field_collection_item.field_collection_publication.field_publication_location
+    - field.field.field_collection_item.field_collection_publication.field_publication_publisher_info
+    - field.field.field_collection_item.field_collection_publication.field_publication_title
+    - field.field.field_collection_item.field_collection_publication.field_publication_title_2
+    - field.field.field_collection_item.field_collection_publication.field_publication_type
+    - field.field.field_collection_item.field_collection_publication.field_publication_url
     - field_collection.field_collection.field_collection_publication
+  module:
+    - link
+    - options
 id: field_collection_item.field_collection_publication.default
 targetEntityType: field_collection_item
 bundle: field_collection_publication
 mode: default
 content:
-  field_article_title:
-    weight: 2
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-  field_periodical_title:
-    weight: 3
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-  field_publication_authors:
-    weight: 0
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-  field_publication_date:
+  field_publication_author:
     weight: 1
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+  field_publication_author_2:
+    weight: 5
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_publication_date:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
   field_publication_location:
+    weight: 6
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_publication_publisher_info:
+    weight: 7
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_publication_title:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_publication_title_2:
     weight: 4
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+  field_publication_type:
+    type: list_key
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_publication_url:
+    weight: 8
+    label: hidden
+    settings:
+      trim_length: 80
+      rel: nofollow
+      target: _blank
+      url_only: false
+      url_plain: false
+    third_party_settings: {  }
+    type: link
 hidden: {  }

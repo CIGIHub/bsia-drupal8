@@ -1,41 +1,87 @@
-{#
-/**
- * @file
- * Theme override for a field.
- *
- * To override output, copy the "field.html.twig" from the templates directory
- * to your theme's directory and customize it, just like customizing other
- * Drupal templates such as page.html.twig or node.html.twig.
- *
- * Instead of overriding the theming for all fields, you can also just override
- * theming for a subset of fields using
- * @link themeable Theme hook suggestions. @endlink For example,
- * here are some theme hook suggestions that can be used for a field_foo field
- * on an article node type:
- * - field--node--field-foo--article.html.twig
- * - field--node--field-foo.html.twig
- * - field--node--article.html.twig
- * - field--field-foo.html.twig
- * - field--text-with-summary.html.twig
- * - field.html.twig
- *
- * Available variables:
- * - attributes: HTML attributes for the containing element.
- * - label_hidden: Whether to show the field label or not.
- * - title_attributes: HTML attributes for the title.
- * - label: The label for the field.
- * - multiple: TRUE if a field can contain multiple items.
- * - items: List of all the field items. Each item contains:
- *   - attributes: List of HTML attributes for each item.
- *   - content: The field item's content.
- * - entity_type: The entity type to which the field belongs.
- * - field_name: The name of the field.
- * - field_type: The type of the field.
- * - label_display: The display settings for the label.
- *
- *
- * @see template_preprocess_field()
- */
-#}
+{%
+  set classes = [
+    'field',
+    'field--name-' ~ field_name|clean_class,
+    'field--type-' ~ field_type|clean_class,
+    'field--ordered-list-style-lower',
+  ]
+%}
+{%
+  set title_classes = [
+    'field__label',
+    label_display == 'visually_hidden' ? 'visually-hidden',
+  ]
+%}
 
-{% include 'themes/custom/bsia/templates/field/_partials/ol-list.html.twig' with { 'list_style' : 'lower' } %}
+{% set italicTitles = ['book', 'edited_book', 'e_book'] %}
+
+<h2{{ title_attributes.addClass(title_classes) }}>{{ label }}</h2>
+<ol{{ attributes.addClass(classes) }}>
+  {% for item in items %}
+
+	<li><div class="list-item">
+		{% set reference_type = item.content['#field_collection_item'].field_publication_type.value %}
+  		{% set author = item.content['#field_collection_item'].field_publication_author.value %}
+  		{% set secondary_author = item.content['#field_collection_item'].field_publication_author_2.value %}
+		{% set year = item.content['#field_collection_item'].field_publication_date.value %}
+		{% set title = item.content['#field_collection_item'].field_publication_title.value %}
+		{% set secondary_title = item.content['#field_collection_item'].field_publication_title_2.value %}
+		{% set location = item.content['#field_collection_item'].field_publication_location.value %}
+		{% set publisher = item.content['#field_collection_item'].field_publication_publisher_info.value %}	
+		{% set url = item.content['#field_collection_item'].field_publication_url.0.uri %}	
+		{% set urlTitle = item.content['#field_collection_item'].field_publication_url.0.title %}	
+
+		{% if author %}
+			<span>{{author}}</span>
+		{% endif %}
+
+		{% if year %}
+			<span>{{year}}</span>
+		{% endif %}
+
+		{% if title %}
+			{% if reference_type in italicTitles %}
+				<span><em>{{ title }}</em></span>
+			{% else %}
+				<span>"{{title}}"</span>
+			{% endif %}
+		{% endif %}
+
+		{% if secondary_title and (reference_type == "report" or reference_type == "thesis")  %}
+			<span>{{secondary_title}}</span>
+		{% elseif secondary_title and reference_type != "book"  and reference_type != "edited_book" %}
+			{% if (reference_type == "generic" or reference_type == "book_section" )  %}
+				In 
+			{% endif %}
+			<span><em>{{secondary_title}}</em></span>
+		{% endif %}
+
+		{% if secondary_author %}
+			{% if (reference_type == "generic" or reference_type == "book_section" or reference_type == "book" or reference_type == "e_book" or reference_type == "edited_book" )  %}
+				Edited by 
+			{% endif %}
+			<span>{{secondary_author}}</span>
+		{% endif %}
+
+		{% if location %}
+			<span>{{location}}</span>
+		{% endif %}
+
+		{% if secondary_title and ( reference_type == "book" or reference_type == "edited_book" ) %}
+			<span><em>{{secondary_title}}</em></span>
+		{% endif %}
+
+		{% if publisher %}
+			<span>{{publisher}}</span>
+		{% endif %}
+
+		{% if url and urlTitle %}
+			<span><a href="{{ url }}">{{ urlTitle }}</a></span>
+		{% elseif url  %}
+			<span><a href="{{ url }}">{{ url }}</a></span>	
+		{% endif %}
+
+	</div></li>
+  {% endfor %}
+</ol>
+

@@ -1,0 +1,23 @@
+uuid: 627d029c-b28b-414e-82c6-d934b40f8552
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_publication_type
+    - field_collection.field_collection.field_collection_publication
+  module:
+    - options
+id: field_collection_item.field_collection_publication.field_publication_type
+field_name: field_publication_type
+entity_type: field_collection_item
+bundle: field_collection_publication
+label: 'Reference Type'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: generic
+default_value_callback: ''
+settings: {  }
+field_type: list_string
