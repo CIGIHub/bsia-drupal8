@@ -37,7 +37,8 @@ class BSIAConnectBlock extends BlockBase {
 				<p>Phone: 1.226.772.3001</p>
 				<p><a href="https://www.google.ca/maps/place/67+Erb+St+W,+Waterloo,+ON+N2L+6C2/@43.463645,-80.525616,17z/data=!3m1!4b1!4m2!3m1!1s0x882bf4126eab0155:0x48ec3237e30666a0">Google Maps to the BSIA</a>.
 				</p>
-				<h3>For room and event inquiries, please email <a href="mailto:events@balsillieschool.ca">events@balsillieschool.ca</a> or call 226.772.3099.</h3>
+				<p>&nbsp;</p>
+				<p>For room and event inquiries, please email <a href="mailto:events@balsillieschool.ca">events@balsillieschool.ca</a> or call 226.772.3099.</p>
 
 				'),
     );
