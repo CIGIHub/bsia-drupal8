@@ -7,7 +7,6 @@ dependencies:
   - ctools
   - devel
   - entity
-  - field_collection
   - field_group
   - google_analytics
   - image

@@ -8,17 +8,17 @@ use Drupal\Component\Utility\SafeMarkup;
 function bsia_connect_mail($key, &$message, $params) {
     $logger = \Drupal::logger('bsia_connect');
 	
-	$message['headers']['Content-Type'] = "text/html; charset=UTF-8; format=flowed; delsp=yes";
-	$message['headers']['Content-Transfer-Encoding'] = "8bit";
+  	$message['headers']['Content-Type'] = "text/html; charset=UTF-8; format=flowed; delsp=yes";
+  	$message['headers']['Content-Transfer-Encoding'] = "8bit";
   	
   	$name = $params['first_name'];
-	if (!empty($params['last_name'])) {
-		$name .= " " . $params['last_name'];
-	}
+  	if (!empty($params['last_name'])) {
+  		$name .= " " . $params['last_name'];
+  	}
 
-	if (!empty($params['first_name']) || !empty($params['last_name']) ) {
-		$name .=", ";
-	}
+  	if (!empty($params['first_name']) || !empty($params['last_name']) ) {
+  		$name .=", ";
+  	}
 
   	switch($key) {
   	  case 'new_signup':
@@ -26,19 +26,28 @@ function bsia_connect_mail($key, &$message, $params) {
       	$message['subject'] = "Connect with Us"; 
         
         $programs = $params['programs'];
-		$campus_tour = $params['campus_tour'];
+		    $campus_tour = $params['campus_tour'];
+        $weekly_bulletin = $params['weekly_bulletin'];
 
-		$signup_message = "<p>Please contact me regarding the following Program(s):<br><br>";
-        //programs are checkboxes, either a 0 or the key.
-		foreach ($programs as $key => $value) {
-			if (!empty($value)) {
-				$signup_message .= $value ."<br>";
-				break;
-			}
-		}
+        $signup_message = "";
 
-		if(!empty($campus_tour)) {
+        if(!empty($programs)) {
+      		$signup_message .= "<p>Please contact me regarding the following Program(s):<br><br>";
+          //programs are checkboxes, either a 0 or the key.
+      		foreach ($programs as $key => $value) {
+      			if (!empty($value)) {
+      				$signup_message .= $value ."<br>";
+      				break;
+      			}
+      		}
+        }
+
+		    if(!empty($campus_tour)) {
           $signup_message .= "<br>Please contact me to book a tour of the school.<br>";
+        }
+
+        if(!empty($weekly_bulletin)) {
+          $signup_message .= "<br>A new sign up for the weekly bulletin succeeded.<br>";
         }
 
         $signup_message .=  "<br>From: " . $name . $params['email'] . "<br></p>" ;
@@ -55,18 +64,18 @@ function bsia_connect_mail($key, &$message, $params) {
       	$message['subject'] = "Connect with Us"; 
         
         $programs = $params['programs'];
-		$campus_tour = $params['campus_tour'];
+    		$campus_tour = $params['campus_tour'];
 
-		$confirmation_email = "<p>" . $name . "<br><br>";
-        //programs are checkboxes, either a 0 or the key.
-		foreach ($programs as $key => $value) {
-			if (!empty($value)) {
-				$confirmation_email .= "Thank you for requesting more information about our programs.<br>";
-				break;
-			}
-		}
+    		$confirmation_email = "<p>" . $name . "<br><br>";
+            //programs are checkboxes, either a 0 or the key.
+    		foreach ($programs as $key => $value) {
+    			if (!empty($value)) {
+    				$confirmation_email .= "Thank you for requesting more information about our programs.<br>";
+    				break;
+    			}
+    		}
 
-		if(!empty($campus_tour)) {
+		    if(!empty($campus_tour)) {
           $confirmation_email .= "Thank you for your interest in touring our campus.<br>";
         }
 
@@ -79,5 +88,4 @@ function bsia_connect_mail($key, &$message, $params) {
 
         break;
   	}
-
 }
