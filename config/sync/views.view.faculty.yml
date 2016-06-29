@@ -12,6 +12,7 @@ dependencies:
     - field.storage.node.field_short_bio
     - field.storage.node.field_surname
     - field.storage.node.field_twitter_url
+    - image.style.square_100x100
     - node.type.person
     - taxonomy.vocabulary.person_type
   content:
@@ -1155,7 +1156,7 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          reduce_duplicates: false
+          reduce_duplicates: true
           type: select
           limit: true
           vid: person_type
