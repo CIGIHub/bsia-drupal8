@@ -1,19 +1,5 @@
 name: Code-Driven Development Module
 description: Separates all configuration from the database.
 package: Custom
-dependencies:
-  - admin_toolbar
-  - calendar
-  - ctools
-  - devel
-  - entity
-  - field_group
-  - google_analytics
-  - image
-  - imce
-  - pathauto
-  - sitemap
-  - token
-  - metatag
 type: module
 core: 8.x

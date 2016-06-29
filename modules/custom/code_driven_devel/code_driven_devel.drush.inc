@@ -31,6 +31,6 @@ function drush_code_driven_devel_override_block_uuids($configuration_name) {
 /**
  * Callback for the override-local-uuids command
  */
-function drush_code_driven_devel_override_local_uuids() {
-  drupal_set_message(t('Not Implemented!'));
+function drush_code_driven_devel_override_local_uuids($configuration_name) {
+  code_driven_devel_override_uuids($configuration_name);
 }
