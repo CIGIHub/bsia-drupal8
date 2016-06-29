@@ -333,7 +333,7 @@ display:
           empty: false
           tokenize: false
           content:
-            value: 'For any space booking inquiries, please contact CIGI Campus receptionist +1.226.772.3040.'
+            value: 'For room and event inquiries, please email <a href="mailto:events@balsillieschool.ca">events@balsillieschool.ca</a> or call 226.772.3099.'
             format: basic_html
           plugin_id: text
     cache_metadata:
