@@ -37,3 +37,5 @@ content:
     weight: 100
 hidden:
   body: true
+  field_caption: true
+  upload: true
