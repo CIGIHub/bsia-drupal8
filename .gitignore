@@ -4,6 +4,8 @@
 *.sass-cache
 themes/custom/bsia/config.codekit
 config.codekit
+*.sql
+*min.js
 
 # Config ignores
 
