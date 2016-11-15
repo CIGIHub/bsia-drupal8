@@ -8,7 +8,7 @@ id: member
 label: 'Editor profile'
 description: 'Configuration for editors'
 conf:
-  extensions: 'jpg jpeg png gif pdf'
+  extensions: 'jpg jpeg png gif pdf mp3'
   maxsize: !!float 10
   quota: !!float 0
   maxwidth: 1212

@@ -35,4 +35,6 @@ content:
   links:
     weight: 100
 hidden:
+  field_caption: true
   field_image: true
+  upload: true

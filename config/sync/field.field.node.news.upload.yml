@@ -19,7 +19,7 @@ default_value: {  }
 default_value_callback: ''
 settings:
   file_directory: content/pdfs/news
-  file_extensions: pdf
+  file_extensions: 'pdf mp3'
   max_filesize: 25MB
   description_field: true
   handler: 'default:file'
