@@ -6,7 +6,7 @@ dependencies:
     - taxonomy.vocabulary.person_type
     - taxonomy.vocabulary.topics
   content:
-    - 'taxonomy_term:person_type:13f536e7-8972-4daf-965f-95508e855571'
+    - 'taxonomy_term:person_type:b6cd333e-caa9-4b87-9003-3d64fd25b155'
   module:
     - node
     - taxonomy
@@ -254,7 +254,7 @@ display:
           group_type: group
           admin_label: ''
           operator: '='
-          value: true
+          value: '1'
           group: 1
           exposed: false
           expose:
@@ -471,7 +471,7 @@ display:
           group_type: group
           admin_label: ''
           operator: '='
-          value: true
+          value: '1'
           group: 1
           exposed: false
           expose:

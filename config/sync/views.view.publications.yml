@@ -10,6 +10,7 @@ dependencies:
     - field.storage.node.field_speakers
     - field.storage.node.field_speakers_unlinked
     - field.storage.node.publication_type
+    - image.style.featured_publication
     - node.type.external_publication
     - node.type.publication
   module:
@@ -137,7 +138,7 @@ display:
           field_api_classes: false
       filters:
         status:
-          value: true
+          value: '1'
           table: node_field_data
           field: status
           plugin_id: boolean
@@ -451,7 +452,7 @@ display:
           offset: 0
       filters:
         status:
-          value: true
+          value: '1'
           table: node_field_data
           field: status
           plugin_id: boolean
@@ -1107,7 +1108,7 @@ display:
       arguments: {  }
       filters:
         status:
-          value: true
+          value: '1'
           table: node_field_data
           field: status
           plugin_id: boolean

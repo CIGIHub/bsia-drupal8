@@ -12,6 +12,7 @@ module:
   ckeditor: 0
   code_driven_devel: 0
   color: 0
+  composer_manager: 0
   config: 0
   contextual: 0
   ctools: 0
@@ -66,7 +67,6 @@ module:
   views_ui: 0
   menu_link_content: 1
   views: 10
-  minimal: 1000
 theme:
   stable: 0
   classy: 0
