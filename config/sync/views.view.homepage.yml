@@ -10,14 +10,12 @@ dependencies:
     - field.storage.node.field_image_page
     - field.storage.node.field_news_date
     - field.storage.node.field_position
-    - image.style.gallery
     - node.type.event
     - node.type.news
     - node.type.page
     - node.type.person
     - node.type.publication
     - node.type.research
-    - responsive_image.styles.gallery
   module:
     - datetime
     - image
@@ -515,7 +513,7 @@ display:
           plugin_id: field
       filters:
         status:
-          value: '1'
+          value: true
           table: node_field_data
           field: status
           plugin_id: boolean
@@ -651,7 +649,7 @@ display:
       block_description: 'Homepage Programs'
       filters:
         status:
-          value: '1'
+          value: true
           table: node_field_data
           field: status
           plugin_id: boolean
@@ -863,7 +861,7 @@ display:
       display_description: ''
       filters:
         status:
-          value: '1'
+          value: true
           table: node_field_data
           field: status
           plugin_id: boolean
@@ -1167,7 +1165,7 @@ display:
         fields: false
       filters:
         status:
-          value: '1'
+          value: true
           table: node_field_data
           field: status
           plugin_id: boolean
@@ -1774,7 +1772,7 @@ display:
           offset: 0
       filters:
         status:
-          value: '1'
+          value: true
           table: node_field_data
           field: status
           plugin_id: boolean

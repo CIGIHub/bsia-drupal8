@@ -462,7 +462,7 @@ display:
           plugin_id: field
       filters:
         status:
-          value: '1'
+          value: true
           table: node_field_data
           field: status
           plugin_id: boolean
@@ -695,7 +695,7 @@ display:
           plugin_id: string
       filters:
         status:
-          value: '1'
+          value: true
           table: node_field_data
           field: status
           plugin_id: boolean
@@ -895,7 +895,7 @@ display:
       sorts: {  }
       filters:
         status:
-          value: '1'
+          value: true
           table: node_field_data
           field: status
           plugin_id: boolean
@@ -1098,7 +1098,7 @@ display:
       sorts: {  }
       filters:
         status:
-          value: '1'
+          value: true
           table: node_field_data
           field: status
           plugin_id: boolean
@@ -1301,7 +1301,7 @@ display:
       title: 'Courses Taught'
       filters:
         status:
-          value: '1'
+          value: true
           table: node_field_data
           field: status
           plugin_id: boolean
@@ -1814,7 +1814,7 @@ display:
           plugin_id: field
       filters:
         status:
-          value: '1'
+          value: true
           table: node_field_data
           field: status
           plugin_id: boolean
@@ -1909,7 +1909,7 @@ display:
       exposed_block: true
       filters:
         status:
-          value: '1'
+          value: true
           table: node_field_data
           field: status
           plugin_id: boolean

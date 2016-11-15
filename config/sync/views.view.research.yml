@@ -10,8 +10,6 @@ dependencies:
     - field.storage.node.field_short_description
     - field.storage.node.field_square_image
     - field.storage.node.field_website
-    - image.style.feature_wide
-    - image.style.square_90x90
     - node.type.research
   module:
     - datetime
@@ -137,7 +135,7 @@ display:
           field_api_classes: false
       filters:
         status:
-          value: '1'
+          value: true
           table: node_field_data
           field: status
           plugin_id: boolean
@@ -230,7 +228,7 @@ display:
         header: false
       filters:
         status:
-          value: '1'
+          value: true
           table: node_field_data
           field: status
           plugin_id: boolean
@@ -612,7 +610,7 @@ display:
       block_description: 'Affiliated Centres Block'
       filters:
         status:
-          value: '1'
+          value: true
           table: node_field_data
           field: status
           plugin_id: boolean
@@ -1287,7 +1285,7 @@ display:
           plugin_id: text_custom
       filters:
         status:
-          value: '1'
+          value: true
           table: node_field_data
           field: status
           plugin_id: boolean
