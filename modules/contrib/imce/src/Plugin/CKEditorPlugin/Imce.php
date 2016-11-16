@@ -1,10 +1,5 @@
 <?php
 
-/**
- * @file
- * Contains \Drupal\imce\Plugin\CKEditorPlugin\Imce.
- */
-
 namespace Drupal\imce\Plugin\CKEditorPlugin;
 
 use Drupal\editor\Entity\Editor;
@@ -19,6 +14,14 @@ use Drupal\ckeditor\CKEditorPluginBase;
  * )
  */
 class Imce extends CKEditorPluginBase {
+
+  /**
+   * {@inheritdoc}
+   */
+  function getDependencies(Editor $editor) {
+    // Need drupalimage for drupallink support. See #2666596
+    return array('drupalimage');
+  }
 
   /**
    * {@inheritdoc}

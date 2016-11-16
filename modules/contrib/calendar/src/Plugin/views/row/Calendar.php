@@ -10,7 +10,6 @@ namespace Drupal\calendar\Plugin\views\row;
 use Drupal\calendar\CalendarEvent;
 use Drupal\calendar\CalendarHelper;
 use Drupal\calendar\CalendarViewsTrait;
-use Drupal\calendar\DateFieldWrapper;
 use Drupal\Core\Entity\EntityFieldManagerInterface;
 use Drupal\Core\Field\EntityReferenceFieldItemListInterface;
 use Drupal\taxonomy\Entity\Term;
@@ -432,43 +431,20 @@ class Calendar extends RowPluginBase {
 
       // @todo implement timezone support
       if ($info['is_field']) {
-
-        $fields = $entity->getFields();
-        // Should CalendarHelper::dateViewFields() be returning this already
-        $entity_field_name = str_replace('_value', '',$field_name);
-        if (isset($fields[$entity_field_name])) {
-          $fieldWrapper = new DateFieldWrapper($fields[$entity_field_name]);
-//        $items = field_get_items($this->entity_type, $entity, $field_name, $this->language);
-//        $item  = $items[$delta];
+        // Should CalendarHelper::dateViewFields() be returning this already?
+        $entity_field_name = str_replace('_value', '', $field_name);
+        $datetime_type = $entity->getFieldDefinition($entity_field_name)->getSetting('datetime_type');
+        $storage_format = $datetime_type == 'date' ? DATETIME_DATE_STORAGE_FORMAT : DATETIME_DATETIME_STORAGE_FORMAT;
 //        $db_tz   = date_get_timezone_db($tz_handling, isset($item->$tz_field) ? $item->$tz_field : timezone_name_get($dateInfo->getTimezone()));
 //        $to_zone = date_get_timezone($tz_handling, isset($item->$tz_field)) ? $item->$tz_field : timezone_name_get($dateInfo->getTimezone());
 
-          $eventDeltaCount = $dateInfo->getEventDeltaCount();
-          if (!array_key_exists($id, $eventDeltaCount)) {
-            $delta = 0;
-          }
-          else {
-            $delta = $eventDeltaCount[$id] + 1;
-          }
-          $eventDeltaCount[$id] = $delta;
-          $dateInfo->setEventDeltaCount($eventDeltaCount);
+        $item_start_date = \DateTime::createFromFormat($storage_format, $row->{$info['query_name']});
+        $item_end_date = \DateTime::createFromFormat($storage_format, $row->{$info['query_name']});
 
-          if (!$fieldWrapper->isEmpty()) {
-//          $item_start_date = new dateObject($item['value'], $db_tz);
-            $item_start_date = $fieldWrapper->getStartDate($delta);
-//          $item_end_date   = array_key_exists('value2', $item) ? new dateObject($item['value2'], $db_tz) : $item_start_date;
-            $item_end_date   = $fieldWrapper->getEndDate($delta);
-          }
-        }
-
-
-//        $cck_field = field_info_field($field_name);
-//        $instance = field_info_instance($this->entity_type, $field_name, $this->type);
         // @todo don't hardcode
 //        $granularity = date_granularity_precision($cck_field['settings']['granularity']);
         $granularity = 'week';
 //        $increment = $instance['widget']['settings']['increment'];
-
       }
       elseif ($entity->get($field_name)) {
         $item = $entity->get($field_name)->getValue();

@@ -110,16 +110,6 @@ class CalendarDateInfo {
   protected $maxDate;
 
   /**
-   * An array that keeps track of all delta counts for this calendar.
-   *
-   * @var array $eventDeltaCount
-   *   An associative array with entity identifiers as keys and delta counts as
-   *   values. A delta count is equal to the highest date field index for which
-   *   a value exists for this entity.
-   */
-  protected $eventDeltaCount;
-
-  /**
    * @TODO explain what this variable does.
    *
    * @var boolean
@@ -365,29 +355,6 @@ class CalendarDateInfo {
    */
   public function setMaxDate($maxDate) {
     $this->maxDate = $maxDate;
-  }
-
-  /**
-   * Getter for the event delta count.
-   *
-   * @return array
-   *   The array containing the event delta count.
-   */
-  public function getEventDeltaCount() {
-    if (is_null($this->eventDeltaCount)) {
-      $this->eventDeltaCount = [];
-    }
-    return $this->eventDeltaCount;
-  }
-
-  /**
-   * Setter for the event delta count.
-   *
-   * @param array $eventDeltaCount
-   *   The array containing the event delta count.
-   */
-  public function setEventDeltaCount($eventDeltaCount) {
-    $this->eventDeltaCount = $eventDeltaCount;
   }
 
   /**

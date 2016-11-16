@@ -81,7 +81,7 @@ class Date extends ArgumentDefaultPluginBase implements CacheableDependencyInter
 
     // The Date argument handlers provide their own format strings, otherwise
     // use a default.
-    if ($argument instanceof \Drupal\calendar_datetime\Plugin\views\argument\Date) {
+    if ($argument instanceof \Drupal\datetime\Plugin\views\argument\Date) {
       /** @var \Drupal\views\Plugin\views\argument\Date $argument */
       $format = $argument->getArgFormat();
     }
