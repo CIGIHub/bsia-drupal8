@@ -441,38 +441,38 @@ textarea {
 /* force widths on non-mobile pages */
 .non-mobile .col-1 {
   width: 16.67%; }
+
 .non-mobile .col-2 {
   width: 33.33%; }
+
 .non-mobile .col-3 {
   width: 50%; }
+
 .non-mobile .col-4 {
   width: 66.67%; }
+
 .non-mobile .col-5 {
   width: 83.33%; }
+
 .non-mobile .col-6 {
   width: 100%; }
 
 @media (min-width: 940px) {
   .wrapper {
     width: 940px; }
-
   .col-1 {
     width: 16.67%; }
-
   .col-2 {
     width: 33.33%; }
-
   .col-3 {
     width: 50%; }
-
   .col-4 {
     width: 66.67%; }
-
   .col-5 {
     width: 83.33%; }
-
   .col-6 {
     width: 100%; } }
+
 body {
   font-size: 14px;
   font-family: Arial, Helvetica, sans-serif; }
@@ -654,20 +654,25 @@ ul.inline, ol.inline {
 
 article .field__label {
   font-weight: normal; }
+
 article ol.field--ordered-list-style-lower {
   list-style-type: lower-roman;
   color: #053b5b; }
   article ol.field--ordered-list-style-lower .list-item {
     color: #808080; }
+
 article .field-group {
   margin-bottom: 10px; }
+
 article .field--name-field-short-description {
   margin: 10px 0; }
+
 article .field--name-topics {
   text-transform: uppercase;
   font-size: 12px; }
   article .field--name-topics a:hover {
     text-decoration: underline; }
+
 article .field--name-upload span:before {
   font-family: FontAwesome;
   content: '\f019  - '; }
@@ -758,14 +763,17 @@ dl.calendar {
 .node--type-event .event-recap a {
   color: white;
   padding: 2px 5px; }
+
 .node--type-event .field__label, .node--type-event h3 {
   font-size: 16px;
   margin: 10px 0;
   color: #19374f; }
+
 .node--type-event .field--name-event-type .field__label {
   font-size: 14px;
   color: black;
   margin: 0; }
+
 .node--type-event .event-type ul.inline li {
   padding: 0; }
 
@@ -856,22 +864,28 @@ dl.calendar {
     text-decoration: none; }
     .region-right-sidebar div[id^='block-'] a:hover img {
       opacity: 1; }
+
 .region-right-sidebar .views-element-container .views-row {
   margin-bottom: 10px; }
+
 .region-right-sidebar .views-element-container .views-field-title,
 .region-right-sidebar .views-element-container .views-field-field-event-date {
   padding-bottom: 5px; }
+
 .region-right-sidebar .views-element-container .views-field-publication-type a {
   color: #808080; }
   .region-right-sidebar .views-element-container .views-field-publication-type a:hover {
     text-decoration: underline; }
+
 .region-right-sidebar .views-element-container .views-field-field-event-date {
   text-transform: uppercase;
   font-size: 12px; }
+
 .region-right-sidebar .views-element-container a {
   color: #053b5b; }
   .region-right-sidebar .views-element-container a:hover {
     text-decoration: underline; }
+
 .region-right-sidebar #block-views-block-news-block-1 {
   font-size: 16px; }
   .region-right-sidebar #block-views-block-news-block-1 .views-summary-unformatted {
@@ -882,8 +896,10 @@ dl.calendar {
   border: none;
   border-bottom: solid 1px #d2d2d2;
   min-height: 110px; }
+
 .region-content .views-row:last-child {
   border-bottom: none; }
+
 .region-content .view-topics .views-row {
   min-height: 0px;
   border-bottom: none; }
@@ -947,6 +963,7 @@ dl.calendar {
 
 .view-research.view-display-id-block_2 h2 {
   font-size: 18px; }
+
 .view-research.view-display-id-block_2 h3 {
   text-transform: uppercase;
   font-size: 12px;
@@ -965,6 +982,7 @@ dl.calendar {
   color: #666;
   border-bottom: solid 1px #d2d2d2;
   margin: 20px 0 10px 0; }
+
 .related-publications .member-list, .related-members .member-list {
   text-transform: uppercase;
   font-size: 12px; }
@@ -974,21 +992,26 @@ dl.calendar {
 #block-views-block-publications-block-2 .views-row {
   overflow: auto;
   position: relative; }
+
 #block-views-block-students-block-1 .view-content,
 #block-views-block-publications-block-2 .view-content {
   margin-bottom: 0px; }
+
 #block-views-block-students-block-1 h2,
 #block-views-block-publications-block-2 h2 {
   text-transform: uppercase;
   font-size: 12px;
   color: #7e7f7e; }
+
 #block-views-block-students-block-1 .photo, #block-views-block-students-block-1 .featured-item,
 #block-views-block-publications-block-2 .photo,
 #block-views-block-publications-block-2 .featured-item {
   float: left; }
+
 #block-views-block-students-block-1 .photo,
 #block-views-block-publications-block-2 .photo {
   margin-right: 20px; }
+
 #block-views-block-students-block-1 .featured-item,
 #block-views-block-publications-block-2 .featured-item {
   color: #666;
@@ -1009,6 +1032,7 @@ dl.calendar {
       #block-views-block-students-block-1 .featured-item .type a:hover,
       #block-views-block-publications-block-2 .featured-item .type a:hover {
         text-decoration: underline; }
+
 #block-views-block-students-block-1 .profile,
 #block-views-block-publications-block-2 .profile {
   position: absolute;
@@ -1019,12 +1043,14 @@ dl.calendar {
   #block-views-block-students-block-1 .profile.video,
   #block-views-block-publications-block-2 .profile.video {
     right: 0; }
+
 #block-views-block-students-block-1 .profile::before,
 #block-views-block-publications-block-2 .profile::before {
   font-family: FontAwesome;
   content: '\f007';
   color: #053b5b;
   margin-right: 5px; }
+
 #block-views-block-students-block-1 .profile.video::before,
 #block-views-block-publications-block-2 .profile.video::before {
   content: '\f03d'; }
@@ -1036,11 +1062,14 @@ dl.calendar {
 /****** Connect with Us Form Page ******/
 #bsia-connect-form h3 {
   font-size: 16px; }
+
 #bsia-connect-form .form-options fieldset .form-checkboxes {
   margin-left: 40px; }
+
 #bsia-connect-form .form-options .form-item-weekly-bulletin label.option,
 #bsia-connect-form .form-options .form-item-campus-tour label.option {
   font-weight: bold; }
+
 #bsia-connect-form .contact-info {
   margin: 40px 0; }
   #bsia-connect-form .contact-info .form-item-contact-title {
@@ -1093,6 +1122,7 @@ dl.calendar {
 #block-connectwithussocial h3 {
   font-size: 16px;
   font-weight: bold; }
+
 #block-connectwithussocial .connect-social {
   margin: 40px auto;
   width: 360px;
@@ -1102,6 +1132,7 @@ dl.calendar {
     float: left; }
     #block-connectwithussocial .connect-social .share-link::last-child {
       margin-right: 0; }
+
 #block-connectwithussocial .social-circle {
   display: block;
   background: #19374f;
@@ -1128,8 +1159,10 @@ dl.calendar {
   margin-bottom: 20px;
   border: none;
   border-bottom: solid 1px #d2d2d2; }
+
 .item-list ol.search-results .search-result__title {
   font-size: 16px; }
+
 .item-list ol.search-results .search-result__snippet-info {
   margin: 10px 0 20px 40px; }
 
@@ -1286,6 +1319,7 @@ header {
       padding: 50px 0 50px 0;
       width: 680px;
       background: url("../images/bsia-logo-2015.png") no-repeat left; } }
+
 @media (min-width: 940px) and (min--moz-device-pixel-ratio: 1.3), (min-width: 940px) and (-o-min-device-pixel-ratio: 2.6 / 2), (min-width: 940px) and (-webkit-min-device-pixel-ratio: 1.3), (min-width: 940px) and (min-device-pixel-ratio: 1.3), (min-width: 940px) and (min-resolution: 1.3dppx) {
   header a.logo {
     /* on retina, use image that's scaled by 2 */
@@ -1480,17 +1514,17 @@ footer {
           margin-right: 0; }
     footer .partners a {
       height: 37px;
-      background: url("../images/bsia-partners.png") no-repeat 0 0;
+      background: url("../images/bsia-partners-2016.png") no-repeat 0 0;
       background-size: cover;
       display: block; }
       footer .partners a.wlu-logo {
-        width: 85px;
+        width: 90px;
         background-position: 0 0; }
       footer .partners a.cigi-logo {
-        width: 94px;
-        background-position: -123px 0; }
+        width: 120px;
+        background-position: -100px 0; }
       footer .partners a.uw-logo {
-        width: 125px;
+        width: 145px;
         background-position: 100% 0; }
       footer .partners a:hover {
         opacity: 0.6; }
@@ -1599,9 +1633,11 @@ footer {
   .right-menu .connect-button a:hover {
     text-decoration: none;
     color: white; }
+
 .right-menu ul.menu:first-child {
   padding: 10px 0;
   margin: 0 0 10px 0; }
+
 .right-menu ul.menu {
   list-style: none;
   background: #19374f;
@@ -1622,6 +1658,7 @@ footer {
         color: #cccccc; }
       .right-menu ul.menu li a.is-active:hover {
         color: white; }
+
 .right-menu .archive-list {
   background: #19374f;
   padding: 0px 0 10px 0;
@@ -1656,6 +1693,7 @@ footer {
   line-height: 0;
   position: absolute;
   border-bottom: 0; }
+
 .homepage h2 {
   text-transform: uppercase;
   border-bottom: solid 1px #666;
@@ -1667,6 +1705,7 @@ footer {
     .homepage h2 a:hover {
       color: #053b5b;
       text-decoration: none; }
+
 .homepage ul {
   list-style: none;
   padding: 0px; }
@@ -1680,6 +1719,7 @@ footer {
     content: '';
     display: block;
     clear: both; }
+
 .homepage .cell {
   height: 100%;
   padding: 0em; }
@@ -1696,6 +1736,7 @@ footer {
     .homepage .cell .views-field-title a:hover {
       text-decoration: none;
       color: black; }
+
 .homepage #block-views-block-homepage-block-1-2 {
   margin-bottom: 1.5em; }
   .homepage #block-views-block-homepage-block-1-2 .row .col-2 {
@@ -1719,12 +1760,11 @@ footer {
   .view-homepage .views-field-field-event-date-value,
   .view-homepage .views-field-field-news-date-value {
     font-size: 140%; }
-
   #block-views-homepage-block_2 .cell .views-field-title {
     font-size: 170%; }
-
   #block-views-block-homepage-block-1-2 .row {
     height: 95px; } }
+
 /******  HOMEPAGE GALLERY  ******/
 #gallery {
   overflow: hidden;
@@ -1869,13 +1909,17 @@ footer {
 
 .node--type-person .field--name-field-graduate-title {
   font-weight: bold; }
+
 .node--type-person .field--name-program-type, .node--type-person .field--name-field-year-graduated {
   display: inline-block;
   vertical-align: bottom; }
+
 .node--type-person .field--name-program-type .field__items {
   padding-right: 0; }
+
 .node--type-person .field--name-program-type .field__item:after {
   content: ","; }
+
 .node--type-person .notice-box {
   text-align: center;
   background: #dff2d5;
@@ -1884,6 +1928,7 @@ footer {
   padding: 5px;
   margin-bottom: 10px;
   width: 95%; }
+
 .node--type-person .social {
   font-size: 16px; }
   .node--type-person .social div {
@@ -1894,6 +1939,7 @@ footer {
 .view-faculty .view-content .profile h2,
 .view-students .view-content .profile h2 {
   font-size: 1.2em; }
+
 .node--type-person.node--view-mode-teaser .profile .text,
 .view-faculty .view-content .profile .text,
 .view-students .view-content .profile .text {
@@ -1912,13 +1958,16 @@ footer {
   width: 200px;
   padding: 3px;
   font-size: 14px; }
+
 #block-exposedformfacultypage-2 .form-actions {
   font-size: 0;
   line-height: 0;
   position: absolute;
   margin: 0px; }
+
 #block-exposedformfacultypage-2 .search-description {
   font-style: italic; }
+
 #block-exposedformfacultypage-2 #edit-submit-faculty {
   display: none; }
 
@@ -1926,6 +1975,7 @@ footer {
   width: 200px;
   padding: 3px;
   font-size: 14px; }
+
 #block-exposedformstudentspage-2 .search-description {
   font-style: italic; }
 
@@ -1957,14 +2007,17 @@ footer {
 
 #views-exposed-form-students-page-2 .form-item {
   position: relative; }
+
 #views-exposed-form-students-page-2 label {
   font-size: 0;
   line-height: 0;
   position: absolute; }
+
 #views-exposed-form-students-page-2 .form-text {
   width: 200px;
   padding: 3px;
   font-size: 14px; }
+
 #views-exposed-form-students-page-2 .form-submit {
   padding: 0 5px;
   border: 1px solid #d2d2d2;
@@ -1977,12 +2030,14 @@ footer {
   border-radius: 3px;
   margin-top: 0px;
   height: 24px; }
+
 #views-exposed-form-students-page-2 .form-actions {
   display: inline-block; }
 
 .students-all-programs h3 {
   margin-top: 20px;
   font-size: 1.3em; }
+
 .students-all-programs .fa-list-ul {
   font-size: 14px;
   margin-left: 10px;
@@ -2071,6 +2126,7 @@ ul.student-list {
   font-size: 1.4em;
   margin: 0 0 0.4em 0;
   color: #053b5b; }
+
 .field--type-field-collection li .list-item {
   padding: 2px 0; }
   .field--type-field-collection li .list-item span:after {
@@ -2079,6 +2135,7 @@ ul.student-list {
 /*******   CALENDAR    *******/
 #block-views-block-event-calendar-block-1 .view-content {
   margin-bottom: 0px; }
+
 #block-views-block-event-calendar-block-1 nav.pager {
   background-color: white;
   border: solid 1px #d2d2d2;
@@ -2099,6 +2156,7 @@ ul.student-list {
   .calendar-calendar table.mini tr:first-child td {
     border: none;
     padding: 5px; }
+
 .calendar-calendar table.mini td {
   padding: 3px 6px 18px 10px;
   border: solid 1px #d2d2d2; }
@@ -2108,5 +2166,3 @@ ul.student-list {
     background-color: #f2f2f2; }
   .calendar-calendar table.mini td.today {
     background-color: #D1DEE2; }
-
-/*# sourceMappingURL=styles.css.map */
