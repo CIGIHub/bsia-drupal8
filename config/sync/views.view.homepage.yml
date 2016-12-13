@@ -924,7 +924,7 @@ display:
           value:
             min: ''
             max: ''
-            value: 'now -2 days'
+            value: now
             type: offset
           group: 1
           exposed: false
@@ -964,7 +964,7 @@ display:
           value:
             min: ''
             max: ''
-            value: '0'
+            value: '1'
           group: 1
           exposed: false
           expose:
