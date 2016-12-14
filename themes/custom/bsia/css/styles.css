@@ -2136,6 +2136,8 @@ ul.student-list {
   padding: 2px 0; }
   .field--type-field-collection li .list-item span:after {
     content: "."; }
+  .field--type-field-collection li .list-item span span:after {
+    content: ""; }
 
 /*******   CALENDAR    *******/
 #block-views-block-event-calendar-block-1 .view-content {

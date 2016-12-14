@@ -336,10 +336,13 @@ ul.student-list{
   }
 
   li .list-item {
-    padding:2px 0;
+    padding: 2px 0;
 
     span:after {
       content:".";
+    }
+    span span:after {
+      content:"";
     }
   }
 
