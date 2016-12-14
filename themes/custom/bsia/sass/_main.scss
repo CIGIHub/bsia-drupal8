@@ -125,9 +125,14 @@ article{
   }
 
   .field--name-upload{
+    margin: 20px 0;
+    .field__item{
+      padding: 5px 0;
+    }
     span:before{
       font-family: FontAwesome;
       content: '\f019  - ';
+      margin-right: 5px;
     }
   }
 }

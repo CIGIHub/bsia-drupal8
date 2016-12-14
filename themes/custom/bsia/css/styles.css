@@ -673,9 +673,14 @@ article .field--name-topics {
   article .field--name-topics a:hover {
     text-decoration: underline; }
 
-article .field--name-upload span:before {
-  font-family: FontAwesome;
-  content: '\f019  - '; }
+article .field--name-upload {
+  margin: 20px 0; }
+  article .field--name-upload .field__item {
+    padding: 5px 0; }
+  article .field--name-upload span:before {
+    font-family: FontAwesome;
+    content: '\f019  - ';
+    margin-right: 5px; }
 
 .view-content {
   margin-bottom: 20px; }

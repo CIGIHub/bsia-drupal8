@@ -122,6 +122,7 @@ third_party_settings:
         - topics
         - field_research_focus
         - field_collection_publication
+        - upload
       parent_name: ''
       weight: 14
       label: Background
@@ -160,7 +161,7 @@ content:
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 20
+    weight: 19
     settings: {  }
     third_party_settings: {  }
   field_alternative_url:
@@ -202,7 +203,7 @@ content:
     third_party_settings: {  }
     type: string_textfield
   field_collection_publication:
-    weight: 21
+    weight: 20
     settings:
       allow_new: true
       allow_existing: false
@@ -287,7 +288,7 @@ content:
     third_party_settings: {  }
     type: image_image
   field_languages:
-    weight: 18
+    weight: 17
     type: string_textfield
     settings:
       size: 60
@@ -341,7 +342,7 @@ content:
     third_party_settings: {  }
     type: string_textarea
   field_research_focus:
-    weight: 20
+    weight: 19
     settings:
       rows: 3
       placeholder: ''
@@ -412,7 +413,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 21
+    weight: 20
     settings: {  }
     third_party_settings: {  }
   person_type:
@@ -434,12 +435,12 @@ content:
     third_party_settings: {  }
   topics:
     type: options_select
-    weight: 19
+    weight: 18
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 19
+    weight: 18
     settings:
       match_operator: CONTAINS
       size: 60
@@ -449,7 +450,7 @@ content:
     settings:
       progress_indicator: throbber
     type: file_generic
-    weight: 18
+    weight: 21
     third_party_settings: {  }
 hidden:
   field_courses: true
