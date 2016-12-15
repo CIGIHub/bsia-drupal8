@@ -1,57 +1,25 @@
 <?php
 
- function bsia_page_attachments_alter(array &$page) {
-	$current_path = \Drupal::service('path.current')->getPath();
- 
-	if($current_path != '/home'){
+function bsia_page_attachments_alter(&$page) {
 
-	    $mobile = array(
-	    	"MobileOptimized", 
-	    	"HandheldFriendly", 
-	    	"viewport", 
-	    	"og_description", 
-	    	"og_image", 
-	    	"og_title", 
-	    	"og_type",
-	    	"og_url",
-	    	"system_meta_content_type",
-	    	"system_meta_generator",
-	    	"content_language",
-	    	"title",
-	    	"description",
+  $current_path = \Drupal::service('path.current')->getPath();
 
-	    );
-
-	    //build a new html head array without the mobile meta tags.
-	    $html_head = array();
-
-	    foreach ($page['#attached']['html_head'] as $key => $value) {
-	    	if (!in_array($value[1], $mobile)) {
-	    		$html_head[] = $value;
-	    	}
-	    }
-	   
-	    //print "<pre>" . print_r($html_head, true) . "</pre>";
-
-	    //now that our new array is built, clear out the old one, and set it to the new one.
-	    unset($page['#attached']['html_head']);
-	    //$page['#attached']['html_head'] = $html_head;
-
-	    //print "<pre>" . print_r($page['#attached']['html_head'], true) . "</pre>";
-
+  if($current_path != '/home'){
+	// Remove the HTML5 mobile meta-tags for non-mobile inner pages
+	$meta_tags_to_remove = ['MobileOptimized', 'HandheldFriendly', 'viewport', 'Generator'];
+	foreach ($page['#attached']['html_head'] as $index => $parts) {
+		if (in_array($parts[1], $meta_tags_to_remove)) {
+			unset($page['#attached']['html_head'][$index]);
+		}
 	}
+  }
 }
-
 
 function bsia_theme_suggestions_block_alter(&$suggestions, $variables) {
   $content = $variables['elements']['content'];
   if (isset($content['#block_content']) && $content['#block_content'] instanceof \Drupal\block_content\BlockContentInterface) {
     $suggestions[] = 'block__' . $content['#block_content']->bundle();
   }
-}
-
-function bsia_preprocess_search_result(&$variables) {
-
 }
 
 function bsia_preprocess_field(&$variables, $hook) {
