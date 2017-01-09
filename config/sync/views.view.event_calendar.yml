@@ -195,12 +195,12 @@ display:
           click_sort_column: value
           type: datetime_default
           settings:
-            timezone_override: ''
+            timezone_override: UTC
             format_type: medium
           group_column: value
           group_columns: {  }
           group_rows: true
-          delta_limit: 0
+          delta_limit: 1
           delta_offset: 0
           delta_reversed: false
           delta_first_last: false
@@ -568,7 +568,7 @@ display:
               page: '#ffffff'
             taxonomy_field: ''
             calendar_colors_vocabulary: {  }
-      path: calenda/week
+      path: calendar/week
       menu:
         type: tab
         title: Week
@@ -579,10 +579,10 @@ display:
         context: '0'
         menu_name: main
       arguments:
-        field_event_date_value_year_week:
-          id: field_event_date_value_year_week
+        field_event_date_value:
+          id: field_event_date_value
           table: node__field_event_date
-          field: field_event_date_value_year_week
+          field: field_event_date_value
           relationship: none
           group_type: group
           admin_label: ''
@@ -611,7 +611,7 @@ display:
             fail: 'not found'
           validate_options:
             replacement_format: 'F j, Y'
-          plugin_id: datetime_year_week
+          plugin_id: datetime
       header:
         calendar_header:
           id: calendar_header

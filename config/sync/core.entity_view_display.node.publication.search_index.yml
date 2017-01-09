@@ -158,5 +158,6 @@ hidden:
   field_embed_code: true
   field_features: true
   field_speakers: true
+  langcode: true
   publication_type: true
   upload: true

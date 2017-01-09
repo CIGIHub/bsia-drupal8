@@ -5,8 +5,10 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.blog.body
+    - field.field.node.blog.field_caption
     - field.field.node.blog.field_image
     - field.field.node.blog.field_published_date
+    - field.field.node.blog.upload
     - node.type.blog
   module:
     - datetime
@@ -37,4 +39,5 @@ content:
 hidden:
   field_caption: true
   field_image: true
+  langcode: true
   upload: true

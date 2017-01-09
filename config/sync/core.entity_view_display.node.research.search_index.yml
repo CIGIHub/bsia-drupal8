@@ -136,4 +136,5 @@ hidden:
   field_related_events: true
   field_related_publications: true
   field_speakers: true
+  langcode: true
   upload: true
