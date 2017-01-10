@@ -2140,22 +2140,45 @@ ul.student-list {
     content: ""; }
 
 /*******   CALENDAR    *******/
+#block-views-block-event-calendar-block-1 .pager,
+.view-event-calendar .view-header .pager {
+  padding: 5px 0; }
+  #block-views-block-event-calendar-block-1 .pager ul,
+  .view-event-calendar .view-header .pager ul {
+    display: table; }
+    #block-views-block-event-calendar-block-1 .pager ul li,
+    .view-event-calendar .view-header .pager ul li {
+      display: table-cell; }
+      #block-views-block-event-calendar-block-1 .pager ul li.pager__item--previous, #block-views-block-event-calendar-block-1 .pager ul li.pager__item--next,
+      .view-event-calendar .view-header .pager ul li.pager__item--previous,
+      .view-event-calendar .view-header .pager ul li.pager__item--next {
+        width: 40px; }
+      #block-views-block-event-calendar-block-1 .pager ul li.pager__item--current,
+      .view-event-calendar .view-header .pager ul li.pager__item--current {
+        width: 200px;
+        text-align: center; }
+
 #block-views-block-event-calendar-block-1 .view-content {
   margin-bottom: 0px; }
 
-#block-views-block-event-calendar-block-1 nav.pager {
+#block-views-block-event-calendar-block-1 .pager {
   background-color: white;
-  border: solid 1px #d2d2d2;
-  padding: 5px 0; }
-  #block-views-block-event-calendar-block-1 nav.pager ul {
-    display: table; }
-    #block-views-block-event-calendar-block-1 nav.pager ul li {
-      display: table-cell; }
-      #block-views-block-event-calendar-block-1 nav.pager ul li.pager__item--previous, #block-views-block-event-calendar-block-1 nav.pager ul li.pager__item--next {
-        width: 40px; }
-      #block-views-block-event-calendar-block-1 nav.pager ul li.pager__item--current {
-        width: 200px;
-        text-align: center; }
+  border: solid 1px #d2d2d2; }
+  #block-views-block-event-calendar-block-1 .pager.pager__item a {
+    padding: 2px 6px; }
+  #block-views-block-event-calendar-block-1 .pager li {
+    text-align: center; }
+
+.region-content .view-event-calendar .view-header {
+  border-bottom: 1px solid #d2d2d2;
+  margin-bottom: 20px; }
+  .region-content .view-event-calendar .view-header h3 {
+    font-size: 20px; }
+  .region-content .view-event-calendar .view-header .pager {
+    padding: 5px 0 10px 0; }
+    .region-content .view-event-calendar .view-header .pager .pager__item a {
+      font-size: 20px;
+      padding: 2px 7px; }
 
 .calendar-calendar table.mini tr:first-child {
   border: solid 1px #d2d2d2;
