@@ -40,6 +40,7 @@
 }
 
 .right-menu{
+
   .connect-button{
     background-image:url(../images/connect-button.png);
     background-color: #fff;
@@ -113,7 +114,6 @@
     .views-summary {
       padding:2px 20px;
 
-    
       a {
         color:white;
       }
@@ -122,6 +122,7 @@
 }
 
 #block-views-block-news-block-1 {
+  margin-bottom: 10px;
   background: $regal-blue;
   h2 {
     color:white;
