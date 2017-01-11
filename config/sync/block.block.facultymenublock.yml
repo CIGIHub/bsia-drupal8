@@ -21,6 +21,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "/people/john-ravenhill\r\n/faculty*\r\n/about/staff-listing"
+    pages: "/people/john-ravenhill\r\n/faculty*"
     negate: false
     context_mapping: {  }
