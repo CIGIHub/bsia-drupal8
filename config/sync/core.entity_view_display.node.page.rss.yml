@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.page.field_feature_area
     - field.field.node.page.field_feature_line
     - field.field.node.page.field_feature_weight
+    - field.field.node.page.field_features
     - field.field.node.page.field_image
     - field.field.node.page.field_image_page
     - field.field.node.page.field_link_text
@@ -112,4 +113,5 @@ hidden:
   body: true
   comment: true
   field_features: true
+  langcode: true
   upload: true

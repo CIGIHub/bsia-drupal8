@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.teaser
     - field.storage.node.field_event_date
   module:
     - calendar
@@ -195,12 +196,12 @@ display:
           click_sort_column: value
           type: datetime_default
           settings:
-            timezone_override: ''
+            timezone_override: UTC
             format_type: medium
           group_column: value
           group_columns: {  }
           group_rows: true
-          delta_limit: 0
+          delta_limit: 1
           delta_offset: 0
           delta_reversed: false
           delta_first_last: false
@@ -220,6 +221,45 @@ display:
           expose:
             operator: ''
           group: 1
+        delta:
+          id: delta
+          table: node__field_event_date
+          field: delta
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: '0'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: numeric
       sorts:
         field_event_date_value:
           id: field_event_date_value
@@ -241,6 +281,7 @@ display:
       arguments: {  }
       display_extenders: {  }
       use_ajax: true
+      title: 'Event Calendar'
     cache_metadata:
       max-age: -1
       contexts:
@@ -327,35 +368,23 @@ display:
       display_extenders: {  }
       display_description: ''
       style:
-        type: calendar
+        type: default
         options:
-          calendar_type: day
-          mini: '0'
-          name_size: '3'
-          with_weekno: '0'
-          max_items: '0'
-          max_items_behavior: more
-          groupby_times: hour
-          groupby_times_custom: null
-          theme_style: '1'
-          groupby_field: ''
-          multiday_theme: '1'
-          multiday_hidden: {  }
+          row_class: ''
+          default_row_class: true
+          uses_fields: false
       defaults:
         style: false
         row: false
         arguments: false
         header: false
+        fields: false
+        empty: false
       row:
-        type: calendar_row
+        type: 'entity:node'
         options:
-          colors:
-            legend: type
-            calendar_colors_type:
-              article: '#ffffff'
-              page: '#ffffff'
-            taxonomy_field: ''
-            calendar_colors_vocabulary: {  }
+          relationship: none
+          view_mode: teaser
       path: calendar/day
       menu:
         type: tab
@@ -425,6 +454,147 @@ display:
           content: ''
           pager_embed: 1
           plugin_id: calendar_header
+      fields:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          entity_type: node
+          entity_field: created
+          plugin_id: field
+        field_event_date:
+          id: field_event_date
+          table: node__field_event_date
+          field: field_event_date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: datetime_default
+          settings:
+            timezone_override: ''
+            format_type: event_date
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 2
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: 'There are no events scheduled for this time.'
+            format: full_html
+          plugin_id: text
     cache_metadata:
       max-age: 0
       contexts:
@@ -568,7 +738,7 @@ display:
               page: '#ffffff'
             taxonomy_field: ''
             calendar_colors_vocabulary: {  }
-      path: calenda/week
+      path: calendar/week
       menu:
         type: tab
         title: Week
@@ -579,10 +749,10 @@ display:
         context: '0'
         menu_name: main
       arguments:
-        field_event_date_value_year_week:
-          id: field_event_date_value_year_week
+        field_event_date_value:
+          id: field_event_date_value
           table: node__field_event_date
-          field: field_event_date_value_year_week
+          field: field_event_date_value
           relationship: none
           group_type: group
           admin_label: ''
@@ -611,7 +781,7 @@ display:
             fail: 'not found'
           validate_options:
             replacement_format: 'F j, Y'
-          plugin_id: datetime_year_week
+          plugin_id: datetime
       header:
         calendar_header:
           id: calendar_header

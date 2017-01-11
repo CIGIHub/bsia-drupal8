@@ -78,4 +78,5 @@ hidden:
   field_person: true
   field_position: true
   field_short_description: true
+  langcode: true
   links: true

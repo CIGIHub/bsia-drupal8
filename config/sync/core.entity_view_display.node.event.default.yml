@@ -209,3 +209,4 @@ hidden:
   field_position: true
   field_speakers: true
   field_website: true
+  langcode: true

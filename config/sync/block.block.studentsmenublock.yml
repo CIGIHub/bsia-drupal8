@@ -1,0 +1,26 @@
+uuid: 5bb654be-5fdc-4b31-837b-7e239a741d1d
+langcode: en
+status: true
+dependencies:
+  module:
+    - bsia_blocks
+    - system
+  theme:
+    - bsia
+id: studentsmenublock
+theme: bsia
+region: right_menu
+weight: 0
+provider: null
+plugin: students_menu
+settings:
+  id: students_menu
+  label: 'Students Menu Block'
+  provider: bsia_blocks
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '/current-students*'
+    negate: false
+    context_mapping: {  }

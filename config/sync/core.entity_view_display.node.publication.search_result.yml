@@ -116,5 +116,6 @@ hidden:
   field_link_text: true
   field_position: true
   field_speakers: true
+  langcode: true
   publication_type: true
   upload: true

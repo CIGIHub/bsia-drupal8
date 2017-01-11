@@ -189,3 +189,4 @@ hidden:
   field_alternative_url: true
   field_credit: true
   field_embed_code: true
+  langcode: true

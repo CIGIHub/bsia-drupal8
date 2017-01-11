@@ -83,4 +83,5 @@ hidden:
   field_speakers: true
   field_square_image: true
   field_website: true
+  langcode: true
   upload: true

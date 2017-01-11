@@ -11,7 +11,7 @@ dependencies:
 id: abouttheschool
 theme: bsia
 region: '-1'
-weight: -30
+weight: -32
 provider: null
 plugin: 'block_content:4576e266-6bfa-4368-914f-791705907717'
 settings:

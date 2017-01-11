@@ -1,0 +1,26 @@
+uuid: d803d25d-12b4-45b1-84af-50b3bc810442
+langcode: en
+status: true
+dependencies:
+  module:
+    - bsia_blocks
+    - system
+  theme:
+    - bsia
+id: eventsmenublock
+theme: bsia
+region: right_menu
+weight: 0
+provider: null
+plugin: events_menu
+settings:
+  id: events_menu
+  label: 'Events Menu Block'
+  provider: bsia_blocks
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '/events*'
+    negate: false
+    context_mapping: {  }

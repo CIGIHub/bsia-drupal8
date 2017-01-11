@@ -75,5 +75,6 @@ hidden:
   field_caption: true
   field_features: true
   field_speakers: true
+  langcode: true
   publication_type: true
   upload: true

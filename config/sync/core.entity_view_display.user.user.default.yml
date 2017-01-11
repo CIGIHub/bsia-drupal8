@@ -24,4 +24,5 @@ content:
     type: image
     weight: 6
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  langcode: true

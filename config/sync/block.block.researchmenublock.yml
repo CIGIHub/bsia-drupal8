@@ -1,0 +1,26 @@
+uuid: e04f1f8e-5c18-42e8-80f7-68db3bce8aa3
+langcode: en
+status: true
+dependencies:
+  module:
+    - bsia_blocks
+    - system
+  theme:
+    - bsia
+id: researchmenublock
+theme: bsia
+region: right_menu
+weight: 0
+provider: null
+plugin: research_menu
+settings:
+  id: research_menu
+  label: 'Research Menu Block'
+  provider: bsia_blocks
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '/research*'
+    negate: false
+    context_mapping: {  }
