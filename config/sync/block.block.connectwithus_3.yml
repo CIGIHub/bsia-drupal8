@@ -12,7 +12,7 @@ dependencies:
 id: connectwithus_3
 theme: bsia
 region: right_menu
-weight: -20
+weight: -32
 provider: null
 plugin: 'block_content:487faa71-d5c4-4dcd-be00-0bc3c7f46226'
 settings:

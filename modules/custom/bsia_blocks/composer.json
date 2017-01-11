@@ -1,0 +1,6 @@
+{
+    "name": "drupal/bsia_blocks",
+    "description": "Programatically created blocks mainly used in the sidebar.",
+    "type": "drupal-module",
+    "license": "GPL-2.0+"
+}

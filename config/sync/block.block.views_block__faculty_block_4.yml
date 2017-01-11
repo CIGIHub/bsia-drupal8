@@ -12,7 +12,7 @@ dependencies:
 id: views_block__faculty_block_4
 theme: bsia
 region: '-1'
-weight: -17
+weight: -29
 provider: null
 plugin: 'views_block:faculty-block_4'
 settings:

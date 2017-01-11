@@ -1,6 +1,4 @@
-
-
- (function ($) {
+(function ($) {
      $(document).ready(function () {
          Menu.initialize();
 
@@ -108,6 +106,22 @@
          }
      });
 
+     //highlight side Menu
+
+     if($(".right-menu ul.menu").length > 0){
+         var path = window.location.pathname;
+         var link = "";
+         $(".right-menu ul.menu li a").removeClass("is-active");
+         $( ".right-menu ul.menu li a" ).each(function( index ) {
+
+            //console.log( index + ": " + $( this ).attr('href') );
+            if($( this ).attr('href') === path){
+                $(this).addClass("is-active");
+                $(this).parent().addClass(" menu-item--active-trail");
+            }
+        });
+     }
+
     //scroll to anchors
     $("a[href*='#']:not([href='#'])").click(function() {
         var target = $(this.hash);
@@ -120,9 +134,8 @@
         }
     });
 
+    $(window).resize(function () {
+        Menu.initialize();
+    });
 
-     $(window).resize(function () {
-         Menu.initialize();
-
-     });
  })(jQuery);
