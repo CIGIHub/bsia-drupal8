@@ -62,5 +62,6 @@ hidden:
   field_news_image: true
   field_person: true
   field_position: true
+  langcode: true
   links: true
   upload: true

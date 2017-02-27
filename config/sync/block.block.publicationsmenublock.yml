@@ -1,0 +1,26 @@
+uuid: 04389f88-bc7c-40bd-b2a6-5486eadd7be6
+langcode: en
+status: true
+dependencies:
+  module:
+    - bsia_blocks
+    - system
+  theme:
+    - bsia
+id: publicationsmenublock
+theme: bsia
+region: right_menu
+weight: 0
+provider: null
+plugin: publications_menu
+settings:
+  id: publications_menu
+  label: 'Publications Menu Block'
+  provider: bsia_blocks
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/publications\r\n/category/publication-type/books\r\n/category/publication-type/refereed\r\n/category/publication-type/op-eds\r\n/category/publication-type/policy-reports\r\n/category/publication-type/non-refereed\r\n/phd-publications"
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,26 @@
+uuid: 9ef7db39-38dd-4681-ae07-318978ed4d97
+langcode: en
+status: true
+dependencies:
+  module:
+    - bsia_blocks
+    - system
+  theme:
+    - bsia
+id: degreemenublock
+theme: bsia
+region: right_menu
+weight: -30
+provider: null
+plugin: degree_menu
+settings:
+  id: degree_menu
+  label: 'Degree Menu Block'
+  provider: bsia_blocks
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/degree-programs\r\n/phd-global-governance\r\n/global-governance-course-offerings-phd\r\n/frequently-asked-questions-phd\r\n/master-of-international-public-policy\r\n/course-offerings-mipp\r\n/frequently-asked-questions-mipp\r\n/african-leaders-of-tomorrow-scholarship-program\r\n/mbamipp-double-degree\r\n/master-of-arts-global-governance\r\n/global-governance-course-offerings-magg\r\n/frequently-asked-questions-magg\r\n/uw-warwick-double-degree-faq\r\n/applications\r\n/scholarships-and-awards\r\n/internships"
+    negate: false
+    context_mapping: {  }

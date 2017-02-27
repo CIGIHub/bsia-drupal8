@@ -155,5 +155,6 @@ hidden:
   field_position: true
   field_rsvp: true
   field_website: true
+  langcode: true
   links: true
   upload: true

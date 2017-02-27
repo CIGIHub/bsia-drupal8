@@ -181,6 +181,7 @@ hidden:
   field_user_link: true
   field_website: true
   field_youtube_id: true
+  langcode: true
   links: true
   topics: true
   upload: true

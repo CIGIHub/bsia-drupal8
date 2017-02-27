@@ -12,7 +12,7 @@ dependencies:
 id: maggvideo
 theme: bsia
 region: '-1'
-weight: -25
+weight: -26
 provider: null
 plugin: 'block_content:f759996d-89ba-4e3c-855c-9248da14da22'
 settings:

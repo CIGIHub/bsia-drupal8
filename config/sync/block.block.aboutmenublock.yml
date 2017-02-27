@@ -1,0 +1,26 @@
+uuid: 556d0529-62e9-4d78-9649-03eca5483816
+langcode: en
+status: true
+dependencies:
+  module:
+    - bsia_blocks
+    - system
+  theme:
+    - bsia
+id: aboutmenublock
+theme: bsia
+region: right_menu
+weight: -31
+provider: null
+plugin: about_menu
+settings:
+  id: about_menu
+  label: 'About Menu Block'
+  provider: bsia_blocks
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/about/*\r\n/balsillie-school-of-international-affairs\r\n/directors-message"
+    negate: false
+    context_mapping: {  }

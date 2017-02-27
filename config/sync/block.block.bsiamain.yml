@@ -1,6 +1,6 @@
 uuid: 68eabd3c-4cb5-46e9-8200-b4edadb94189
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.menu-main
@@ -10,8 +10,8 @@ dependencies:
     - bsia
 id: bsiamain
 theme: bsia
-region: right_menu
-weight: -19
+region: '-1'
+weight: -29
 provider: null
 plugin: 'system_menu_block:menu-main'
 settings:

@@ -1,13 +1,8 @@
 /*******   CALENDAR    *******/
 
-#block-views-block-event-calendar-block-1{
-	.view-content{
-		margin-bottom: 0px;
-	}
-	nav.pager{
-		background-color: white;
-		border: solid 1px $hr-border-color;
-
+#block-views-block-event-calendar-block-1,
+.view-event-calendar .view-header{
+	.pager{
 		padding: 5px 0;
 		ul{
 			display: table;
@@ -26,6 +21,36 @@
 	}
 }
 
+#block-views-block-event-calendar-block-1{
+	.view-content{
+		margin-bottom: 0px;
+	}
+	.pager{
+		background-color: white;
+		border: solid 1px $hr-border-color;
+		&.pager__item a{
+			padding: 2px 6px;
+		}
+		li{
+			text-align: center;
+		}
+	}
+}
+
+.region-content .view-event-calendar .view-header{
+	border-bottom: 1px solid $light-grey;
+	margin-bottom: 20px;
+	h3{
+		font-size: 20px;
+	}
+	.pager{
+		padding: 5px 0 10px 0;
+		.pager__item a{
+			font-size: 20px;
+			padding: 2px 7px;
+		}
+	}
+}
 
 .calendar-calendar{
 	table.mini{
@@ -54,8 +79,3 @@
 		}
 	}
 }
-
-
-
-
-	

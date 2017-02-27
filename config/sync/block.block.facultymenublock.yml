@@ -1,0 +1,26 @@
+uuid: 0f0b25c9-12e4-41df-ba4c-96125841e9e0
+langcode: en
+status: true
+dependencies:
+  module:
+    - bsia_blocks
+    - system
+  theme:
+    - bsia
+id: facultymenublock
+theme: bsia
+region: right_menu
+weight: 0
+provider: null
+plugin: faculty_menu
+settings:
+  id: faculty_menu
+  label: 'Faculty Menu Block'
+  provider: bsia_blocks
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/people/john-ravenhill\r\n/faculty*"
+    negate: false
+    context_mapping: {  }
