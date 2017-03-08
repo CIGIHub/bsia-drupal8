@@ -51,6 +51,7 @@
 
 @mixin divider{
   margin-bottom: 20px;
+  padding-bottom: 15px;
   border: none;
   border-bottom: solid 1px $hr-border-color;
 }

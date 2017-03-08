@@ -553,19 +553,25 @@ ul.sitemap-menu li {
       font-weight: normal; }
 
 .top {
-  font-size: 2em;
-  text-align: center; }
+  font-size: 2em; }
   .top a {
     text-decoration: none;
-    color: #fecd2f; }
-    .top a:hover {
+    display: block;
+    text-align: center; }
+    .top a:after {
+      content: '\f0aa';
+      font-family: fontawesome;
+      color: #fecd2f;
+      cursor: pointer; }
+    .top a:hover:after {
       color: #19374f; }
 
-.divider {
+hr {
   margin-bottom: 20px;
+  padding-bottom: 15px;
   border: none;
   border-bottom: solid 1px #d2d2d2;
-  margin-top: 10px; }
+  margin: 30px 0; }
 
 /************ MAIN  ***********/
 article {
@@ -586,8 +592,9 @@ article {
   article.node--unpublished {
     background: #FFF4F4; }
 
-hr, .row-divider {
+.row-divider {
   margin-bottom: 20px;
+  padding-bottom: 15px;
   border: none;
   border-bottom: solid 1px #d2d2d2; }
 
@@ -898,6 +905,7 @@ dl.calendar {
 
 .region-content .views-row {
   margin-bottom: 20px;
+  padding-bottom: 15px;
   border: none;
   border-bottom: solid 1px #d2d2d2;
   min-height: 110px; }
@@ -1162,6 +1170,7 @@ dl.calendar {
 .item-list ol.search-results li {
   margin: 0px;
   margin-bottom: 20px;
+  padding-bottom: 15px;
   border: none;
   border-bottom: solid 1px #d2d2d2; }
 

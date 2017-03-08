@@ -31,8 +31,9 @@ settings:
         -
           name: Linking
           items:
-            - DrupalLink
-            - DrupalUnlink
+            - Link
+            - Unlink
+            - Anchor
         -
           name: Media
           items:
@@ -82,8 +83,10 @@ settings:
             - '-'
             - Source
   plugins:
+    language:
+      language_list: un
     stylescombo:
-      styles: ''
+      styles: 'div.top|Top Link'
 image_upload:
   status: true
   scheme: public
