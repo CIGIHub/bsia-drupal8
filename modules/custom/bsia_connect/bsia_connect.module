@@ -36,7 +36,19 @@ function bsia_connect_mail($key, &$message, $params) {
           //programs are checkboxes, either a 0 or the key.
       		foreach ($programs as $key => $value) {
       			if (!empty($value)) {
-      				$signup_message .= $value ."<br>";
+							if($value == 'phd'){
+								$program_name = 'PhD in Global Governance';
+							}
+							elseif($value == 'magg'){
+								$program_name = 'Master of Arts in Global Governance (MAGG)';
+							}
+							elseif($value == 'mipp'){
+								$program_name = 'Master of International Public Policy (MIPP)';
+							}
+							elseif($value == 'mba_mipp'){
+								$program_name = 'Master of Business Administration (MBA)/Master of International Public Policy (MIPP)';
+							}
+      				$signup_message .= $program_name ."<br>";
       				break;
       			}
       		}
