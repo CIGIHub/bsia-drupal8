@@ -44,10 +44,13 @@ class DegreeMenu extends BlockBase {
     );
 
     $menu_links = array();
+    $logger = \Drupal::logger('bsia_degreemenu');
 
     foreach( $links as $key=>$data ){
+      $length = count($data);
+      //$logger->notice("length:" . print_r($length, true));
 
-      if($data[2]){
+      if($length > 2){
         $item = "<li class='menu-item menu-item--expanded'><a href=" . $data[1] . "/>" . $data[0] . "</a>";
       }
       else{
@@ -57,7 +60,7 @@ class DegreeMenu extends BlockBase {
       array_push($menu_links, $item);
 
       //if there is a submenu build it
-      if($data[2]){
+      if($length > 2){
         array_push($menu_links, "<ul class='menu'>");
         foreach($data[2] as $key2=>$data2){
           $subitem = "<li class='menu-item'><a href=" . $data2[1] . "/>" . $data2[0] . "</a></li>";

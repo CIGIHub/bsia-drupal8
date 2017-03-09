@@ -51,6 +51,7 @@ class BSIAConnectSubmissionForm extends FormBase {
 				"phd" => t('PhD in Global Governance'),
 				"magg" => t('Master of Arts in Global Governance (MAGG)'),
 				"mipp" => t('Master of International Public Policy (MIPP)'),
+				"mba_mipp" => t('Master of Business Administration (MBA)/Master of International Public Policy (MIPP)'),
 			),
 			'#title' => $this->t('Find out more about our programs?'),
 		);
@@ -105,7 +106,7 @@ class BSIAConnectSubmissionForm extends FormBase {
 		//$form['actions'] = array('#type' => 'actions');
 		$form['form-contact']['submit'] = array(
 			'#type' => 'submit',
-			'#value' => $this->t('Sign Up'),
+			'#value' => $this->t('Submit'),
 			'#button_type' => 'primary',
 		);
 
