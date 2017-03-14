@@ -29,6 +29,7 @@ dependencies:
     - field.field.node.person.field_link_text
     - field.field.node.person.field_linkedin_url
     - field.field.node.person.field_office_location
+    - field.field.node.person.field_paragraph_publications
     - field.field.node.person.field_person_position
     - field.field.node.person.field_phone
     - field.field.node.person.field_photo
@@ -53,6 +54,7 @@ dependencies:
     - image.style.square_100x100
     - node.type.person
   module:
+    - entity_reference_revisions
     - file
     - image
     - options
@@ -231,6 +233,14 @@ content:
     label: inline
     settings:
       link_to_entity: false
+    third_party_settings: {  }
+  field_paragraph_publications:
+    type: entity_reference_revisions_entity_view
+    weight: 105
+    label: above
+    settings:
+      view_mode: default
+      link: ''
     third_party_settings: {  }
   field_person_position:
     type: string

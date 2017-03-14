@@ -1,0 +1,30 @@
+uuid: c2956647-e898-4ced-a026-4e24a745367a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraph_publications
+    - node.type.person
+    - paragraphs.paragraphs_type.publication
+  module:
+    - entity_reference_revisions
+id: node.person.field_paragraph_publications
+field_name: field_paragraph_publications
+entity_type: node
+bundle: person
+label: Publications
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      publication: publication
+    target_bundles_drag_drop:
+      publication:
+        enabled: true
+        weight: 2
+field_type: entity_reference_revisions

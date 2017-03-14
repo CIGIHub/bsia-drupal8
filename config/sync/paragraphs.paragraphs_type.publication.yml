@@ -1,0 +1,7 @@
+uuid: cde06c18-f4cc-41bb-b35f-677a33cbc683
+langcode: en
+status: true
+dependencies: {  }
+id: publication
+label: Publication
+behavior_plugins: {  }

@@ -1,0 +1,90 @@
+uuid: a3d85380-7030-4ded-b8fb-9b702d4d4ff8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.publication.field_publication_author
+    - field.field.paragraph.publication.field_publication_author_2
+    - field.field.paragraph.publication.field_publication_date
+    - field.field.paragraph.publication.field_publication_location
+    - field.field.paragraph.publication.field_publication_publisher_info
+    - field.field.paragraph.publication.field_publication_title
+    - field.field.paragraph.publication.field_publication_title_2
+    - field.field.paragraph.publication.field_publication_type
+    - field.field.paragraph.publication.field_publication_url
+    - paragraphs.paragraphs_type.publication
+  module:
+    - link
+    - options
+id: paragraph.publication.default
+targetEntityType: paragraph
+bundle: publication
+mode: default
+content:
+  field_publication_author:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_publication_author_2:
+    weight: 5
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_publication_date:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_publication_location:
+    weight: 6
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_publication_publisher_info:
+    weight: 7
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_publication_title:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_publication_title_2:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_publication_type:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+  field_publication_url:
+    weight: 8
+    label: hidden
+    settings:
+      trim_length: 80
+      rel: nofollow
+      target: _blank
+      url_only: false
+      url_plain: false
+    third_party_settings: {  }
+    type: link
+hidden: {  }
