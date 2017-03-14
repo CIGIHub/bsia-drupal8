@@ -1,0 +1,6 @@
+name: Field Collection Migration
+description: 'Migrates content from the unsupported Field Collection into Paragraphs.'
+package: Post Migration
+
+type: module
+core: 8.x
