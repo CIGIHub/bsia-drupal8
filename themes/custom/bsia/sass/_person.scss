@@ -31,6 +31,16 @@
       margin-bottom: 10px;
     }
   }
+  
+  .paragraph {
+    div {
+      display: inline;
+
+      &:after {
+        content:".";
+      }
+    }
+  }
 }
 
 .position{
@@ -346,4 +356,20 @@ ul.student-list{
     }
   }
 
+}
+
+/*person publications in paragraph form */
+.node--type-person.node--view-mode-full {
+  .paragraph {
+    padding: 4px 0;
+
+    div {
+      display: inline;
+
+      &:after {
+        content: ".";
+      }
+    }
+
+  }
 }
