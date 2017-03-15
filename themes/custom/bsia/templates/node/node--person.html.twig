@@ -23,7 +23,7 @@
     {% if view_mode == 'teaser' %}
       <div class="profile">
         {% if content.field_photo %}
-          <div class="image">{{ content.field_photo }}</div>
+            <div class="image"><a href="{{ url }}">{{ content.field_photo }}</a></div>
         {% endif %}
         <div class="text">
           <h2><a href="{{ url }}" rel="bookmark">{{ label }}</a></h2>
