@@ -29,6 +29,7 @@ dependencies:
     - field.field.node.person.field_link_text
     - field.field.node.person.field_linkedin_url
     - field.field.node.person.field_office_location
+    - field.field.node.person.field_paragraph_publications
     - field.field.node.person.field_person_position
     - field.field.node.person.field_phone
     - field.field.node.person.field_photo
@@ -42,7 +43,6 @@ dependencies:
     - field.field.node.person.field_surname
     - field.field.node.person.field_testimonial
     - field.field.node.person.field_twitter_url
-    - field.field.node.person.field_user_link
     - field.field.node.person.field_website
     - field.field.node.person.field_year_graduated
     - field.field.node.person.field_youtube_id
@@ -53,6 +53,7 @@ dependencies:
     - image.style.square_100x100
     - node.type.person
   module:
+    - entity_reference_revisions
     - file
     - image
     - options
@@ -232,6 +233,14 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+  field_paragraph_publications:
+    type: entity_reference_revisions_entity_view
+    weight: 105
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
   field_person_position:
     type: string
     weight: 25
@@ -358,6 +367,5 @@ hidden:
   field_current_student: true
   field_position: true
   field_subtitle: true
-  field_user_link: true
   langcode: true
   links: true
