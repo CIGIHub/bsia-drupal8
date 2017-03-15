@@ -1877,10 +1877,6 @@ footer {
     text-transform: uppercase; }
   .node--type-person.node--view-mode-full .profile .description {
     margin-bottom: 10px; }
-.node--type-person.node--view-mode-full .paragraph div {
-  display: inline; }
-  .node--type-person.node--view-mode-full .paragraph div:after {
-    content: "."; }
 
 .position {
   font-style: italic;
@@ -2105,8 +2101,6 @@ ul.student-list {
   padding: 4px 0; }
   .node--type-person.node--view-mode-full .paragraph div {
     display: inline; }
-    .node--type-person.node--view-mode-full .paragraph div:after {
-      content: "."; }
 
 /*******   CALENDAR    *******/
 #block-views-block-event-calendar-block-1 .pager,

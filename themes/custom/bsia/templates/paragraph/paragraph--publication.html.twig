@@ -58,69 +58,68 @@
         {% set location = content.field_publication_location %}
         {% set publisher = content.field_publication_publisher_info %}
 
-        {% if author %}
-            <span>{{author}}</span>
+        {% if author|render|trim is not empty %}
+            <span>{% spaceless %}{{author}}{% endspaceless %}</span>.
         {% endif %}
 
-        {% if year %}
-            <span>{{year}}</span>
+        {% if year|render|trim is not empty %}
+            <span>{% spaceless %}{{year}}{% endspaceless %}</span>.
         {% endif %}
 
-        {% if title %}
+        {% if title|render|trim is not empty %}
             {% if reference_type in italicTitles %}
                 <span><em>{% spaceless %}
 
 				{% if url and not urlTitle  %}
-                            <span><a href="{{ url }}">{{ title }}</a></span>
+                    <span><a href="{{ url }}">{{ title }}</a></span>
+                {% else %}
+                    {{ title }}
+                {% endif %}
 
-                        {% else %}
-                            {{ title }}
-                        {% endif %}
-
-				{% endspaceless %}</em></span>
+				{% endspaceless %}</em></span>.
             {% else %}
                 <span>"{% spaceless %}
 
-                    {% if url and not urlTitle  %}
-                        <span><a href="{{ url }}">{{ title }}</a></span>
-                    {% else %}
-                        {{ title }}
-                    {% endif %}
+                {% if url and not urlTitle  %}
+                    <span><a href="{{ url }}">{{ title }}</a></span>
+                {% else %}
+                    {{ title }}
+                {% endif %}
 
-                    {% endspaceless %}"</span>
+                {% endspaceless %}"</span>.
             {% endif %}
         {% endif %}
 
-        {% if secondary_title and (reference_type == "report" or reference_type == "thesis")  %}
-            <span>{{secondary_title}}</span>
-        {% elseif secondary_title and reference_type != "book"  and reference_type != "edited_book" %}
+        {% if secondary_title|render|trim is not empty and (reference_type == "report" or reference_type == "thesis")  %}
+            <span>{% spaceless %}{{secondary_title}}{% endspaceless %}</span>.
+        {% elseif secondary_title|render|trim is not empty and reference_type != "book"  and reference_type != "edited_book" %}
             {% if (reference_type == "generic" or reference_type == "book_section" )  %}
                 {# In #}
             {% endif %}
-            <span><em>{{secondary_title}}</em></span>
+            <span><em>{% spaceless %}{{secondary_title}}{% endspaceless %}</em></span>.
         {% endif %}
 
-        {% if secondary_author %}
+        {% if secondary_author|render|trim is not empty %}
             {% if (reference_type == "generic" or reference_type == "book_section" or reference_type == "book" or reference_type == "e_book" or reference_type == "edited_book" )  %}
                 {# Edited by #}
             {% endif %}
-            <span>{{secondary_author}}</span>
+            <span>{% spaceless %}{{secondary_author}}{% endspaceless %}</span>.
         {% endif %}
 
-        {% if location %}
-            <span>{{location}}</span>
+        {% if location|render|trim is not empty %}
+            <span>{% spaceless %}{{location}}{% endspaceless %}</span>.
         {% endif %}
 
-        {% if secondary_title and ( reference_type == "book" or reference_type == "edited_book" ) %}
-            <span><em>{{secondary_title}}</em></span>
+        {% if secondary_title|render|trim is not empty and ( reference_type == "book" or reference_type == "edited_book" ) %}
+            <span><em>{% spaceless %}{{secondary_title}}{% endspaceless %}</em></span>.
         {% endif %}
 
-        {% if publisher %}
-            <span>{{publisher}}</span>
+        {% if publisher|render|trim is not empty %}
+            <span>{% spaceless %}{{publisher}}{% endspaceless %}</span>.
         {% endif %}
 
         {% if url and urlTitle %}
-            <span><a href="{{ url }}">{{ urlTitle }}</a></span>
+            <span><a href="{{ url }}">{{ urlTitle }}</a></span>.
         {% endif %}
 
     {% endblock %}

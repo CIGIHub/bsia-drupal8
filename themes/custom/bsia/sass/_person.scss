@@ -31,16 +31,6 @@
       margin-bottom: 10px;
     }
   }
-  
-  .paragraph {
-    div {
-      display: inline;
-
-      &:after {
-        content:".";
-      }
-    }
-  }
 }
 
 .position{
@@ -365,11 +355,6 @@ ul.student-list{
 
     div {
       display: inline;
-
-      &:after {
-        content: ".";
-      }
     }
-
   }
 }
