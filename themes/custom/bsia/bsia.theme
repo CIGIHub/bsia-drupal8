@@ -423,4 +423,14 @@ function speakers_or_authors($node_speakers_linked, $node_speakers_unlinked, $di
 	
 }
 
-?>
+function bsia_preprocess_paragraph(&$variables) {
+
+    /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+    $paragraph = $variables['paragraph'];
+
+    if($paragraph->get("field_publication_url")->getValue()) {
+        $variables['url'] = $paragraph->get("field_publication_url")->getValue()[0]['uri'];
+        $variables['url_title'] = $paragraph->get("field_publication_url")->getValue()[0]['title'];
+    }
+
+}

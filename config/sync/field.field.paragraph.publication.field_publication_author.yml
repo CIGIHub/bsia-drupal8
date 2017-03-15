@@ -1,0 +1,19 @@
+uuid: 5b9092e2-c312-4a7c-8ff2-bfed20121285
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_publication_author
+    - paragraphs.paragraphs_type.publication
+id: paragraph.publication.field_publication_author
+field_name: field_publication_author
+entity_type: paragraph
+bundle: publication
+label: Author
+description: 'Also used as Editor (for Edited Book) or Reporter (for Newspaper Article).'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

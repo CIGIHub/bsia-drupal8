@@ -1,0 +1,63 @@
+<?php
+
+/**
+ * Implements hook_install()
+ */
+function bsia_fc_migration_install() {
+
+
+    \Drupal\Core\Database\Database::setActiveConnection();
+    $connection = \Drupal\Core\Database\Database::getConnection();
+
+    $results = $connection->query('select entity_id, field_collection_publication_target_id from node__field_collection_publication;')->fetchAll();
+
+    $logger = \Drupal::logger('fc_migration');
+
+    if ($results) {
+        foreach ($results as $record) {
+
+            //load the field collection and create a paragraph entity with the same data.
+            /** @var \Drupal\field_collection\Entity\FieldCollectionItem $fc */
+            $fc = Drupal\field_collection\Entity\FieldCollectionItem::load($record->field_collection_publication_target_id);
+
+            $paragraph = \Drupal\paragraphs\Entity\Paragraph::create([
+                'type' => 'publication',
+                'parent_id' => $record->entity_id,
+                'parent_type' => 'node',
+            ]);
+
+            //$logger->notice("Field collection to be used: <pre>" . print_r($fc->toArray(), true) . "</pre>");
+            //$logger->notice("publication author value: <pre>" . print_r($fc->get("field_publication_author")->getValue(), true) . "</pre>");
+
+            $paragraph->set("field_publication_author",$fc->get("field_publication_author")->getValue());
+            $paragraph->set("field_publication_location",$fc->get("field_publication_location")->getValue());
+            $paragraph->set("field_publication_publisher_info",$fc->get("field_publication_publisher_info")->getValue());
+            $paragraph->set("field_publication_type",$fc->get("field_publication_type")->getValue());
+            $paragraph->set("field_publication_author_2",$fc->get("field_publication_author_2")->getValue());
+            $paragraph->set("field_publication_title_2",$fc->get("field_publication_title_2")->getValue());
+            $paragraph->set("field_publication_title",$fc->get("field_publication_title")->getValue());
+            $paragraph->set("field_publication_url",$fc->get("field_publication_url")->getValue());
+            $paragraph->set("field_publication_date",$fc->get("field_publication_date")->getValue());
+
+            $paragraph->setOwnerId(1); //set to administrator
+            $paragraph->save();
+
+            //$logger->notice("Paragraph to be saved on node: <pre>" . print_r($paragraph->toArray(), true) . "</pre>");
+
+            $node = \Drupal\node\Entity\Node::load($record->entity_id);
+
+            // Grab any existing paragraphs from the node, and add this one
+            $current = $node->get('field_paragraph_publications')->getValue();
+            $current[] = array(
+                'target_id' => $paragraph->id(),
+                'target_revision_id' => $paragraph->getRevisionId(),
+            );
+
+            $node->set("field_paragraph_publications", $current);
+            $node->save();
+
+        }
+
+    }
+    $logger->notice(t("Updated " . count($results) . " field collections."));
+}
