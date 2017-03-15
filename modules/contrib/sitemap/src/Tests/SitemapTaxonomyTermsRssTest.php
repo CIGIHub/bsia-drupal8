@@ -2,22 +2,19 @@
 
 namespace Drupal\sitemap\Tests;
 
-use Drupal\Component\Utility\Unicode;
-use Drupal\simpletest\WebTestBase;
-
 /**
  * Tests the display of RSS links based on sitemap settings.
  *
  * @group sitemap
  */
-class SitemapRssTest extends WebTestBase {
+class SitemapTaxonomyTermsRssTest extends SitemapTaxonomyTestBase {
 
   /**
    * Modules to enable.
    *
    * @var array
    */
-  public static $modules = array('sitemap');
+  public static $modules = array('sitemap', 'node', 'taxonomy');
 
   /**
    * {@inheritdoc}
@@ -25,73 +22,28 @@ class SitemapRssTest extends WebTestBase {
   protected function setUp() {
     parent::setUp();
 
-    // Create user, then login.
-    $this->user = $this->drupalCreateUser(array(
-      'administer sitemap',
-      'access sitemap',
-    ));
-    $this->drupalLogin($this->user);
-  }
+    // Create terms
+    $this->terms = $this->createTerms($this->vocabulary);
 
-  /**
-   * Tests RSS feed for front page.
-   */
-  public function testRssFeedForFrontPage() {
-    // Assert default RSS feed for front page.
-    $this->drupalGet('/sitemap');
-    $this->assertLinkByHref('/rss.xml');
-
-    // Change RSS feed for front page.
-    $href = Unicode::strtolower($this->randomMachineName());
+    // Set to show all taxonomy terms, even if they are not assigned to any
+    // nodes.
     $edit = array(
-      'rss_front' => $href,
+      'term_threshold' => -1,
     );
     $this->drupalPostForm('admin/config/search/sitemap', $edit, t('Save configuration'));
 
-    // Assert that RSS feed for front page has been changed.
-    $this->drupalGet('/sitemap');
-    $this->assertLinkByHref('/' . $href);
   }
 
   /**
    * Tests included RSS links.
    */
   public function testIncludeRssLinks() {
-    /*$terms = $this->createTerms($this->vocabulary);
-    $feed = '/taxonomy/term/@term/feed';
-    $tags = array();
 
-    // Get tags from terms.
-    foreach ($terms as $term) {
-      $tags[] = $term->label();
-    }
-
-    // Create dummy node.
-    $title = $this->randomString();
-    $edit = array(
-      'title[0][value]' => $title,
-      $this->field_tags_name . '[target_id]' => implode(',', $tags),
-    );
-    $this->drupalPostForm('node/add/article', $edit, t('Save and publish'));
-*/
-    // Assert that RSS link for front page is included in the sitemap.
+    // Assert that RSS links for terms are included in the sitemap.
     $this->drupalGet('/sitemap');
-    $this->assertLinkByHref('/rss.xml');
-/*
-    // Assert that RSS links are included in the sitemap.
-    foreach ($terms as $term) {
+    foreach ($this->terms as $term) {
       $this->assertLinkByHref('/taxonomy/term/' . $term->id() . '/feed');
     }
-*/
-    // Change the settings to place RSS links on the left.
-    $edit = array(
-      'show_rss_links' => 2,
-    );
-    $this->drupalPostForm('admin/config/search/sitemap', $edit, t('Save configuration'));
-
-    // Assert that the 'sitemap-rss-left' class is found.
-    $this->drupalGet('/sitemap');
-    $this->assertRaw('sitemap-rss-left', 'Class .sitemap-rss-left found.');
 
     // Change module not to include RSS links.
     $edit = array(
@@ -99,43 +51,20 @@ class SitemapRssTest extends WebTestBase {
     );
     $this->drupalPostForm('admin/config/search/sitemap', $edit, t('Save configuration'));
 
-    // Assert that RSS link for front page is not included in the sitemap.
-    $this->drupalGet('/sitemap');
-    $this->assertNoLinkByHref('/rss.xml');
-/*
     // Assert that RSS links are not included in the sitemap.
-    foreach ($terms as $term) {
+    $this->drupalGet('/sitemap');
+    foreach ($this->terms as $term) {
       $this->assertNoLinkByHref('/taxonomy/term/' . $term->id() . '/feed');
-    }*/
+    }
   }
 
   /**
    * Tests RSS feed depth.
-   *//*
+   */
   public function testRssFeedDepth() {
-    $terms = $this->createTerms($this->vocabulary);
-    $tags = array();
+    $terms = $this->terms;
 
-    // Get tags from terms.
-    foreach ($terms as $term) {
-      $tags[] = $term->label();
-    }
-
-    // Assert that all RSS links are not included in the sitemap.
-    $this->drupalGet('sitemap');
-    foreach ($terms as $term) {
-      $this->assertNoLinkByHref('/taxonomy/term/' . $term->id() . '/feed');
-    }
-
-    // Create dummy node.
-    $title = $this->randomString();
-    $edit = array(
-      'title[0][value]' => $title,
-      $this->field_tags_name . '[target_id]' => implode(',', $tags),
-    );
-    $this->drupalPostForm('node/add/article', $edit, t('Save and publish'));
-
-    // Change RSS feed depth to -1.
+    // Set RSS feed depth to -1.
     $edit = array(
       'rss_taxonomy' => -1,
     );
@@ -195,6 +124,6 @@ class SitemapRssTest extends WebTestBase {
     foreach ($terms as $term) {
       $this->assertLinkByHref('/taxonomy/term/' . $term->id() . '/feed');
     }
-  }*/
+  }
 
 }
