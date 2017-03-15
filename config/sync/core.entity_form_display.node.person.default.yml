@@ -29,6 +29,7 @@ dependencies:
     - field.field.node.person.field_link_text
     - field.field.node.person.field_linkedin_url
     - field.field.node.person.field_office_location
+    - field.field.node.person.field_paragraph_publications
     - field.field.node.person.field_person_position
     - field.field.node.person.field_phone
     - field.field.node.person.field_photo
@@ -42,7 +43,6 @@ dependencies:
     - field.field.node.person.field_surname
     - field.field.node.person.field_testimonial
     - field.field.node.person.field_twitter_url
-    - field.field.node.person.field_user_link
     - field.field.node.person.field_website
     - field.field.node.person.field_year_graduated
     - field.field.node.person.field_youtube_id
@@ -57,6 +57,7 @@ dependencies:
     - field_group
     - file
     - image
+    - paragraphs
     - path
     - text
 third_party_settings:
@@ -122,6 +123,7 @@ third_party_settings:
         - topics
         - field_research_focus
         - field_collection_publication
+        - field_paragraph_publications
         - upload
       parent_name: ''
       weight: 14
@@ -274,7 +276,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_graduate_title:
-    weight: 17
+    weight: 18
     type: string_textfield
     settings:
       size: 60
@@ -307,6 +309,17 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  field_paragraph_publications:
+    type: entity_reference_paragraphs
+    weight: 21
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
     third_party_settings: {  }
   field_person_position:
     weight: 9
@@ -405,7 +418,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_youtube_id:
-    weight: 18
+    weight: 19
     type: string_textfield
     settings:
       size: 60
@@ -455,7 +468,7 @@ content:
     settings:
       progress_indicator: throbber
     type: file_generic
-    weight: 21
+    weight: 22
     third_party_settings: {  }
 hidden:
   field_courses: true
@@ -463,6 +476,5 @@ hidden:
   field_feature_area: true
   field_link_text: true
   field_publications: true
-  field_user_link: true
   promote: true
   sticky: true
