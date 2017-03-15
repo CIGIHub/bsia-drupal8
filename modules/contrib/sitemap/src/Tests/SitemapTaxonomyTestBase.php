@@ -1,20 +1,15 @@
 <?php
 
-/**
- * @file
- * Definition of Drupal\sitemap\Tests\SitemapTestBase.
- */
-
 namespace Drupal\sitemap\Tests;
 
+use Drupal\taxonomy\Tests\TaxonomyTestBase;
 use Drupal\Core\Entity\Entity\EntityFormDisplay;
 use Drupal\Core\Field\FieldStorageDefinitionInterface;
-use Drupal\taxonomy\Tests\TaxonomyTestBase;
 
 /**
  * Base class for some Sitemap test cases.
  */
-abstract class SitemapTestBase extends TaxonomyTestBase {
+abstract class SitemapTaxonomyTestBase extends TaxonomyTestBase {
 
   /**
    * Modules to enable.
@@ -24,30 +19,34 @@ abstract class SitemapTestBase extends TaxonomyTestBase {
   public static $modules = array('sitemap', 'node', 'taxonomy');
 
   /**
+   * A vocabulary entity.
+   *
+   * @var \Drupal\taxonomy\Entity\Vocabulary
+   */
+  protected $vocabulary;
+
+  /**
+   * A string to identify the field name for testing terms.
+   *
+   * @var string
+   */
+  protected $field_tags_name;
+
+  /**
+   * An array of taxonomy terms.
+   *
+   * @var array
+   */
+  protected $terms;
+
+  /**
    * {@inheritdoc}
    */
   protected function setUp() {
     parent::setUp();
 
-    $this->tags = $this->getTags();
+    // Create a vocabulary.
     $this->vocabulary = $this->createVocabulary();
-    $this->field_tags_name = 'field_' . $this->vocabulary->id();
-
-    $handler_settings = array(
-      'target_bundles' => array(
-        $this->vocabulary->id() => $this->vocabulary->id(),
-      ),
-      'auto_create' => TRUE,
-    );
-
-    // Create the entity reference field for terms.
-    $this->createEntityReferenceField('node', 'article', $this->field_tags_name, 'Tags', 'taxonomy_term', 'default', $handler_settings, FieldStorageDefinitionInterface::CARDINALITY_UNLIMITED);
-    // Configure for autocomplete display.
-    EntityFormDisplay::load('node.article.default')
-      ->setComponent($this->field_tags_name, array(
-        'type' => 'entity_reference_autocomplete_tags',
-      ))
-      ->save();
 
     // Create user, then login.
     $this->user = $this->drupalCreateUser(array(
@@ -59,7 +58,7 @@ abstract class SitemapTestBase extends TaxonomyTestBase {
     ));
     $this->drupalLogin($this->user);
 
-    // Configure the sitemap to show categories.
+    // Configure the sitemap to display the vocabulary.
     $vid = $this->vocabulary->id();
     $edit = array(
       "show_vocabularies[$vid]" => $vid,
@@ -68,23 +67,9 @@ abstract class SitemapTestBase extends TaxonomyTestBase {
   }
 
   /**
-   * Get tags.
-   *
-   * @return array
-   *   List of tags.
-   */
-  protected function getTags() {
-    return array(
-      $this->randomMachineName(),
-      $this->randomMachineName(),
-      $this->randomMachineName(),
-    );
-  }
-
-  /**
    * Create taxonomy terms.
    *
-   * @param object $vocabulary
+   * @param \Drupal\taxonomy\Entity\Vocabulary $vocabulary
    *   Taxonomy vocabulary.
    *
    * @return array
@@ -96,6 +81,7 @@ abstract class SitemapTestBase extends TaxonomyTestBase {
       $this->createTerm($vocabulary),
       $this->createTerm($vocabulary),
     );
+    $this->terms = $terms;
 
     // Make term 2 child of term 1, term 3 child of term 2.
     $edit = array(
@@ -122,20 +108,53 @@ abstract class SitemapTestBase extends TaxonomyTestBase {
     return $terms;
   }
 
-
   /**
    * Create node and assign tags to it.
    *
-   * @param array $tags
-   *   Tags to assign to node.
+   * @param $terms array
+   *   An array of taxonomy terms to apply to the node.
    */
-  protected function createNode($tags = array()) {
+  protected function createNodeWithTerms($terms = array()) {
+    if (empty($terms)) {
+      $this->terms = $this->createTerms($this->vocabulary);
+    }
+
+    // Add an entityreference field to a node bundle.
+    $this->addEntityreferenceField();
+
+    $values = [];
+    foreach ($terms as $term) {
+      $values[] = $term->getName();
+    }
     $title = $this->randomString();
     $edit = array(
       'title[0][value]' => $title,
-      $this->field_tags_name . '[target_id]' => implode(',', $tags),
+      $this->field_tags_name . '[target_id]' => implode(',', $values),
     );
     $this->drupalPostForm('node/add/article', $edit, t('Save and publish'));
   }
+
+  /**
+   * Add an entityreference field to tag nodes
+   */
+   protected function addEntityreferenceField() {
+     $this->field_tags_name = 'field_' . $this->vocabulary->id();
+
+     $handler_settings = array(
+       'target_bundles' => array(
+         $this->vocabulary->id() => $this->vocabulary->id(),
+       ),
+       'auto_create' => TRUE,
+     );
+
+     // Create the entity reference field for terms.
+     $this->createEntityReferenceField('node', 'article', $this->field_tags_name, 'Tags', 'taxonomy_term', 'default', $handler_settings, FieldStorageDefinitionInterface::CARDINALITY_UNLIMITED);
+     // Configure for autocomplete display.
+     EntityFormDisplay::load('node.article.default')
+       ->setComponent($this->field_tags_name, array(
+         'type' => 'entity_reference_autocomplete_tags',
+       ))
+       ->save();
+   }
 
 }
