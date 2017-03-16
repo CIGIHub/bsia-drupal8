@@ -12,7 +12,6 @@ module:
   calendar: 0
   calendar_datetime: 0
   ckeditor: 0
-  code_driven_devel: 0
   color: 0
   config: 0
   contextual: 0
@@ -31,21 +30,16 @@ module:
   file: 0
   filter: 0
   google_analytics: 0
-  graduate_title: 0
   help: 0
   history: 0
   image: 0
   imce: 0
-  import_caption: 0
-  import_publication: 0
   inline_entity_form: 0
   language: 0
   link: 0
   menu_ui: 0
   metatag: 0
   metatag_open_graph: 0
-  migrate: 0
-  migrate_drupal: 0
   node: 0
   options: 0
   page_cache: 0
