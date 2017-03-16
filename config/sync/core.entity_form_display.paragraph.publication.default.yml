@@ -1,0 +1,87 @@
+uuid: b3b6f695-e07a-4655-a7f5-58e5101a1ac7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.publication.field_publication_author
+    - field.field.paragraph.publication.field_publication_author_2
+    - field.field.paragraph.publication.field_publication_date
+    - field.field.paragraph.publication.field_publication_location
+    - field.field.paragraph.publication.field_publication_publisher_info
+    - field.field.paragraph.publication.field_publication_title
+    - field.field.paragraph.publication.field_publication_title_2
+    - field.field.paragraph.publication.field_publication_type
+    - field.field.paragraph.publication.field_publication_url
+    - paragraphs.paragraphs_type.publication
+  module:
+    - link
+id: paragraph.publication.default
+targetEntityType: paragraph
+bundle: publication
+mode: default
+content:
+  field_publication_author:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_publication_author_2:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_publication_date:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_publication_location:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_publication_publisher_info:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_publication_title:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_publication_title_2:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_publication_type:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_publication_url:
+    weight: 8
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+hidden:
+  created: true
+  status: true
+  uid: true

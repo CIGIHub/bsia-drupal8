@@ -72,14 +72,14 @@ third_party_settings:
         - field_position
         - field_alternative_url
       parent_name: ''
-      weight: 17
+      weight: 18
       label: 'Homepage Feature'
-      format_type: fieldset
+      format_type: details
       format_settings:
-        description: ''
+        open: false
+        required_fields: true
         classes: ''
         id: ''
-        required_fields: true
     group_contact:
       children:
         - field_department
@@ -90,14 +90,14 @@ third_party_settings:
         - field_twitter_url
         - field_linkedin_url
       parent_name: ''
-      weight: 12
+      weight: 13
       label: 'Contact Info'
-      format_type: fieldset
+      format_type: details
       format_settings:
-        description: ''
+        open: false
+        required_fields: true
         classes: ''
         id: ''
-        required_fields: true
     group_student:
       children:
         - field_testimonial
@@ -106,14 +106,14 @@ third_party_settings:
         - field_graduate_title
         - field_youtube_id
       parent_name: ''
-      weight: 15
+      weight: 17
       label: Student
-      format_type: fieldset
+      format_type: details
       format_settings:
-        description: ''
+        open: false
+        required_fields: true
         classes: ''
         id: ''
-        required_fields: true
     group_background:
       children:
         - field_awards
@@ -122,32 +122,43 @@ third_party_settings:
         - field_languages
         - topics
         - field_research_focus
-        - field_collection_publication
-        - field_paragraph_publications
         - upload
       parent_name: ''
-      weight: 14
+      weight: 15
       label: Background
-      format_type: fieldset
+      format_type: details
       format_settings:
-        description: ''
+        open: false
+        required_fields: true
         classes: ''
         id: ''
-        required_fields: true
     group_photo:
       children:
         - field_photo
         - field_square_image
         - field_caption
       parent_name: ''
-      weight: 13
+      weight: 14
       label: Photo
-      format_type: fieldset
+      format_type: details
       format_settings:
-        description: ''
+        open: false
+        required_fields: true
         classes: ''
         id: ''
+    group_publications:
+      children:
+        - field_collection_publication
+        - field_paragraph_publications
+      parent_name: ''
+      weight: 16
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
         required_fields: true
+      label: Publications
 id: node.person.default
 targetEntityType: node
 bundle: person
@@ -155,7 +166,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 8
+    weight: 9
     settings:
       rows: 9
       placeholder: ''
@@ -163,7 +174,7 @@ content:
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 19
+    weight: 20
     settings: {  }
     third_party_settings: {  }
   field_alternative_url:
@@ -174,7 +185,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_archived:
-    weight: 4
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -186,12 +197,12 @@ content:
       rows: 5
     third_party_settings: {  }
   field_board_order:
-    weight: 11
+    weight: 12
     type: options_select
     settings: {  }
     third_party_settings: {  }
   field_board_position:
-    weight: 10
+    weight: 11
     type: string_textfield
     settings:
       size: 60
@@ -322,7 +333,7 @@ content:
       default_paragraph_type: ''
     third_party_settings: {  }
   field_person_position:
-    weight: 9
+    weight: 10
     type: string_textfield
     settings:
       size: 60
@@ -362,7 +373,7 @@ content:
     third_party_settings: {  }
     type: string_textarea
   field_short_bio:
-    weight: 7
+    weight: 8
     settings:
       rows: 3
       placeholder: ''
@@ -376,14 +387,14 @@ content:
     third_party_settings: {  }
     type: image_image
   field_subtitle:
-    weight: 3
+    weight: 4
     type: string_textfield
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
   field_surname:
-    weight: 2
+    weight: 3
     type: string_textfield
     settings:
       size: 60
@@ -431,17 +442,17 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 20
+    weight: 21
     settings: {  }
     third_party_settings: {  }
   person_type:
     type: options_select
-    weight: 5
+    weight: 6
     settings: {  }
     third_party_settings: {  }
   program_type:
     type: options_select
-    weight: 6
+    weight: 7
     settings: {  }
     third_party_settings: {  }
   title:
@@ -458,7 +469,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 18
+    weight: 19
     settings:
       match_operator: CONTAINS
       size: 60

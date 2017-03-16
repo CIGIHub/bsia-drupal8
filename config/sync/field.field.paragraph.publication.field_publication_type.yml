@@ -1,0 +1,21 @@
+uuid: 4f19372a-7c65-4265-96ab-d75a02170da5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_publication_type
+    - paragraphs.paragraphs_type.publication
+  module:
+    - options
+id: paragraph.publication.field_publication_type
+field_name: field_publication_type
+entity_type: paragraph
+bundle: publication
+label: 'Reference Type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

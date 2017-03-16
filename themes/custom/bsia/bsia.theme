@@ -50,7 +50,6 @@ function bsia_preprocess_html(&$variables){
 	foreach (range('A', 'Z') as $letter){
 		if ($current_path == "/faculty/" . $letter) {
 			$showFacultyHeader = true;
-			$showFacultySubMenu = true;
 			break;
 		}
 	}
@@ -79,16 +78,6 @@ function bsia_preprocess_html(&$variables){
 			->view($block);
 		$variables['page']['content_header'][] = $block_content;
 	}
-
-	if ($showFacultySubMenu) {
-		$block = \Drupal\block\Entity\Block::load('facultysubmenublock');
-		$block_content = \Drupal::entityManager()
-			->getViewBuilder('block')
-			->view($block);
-		$variables['page']['right_menu'][] = $block_content;
-	}
-
-
 }
 
 function bsia_preprocess_node(&$variables){
@@ -423,4 +412,14 @@ function speakers_or_authors($node_speakers_linked, $node_speakers_unlinked, $di
 	
 }
 
-?>
+function bsia_preprocess_paragraph(&$variables) {
+
+    /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+    $paragraph = $variables['paragraph'];
+
+    if($paragraph->get("field_publication_url")->getValue()) {
+        $variables['url'] = $paragraph->get("field_publication_url")->getValue()[0]['uri'];
+        $variables['url_title'] = $paragraph->get("field_publication_url")->getValue()[0]['title'];
+    }
+
+}

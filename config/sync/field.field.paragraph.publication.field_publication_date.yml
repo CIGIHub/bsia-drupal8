@@ -1,0 +1,19 @@
+uuid: 98155dc8-f6c6-420a-af9e-86f7039f40b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_publication_date
+    - paragraphs.paragraphs_type.publication
+id: paragraph.publication.field_publication_date
+field_name: field_publication_date
+entity_type: paragraph
+bundle: publication
+label: Year
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
