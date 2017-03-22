@@ -1,0 +1,6 @@
+name: Publication Reorder by Year
+description: 'Reorders the paragraph publications by date field.'
+package: Post Migration
+
+type: module
+core: 8.x
