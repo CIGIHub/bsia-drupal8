@@ -1,0 +1,62 @@
+<?php
+
+/**
+ * Implements hook_install()
+ */
+function bsia_pub_sort_install() {
+
+
+    \Drupal\Core\Database\Database::setActiveConnection();
+    $connection = \Drupal\Core\Database\Database::getConnection();
+
+    $results = $connection->query('select parent_id from paragraphs_item_field_data group by parent_id')->fetchAll();
+
+    $logger = \Drupal::logger('fc_pub_sort');
+
+    if ($results) {
+
+        foreach ($results as $record) {
+
+            // Go through each entity, and update the weights of the paragraph publications based on the publication year.
+            // Because the delta is part of the PK, we have to keep them unique. => Use big ids
+            bsia_pub_sort_update_pubs($record->parent_id, 1000);
+
+            // Now reset them to normal weights, starting at 0
+            bsia_pub_sort_update_pubs($record->parent_id, 0);
+
+        }
+
+
+    }
+    $logger->notice(t("Updated " . count($results) . " nodes."));
+}
+
+function bsia_pub_sort_update_pubs($entity_id, $delta =0) {
+
+    $logger = \Drupal::logger('fc_pub_sort');
+    $connection = \Drupal\Core\Database\Database::getConnection();
+
+    $subresults = $connection->query("select p.id, p.parent_id, field_publication_date_value, np.delta 
+            from paragraphs_item_field_data p 
+            inner join node__field_paragraph_publications np on p.parent_id = np.entity_id and p.id = np.field_paragraph_publications_target_id  
+            left join paragraph__field_publication_date pdate on pdate.entity_id = np.field_paragraph_publications_target_id 
+            where np.entity_id = " . $entity_id . " 
+            order by field_publication_date_value desc, delta asc")->fetchAll();
+
+
+    foreach ($subresults as $subrecord) {
+        $connection->update('node__field_paragraph_publications')
+            ->fields(array(
+                'delta' => $delta,
+            ))
+            ->condition('bundle', 'person', '=')
+            ->condition('field_paragraph_publications_target_id', $subrecord->id, '=')
+            ->condition('entity_id', $subrecord->parent_id, '=')
+            ->execute();
+
+        $delta++;
+    }
+
+    $logger->notice(t("Updated node " . $entity_id. " with " . count($subresults) ." publications"));
+
+}
