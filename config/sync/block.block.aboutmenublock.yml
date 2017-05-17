@@ -21,6 +21,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "/about/*\r\n/balsillie-school-of-international-affairs\r\n/directors-message"
+    pages: "/about/*\r\n/balsillie-school-of-international-affairs\r\n/directors-message\r\n/annual-reports"
     negate: false
     context_mapping: {  }
