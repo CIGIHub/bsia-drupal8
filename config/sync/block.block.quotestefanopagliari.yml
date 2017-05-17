@@ -10,7 +10,7 @@ dependencies:
     - bsia
 id: quotestefanopagliari
 theme: bsia
-region: '-1'
+region: search
 weight: -23
 provider: null
 plugin: 'block_content:f4b07aea-3d38-4992-8600-fab309ee5f0c'

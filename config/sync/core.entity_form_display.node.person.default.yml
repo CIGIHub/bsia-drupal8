@@ -170,11 +170,13 @@ content:
       placeholder: ''
       summary_rows: 3
     third_party_settings: {  }
+    region: content
   created:
     type: datetime_timestamp
     weight: 20
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_alternative_url:
     weight: 22
     type: string_textfield
@@ -182,11 +184,13 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   field_archived:
     weight: 5
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
   field_awards:
     weight: 14
     type: string_textarea
@@ -194,11 +198,13 @@ content:
       placeholder: ''
       rows: 5
     third_party_settings: {  }
+    region: content
   field_board_order:
     weight: 12
     type: options_select
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_board_position:
     weight: 11
     type: string_textfield
@@ -206,6 +212,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   field_caption:
     weight: 18
     settings:
@@ -213,6 +220,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
   field_credit:
     weight: 19
     type: string_textfield
@@ -220,6 +228,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   field_department:
     weight: 13
     type: string_textfield
@@ -227,6 +236,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   field_education:
     weight: 15
     type: string_textfield
@@ -234,6 +244,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   field_email:
     weight: 15
     type: string_textfield
@@ -241,6 +252,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   field_expertise:
     weight: 16
     type: string_textfield
@@ -248,6 +260,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   field_feature_line:
     weight: 20
     settings:
@@ -255,16 +268,19 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
+    region: content
   field_feature_weight:
     type: options_select
     weight: 17
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_features:
     type: options_select
     weight: 16
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_given_names:
     weight: 1
     type: string_textfield
@@ -272,6 +288,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   field_graduate_title:
     weight: 18
     type: string_textfield
@@ -279,6 +296,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   field_image_page:
     weight: 18
     settings:
@@ -286,6 +304,7 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
   field_languages:
     weight: 17
     type: string_textfield
@@ -293,6 +312,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   field_linkedin_url:
     weight: 20
     type: string_textfield
@@ -300,6 +320,7 @@ content:
       size: 40
       placeholder: ''
     third_party_settings: {  }
+    region: content
   field_office_location:
     weight: 14
     type: string_textfield
@@ -307,6 +328,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   field_paragraph_publications:
     type: entity_reference_paragraphs
     weight: 21
@@ -318,6 +340,7 @@ content:
       form_display_mode: default
       default_paragraph_type: ''
     third_party_settings: {  }
+    region: content
   field_person_position:
     weight: 10
     type: string_textfield
@@ -325,6 +348,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   field_phone:
     weight: 16
     type: string_textfield
@@ -332,6 +356,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   field_photo:
     weight: 16
     settings:
@@ -339,11 +364,13 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
   field_position:
     weight: 21
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
   field_quote:
     weight: 15
     settings:
@@ -351,6 +378,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
+    region: content
   field_research_focus:
     weight: 19
     settings:
@@ -358,6 +386,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
+    region: content
   field_short_bio:
     weight: 8
     settings:
@@ -365,6 +394,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
+    region: content
   field_square_image:
     weight: 17
     settings:
@@ -372,6 +402,7 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
   field_subtitle:
     weight: 4
     type: string_textfield
@@ -379,6 +410,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   field_surname:
     weight: 3
     type: string_textfield
@@ -386,6 +418,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   field_testimonial:
     weight: 14
     settings:
@@ -393,6 +426,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
+    region: content
   field_twitter_url:
     weight: 18
     type: string_textfield
@@ -400,6 +434,7 @@ content:
       size: 40
       placeholder: ''
     third_party_settings: {  }
+    region: content
   field_website:
     weight: 17
     type: string_textfield
@@ -407,6 +442,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   field_year_graduated:
     weight: 16
     type: string_textfield
@@ -414,6 +450,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   field_youtube_id:
     weight: 19
     type: string_textfield
@@ -421,26 +458,31 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   langcode:
     type: language_select
     weight: 2
     settings: {  }
     third_party_settings: {  }
+    region: content
   path:
     type: path
     weight: 21
     settings: {  }
     third_party_settings: {  }
+    region: content
   person_type:
     type: options_select
     weight: 6
     settings: {  }
     third_party_settings: {  }
+    region: content
   program_type:
     type: options_select
     weight: 7
     settings: {  }
     third_party_settings: {  }
+    region: content
   title:
     type: string_textfield
     weight: 0
@@ -448,11 +490,13 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   topics:
     type: options_select
     weight: 18
     settings: {  }
     third_party_settings: {  }
+    region: content
   uid:
     type: entity_reference_autocomplete
     weight: 19
@@ -461,12 +505,14 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   upload:
     settings:
       progress_indicator: throbber
     type: file_generic
     weight: 22
     third_party_settings: {  }
+    region: content
 hidden:
   field_courses: true
   field_current_student: true

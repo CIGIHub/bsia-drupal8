@@ -35,6 +35,7 @@ content:
     type: basic_string
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_news_date:
     label: hidden
     weight: 1
@@ -43,12 +44,14 @@ content:
       format_type: fallback
       timezone_override: ''
     third_party_settings: {  }
+    region: content
   field_short_description:
     label: hidden
     weight: 0
     type: basic_string
     settings: {  }
     third_party_settings: {  }
+    region: content
 hidden:
   body: true
   field_alternative_url: true

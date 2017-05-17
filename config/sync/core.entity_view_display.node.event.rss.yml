@@ -55,6 +55,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: content
   field_alternative_url:
     label: hidden
     weight: 21
@@ -62,6 +63,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: content
   field_city:
     label: above
     weight: 10
@@ -69,6 +71,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: content
   field_country:
     label: above
     weight: 12
@@ -76,6 +79,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: content
   field_credit:
     label: hidden
     weight: 26
@@ -83,6 +87,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: content
   field_email_subject:
     label: above
     weight: 8
@@ -90,6 +95,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: content
   field_event_date:
     label: above
     weight: 0
@@ -98,6 +104,7 @@ content:
       timezone_override: America/Toronto
       format_type: timestamp
     third_party_settings: {  }
+    region: content
   field_event_management:
     label: above
     weight: 7
@@ -105,12 +112,14 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: content
   field_event_summary:
     label: above
     weight: 27
     type: text_default
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_event_videos:
     label: above
     weight: 29
@@ -118,24 +127,28 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: content
   field_feature_area:
     label: hidden
     weight: 17
     type: list_key
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_feature_line:
     label: above
     weight: 19
     type: text_default
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_feature_weight:
     label: hidden
     weight: 20
     type: list_key
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_flickr_id:
     label: above
     weight: 28
@@ -143,6 +156,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: content
   field_image:
     label: above
     weight: 3
@@ -151,6 +165,7 @@ content:
       image_style: ''
       image_link: ''
     third_party_settings: {  }
+    region: content
   field_image_page:
     label: hidden
     weight: 18
@@ -159,6 +174,7 @@ content:
       image_style: ''
       image_link: ''
     third_party_settings: {  }
+    region: content
   field_invitation:
     label: above
     weight: 5
@@ -168,6 +184,7 @@ content:
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
+    region: content
   field_link_text:
     label: hidden
     weight: 24
@@ -175,6 +192,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: content
   field_location:
     label: above
     weight: 8
@@ -182,12 +200,14 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: content
   field_position:
     label: hidden
     weight: 25
     type: list_key
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_rsvp:
     label: above
     weight: 6
@@ -197,12 +217,14 @@ content:
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
+    region: content
   field_short_description:
     label: above
     weight: -3
     type: text_default
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_speakers_unlinked:
     label: above
     weight: 6
@@ -210,6 +232,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: content
   field_state_province:
     label: above
     weight: 11
@@ -217,6 +240,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: content
   field_website:
     label: hidden
     weight: 4
@@ -224,10 +248,12 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: content
   links:
     weight: 100
     settings: {  }
     third_party_settings: {  }
+    region: content
 hidden:
   body: true
   event_series: true

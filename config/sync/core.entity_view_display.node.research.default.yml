@@ -42,6 +42,7 @@ content:
     weight: 6
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_caption:
     weight: 8
     label: hidden
@@ -49,18 +50,21 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   field_feature_line:
     label: above
     weight: 4
     type: basic_string
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_features:
     weight: 13
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
   field_image:
     type: image
     weight: 9
@@ -69,6 +73,7 @@ content:
       image_style: page_wide_606_
       image_link: ''
     third_party_settings: {  }
+    region: content
   field_related_events:
     type: entity_reference_entity_view
     weight: 10
@@ -77,6 +82,7 @@ content:
       view_mode: default
       link: false
     third_party_settings: {  }
+    region: content
   field_related_publications:
     type: entity_reference_label
     weight: 11
@@ -84,18 +90,21 @@ content:
     settings:
       link: true
     third_party_settings: {  }
+    region: content
   field_research_type:
     label: above
     weight: 0
     type: list_key
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_short_description:
     label: above
     weight: 1
     type: basic_string
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_speakers:
     type: entity_reference_entity_view
     weight: 12
@@ -104,6 +113,7 @@ content:
       view_mode: default
       link: false
     third_party_settings: {  }
+    region: content
   field_speakers_unlinked:
     label: above
     weight: 2
@@ -111,6 +121,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: content
   field_square_image:
     label: above
     weight: 3
@@ -119,16 +130,19 @@ content:
       image_style: ''
       image_link: ''
     third_party_settings: {  }
+    region: content
   links:
     weight: 5
     settings: {  }
     third_party_settings: {  }
+    region: content
   upload:
     label: hidden
     settings: {  }
     type: file_default
     weight: 7
     third_party_settings: {  }
+    region: content
 hidden:
   field_alternative_url: true
   field_credit: true

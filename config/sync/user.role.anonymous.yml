@@ -9,6 +9,10 @@ label: 'anonymous user'
 weight: 0
 is_admin: false
 permissions:
+  - 'access content'
+  - 'access site map'
+  - 'search content'
+  - 'use text format filtered_html1'
   - 'view field_address_1'
   - 'view field_alternative_url'
   - 'view field_awards'
@@ -75,8 +79,4 @@ permissions:
   - 'view imagecache permission_test'
   - 'view imagecache person_photo'
   - 'view imagecache student_list'
-  - 'access content'
-  - 'search content'
-  - 'access site map'
   - 'view uploaded files'
-  - 'use text format filtered_html1'

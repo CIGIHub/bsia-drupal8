@@ -37,6 +37,7 @@ content:
     weight: 3
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_caption:
     weight: 2
     label: hidden
@@ -44,6 +45,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   field_news_date:
     label: hidden
     weight: 0
@@ -52,6 +54,7 @@ content:
       timezone_override: America/Toronto
       format_type: medium
     third_party_settings: {  }
+    region: content
   field_news_image:
     label: hidden
     weight: 1
@@ -60,12 +63,14 @@ content:
       image_style: ''
       image_link: ''
     third_party_settings: {  }
+    region: content
   upload:
     label: hidden
     settings: {  }
     type: file_default
     weight: 4
     third_party_settings: {  }
+    region: content
 hidden:
   field_alternative_url: true
   field_credit: true

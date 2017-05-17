@@ -68,6 +68,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: content
   field_department:
     type: string
     weight: 11
@@ -75,6 +76,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: content
   field_email:
     type: string
     weight: 8
@@ -82,12 +84,14 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: content
   field_feature_line:
     label: hidden
     weight: 0
     type: text_default
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_person_position:
     type: string
     weight: 2
@@ -95,6 +99,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: content
   field_phone:
     type: string
     weight: 9
@@ -102,6 +107,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: content
   field_photo:
     type: image
     weight: 6
@@ -110,12 +116,14 @@ content:
       image_style: square_100x100
       image_link: ''
     third_party_settings: {  }
+    region: content
   field_short_bio:
     type: text_default
     weight: 7
     label: hidden
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_twitter_url:
     label: hidden
     weight: 3
@@ -123,6 +131,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: content
   field_year_graduated:
     label: hidden
     weight: 4
@@ -130,6 +139,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: content
   person_type:
     type: entity_reference_entity_view
     weight: 10
@@ -138,6 +148,7 @@ content:
       view_mode: default
       link: false
     third_party_settings: {  }
+    region: content
   program_type:
     type: entity_reference_entity_view
     weight: 5
@@ -146,6 +157,7 @@ content:
       view_mode: default
       link: false
     third_party_settings: {  }
+    region: content
 hidden:
   body: true
   field_alternative_url: true

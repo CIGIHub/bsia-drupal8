@@ -8,7 +8,7 @@ dependencies:
     - seven
 id: system
 theme: seven
-region: '-1'
+region: header
 weight: 10
 provider: null
 plugin: system_powered_by_block

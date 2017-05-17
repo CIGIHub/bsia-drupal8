@@ -25,6 +25,7 @@ content:
     weight: 101
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_caption:
     weight: 103
     label: above
@@ -32,6 +33,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   field_published_date:
     label: above
     weight: 0
@@ -40,14 +42,17 @@ content:
       format_type: fallback
       timezone_override: ''
     third_party_settings: {  }
+    region: content
   links:
     weight: 100
+    region: content
   upload:
     label: hidden
     settings: {  }
     type: file_default
     weight: 102
     third_party_settings: {  }
+    region: content
 hidden:
   field_image: true
   langcode: true

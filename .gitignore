@@ -6,10 +6,15 @@ themes/custom/bsia/config.codekit
 config.codekit
 config.codekit3
 *.sql
-*min.js
+
 
 # Config ignores
 
 config/deploy
 config/sync/.htaccess
 config/sync/migrate.migration.*
+
+
+# Drupal settings
+sites/
+

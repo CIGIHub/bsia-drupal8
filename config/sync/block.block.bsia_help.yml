@@ -10,7 +10,7 @@ _core:
   default_config_hash: NU5A_49mwLHfs5xFzMFrZ850w9pgUolxMS9NNF3vv4c
 id: bsia_help
 theme: bsia
-region: '-1'
+region: search
 weight: -27
 provider: null
 plugin: help_block

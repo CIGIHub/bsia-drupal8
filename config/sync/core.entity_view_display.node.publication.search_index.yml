@@ -45,6 +45,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: content
   field_book_cover:
     label: hidden
     weight: 6
@@ -53,6 +54,7 @@ content:
       image_style: ''
       image_link: ''
     third_party_settings: {  }
+    region: content
   field_credit:
     label: hidden
     weight: 16
@@ -60,24 +62,28 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: content
   field_feature_area:
     label: hidden
     weight: 14
     type: list_key
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_feature_line:
     label: above
     weight: 16
     type: basic_string
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_feature_weight:
     label: hidden
     weight: 17
     type: list_key
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_image:
     label: hidden
     weight: 5
@@ -86,6 +92,7 @@ content:
       image_style: ''
       image_link: ''
     third_party_settings: {  }
+    region: content
   field_image_page:
     label: hidden
     weight: 15
@@ -94,12 +101,14 @@ content:
       image_style: ''
       image_link: ''
     third_party_settings: {  }
+    region: content
   field_link_label:
     label: above
     weight: 2
     type: list_key
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_link_text:
     label: hidden
     weight: 15
@@ -107,12 +116,14 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: content
   field_position:
     label: hidden
     weight: 14
     type: list_key
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_publication_source:
     label: above
     weight: 0
@@ -120,6 +131,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: content
   field_publication_source_link:
     label: above
     weight: 1
@@ -127,6 +139,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: content
   field_published_date:
     label: hidden
     weight: -3
@@ -135,12 +148,14 @@ content:
       timezone_override: America/Toronto
       format_type: publication_date
     third_party_settings: {  }
+    region: content
   field_short_description:
     label: hidden
     weight: 3
     type: basic_string
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_speakers_unlinked:
     label: hidden
     weight: -1
@@ -148,10 +163,12 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: content
   links:
     weight: 100
     settings: {  }
     third_party_settings: {  }
+    region: content
 hidden:
   body: true
   field_caption: true

@@ -31,12 +31,14 @@ content:
     type: text_default
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_publication_source_link:
     label: above
     weight: 0
     type: text_default
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_published_date:
     label: hidden
     weight: -4
@@ -45,20 +47,24 @@ content:
       format_type: fallback
       timezone_override: ''
     third_party_settings: {  }
+    region: content
   field_short_description:
     label: above
     weight: 2
     type: text_default
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_speakers_unlinked:
     label: hidden
     weight: -2
     type: text_default
     settings: {  }
     third_party_settings: {  }
+    region: content
   links:
     weight: 100
+    region: content
 hidden:
   body: true
   field_caption: true

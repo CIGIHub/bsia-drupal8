@@ -32,6 +32,7 @@ content:
     settings:
       trim_length: 600
     third_party_settings: {  }
+    region: content
   field_publication_source:
     label: hidden
     weight: -1
@@ -39,6 +40,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: content
   field_publication_source_link:
     label: hidden
     weight: 0
@@ -46,6 +48,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: content
   field_published_date:
     label: hidden
     weight: -4
@@ -54,12 +57,14 @@ content:
       timezone_override: America/Toronto
       format_type: publication_date
     third_party_settings: {  }
+    region: content
   field_short_description:
     label: hidden
     weight: 2
     type: basic_string
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_speakers_unlinked:
     label: hidden
     weight: -2
@@ -67,10 +72,12 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: content
   links:
     weight: 100
     settings: {  }
     third_party_settings: {  }
+    region: content
 hidden:
   field_caption: true
   field_features: true

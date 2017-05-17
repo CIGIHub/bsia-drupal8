@@ -9,6 +9,11 @@ label: 'authenticated user'
 weight: 1
 is_admin: false
 permissions:
+  - 'access site map'
+  - 'search content'
+  - 'use text format basic_html'
+  - 'use text format filtered_html1'
+  - 'view date repeats'
   - 'view field_address_1'
   - 'view field_alternative_url'
   - 'view field_awards'
@@ -66,7 +71,6 @@ permissions:
   - 'view field_website'
   - 'view field_year_graduated'
   - 'view field_youtube_id'
-  - 'view date repeats'
   - 'view imagecache blog_feature'
   - 'view imagecache event_image'
   - 'view imagecache feature_person'
@@ -76,7 +80,3 @@ permissions:
   - 'view imagecache permission_test'
   - 'view imagecache person_photo'
   - 'view imagecache student_list'
-  - 'search content'
-  - 'access site map'
-  - 'use text format filtered_html1'
-  - 'use text format basic_html'
