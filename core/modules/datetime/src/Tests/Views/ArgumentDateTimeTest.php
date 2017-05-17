@@ -27,6 +27,8 @@ class ArgumentDateTimeTest extends DateTimeHandlerTestBase {
       '2000-10-10',
       '2001-10-10',
       '2002-01-01',
+      // Add a date that in in 2002 in UTC, but in 2003 site (Sydney).
+      '2002-12-31T23:00:00',
     ];
     foreach ($dates as $date) {
       $this->nodes[] = $this->drupalCreateNode([
@@ -59,6 +61,31 @@ class ArgumentDateTimeTest extends DateTimeHandlerTestBase {
     $expected[] = ['nid' => $this->nodes[2]->id()];
     $this->assertIdenticalResultset($view, $expected, $this->map);
     $view->destroy();
+
+    $view->setDisplay('default');
+    $this->executeView($view, ['2003']);
+    $expected = [];
+    $expected[] = ['nid' => $this->nodes[3]->id()];
+    $this->assertIdenticalResultset($view, $expected, $this->map);
+    $view->destroy();
+
+    // Test as a user with a different timezone.
+    $this->config('system.date')
+      ->set('timezone.user.configurable', TRUE)
+      ->save();
+    $user = $this->drupalCreateUser();
+    $user->set('timezone', 'America/Vancouver');
+    $user->save();
+    $this->drupalLogin($user);
+
+    $view->setDisplay('default');
+    $this->executeView($view, ['2002']);
+    $expected = [];
+    // Only the 3rd node is returned here since UTC 2002-01-01T00:00:00 is still
+    // in 2001 for this user timezone.
+    $expected[] = ['nid' => $this->nodes[3]->id()];
+    $this->assertIdenticalResultset($view, $expected, $this->map);
+    $view->destroy();
   }
 
   /**
@@ -82,6 +109,7 @@ class ArgumentDateTimeTest extends DateTimeHandlerTestBase {
     $this->executeView($view, ['01']);
     $expected = [];
     $expected[] = ['nid' => $this->nodes[2]->id()];
+    $expected[] = ['nid' => $this->nodes[3]->id()];
     $this->assertIdenticalResultset($view, $expected, $this->map);
     $view->destroy();
   }
@@ -107,6 +135,7 @@ class ArgumentDateTimeTest extends DateTimeHandlerTestBase {
     $this->executeView($view, ['01']);
     $expected = [];
     $expected[] = ['nid' => $this->nodes[2]->id()];
+    $expected[] = ['nid' => $this->nodes[3]->id()];
     $this->assertIdenticalResultset($view, $expected, $this->map);
     $view->destroy();
   }
@@ -152,6 +181,7 @@ class ArgumentDateTimeTest extends DateTimeHandlerTestBase {
     $this->executeView($view, ['01']);
     $expected = [];
     $expected[] = ['nid' => $this->nodes[2]->id()];
+    $expected[] = ['nid' => $this->nodes[3]->id()];
     $this->assertIdenticalResultset($view, $expected, $this->map);
     $view->destroy();
   }

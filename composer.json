@@ -29,6 +29,30 @@
         "preferred-install": "dist",
         "autoloader-suffix": "Drupal8"
     },
+    "autoload": {
+        "psr-4": {
+            "Drupal\\Core\\Composer\\": "core/lib/Drupal/Core/Composer"
+        }
+    },
+    "scripts": {
+        "pre-autoload-dump": "Drupal\\Core\\Composer\\Composer::preAutoloadDump",
+        "post-autoload-dump": "Drupal\\Core\\Composer\\Composer::ensureHtaccess",
+        "post-package-install": "Drupal\\Core\\Composer\\Composer::vendorTestCodeCleanup",
+        "post-package-update": "Drupal\\Core\\Composer\\Composer::vendorTestCodeCleanup",
+        "remove-git-submodules": "find . -mindepth 2 -type d -name .git | xargs rm -rf",
+        "post-install-cmd": [
+            "@remove-git-submodules"
+        ],
+        "post-update-cmd": [
+            "@remove-git-submodules"
+        ]
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    ],
     "extra": {
         "_readme": [
             "By default Drupal loads the autoloader from ./vendor/autoload.php.",
@@ -55,30 +79,11 @@
             "themes/custom/{$name}": ["type:drupal-custom-theme"],
             "libraries/{$name}": [ "type:drupal-library"],
             "drush/{$name}": ["type:drupal-drush"]
+        },
+        "patches": {
+            "drupal/core": {
+                "2627512 - Datetime Views plugins don't support timezones": "https://www.drupal.org/files/issues/2627512-214-wo-update.patch"
+            }
         }
-    },
-    "autoload": {
-        "psr-4": {
-            "Drupal\\Core\\Composer\\": "core/lib/Drupal/Core/Composer"
-        }
-    },
-    "scripts": {
-        "pre-autoload-dump": "Drupal\\Core\\Composer\\Composer::preAutoloadDump",
-        "post-autoload-dump": "Drupal\\Core\\Composer\\Composer::ensureHtaccess",
-        "post-package-install": "Drupal\\Core\\Composer\\Composer::vendorTestCodeCleanup",
-        "post-package-update": "Drupal\\Core\\Composer\\Composer::vendorTestCodeCleanup",
-        "remove-git-submodules": "find . -mindepth 2 -type d -name .git | xargs rm -rf",
-        "post-install-cmd": [
-            "@remove-git-submodules"
-        ],
-        "post-update-cmd": [
-            "@remove-git-submodules"
-        ]
-    },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://packages.drupal.org/8"
-        }
-    ]
+    }
 }
