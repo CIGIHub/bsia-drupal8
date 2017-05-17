@@ -13,3 +13,8 @@ config.codekit3
 config/deploy
 config/sync/.htaccess
 config/sync/migrate.migration.*
+
+
+# Drupal settings
+sites/
+
