@@ -26,6 +26,7 @@ content:
     settings:
       trim_length: 600
     third_party_settings: {  }
+    region: content
   field_published_date:
     label: above
     weight: 0
@@ -34,8 +35,10 @@ content:
       format_type: fallback
       timezone_override: ''
     third_party_settings: {  }
+    region: content
   links:
     weight: 100
+    region: content
 hidden:
   field_caption: true
   field_image: true

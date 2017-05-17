@@ -11,7 +11,7 @@ dependencies:
     - bsia
 id: connectwithus_2
 theme: bsia
-region: '-1'
+region: search
 weight: -30
 provider: null
 plugin: 'block_content:487faa71-d5c4-4dcd-be00-0bc3c7f46226'

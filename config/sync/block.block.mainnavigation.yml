@@ -10,7 +10,7 @@ dependencies:
     - bsia
 id: mainnavigation
 theme: bsia
-region: '-1'
+region: search
 weight: -25
 provider: null
 plugin: 'system_menu_block:main'

@@ -32,7 +32,6 @@ module:
   history: 0
   image: 0
   imce: 0
-  inline_entity_form: 0
   language: 0
   link: 0
   menu_ui: 0
@@ -73,3 +72,4 @@ theme:
   bsia: 0
 _core:
   default_config_hash: m2GVq11UAOVuNgj8x0t5fMOPujpvQQ_zxLoaly1BMEU
+profile: minimal

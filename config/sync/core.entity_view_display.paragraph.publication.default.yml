@@ -28,6 +28,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   field_publication_author_2:
     weight: 5
     label: hidden
@@ -35,6 +36,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   field_publication_date:
     weight: 2
     label: hidden
@@ -42,6 +44,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   field_publication_location:
     weight: 6
     label: hidden
@@ -49,6 +52,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   field_publication_publisher_info:
     weight: 7
     label: hidden
@@ -56,6 +60,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   field_publication_title:
     weight: 3
     label: hidden
@@ -63,6 +68,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   field_publication_title_2:
     weight: 4
     label: hidden
@@ -70,12 +76,14 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   field_publication_type:
     weight: 0
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_key
+    region: content
   field_publication_url:
     weight: 8
     label: hidden
@@ -87,4 +95,5 @@ content:
       url_plain: false
     third_party_settings: {  }
     type: link
+    region: content
 hidden: {  }

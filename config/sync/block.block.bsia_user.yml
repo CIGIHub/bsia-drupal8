@@ -11,7 +11,7 @@ _core:
   default_config_hash: IItlF4SKHgxduIysVQdvirDJ_v3HGuAviOkidAOJYRE
 id: bsia_user
 theme: bsia
-region: '-1'
+region: search
 weight: -19
 provider: null
 plugin: user_login_block

@@ -10,7 +10,7 @@ dependencies:
     - bsia
 id: user_4
 theme: bsia
-region: '-1'
+region: search
 weight: -20
 provider: null
 plugin: 'system_menu_block:tools'

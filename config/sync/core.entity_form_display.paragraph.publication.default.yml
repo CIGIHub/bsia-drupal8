@@ -27,6 +27,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
   field_publication_author_2:
     weight: 5
     settings:
@@ -34,6 +35,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
   field_publication_date:
     weight: 2
     settings:
@@ -41,6 +43,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
   field_publication_location:
     weight: 6
     settings:
@@ -48,6 +51,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
   field_publication_publisher_info:
     weight: 7
     settings:
@@ -55,6 +59,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
   field_publication_title:
     weight: 3
     settings:
@@ -62,6 +67,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
   field_publication_title_2:
     weight: 4
     settings:
@@ -69,11 +75,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
   field_publication_type:
     weight: 0
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
   field_publication_url:
     weight: 8
     settings:
@@ -81,6 +89,7 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
 hidden:
   created: true
   status: true

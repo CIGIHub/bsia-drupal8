@@ -10,7 +10,7 @@ _core:
   default_config_hash: WWu2OQswgCztl9OeXjD1stexIEMZsSgPMYIdC-JHx9c
 id: bsia_breadcrumbs
 theme: bsia
-region: '-1'
+region: search
 weight: -31
 provider: null
 plugin: system_breadcrumb_block

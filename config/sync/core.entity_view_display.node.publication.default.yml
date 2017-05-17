@@ -45,12 +45,14 @@ content:
     weight: 10
     settings: {  }
     third_party_settings: {  }
+    region: content
   comment:
     label: hidden
     type: comment_default
     weight: 20
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_book_cover:
     label: hidden
     weight: 6
@@ -59,6 +61,7 @@ content:
       image_style: featured_publication
       image_link: ''
     third_party_settings: {  }
+    region: content
   field_caption:
     weight: 12
     label: above
@@ -66,30 +69,35 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   field_feature_area:
     type: list_default
     weight: 13
     label: above
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_feature_line:
     label: above
     weight: 7
     type: basic_string
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_feature_weight:
     type: list_default
     weight: 19
     label: above
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_features:
     weight: 21
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
   field_image:
     type: image
     weight: 17
@@ -98,6 +106,7 @@ content:
       image_style: ''
       image_link: ''
     third_party_settings: {  }
+    region: content
   field_image_page:
     type: image
     weight: 14
@@ -106,12 +115,14 @@ content:
       image_style: ''
       image_link: ''
     third_party_settings: {  }
+    region: content
   field_link_label:
     label: above
     weight: 4
     type: list_default
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_link_text:
     type: string
     weight: 16
@@ -119,12 +130,14 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: content
   field_position:
     type: list_default
     weight: 18
     label: above
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_publication_source:
     label: above
     weight: 2
@@ -132,6 +145,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: content
   field_publication_source_link:
     label: above
     weight: 3
@@ -139,6 +153,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: content
   field_published_date:
     label: hidden
     weight: 0
@@ -147,12 +162,14 @@ content:
       timezone_override: America/Toronto
       format_type: publication_date
     third_party_settings: {  }
+    region: content
   field_short_description:
     label: hidden
     weight: 5
     type: basic_string
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_speakers:
     type: entity_reference_entity_view
     weight: 15
@@ -161,6 +178,7 @@ content:
       view_mode: default
       link: false
     third_party_settings: {  }
+    region: content
   field_speakers_unlinked:
     label: hidden
     weight: 1
@@ -168,10 +186,12 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: content
   links:
     weight: 9
     settings: {  }
     third_party_settings: {  }
+    region: content
   publication_type:
     label: hidden
     type: entity_reference_label
@@ -179,12 +199,14 @@ content:
     settings:
       link: true
     third_party_settings: {  }
+    region: content
   upload:
     label: hidden
     settings: {  }
     type: file_default
     weight: 11
     third_party_settings: {  }
+    region: content
 hidden:
   field_alternative_url: true
   field_credit: true

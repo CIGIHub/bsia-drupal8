@@ -39,6 +39,7 @@ content:
     weight: 100
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_caption:
     weight: 103
     label: hidden
@@ -46,12 +47,14 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   field_features:
     weight: 104
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
   field_image:
     label: hidden
     weight: -1
@@ -60,16 +63,19 @@ content:
       image_style: page_wide_606_
       image_link: ''
     third_party_settings: {  }
+    region: content
   links:
     weight: 101
     settings: {  }
     third_party_settings: {  }
+    region: content
   upload:
     label: hidden
     settings: {  }
     type: file_default
     weight: 102
     third_party_settings: {  }
+    region: content
 hidden:
   field_alternative_url: true
   field_credit: true

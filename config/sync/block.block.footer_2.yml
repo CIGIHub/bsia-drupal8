@@ -10,7 +10,7 @@ dependencies:
     - bsia
 id: footer_2
 theme: bsia
-region: '-1'
+region: search
 weight: -28
 provider: null
 plugin: 'system_menu_block:menu-footer'

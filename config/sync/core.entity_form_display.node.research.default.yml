@@ -79,11 +79,13 @@ content:
       summary_rows: 3
       placeholder: ''
     third_party_settings: {  }
+    region: content
   created:
     type: datetime_timestamp
     weight: 14
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_alternative_url:
     weight: 14
     type: string_textfield
@@ -91,6 +93,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   field_caption:
     weight: 8
     settings:
@@ -98,6 +101,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
   field_credit:
     weight: 11
     type: string_textfield
@@ -105,6 +109,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   field_feature_line:
     weight: 12
     settings:
@@ -112,16 +117,19 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
+    region: content
   field_feature_weight:
     type: options_select
     weight: 9
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_features:
     weight: 8
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
   field_image:
     type: image_image
     weight: 6
@@ -129,6 +137,7 @@ content:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
+    region: content
   field_image_page:
     weight: 10
     settings:
@@ -136,26 +145,31 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
   field_position:
     weight: 13
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
   field_related_events:
     weight: 7
     type: options_select
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_related_publications:
     weight: 8
     type: options_select
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_research_type:
     weight: 1
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
   field_short_description:
     weight: 3
     settings:
@@ -163,6 +177,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
+    region: content
   field_speakers:
     weight: 5
     type: entity_reference_autocomplete
@@ -171,6 +186,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   field_speakers_unlinked:
     weight: 6
     type: string_textfield
@@ -178,6 +194,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   field_square_image:
     weight: 7
     settings:
@@ -185,6 +202,7 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
   field_website:
     weight: 2
     type: string_textfield
@@ -192,16 +210,19 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   langcode:
     type: language_select
     weight: 2
     settings: {  }
     third_party_settings: {  }
+    region: content
   path:
     type: path
     weight: 12
     settings: {  }
     third_party_settings: {  }
+    region: content
   title:
     type: string_textfield
     weight: 0
@@ -209,6 +230,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   uid:
     type: entity_reference_autocomplete
     weight: 13
@@ -217,12 +239,14 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   upload:
     settings:
       progress_indicator: throbber
     type: file_generic
     weight: 11
     third_party_settings: {  }
+    region: content
 hidden:
   field_feature_area: true
   field_link_text: true
