@@ -27,7 +27,9 @@ class PublicationsMenu extends BlockBase {
               array("Non Refereed", "/category/publication-type/non-refereed"),
         ),
       ),
-      array("PH.D. Publications", "/phd-publications"),
+      array("PH.D. Publications", "/phd-publications",
+        array(),
+      ),
     );
 
     $menu_links = array();
